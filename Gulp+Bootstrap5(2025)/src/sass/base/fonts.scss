@@ -1,3 +1,5 @@
+@use "../helpers/icons-variables.scss";
+
 @font-face {
   font-family: 'secura-insurance-icons';
   src:  url('fonts/secura-insurance-icons.eot?ljd5n4');
@@ -26,41 +28,42 @@
 }
 
 .icon-telephone:before {
-  content: "\e908";
+  // content: "\e908";
+  content: icons-variables.$icon-telephone;
 }
 .icon-trash-alt:before {
-  content: "\e909";
+  content: icons-variables.$icon-trash-alt;
 }
 .icon-mail:before {
-  content: "\e90a";
+  content: icons-variables.$icon-mail;
 }
 .icon-clock:before {
-  content: "\e90b";
+  content: icons-variables.$icon-clock;
 }
 .icon-check:before {
-  content: "\e90c";
+  content: icons-variables.$icon-check;
 }
 .icon-arrow-dropdown:before {
-  content: "\e900";
+  content: icons-variables.$icon-arrow-dropdown;
 }
 .icon-burger_menu:before {
-  content: "\e901";
+  content: icons-variables.$icon-burger_menu;
 }
 .icon-close:before {
-  content: "\e902";
+  content: icons-variables.$icon-close;
 }
 .icon-globe:before {
-  content: "\e903";
+  content: icons-variables.$icon-globe;
 }
 .icon-lock:before {
-  content: "\e904";
+  content: icons-variables.$icon-lock;
 }
 .icon-phone:before {
-  content: "\e905";
+  content: icons-variables.$icon-phone;
 }
 .icon-power-off:before {
-  content: "\e906";
+  content: icons-variables.$icon-power-off;
 }
 .icon-user:before {
-  content: "\e907";
+  content: icons-variables.$icon-user;
 }
