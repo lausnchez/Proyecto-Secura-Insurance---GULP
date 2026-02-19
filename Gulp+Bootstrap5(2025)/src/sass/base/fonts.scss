@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'secura-insurance-icons';
-  src:  url('fonts/secura-insurance-icons.eot?5o86jo');
-  src:  url('fonts/secura-insurance-icons.eot?5o86jo#iefix') format('embedded-opentype'),
-    url('fonts/secura-insurance-icons.ttf?5o86jo') format('truetype'),
-    url('fonts/secura-insurance-icons.woff?5o86jo') format('woff'),
-    url('fonts/secura-insurance-icons.svg?5o86jo#secura-insurance-icons') format('svg');
+  src:  url('fonts/secura-insurance-icons.eot?ljd5n4');
+  src:  url('fonts/secura-insurance-icons.eot?ljd5n4#iefix') format('embedded-opentype'),
+    url('fonts/secura-insurance-icons.ttf?ljd5n4') format('truetype'),
+    url('fonts/secura-insurance-icons.woff?ljd5n4') format('woff'),
+    url('fonts/secura-insurance-icons.svg?ljd5n4#secura-insurance-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,35 +25,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-telephone:before {
+  content: "\e908";
+}
+.icon-trash-alt:before {
+  content: "\e909";
+}
+.icon-mail:before {
+  content: "\e90a";
+}
+.icon-clock:before {
+  content: "\e90b";
+}
+.icon-check:before {
+  content: "\e90c";
+}
 .icon-arrow-dropdown:before {
   content: "\e900";
-  color: #4b98d9;
 }
 .icon-burger_menu:before {
   content: "\e901";
-  color: #4b98d9;
 }
 .icon-close:before {
   content: "\e902";
-  color: #4b98d9;
 }
 .icon-globe:before {
   content: "\e903";
-  color: #4b98d9;
 }
 .icon-lock:before {
   content: "\e904";
-  color: #4b98d9;
 }
 .icon-phone:before {
   content: "\e905";
-  color: #4b98d9;
 }
 .icon-power-off:before {
   content: "\e906";
-  color: #4b98d9;
 }
 .icon-user:before {
   content: "\e907";
-  color: #4b98d9;
 }
