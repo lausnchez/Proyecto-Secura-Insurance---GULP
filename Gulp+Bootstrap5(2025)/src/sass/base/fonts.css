@@ -1,3 +1,7 @@
+/* Convert px to rem 
+    - example of usage: @include toRem(font-size, 20px);
+*/
+/* Tira del mapa de iconos creado en icons-variables*/
 @font-face {
   font-family: "secura-insurance-icons";
   src: url("fonts/secura-insurance-icons.eot?ljd5n4");
@@ -20,54 +24,155 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-telephone:before {
+.icon-filter::before {
+  font-family: "secura-insurance-icons";
+  color: #4B98D9;
+  display: block;
+}
+
+.icon-calendar::before {
+  font-family: "secura-insurance-icons";
+  color: #4B98D9;
+  display: block;
+}
+
+.icon-skip-right::before {
+  font-family: "secura-insurance-icons";
+  color: #4B98D9;
+  display: block;
+}
+
+.icon-arrow-right::before {
+  font-family: "secura-insurance-icons";
+  color: #4B98D9;
+  display: block;
+}
+
+.icon-back::before {
+  font-family: "secura-insurance-icons";
+  color: #4B98D9;
+  display: block;
+}
+
+.icon-skip-left::before {
+  font-family: "secura-insurance-icons";
+  color: #4B98D9;
+  display: block;
+}
+
+.icon-file::before {
+  font-family: "secura-insurance-icons";
+  color: #4B98D9;
+  display: block;
+}
+
+.icon-copyright::before {
+  font-family: "secura-insurance-icons";
+  color: #4B98D9;
+  display: block;
+}
+
+.icon-telephone::before {
+  font-family: "secura-insurance-icons";
   content: "\e908";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-trash-alt:before {
+.icon-trash-alt::before {
+  font-family: "secura-insurance-icons";
   content: "\e909";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-mail:before {
+.icon-mail::before {
+  font-family: "secura-insurance-icons";
   content: "\e90a";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-clock:before {
+.icon-clock::before {
+  font-family: "secura-insurance-icons";
   content: "\e90b";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-check:before {
+.icon-clock-subtitle::before {
+  font-family: "secura-insurance-icons";
+  content: "\e90b";
+  color: #405258;
+  display: block;
+}
+
+.icon-check::before {
+  font-family: "secura-insurance-icons";
   content: "\e90c";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-arrow-dropdown:before {
+.icon-check-green::before {
+  font-family: "secura-insurance-icons";
+  content: "\e90c";
+  color: #45944D;
+  display: block;
+}
+
+.icon-arrow-dropdown::before {
+  font-family: "secura-insurance-icons";
   content: "\e900";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-burger_menu:before {
+.icon-burger_menu::before {
+  font-family: "secura-insurance-icons";
   content: "\e901";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-close:before {
+.icon-close::before {
+  font-family: "secura-insurance-icons";
   content: "\e902";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-globe:before {
+.icon-globe::before {
+  font-family: "secura-insurance-icons";
   content: "\e903";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-lock:before {
+.icon-lock::before {
+  font-family: "secura-insurance-icons";
   content: "\e904";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-phone:before {
+.icon-phone::before {
+  font-family: "secura-insurance-icons";
   content: "\e905";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-power-off:before {
+.icon-power-off::before {
+  font-family: "secura-insurance-icons";
   content: "\e906";
+  color: #4B98D9;
+  display: block;
 }
 
-.icon-user:before {
+.icon-user::before {
+  font-family: "secura-insurance-icons";
   content: "\e907";
+  color: #4B98D9;
+  display: block;
 }/*# sourceMappingURL=fonts.css.map */

@@ -1,6 +1,18 @@
+@use "icons-variables";
+@use "colors";
 /* Convert px to rem 
     - example of usage: @include toRem(font-size, 20px);
 */
 @mixin toRem($property, $value, $base: 16px) {
     #{$property}: #{$value / $base}rem;
+}
+
+/* Tira del mapa de iconos creado en icons-variables*/
+@mixin icon($name, $color : colors.$base-primary){
+    &::before{
+        font-family: icons-variables.$icon-font-family;
+        content: map-get(icons-variables.$icons, $name);
+        color: $color;
+        display: block;
+    }
 }

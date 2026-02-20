@@ -1,7 +1,9 @@
 @use "../helpers/icons-variables.scss";
+@use "../helpers/mixins" as *;
+@use "../helpers/colors";
 
 @font-face {
-  font-family: 'secura-insurance-icons';
+  font-family: icons-variables.$icon-font-family;
   src:  url('fonts/secura-insurance-icons.eot?ljd5n4');
   src:  url('fonts/secura-insurance-icons.eot?ljd5n4#iefix') format('embedded-opentype'),
     url('fonts/secura-insurance-icons.ttf?ljd5n4') format('truetype'),
@@ -27,43 +29,72 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-telephone:before {
-  // content: "\e908";
-  content: icons-variables.$icon-telephone;
+.icon-filter{
+  @include icon(filter);
 }
-.icon-trash-alt:before {
-  content: icons-variables.$icon-trash-alt;
+.icon-calendar{
+  @include icon(calendar);
 }
-.icon-mail:before {
-  content: icons-variables.$icon-mail;
+.icon-skip-right{
+  @include icon(skip-right);
 }
-.icon-clock:before {
-  content: icons-variables.$icon-clock;
+.icon-arrow-right{
+  @include icon(arrow-right);
 }
-.icon-check:before {
-  content: icons-variables.$icon-check;
+.icon-back{
+  @include icon(before);
 }
-.icon-arrow-dropdown:before {
-  content: icons-variables.$icon-arrow-dropdown;
+.icon-skip-left{
+  @include icon(skip-left);
 }
-.icon-burger_menu:before {
-  content: icons-variables.$icon-burger_menu;
+.icon-file{
+  @include icon(file);
 }
-.icon-close:before {
-  content: icons-variables.$icon-close;
+.icon-copyright{
+  @include icon(copyright);
 }
-.icon-globe:before {
-  content: icons-variables.$icon-globe;
+.icon-telephone{
+  @include icon(telephone);
 }
-.icon-lock:before {
-  content: icons-variables.$icon-lock;
+.icon-trash-alt{
+  @include icon(trash);
 }
-.icon-phone:before {
-  content: icons-variables.$icon-phone;
+.icon-mail{
+  @include icon(mail);
 }
-.icon-power-off:before {
-  content: icons-variables.$icon-power-off;
+.icon-clock{
+  @include icon(clock);
 }
-.icon-user:before {
-  content: icons-variables.$icon-user;
+.icon-clock-subtitle{
+  @include icon(clock, colors.$text-subtitle);
+}
+.icon-check{
+  @include icon(check);
+}
+.icon-check-green{
+  @include icon(check, colors.$icon-success-green);
+}
+.icon-arrow-dropdown{
+  @include icon(arrow-down);
+}
+.icon-burger_menu{
+  @include icon(burger-menu);
+}
+.icon-close{
+  @include icon(close);
+}
+.icon-globe{
+  @include icon(globe);
+}
+.icon-lock{
+  @include icon(lock);
+}
+.icon-phone{
+  @include icon(phone);
+}
+.icon-power-off{
+  @include icon(power-off);
+}
+.icon-user{
+  @include icon(user);
 }
