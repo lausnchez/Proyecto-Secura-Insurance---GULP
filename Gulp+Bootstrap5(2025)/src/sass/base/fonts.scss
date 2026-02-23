@@ -51,3 +51,53 @@
 .icon-phone{@include icon(var(--icon-phone));}
 .icon-power-off{@include icon(var(--icon-power-off));}
 .icon-user{@include icon(var(--icon-user));}
+
+//  Formatos de texto
+.navbar-text{@include text-format(
+  $color: var(--base-greyscale-700)
+)}
+
+.item-dropdown-text{@include text-format(
+  $color: var(--text-subtitle)
+)}
+
+.base_title{@include text-format(
+  $size: var(--typo-size-title),
+  $weight: Bold
+)}
+
+.base_header2{@include text-format(
+  $size: var(--typo-size-header2),
+  $weight: Bold
+)}
+
+.base_header3{@include text-format(
+  $size: var(--typo-size-header3),
+  $weight: SemiBold
+)}
+
+.base_subtitle{@include text-format(
+  $size: var(--typo-size-subtitle),
+  $weight: Regular
+)}
+
+.base_body{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: Regular
+)}
+
+.base_body_bold{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: Bold
+)}
+
+.base_small{@include text-format(
+  $size: var(--typo-size-title-small),
+  $weight: Medium
+)}
+
+.base_small_title{@include text-format(
+  $size: var(--typo-size-title-small),
+  $weight: Bold
+)}
+

@@ -93,6 +93,7 @@ html {
 
 body {
   min-height: 100vh;
+  font-family: var(--default-font-family);
   &.not-scroll {
     height: 100%;
     overflow: hidden;
@@ -126,6 +127,7 @@ sub {
 }
 
 a {
+  text-decoration: none;
   &:hover,
   &:focus-visible {
     text-decoration: underline;

@@ -1,4 +1,6 @@
 :root{
+    --default-font-family: 'Roboto', sans-serif;
+
     // TYPOGRAPHY SIZES
     --typo-size-title: 64px;
     --typo-size-header2: 40px;
@@ -9,6 +11,5 @@
     --typo-size-title-small: 10px;
 
     // TYPOGRAPHY GENERALS
-    --typo-font-family: "Roboto";
     --default-letter-spacing: 0%;
 }

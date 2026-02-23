@@ -12,5 +12,20 @@
         font-family: var(--icon-font-family);
         content: $name;
         color: $color;
+        font-size: var(--icon-size);
     }
+}
+
+@mixin text-format(
+    $font-family: var(--default-font-family),
+    $size: var(--typo-size-body),
+    $color: var(--text-body-default),
+    $weight: normal,
+    $letter-spacing: 0%
+    )
+    {
+    font-size: toRem($size);
+    color: $color;
+    font-weight: $weight;
+    letter-spacing: $letter-spacing;
 }

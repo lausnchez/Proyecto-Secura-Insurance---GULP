@@ -1,4 +1,5 @@
 :root {
+  --default-font-family: 'Roboto', sans-serif;
   --typo-size-title: 64px;
   --typo-size-header2: 40px;
   --typo-size-header3: 24px;
@@ -6,6 +7,5 @@
   --typo-size-body: 16px;
   --typo-size-small: 10px;
   --typo-size-title-small: 10px;
-  --typo-font-family: "Roboto";
   --default-letter-spacing: 0%;
 }/*# sourceMappingURL=typo-variables.css.map */

@@ -93,6 +93,7 @@ html {
 
 body {
   min-height: 100vh;
+  font-family: var(--default-font-family);
 }
 body.not-scroll {
   height: 100%;
@@ -125,6 +126,9 @@ sub {
   color: initial;
 }
 
+a {
+  text-decoration: none;
+}
 a:hover, a:focus-visible {
   text-decoration: underline;
 }/*# sourceMappingURL=base.css.map */
