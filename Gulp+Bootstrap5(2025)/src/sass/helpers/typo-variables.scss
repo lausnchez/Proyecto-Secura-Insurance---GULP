@@ -1,12 +1,14 @@
-// TYPOGRAPHY SIZES
-$typo-size-title: 64px;
-$typo-size-header2: 40px;
-$typo-size-header3: 24px;
-$typo-size-subtitle: 24px;
-$typo-size-body: 16px;
-$typo-size-small: 10px;
-$typo-size-title-small: 10px;
+:root{
+    // TYPOGRAPHY SIZES
+    --typo-size-title: 64px;
+    --typo-size-header2: 40px;
+    --typo-size-header3: 24px;
+    --typo-size-subtitle: 24px;
+    --typo-size-body: 16px;
+    --typo-size-small: 10px;
+    --typo-size-title-small: 10px;
 
-// TYPOGRAPHY GENERALS
-$typo-font-family: "Roboto";
-$default-letter-spacing: 0%;
+    // TYPOGRAPHY GENERALS
+    --typo-font-family: "Roboto";
+    --default-letter-spacing: 0%;
+}

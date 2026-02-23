@@ -14,9 +14,55 @@
 /* FONTS */
 /* MEDIA QUERIES */
 /* Spacing */
+:root {
+  --icon-font-family: 'secura-insurance-icons';
+  --icon-filter: "\e90e";
+  --icon-calendar: "\e90f";
+  --icon-skip-right: "\e910";
+  --icon-arrow-right: "\e911";
+  --icon-back: "\e912";
+  --icon-skip-left: "\e913";
+  --icon-file: "\e914";
+  --icon-copyright: "\e90d";
+  --icon-telephone: "\e908";
+  --icon-trash-alt: "\e909";
+  --icon-mail: "\e90a";
+  --icon-clock: "\e90b";
+  --icon-check: "\e90c";
+  --icon-arrow-dropdown: "\e900";
+  --icon-burger_menu: "\e901";
+  --icon-close: "\e902";
+  --icon-globe: "\e903";
+  --icon-lock: "\e904";
+  --icon-phone: "\e905";
+  --icon-power-off: "\e906";
+  --icon-user: "\e907";
+}
+
+:root {
+  --base-primary: #4B98D9;
+  --base-primary-75: #6FA6D4;
+  --base-primary-50: #9FC3E2;
+  --base-primary-25: #CFE1F1;
+  --neutral-grey-100: #353535;
+  --neutral-grey-75: #686868;
+  --neutral-grey-50: #9A9A9A;
+  --neutral-grey-25: #CDCDCD;
+  --neutral-light: #FAFCFE;
+  --function-success: #3BD378;
+  --function-error: #E75249;
+  --information-text: #191C3D;
+  --information-subtle-text: #7579A0;
+  --information-accent: #D8DBF5;
+  --information-inverse-text: #F7F7FC;
+  --icon-success-green: #45944D;
+  --text-subtitle: #405258;
+}
+
 /* Convert px to rem 
     - example of usage: @include toRem(font-size, 20px);
 */
+/* Tira del mapa de iconos creado en icons-variables*/
 /** BASE **/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -37,6 +83,8 @@ html {
  */
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /**
@@ -149,6 +197,7 @@ sup {
  */
 img {
   border-style: none;
+  max-width: 100%;
 }
 
 /* Forms
@@ -350,56 +399,140 @@ template {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-telephone:before {
-  content: "\e908";
+.icon-filter {
+  content: "\e90e";
 }
 
-.icon-trash-alt:before {
-  content: "\e909";
+.icon-calendar::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-calendar);
+  color: var(--base-primary);
 }
 
-.icon-mail:before {
-  content: "\e90a";
+.icon-skip-right::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-skip-right);
+  color: var(--base-primary);
 }
 
-.icon-clock:before {
-  content: "\e90b";
+.icon-arrow-right::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-arrow-right);
+  color: var(--base-primary);
 }
 
-.icon-check:before {
-  content: "\e90c";
+.icon-back::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-back);
+  color: var(--base-primary);
 }
 
-.icon-arrow-dropdown:before {
-  content: "\e900";
+.icon-skip-left::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-skip-left);
+  color: var(--base-primary);
 }
 
-.icon-burger_menu:before {
-  content: "\e901";
+.icon-file::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-file);
+  color: var(--base-primary);
 }
 
-.icon-close:before {
-  content: "\e902";
+.icon-copyright::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-copyright);
+  color: var(--base-primary);
 }
 
-.icon-globe:before {
-  content: "\e903";
+.icon-telephone::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-telephone);
+  color: var(--base-primary);
 }
 
-.icon-lock:before {
-  content: "\e904";
+.icon-trash-alt::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-trash-alt);
+  color: var(--base-primary);
 }
 
-.icon-phone:before {
-  content: "\e905";
+.icon-mail::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-mail);
+  color: var(--base-primary);
 }
 
-.icon-power-off:before {
-  content: "\e906";
+.icon-clock::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-clock);
+  color: var(--base-primary);
 }
 
-.icon-user:before {
-  content: "\e907";
+.icon-clock-subtitle::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-clock);
+  color: var(--text-subtitle);
+}
+
+.icon-check::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-check);
+  color: var(--base-primary);
+}
+
+.icon-check-green::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-check);
+  color: var(--icon-success-green);
+}
+
+.icon-arrow-dropdown::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-arrow-dropdown);
+  color: var(--base-primary);
+}
+
+.icon-burger_menu::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-burger_menu);
+  color: var(--base-primary);
+}
+
+.icon-close::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-close);
+  color: var(--base-primary);
+}
+
+.icon-globe::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-globe);
+  color: var(--base-primary);
+}
+
+.icon-lock::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-lock);
+  color: var(--base-primary);
+}
+
+.icon-phone::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-phone);
+  color: var(--base-primary);
+}
+
+.icon-power-off::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-power-off);
+  color: var(--base-primary);
+}
+
+.icon-user::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-user);
+  color: var(--base-primary);
 }
 
 html,
@@ -533,4 +666,10 @@ a:hover, a:focus-visible {
 
 /** LAYOUT **/
 /** FRAGMENTS **/
-/** COMPONENTS **//*# sourceMappingURL=main.css.map */
+/** COMPONENTS **/
+.header {
+  display: grid;
+  grid-template-columns: 1fr 5fr 3fr;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=main.css.map */

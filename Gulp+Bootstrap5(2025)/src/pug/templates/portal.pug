@@ -18,8 +18,7 @@ html(lang="es")
 		if (pageClass)
 			- var mainClass = mainClass + ' ' + pageClass;
 
-		header(id="header" class='header')
-			include header.pug
+		include ../components/_header.pug
 
 		main(id="main-content", class=mainClass)
 			block content

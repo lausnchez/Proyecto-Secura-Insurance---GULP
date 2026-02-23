@@ -3,6 +3,7 @@
 /** HELPERS **/
 @use "helpers/variables";
 @use "helpers/icons-variables";
+@use "helpers/functions";
 @use "helpers/mixins";
 @use "helpers/custom";
 @use "helpers/colors";
@@ -14,10 +15,10 @@
 @use "base/base-clases";
 
 /** LAYOUT **/
-@use "layout/header";
 @use "layout/navigation";
-@use "layout/footer";
 
 /** FRAGMENTS **/
 
 /** COMPONENTS **/
+@use "components/header";
+@use "components/footer";
