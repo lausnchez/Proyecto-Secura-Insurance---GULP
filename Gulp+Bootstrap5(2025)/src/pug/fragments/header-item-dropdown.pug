@@ -1,5 +1,5 @@
 mixin header-item-dropdown(textContent, iconContent)
     a(href="#").nav-dropdown
         span(class=`icon-${iconContent}`)
-        span= textContent
+        span.nav-dropdown__textContent= textContent
         span.icon-arrow-dropdown

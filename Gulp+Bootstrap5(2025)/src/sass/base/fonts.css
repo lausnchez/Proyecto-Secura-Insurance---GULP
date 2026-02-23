@@ -206,13 +206,15 @@
 }
 
 .navbar-text {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-body));
   color: var(--base-greyscale-700);
-  font-weight: normal;
+  font-weight: Bold;
   letter-spacing: 0%;
 }
 
 .item-dropdown-text {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-body));
   color: var(--text-subtitle);
   font-weight: normal;
@@ -220,6 +222,7 @@
 }
 
 .base_title {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-title));
   color: var(--text-body-default);
   font-weight: Bold;
@@ -227,6 +230,7 @@
 }
 
 .base_header2 {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-header2));
   color: var(--text-body-default);
   font-weight: Bold;
@@ -234,6 +238,7 @@
 }
 
 .base_header3 {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-header3));
   color: var(--text-body-default);
   font-weight: SemiBold;
@@ -241,6 +246,7 @@
 }
 
 .base_subtitle {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-subtitle));
   color: var(--text-body-default);
   font-weight: Regular;
@@ -248,6 +254,7 @@
 }
 
 .base_body {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-body));
   color: var(--text-body-default);
   font-weight: Regular;
@@ -255,6 +262,7 @@
 }
 
 .base_body_bold {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-body));
   color: var(--text-body-default);
   font-weight: Bold;
@@ -262,6 +270,7 @@
 }
 
 .base_small {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-title-small));
   color: var(--text-body-default);
   font-weight: Medium;
@@ -269,6 +278,7 @@
 }
 
 .base_small_title {
+  font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-title-small));
   color: var(--text-body-default);
   font-weight: Bold;

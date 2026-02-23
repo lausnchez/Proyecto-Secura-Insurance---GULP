@@ -10,4 +10,9 @@
     min-width: $nav-dropdown-min-width;
     gap: $nav-dropdown-gap;
     padding: $nav-dropdown-padding;
+
+    &__textContent{
+        white-space: nowrap;
+        color: var(--text-subtitle);
+    }
 }

@@ -54,7 +54,8 @@
 
 //  Formatos de texto
 .navbar-text{@include text-format(
-  $color: var(--base-greyscale-700)
+  $color: var(--base-greyscale-700),
+  $weight: Bold
 )}
 
 .item-dropdown-text{@include text-format(

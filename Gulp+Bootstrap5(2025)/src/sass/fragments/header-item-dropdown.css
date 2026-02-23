@@ -26,4 +26,8 @@
   min-width: 130px;
   gap: 8px;
   padding: 8px;
+}
+.nav-dropdown__textContent {
+  white-space: nowrap;
+  color: var(--text-subtitle);
 }/*# sourceMappingURL=header-item-dropdown.css.map */
