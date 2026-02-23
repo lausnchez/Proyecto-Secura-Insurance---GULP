@@ -1,3 +1,23 @@
+:root {
+  --base-primary: #4B98D9;
+  --base-primary-75: #6FA6D4;
+  --base-primary-50: #9FC3E2;
+  --base-primary-25: #CFE1F1;
+  --neutral-grey-100: #353535;
+  --neutral-grey-75: #686868;
+  --neutral-grey-50: #9A9A9A;
+  --neutral-grey-25: #CDCDCD;
+  --neutral-light: #FAFCFE;
+  --function-success: #3BD378;
+  --function-error: #E75249;
+  --information-text: #191C3D;
+  --information-subtle-text: #7579A0;
+  --information-accent: #D8DBF5;
+  --information-inverse-text: #F7F7FC;
+  --icon-success-green: #45944D;
+  --text-subtitle: #405258;
+}
+
 /* Convert px to rem 
     - example of usage: @include toRem(font-size, 20px);
 */
@@ -24,155 +44,138 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-filter::before {
-  font-family: "secura-insurance-icons";
-  color: #4B98D9;
-  display: block;
+.icon-filter {
+  content: "\e90e";
 }
 
 .icon-calendar::before {
-  font-family: "secura-insurance-icons";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-calendar);
+  color: var(--base-primary);
 }
 
 .icon-skip-right::before {
-  font-family: "secura-insurance-icons";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-skip-right);
+  color: var(--base-primary);
 }
 
 .icon-arrow-right::before {
-  font-family: "secura-insurance-icons";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-arrow-right);
+  color: var(--base-primary);
 }
 
 .icon-back::before {
-  font-family: "secura-insurance-icons";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-back);
+  color: var(--base-primary);
 }
 
 .icon-skip-left::before {
-  font-family: "secura-insurance-icons";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-skip-left);
+  color: var(--base-primary);
 }
 
 .icon-file::before {
-  font-family: "secura-insurance-icons";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-file);
+  color: var(--base-primary);
 }
 
 .icon-copyright::before {
-  font-family: "secura-insurance-icons";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-copyright);
+  color: var(--base-primary);
 }
 
 .icon-telephone::before {
-  font-family: "secura-insurance-icons";
-  content: "\e908";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-telephone);
+  color: var(--base-primary);
 }
 
 .icon-trash-alt::before {
-  font-family: "secura-insurance-icons";
-  content: "\e909";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-trash-alt);
+  color: var(--base-primary);
 }
 
 .icon-mail::before {
-  font-family: "secura-insurance-icons";
-  content: "\e90a";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-mail);
+  color: var(--base-primary);
 }
 
 .icon-clock::before {
-  font-family: "secura-insurance-icons";
-  content: "\e90b";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-clock);
+  color: var(--base-primary);
 }
 
 .icon-clock-subtitle::before {
-  font-family: "secura-insurance-icons";
-  content: "\e90b";
-  color: #405258;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-clock);
+  color: var(--text-subtitle);
 }
 
 .icon-check::before {
-  font-family: "secura-insurance-icons";
-  content: "\e90c";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-check);
+  color: var(--base-primary);
 }
 
 .icon-check-green::before {
-  font-family: "secura-insurance-icons";
-  content: "\e90c";
-  color: #45944D;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-check);
+  color: var(--icon-success-green);
 }
 
 .icon-arrow-dropdown::before {
-  font-family: "secura-insurance-icons";
-  content: "\e900";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-arrow-dropdown);
+  color: var(--base-primary);
 }
 
 .icon-burger_menu::before {
-  font-family: "secura-insurance-icons";
-  content: "\e901";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-burger_menu);
+  color: var(--base-primary);
 }
 
 .icon-close::before {
-  font-family: "secura-insurance-icons";
-  content: "\e902";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-close);
+  color: var(--base-primary);
 }
 
 .icon-globe::before {
-  font-family: "secura-insurance-icons";
-  content: "\e903";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-globe);
+  color: var(--base-primary);
 }
 
 .icon-lock::before {
-  font-family: "secura-insurance-icons";
-  content: "\e904";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-lock);
+  color: var(--base-primary);
 }
 
 .icon-phone::before {
-  font-family: "secura-insurance-icons";
-  content: "\e905";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-phone);
+  color: var(--base-primary);
 }
 
 .icon-power-off::before {
-  font-family: "secura-insurance-icons";
-  content: "\e906";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-power-off);
+  color: var(--base-primary);
 }
 
 .icon-user::before {
-  font-family: "secura-insurance-icons";
-  content: "\e907";
-  color: #4B98D9;
-  display: block;
+  font-family: var(--icon-font-family);
+  content: var(--icon-user);
+  color: var(--base-primary);
 }/*# sourceMappingURL=fonts.css.map */

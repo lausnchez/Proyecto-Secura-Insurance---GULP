@@ -1,48 +1,25 @@
-$icon-font-family: 'secura-insurance-icons';
+:root{
+    --icon-font-family: 'secura-insurance-icons';
 
-$icon-filter: "\e90e";
-$icon-calendar: "\e90f";
-$icon-skip-right: "\e910";
-$icon-arrow-right: "\e911";
-$icon-back: "\e912";
-$icon-skip-left: "\e913";
-$icon-file: "\e914";
-$icon-copyright: "\e90d";
-$icon-telephone : "\e908";
-$icon-trash-alt : "\e909";
-$icon-mail : "\e90a";
-$icon-clock : "\e90b";
-$icon-check : "\e90c";
-$icon-arrow-dropdown : "\e900";
-$icon-burger_menu: "\e901";
-$icon-close: "\e902";
-$icon-globe: "\e903";
-$icon-lock: "\e904";
-$icon-phone: "\e905";
-$icon-power-off: "\e906";
-$icon-user : "\e907";
-
-// MAPA DE ICONOS PARA EL MIXIN
-$icons:(
-    filter: $icon-filter,
-    calendar: $icon-calendar,
-    skip-right: $icon-skip-right,
-    arrow-right: $icon-arrow-right,
-    back: $icon-back,
-    skip-left: $icon-skip-left,
-    file: $icon-file,
-    copyright: $icon-copyright,
-    telephone: $icon-telephone,
-    trash: $icon-trash-alt,
-    mail: $icon-mail,
-    clock: $icon-clock,
-    check: $icon-check,
-    arrow-down: $icon-arrow-dropdown,
-    burger-menu: $icon-burger_menu,
-    close: $icon-close,
-    globe: $icon-globe,
-    lock: $icon-lock,
-    phone: $icon-phone,
-    power-off: $icon-power-off,
-    user: $icon-user,
-);
+    --icon-filter: "\e90e";
+    --icon-calendar: "\e90f";
+    --icon-skip-right: "\e910";
+    --icon-arrow-right: "\e911";
+    --icon-back: "\e912";
+    --icon-skip-left: "\e913";
+    --icon-file: "\e914";
+    --icon-copyright: "\e90d";
+    --icon-telephone : "\e908";
+    --icon-trash-alt : "\e909";
+    --icon-mail : "\e90a";
+    --icon-clock : "\e90b";
+    --icon-check : "\e90c";
+    --icon-arrow-dropdown : "\e900";
+    --icon-burger_menu: "\e901";
+    --icon-close: "\e902";
+    --icon-globe: "\e903";
+    --icon-lock: "\e904";
+    --icon-phone: "\e905";
+    --icon-power-off: "\e906";
+    --icon-user : "\e907";
+}
