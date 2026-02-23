@@ -55,154 +55,154 @@
   font-family: var(--icon-font-family);
   content: var(--icon-calendar);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-skip-right::before {
   font-family: var(--icon-font-family);
   content: var(--icon-skip-right);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-arrow-right::before {
   font-family: var(--icon-font-family);
   content: var(--icon-arrow-right);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-back::before {
   font-family: var(--icon-font-family);
   content: var(--icon-back);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-skip-left::before {
   font-family: var(--icon-font-family);
   content: var(--icon-skip-left);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-file::before {
   font-family: var(--icon-font-family);
   content: var(--icon-file);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-copyright::before {
   font-family: var(--icon-font-family);
   content: var(--icon-copyright);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-telephone::before {
   font-family: var(--icon-font-family);
   content: var(--icon-telephone);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-trash-alt::before {
   font-family: var(--icon-font-family);
   content: var(--icon-trash-alt);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-mail::before {
   font-family: var(--icon-font-family);
   content: var(--icon-mail);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-clock::before {
   font-family: var(--icon-font-family);
   content: var(--icon-clock);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-clock-subtitle::before {
   font-family: var(--icon-font-family);
   content: var(--icon-clock);
   color: var(--text-subtitle);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-check::before {
   font-family: var(--icon-font-family);
   content: var(--icon-check);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-check-green::before {
   font-family: var(--icon-font-family);
   content: var(--icon-check);
   color: var(--icon-success-green);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-arrow-dropdown::before {
   font-family: var(--icon-font-family);
   content: var(--icon-arrow-dropdown);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-burger_menu::before {
   font-family: var(--icon-font-family);
   content: var(--icon-burger_menu);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-close::before {
   font-family: var(--icon-font-family);
   content: var(--icon-close);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-globe::before {
   font-family: var(--icon-font-family);
   content: var(--icon-globe);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-lock::before {
   font-family: var(--icon-font-family);
   content: var(--icon-lock);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-phone::before {
   font-family: var(--icon-font-family);
   content: var(--icon-phone);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-power-off::before {
   font-family: var(--icon-font-family);
   content: var(--icon-power-off);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-user::before {
   font-family: var(--icon-font-family);
   content: var(--icon-user);
   color: var(--base-primary);
-  font-size: var(--icon-size);
+  font-size: toRem(var(--icon-size));
 }
 
 .navbar-text {

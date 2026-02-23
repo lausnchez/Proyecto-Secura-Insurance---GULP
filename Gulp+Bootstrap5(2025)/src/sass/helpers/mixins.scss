@@ -1,4 +1,6 @@
-@use "colors";
+@use "colors" as *;
+@use "../helpers/variables" as *;
+
 /* Convert px to rem 
     - example of usage: @include toRem(font-size, 20px);
 */
@@ -12,7 +14,7 @@
         font-family: var(--icon-font-family);
         content: $name;
         color: $color;
-        font-size: var(--icon-size);
+        font-size: toRem(var(--icon-size));
     }
 }
 
@@ -21,7 +23,7 @@
     $size: var(--typo-size-body),
     $color: var(--text-body-default),
     $weight: normal,
-    $letter-spacing: 0%
+    $letter-spacing: $spacing-default
     )
     {
     font-family: $font-family;
@@ -30,3 +32,16 @@
     font-weight: $weight;
     letter-spacing: $letter-spacing;
 }
+
+@mixin declare-font($name, $path, $weight: normal) {
+  @font-face {
+    font-family: $name;
+    src: url('#{$path}.woff2') format('woff2');
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
+
+// Implementación
+// @include declare-font('Roboto', '../fonts/roboto-regular', 400);
+@include declare-font('Roboto', '../../src/assets/fonts/roboto', 400);

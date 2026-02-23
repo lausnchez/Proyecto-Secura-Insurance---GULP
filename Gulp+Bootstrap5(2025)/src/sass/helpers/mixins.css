@@ -18,10 +18,33 @@
   --text-subtitle: #405258;
   --base-greyscale-700: #405258;
   --text-body-default: #4A4A68;
-  --header-background-color: #EFF3F5;
+  --header-background-color: #FFFFFF;
 }
 
+/* COLORS */
+/* Primary */
+/* Secondary */
+/* Neutral */
+/* Generic */
+/* States */
+/* Labels */
+/* Special */
+/* Gradient */
+/* Background opacity */
+/* Shadow */
+/* FONTS */
+/* MEDIA QUERIES */
+/* Spacing */
+/* Header */
+/* Header NavBar */
+/* Nav-Dropdown */
 /* Convert px to rem 
     - example of usage: @include toRem(font-size, 20px);
 */
-/* Tira del mapa de iconos creado en icons-variables*//*# sourceMappingURL=mixins.css.map */
+/* Tira del mapa de iconos creado en icons-variables*/
+@font-face {
+  font-family: "Roboto";
+  src: url("../../src/assets/fonts/roboto.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}/*# sourceMappingURL=mixins.css.map */

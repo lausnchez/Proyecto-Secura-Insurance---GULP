@@ -1,6 +1,6 @@
 @use "../helpers/variables" as *;
 
-.nav-dropdown{
+.header-item-dropdown{
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -11,7 +11,7 @@
     gap: $nav-dropdown-gap;
     padding: $nav-dropdown-padding;
 
-    &__textContent{
+    .header-item-dropdown__textContent{
         white-space: nowrap;
         color: var(--text-subtitle);
     }

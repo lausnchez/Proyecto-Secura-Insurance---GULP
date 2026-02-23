@@ -11,12 +11,12 @@
     border: $header-border-width solid var(--header-background-color);
     background-color: var(--header-background-color);
     
-    &__logo-container{
+    .header__logo-container{
         width: toRem($header-logo-container-width);
         border:none;
     }
     
-    &__navBar{
+    .header__navBar{
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -25,13 +25,13 @@
         gap: $header-navBar-gap;
     }
 
-    &__navBarLinks{
+    .header__navBarLinks{
         display: flex;
         flex-direction: row;
         gap: $header-navBar-gap;
     }
 
-    &__submenus{
+    .header__submenus{
         display: flex;
         flex-direction: row;
         gap: $header-submenus-gap;
