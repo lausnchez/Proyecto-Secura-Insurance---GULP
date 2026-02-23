@@ -1,3 +1,5 @@
+include ../fragments/header-item-dropdown.pug
+
 //- logotipo, páginas de menu, desplegable de perfil, selector de idioma
 header.header
     a(href="#")
@@ -6,14 +8,7 @@ header.header
     nav.header__navBar 
         a(href="#") Inicio
         a(href="#") Próximas renovaciones
-    .header__submenus 
-        a(href="#")
-            span.icon-user
-            span Mi perfil
-            span.icon-arrow-dropdown
-            
-        a(href="#")
-            span.icon-globe
-            span Español 
-            span.icon-arrow-dropdown
+    .header__submenus
+        +header-item-dropdown("Mi perfil", "user")
+        +header-item-dropdown("Español", "globe")
         

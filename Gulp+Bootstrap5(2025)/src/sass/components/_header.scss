@@ -1,8 +1,32 @@
+@use "../helpers/colors";
+@use "../helpers/variables" as *;
+@use "../helpers/functions" as *;
 
 .header{
-    display: grid;
-    grid-template-columns: 1fr 5fr 3fr;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    padding: $header-padding-y $header-padding-x;
+    border: $header-border-width solid var(--header-background-color);
+    background-color: var(--header-background-color);
     
+    &__logo-container{
+        width: toRem($header-border-width);
+        border:none;
+    }
+    
+    &__navBar{
+        width: 100%;
+    }
+
+    // &__navBar a{
+
+    // }
+
+    &__submenus{
+        display: flex;
+        flex-direction: row;
+        gap: $header-submenus-gap;
+    }
 }

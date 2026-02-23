@@ -14,6 +14,8 @@
 /* FONTS */
 /* MEDIA QUERIES */
 /* Spacing */
+/* Header */
+/* Nav-Dropdown */
 :root {
   --icon-font-family: 'secura-insurance-icons';
   --icon-filter: "\e90e";
@@ -57,6 +59,7 @@
   --information-inverse-text: #F7F7FC;
   --icon-success-green: #45944D;
   --text-subtitle: #405258;
+  --header-background-color: #EFF3F5;
 }
 
 /* Convert px to rem 
@@ -624,6 +627,8 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -666,10 +671,41 @@ a:hover, a:focus-visible {
 
 /** LAYOUT **/
 /** FRAGMENTS **/
-/** COMPONENTS **/
-.header {
-  display: grid;
-  grid-template-columns: 1fr 5fr 3fr;
-  justify-content: center;
+/** CSS LIBS **/
+/** HELPERS **/
+.nav-dropdown {
+  display: flex;
+  flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: space-between;
   align-items: center;
+  min-width: 130px;
+  gap: 8px;
+  background-color: crimson;
+}
+
+/** COMPONENTS **/
+/** CSS LIBS **/
+/** HELPERS **/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 88px;
+  border: 1px solid var(--header-background-color);
+  background-color: var(--header-background-color);
+}
+.header__logo-container {
+  width: 0.0625rem;
+  border: none;
+}
+.header__navBar {
+  width: 100%;
+}
+.header__submenus {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
 }/*# sourceMappingURL=main.css.map */

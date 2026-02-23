@@ -1,0 +1,13 @@
+@use "../helpers/variables" as *;
+
+.nav-dropdown{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: $nav-dropdown-height;
+    justify-content: space-between;
+    align-items: center;
+    min-width: $nav-dropdown-min-width;
+    gap: $nav-dropdown-gap;
+    padding: $nav-dropdown-padding;
+}

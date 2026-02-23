@@ -1,0 +1,28 @@
+/* COLORS */
+/* Primary */
+/* Secondary */
+/* Neutral */
+/* Generic */
+/* States */
+/* Labels */
+/* Special */
+/* Gradient */
+/* Background opacity */
+/* Shadow */
+/* FONTS */
+/* MEDIA QUERIES */
+/* Spacing */
+/* Header */
+/* Nav-Dropdown */
+.nav-dropdown {
+  display: flex;
+  flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 130px;
+  gap: 8px;
+  padding: 8px;
+}/*# sourceMappingURL=header-item-dropdown.css.map */
