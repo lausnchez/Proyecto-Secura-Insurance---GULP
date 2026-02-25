@@ -1,5 +1,7 @@
 .profile-dropdown{
+    min-width: var(--profile-dropdown-min-width);
+
     .profile-dropdown-context{
-        padding: 24px;
+        padding: var(--profile-dropdown-context-padding);
     }
 }

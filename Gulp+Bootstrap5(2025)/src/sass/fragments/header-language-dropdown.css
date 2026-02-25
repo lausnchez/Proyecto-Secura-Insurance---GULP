@@ -1,1 +1,3 @@
-/*# sourceMappingURL=header-language-dropdown.css.map */
+.language-dropdown {
+  min-width: var(--language-dropdown-min-width);
+}/*# sourceMappingURL=header-language-dropdown.css.map */

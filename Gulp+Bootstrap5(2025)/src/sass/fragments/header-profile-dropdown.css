@@ -1,3 +1,6 @@
+.profile-dropdown {
+  min-width: var(--profile-dropdown-min-width);
+}
 .profile-dropdown .profile-dropdown-context {
-  padding: 24px;
+  padding: var(--profile-dropdown-context-padding);
 }/*# sourceMappingURL=header-profile-dropdown.css.map */

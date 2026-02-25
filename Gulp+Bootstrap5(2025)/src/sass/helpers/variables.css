@@ -14,4 +14,15 @@
 /* Spacing */
 /* Header */
 /* Header NavBar */
-/* Nav-Dropdown *//*# sourceMappingURL=variables.css.map */
+/* Nav-Dropdown */
+:root {
+  /* Nav-Dropdown */
+  --dropdown-top-position: 120%;
+  --dropdown-bottom-position: 0;
+  --dropdown-item-padding: 15px 24px;
+  --dropdown-separator-weight: 1px;
+  --dropdown-icon-content-gap: 14px;
+  --language-dropdown-min-width: 131px;
+  --profile-dropdown-min-width: 300px;
+  --profile-dropdown-context-padding: 24px;
+}/*# sourceMappingURL=variables.css.map */

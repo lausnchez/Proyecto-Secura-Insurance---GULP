@@ -77,6 +77,13 @@
   --text-body-default: #4A4A68;
   --header-background-color: #FFFFFF;
   --header-dropdown-icon-content-text: #374649;
+  --neutral-gray-100: #E6E7E8;
+  --dropdown-shadow-color: #37464933;
+  --dropdown-top-position: 120%;
+  --dropdown-bottom-position: 0;
+  --dropdown-item-padding: 15px 24px;
+  --dropdown-separator-weight: 1px;
+  --dropdown-icon-content-gap: 14px;
 }
 
 /** CSS LIBS **/
@@ -667,6 +674,14 @@ template {
   letter-spacing: 0%;
 }
 
+.base_body--active {
+  font-family: var(--default-font-family);
+  font-size: toRem(var(--typo-size-body));
+  color: var(--text-body-default);
+  font-weight: Bold;
+  letter-spacing: 0%;
+}
+
 .base_body_bold {
   font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-body));
@@ -856,18 +871,27 @@ a:hover, a:focus-visible {
 .header__submenu__dropdown {
   background-color: var(--header-background-color);
   list-style: none;
-  max-width: 375px;
-  position: absolute;
-  box-shadow: 0px 4px 5px rgba(55, 70, 73, 0.2);
+  box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
   border-radius: 5px;
-  top: 75px;
-  left: 550px;
-  display: grid;
-  grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+  overflow: hidden;
+  position: absolute;
+  top: var(--dropdown-top-position);
+  right: var(--dropdown-bottom-position);
+  display: flex;
+  flex-direction: column;
 }
 .header__submenu__dropdown > li {
-  padding: 10px 24px;
-  border-bottom: 1px solid black;
+  padding: var(--dropdown-item-padding);
+  border-bottom: var(--dropdown-separator-weight) solid var(--neutral-gray-100);
+}
+.header__submenu__dropdown > li:hover {
+  background-color: #EFF3F5;
+}
+.header__submenu__dropdown .dropdown-icon-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--dropdown-icon-content-gap);
 }
 .header__submenu__dropdown > li:last-child {
   border-bottom: none;
@@ -875,6 +899,10 @@ a:hover, a:focus-visible {
 
 .profile-dropdown .profile-dropdown-context {
   padding: 24px;
+}
+
+.language-dropdown {
+  min-width: 131px;
 }
 
 /** COMPONENTS **/
@@ -914,6 +942,4 @@ a:hover, a:focus-visible {
 }
 .header .header__submenus li {
   position: relative;
-}
-
-/** IMPORTS **//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

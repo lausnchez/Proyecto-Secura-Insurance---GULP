@@ -127,6 +127,11 @@
   $weight: Regular
 )}
 
+.base_body--active{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: Bold
+)}
+
 .base_body_bold{@include text-format(
   $size: var(--typo-size-body),
   $weight: Bold
