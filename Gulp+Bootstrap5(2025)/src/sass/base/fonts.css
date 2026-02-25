@@ -22,11 +22,6 @@
   --header-dropdown-icon-content-text: #374649;
   --neutral-gray-100: #E6E7E8;
   --dropdown-shadow-color: #37464933;
-  --dropdown-top-position: 120%;
-  --dropdown-bottom-position: 0;
-  --dropdown-item-padding: 15px 24px;
-  --dropdown-separator-weight: 1px;
-  --dropdown-icon-content-gap: 14px;
 }
 
 /* COLORS */
@@ -46,6 +41,18 @@
 /* Header */
 /* Header NavBar */
 /* Nav-Dropdown */
+:root {
+  /* Nav-Dropdown */
+  --dropdown-top-position: 120%;
+  --dropdown-bottom-position: 0;
+  --dropdown-item-padding: 15px 24px;
+  --dropdown-separator-weight: 1px;
+  --dropdown-icon-content-gap: 14px;
+  --language-dropdown-min-width: 131px;
+  --profile-dropdown-min-width: 300px;
+  --profile-dropdown-context-padding: 24px;
+}
+
 /* Convert px to rem 
     - example of usage: @include toRem(font-size, 20px);
 */

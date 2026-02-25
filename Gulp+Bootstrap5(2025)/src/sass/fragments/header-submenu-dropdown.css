@@ -54,6 +54,7 @@
 }
 
 .header__submenu__dropdown {
+  display: none;
   background-color: var(--header-background-color);
   list-style: none;
   box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
@@ -62,8 +63,6 @@
   position: absolute;
   top: var(--dropdown-top-position);
   right: var(--dropdown-bottom-position);
-  display: flex;
-  flex-direction: column;
 }
 .header__submenu__dropdown > li {
   padding: var(--dropdown-item-padding);
