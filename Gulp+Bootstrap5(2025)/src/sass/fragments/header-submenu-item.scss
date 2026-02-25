@@ -1,6 +1,6 @@
 @use "../helpers/variables" as *;
 
-.header-submenu-item{
+.header__submenu__item{
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -14,5 +14,9 @@
     .header-submenu-item__textContent{
         white-space: nowrap;
         color: var(--text-subtitle);
+    }
+
+    &:hover{
+        background-color: var(--base-primary-25);
     }
 }

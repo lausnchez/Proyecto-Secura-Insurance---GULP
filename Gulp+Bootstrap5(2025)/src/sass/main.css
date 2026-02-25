@@ -76,6 +76,7 @@
   --base-greyscale-700: #405258;
   --text-body-default: #4A4A68;
   --header-background-color: #FFFFFF;
+  --header-dropdown-icon-content-text: #374649;
 }
 
 /** CSS LIBS **/
@@ -830,7 +831,7 @@ a:hover, a:focus-visible {
 /** FRAGMENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
-.header-submenu-item {
+.header__submenu__item {
   display: flex;
   flex-direction: row;
   width: -moz-fit-content;
@@ -842,9 +843,38 @@ a:hover, a:focus-visible {
   gap: 8px;
   padding: 8px;
 }
-.header-submenu-item .header-submenu-item__textContent {
+.header__submenu__item .header-submenu-item__textContent {
   white-space: nowrap;
   color: var(--text-subtitle);
+}
+.header__submenu__item:hover {
+  background-color: var(--base-primary-25);
+}
+
+/** CSS LIBS **/
+/** HELPERS **/
+.header__submenu__dropdown {
+  background-color: var(--header-background-color);
+  list-style: none;
+  max-width: 375px;
+  position: absolute;
+  box-shadow: 0px 4px 5px rgba(55, 70, 73, 0.2);
+  border-radius: 5px;
+  top: 75px;
+  left: 550px;
+  display: grid;
+  grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+}
+.header__submenu__dropdown > li {
+  padding: 10px 24px;
+  border-bottom: 1px solid black;
+}
+.header__submenu__dropdown > li:last-child {
+  border-bottom: none;
+}
+
+.profile-dropdown .profile-dropdown-context {
+  padding: 24px;
 }
 
 /** COMPONENTS **/
@@ -859,10 +889,6 @@ a:hover, a:focus-visible {
   border: 1px solid var(--header-background-color);
   background-color: var(--header-background-color);
 }
-.header .header__logo-container {
-  width: 5.5rem;
-  border: none;
-}
 .header .header__navBar {
   width: 100%;
   display: flex;
@@ -870,6 +896,10 @@ a:hover, a:focus-visible {
   justify-content: left;
   align-items: center;
   gap: 32px;
+}
+.header .header__logo-container {
+  width: 5.5rem;
+  border: none;
 }
 .header .header__navBarLinks {
   display: flex;
@@ -882,8 +912,8 @@ a:hover, a:focus-visible {
   gap: 24px;
   list-style: none;
 }
-.header .header__submenus__item:hover {
-  background-color: var(--base-primary-25);
+.header .header__submenus li {
+  position: relative;
 }
 
 /** IMPORTS **//*# sourceMappingURL=main.css.map */

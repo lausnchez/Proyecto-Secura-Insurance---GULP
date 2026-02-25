@@ -10,22 +10,9 @@ header.header
             a.navbar-text(href="#") Inicio
             a.navbar-text(href="#") Próximas renovaciones
     ul.header__submenus
-        li.header__submenu__item.has-dropdown(data-dropdown="profile-dropdown")
+        li
             +header-submenu-item("Mi perfil", "user")
             include ../fragments/_header-profile-dropdown.pug
-        li.header__submenu__item.has-dropdown(data-dropdown="language-dropdown")
+        li
             +header-submenu-item("Español", "globe")
-            include ../fragments/_header-language-dropdown.pug
-        
-//- header.header
-//-     nav.header__navBar 
-//-         a(href="#")
-//-             .header__logo-container
-//-                 img(src="images/secura-insurance_logo.png", alt="Logotipo de Secura-Insurance")
-//-         .header__navBarLinks
-//-             a.navbar-text(href="#") Inicio
-//-             a.navbar-text(href="#") Próximas renovaciones
-//-     .header__submenus
-//-         +header-item-dropdown("Mi perfil", "user", "profile-dropdown")
-//-         +header-item-dropdown("Español", "globe", "language-dropdown")
-        
+            //- include ../fragments/_header-language-dropdown.pug

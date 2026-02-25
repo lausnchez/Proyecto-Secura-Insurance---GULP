@@ -11,11 +11,6 @@
     border: $header-border-width solid var(--header-background-color);
     background-color: var(--header-background-color);
     
-    .header__logo-container{
-        width: toRem($header-logo-container-width);
-        border:none;
-    }
-    
     .header__navBar{
         width: 100%;
         display: flex;
@@ -23,6 +18,11 @@
         justify-content: left;
         align-items: center;
         gap: $header-navBar-gap;
+    }
+
+    .header__logo-container{
+        width: toRem($header-logo-container-width);
+        border:none;
     }
 
     .header__navBarLinks{
@@ -38,9 +38,7 @@
         list-style: none;
     }
 
-    .header__submenus__item{
-        &:hover{
-            background-color: var(--base-primary-25);
-        }
+    .header__submenus li{
+        position: relative;
     }
 }

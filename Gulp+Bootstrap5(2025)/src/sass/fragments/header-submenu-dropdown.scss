@@ -1,0 +1,26 @@
+@use "../helpers/variables" as *;
+@use "../helpers/colors" as *;
+
+.header__submenu__dropdown{
+    background-color: var(--header-background-color);
+    list-style: none;
+    width: 375px;   
+    box-shadow: 0px 4px 5px #37464933;
+    border-radius: 5px;
+
+    position: absolute; // Para colocarlo respecto al padre con position relative
+    top: 120%;
+    right: 0;
+
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+
+    >li{
+        padding: 10px 24px;
+        border-bottom: 1px solid black;
+    }
+
+    >li:last-child{
+        border-bottom: none;
+    }
+}
