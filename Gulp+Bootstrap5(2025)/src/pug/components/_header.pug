@@ -1,4 +1,4 @@
-include ../fragments/header-item-dropdown.pug
+include ../fragments/_header-submenu-item.pug
 
 //- logotipo, páginas de menu, desplegable de perfil, selector de idioma
 header.header
@@ -9,7 +9,23 @@ header.header
         .header__navBarLinks
             a.navbar-text(href="#") Inicio
             a.navbar-text(href="#") Próximas renovaciones
-    .header__submenus
-        +header-item-dropdown("Mi perfil", "user")
-        +header-item-dropdown("Español", "globe")
+    ul.header__submenus
+        li.header__submenu__item.has-dropdown(data-dropdown="profile-dropdown")
+            +header-submenu-item("Mi perfil", "user")
+            include ../fragments/_header-profile-dropdown.pug
+        li.header__submenu__item.has-dropdown(data-dropdown="language-dropdown")
+            +header-submenu-item("Español", "globe")
+            include ../fragments/_header-language-dropdown.pug
+        
+//- header.header
+//-     nav.header__navBar 
+//-         a(href="#")
+//-             .header__logo-container
+//-                 img(src="images/secura-insurance_logo.png", alt="Logotipo de Secura-Insurance")
+//-         .header__navBarLinks
+//-             a.navbar-text(href="#") Inicio
+//-             a.navbar-text(href="#") Próximas renovaciones
+//-     .header__submenus
+//-         +header-item-dropdown("Mi perfil", "user", "profile-dropdown")
+//-         +header-item-dropdown("Español", "globe", "language-dropdown")
         

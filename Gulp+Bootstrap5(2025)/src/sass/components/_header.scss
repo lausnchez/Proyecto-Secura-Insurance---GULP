@@ -35,5 +35,12 @@
         display: flex;
         flex-direction: row;
         gap: $header-submenus-gap;
+        list-style: none;
+    }
+
+    .header__submenus__item{
+        &:hover{
+            background-color: var(--base-primary-25);
+        }
     }
 }

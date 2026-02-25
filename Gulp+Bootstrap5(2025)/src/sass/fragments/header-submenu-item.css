@@ -15,7 +15,7 @@
 /* Header */
 /* Header NavBar */
 /* Nav-Dropdown */
-.header-item-dropdown {
+.header-submenu-item {
   display: flex;
   flex-direction: row;
   width: -moz-fit-content;
@@ -27,7 +27,7 @@
   gap: 8px;
   padding: 8px;
 }
-.header-item-dropdown .header-item-dropdown__textContent {
+.header-submenu-item .header-submenu-item__textContent {
   white-space: nowrap;
   color: var(--text-subtitle);
-}/*# sourceMappingURL=header-item-dropdown.css.map */
+}/*# sourceMappingURL=header-submenu-item.css.map */

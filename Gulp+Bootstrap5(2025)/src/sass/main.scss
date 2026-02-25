@@ -19,7 +19,10 @@
 @use "layout/navigation";
 
 /** FRAGMENTS **/
-@use "fragments/header-item-dropdown";
+@use "fragments/header-submenu-item";
+@use "fragments/header-submenu-item-dropdown";
+@use "fragments/header-profile-dropdown";
+@use "fragments/header-language-dropdown";
 
 /** COMPONENTS **/
 @use "components/header";

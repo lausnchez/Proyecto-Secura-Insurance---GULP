@@ -12,8 +12,40 @@
           <div class="header__logo-container"><img src="images/secura-insurance_logo.png" alt="Logotipo de Secura-Insurance"></div></a>
         <div class="header__navBarLinks"><a class="navbar-text" href="#">Inicio</a><a class="navbar-text" href="#">Próximas renovaciones</a></div>
       </nav>
-      <div class="header__submenus"><a class="header-item-dropdown" href="#"><span class="icon-user"></span><span class="header-item-dropdown__textContent">Mi perfil</span><span class="icon-arrow-dropdown"></span></a><a class="header-item-dropdown" href="#"><span class="icon-globe"></span><span class="header-item-dropdown__textContent">Español</span><span class="icon-arrow-dropdown"></span></a>
-      </div>
+      <ul class="header__submenus">
+        <li class="header__submenu__item has-dropdown" data-dropdown="profile-dropdown"><a class="header-submenu-item" href="#"><span class="icon-user"></span><span class="header-submenu-item__textContent">Mi perfil</span><span class="icon-arrow-dropdown"></span></a>
+          <ul class="header-submenu-item-dropdown profile-dropdown">
+            <li><span class="base_body_bold">Mi perfil</span>
+              <p>
+                En este espacio puedes acceder, modificar, gestionar y 
+                consultar todo lo relacionado con tus servicios de 
+                energía. Fácil y rápido.
+              </p>
+            </li>
+            <li> 
+              <div class="dropdown-icon-content"><span class="icon-user"> </span><span>Mis datos personales</span></div>
+            </li>
+            <li> 
+              <div class="dropdown-icon-content"><span class="icon-lock"></span><span>Mi contraseña</span></div>
+            </li>
+            <li> 
+              <div class="dropdown-icon-content"><span class="icon-lock"></span><span>Contacto</span></div>
+            </li>
+            <li> 
+              <div class="dropdown-icon-content"><span class="icon-close"></span><span>Cerrar sesión</span></div>
+            </li>
+          </ul>
+        </li>
+        <li class="header__submenu__item has-dropdown" data-dropdown="language-dropdown"><a class="header-submenu-item" href="#"><span class="icon-globe"></span><span class="header-submenu-item__textContent">Español</span><span class="icon-arrow-dropdown"></span></a>
+          <ul class="header-submenu-item-dropdown language-dropdown">
+            <li><span>Español</span></li>
+            <li> <span>English</span></li>
+            <li> <span>Catalan</span></li>
+            <li> <span>Gallego</span></li>
+            <li> <span>Euskera</span></li>
+          </ul>
+        </li>
+      </ul>
     </header>
     <main class="main-content" id="main-content">
     </main>

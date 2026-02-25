@@ -1,0 +1,5 @@
+mixin header-submenu-item(textContent, iconContent)
+    a(href="#").header-submenu-item
+        span(class=`icon-${iconContent}`)
+        span.header-submenu-item__textContent= textContent
+        span.icon-arrow-dropdown
