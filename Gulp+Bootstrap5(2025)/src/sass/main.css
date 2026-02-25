@@ -1,7 +1,5 @@
 /** CSS LIBS **/
 /** HELPERS **/
-/** IMPORTS **/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 /* COLORS */
 /* Primary */
 /* Secondary */
@@ -77,9 +75,11 @@
   --text-subtitle: #405258;
   --base-greyscale-700: #405258;
   --text-body-default: #4A4A68;
-  --header-background-color: #EFF3F5;
+  --header-background-color: #FFFFFF;
 }
 
+/** CSS LIBS **/
+/** HELPERS **/
 /* Convert px to rem 
     - example of usage: @include toRem(font-size, 20px);
 */
@@ -578,6 +578,38 @@ template {
   font-size: toRem(var(--icon-size));
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.default-font {
+  font-family: var(--default-font-family);
+}
+
 .navbar-text {
   font-family: var(--default-font-family);
   font-size: toRem(var(--typo-size-body));
@@ -754,6 +786,7 @@ html {
 body {
   min-height: 100vh;
   font-family: var(--default-font-family);
+  background-color: var(--base-primary);
 }
 body.not-scroll {
   height: 100%;
@@ -797,7 +830,7 @@ a:hover, a:focus-visible {
 /** FRAGMENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
-.nav-dropdown {
+.header-item-dropdown {
   display: flex;
   flex-direction: row;
   width: -moz-fit-content;
@@ -809,7 +842,7 @@ a:hover, a:focus-visible {
   gap: 8px;
   padding: 8px;
 }
-.nav-dropdown .nav-dropdown__textContent {
+.header-item-dropdown .header-item-dropdown__textContent {
   white-space: nowrap;
   color: var(--text-subtitle);
 }
@@ -847,4 +880,6 @@ a:hover, a:focus-visible {
   display: flex;
   flex-direction: row;
   gap: 24px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/** IMPORTS **//*# sourceMappingURL=main.css.map */

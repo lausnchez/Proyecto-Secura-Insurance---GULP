@@ -41,10 +41,4 @@
 /* Convert px to rem 
     - example of usage: @include toRem(font-size, 20px);
 */
-/* Tira del mapa de iconos creado en icons-variables*/
-@font-face {
-  font-family: "Roboto";
-  src: url("../../src/assets/fonts/roboto.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}/*# sourceMappingURL=mixins.css.map */
+/* Tira del mapa de iconos creado en icons-variables*//*# sourceMappingURL=mixins.css.map */

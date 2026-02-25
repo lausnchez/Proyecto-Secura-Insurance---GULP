@@ -33,15 +33,3 @@
     letter-spacing: $letter-spacing;
 }
 
-@mixin declare-font($name, $path, $weight: normal) {
-  @font-face {
-    font-family: $name;
-    src: url('#{$path}.woff2') format('woff2');
-    font-weight: $weight;
-    font-display: swap;
-  }
-}
-
-// Implementación
-// @include declare-font('Roboto', '../fonts/roboto-regular', 400);
-@include declare-font('Roboto', '../../src/assets/fonts/roboto', 400);
