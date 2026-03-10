@@ -1,1 +1,1 @@
-{"version":3,"sources":["header-profile-dropdown.scss","header-profile-dropdown.css"],"names":[],"mappings":"AAAA;EACI,4CAAA;ACCJ;ADCI;EACI,gDAAA;ACCR","file":"header-profile-dropdown.css"}
+{"version":3,"sources":["header-profile-dropdown.scss","header-profile-dropdown.css"],"names":[],"mappings":"AAAA;EACI,4CAAA;EACA,4BAAA;ACCJ;ADCI;EACI,kCAAA;ACCR;ADEI;EACI,gDAAA;ACAR;ADGI;EACI,8BAAA;ACDR","file":"header-profile-dropdown.css"}

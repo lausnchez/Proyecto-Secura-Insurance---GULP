@@ -1,4 +1,5 @@
 @use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
 
 @font-face {
   font-family: 'secura-insurance-icons';
@@ -96,7 +97,11 @@
 .navbar-text{@include text-format(
   $color: var(--base-greyscale-700),
   $weight: Bold
-)}
+);
+  @media (max-width: $mobilexlMax) {
+      display: none;
+  }
+}
 
 .item-dropdown-text{@include text-format(
   $color: var(--text-subtitle)

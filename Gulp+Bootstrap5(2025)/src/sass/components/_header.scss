@@ -3,13 +3,19 @@
 @use "../helpers/functions" as *;
 
 .header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     padding: $header-padding-y $header-padding-x;
     border: $header-border-width solid var(--header-background-color);
     background-color: var(--header-background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    .header__contentPrincipal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
     
     .header__navBar{
         width: 100%;
@@ -25,17 +31,16 @@
         border:none;
     }
 
-    .header__navBarLinks{
-        display: flex;
-        flex-direction: row;
-        gap: $header-navBar-gap;
-    }
-
-    .header__submenus{
+    .header__desktop-submenu{
         display: flex;
         flex-direction: row;
         gap: $header-submenus-gap;
         list-style: none;
+        align-items: center;
+    }
+
+    .header__mobile-submenu{
+        display: none; 
     }
 
     .header__submenus li{
@@ -45,5 +50,40 @@
     .header__submenus li:hover .header__submenu__dropdown{
         display: flex;
         flex-direction: column;
+    }
+
+    // Contiene los menús desplegables del mobile
+    .mobile-dropdown-wrapper{
+        display: none;
+    }
+
+    // MEDIA QUERIES
+    // ----------------------------------------------------------
+
+    @media (max-width: $mobilexlMax) {
+        // Cambiar entre menús de desktop y mobile
+        .header__mobile-submenu{
+            display: flex;
+            flex-direction: row;
+            gap: $header-submenus-gap;
+            list-style: none;
+            align-items: center;
+        }
+
+        .header__desktop-submenu{
+            display: none;
+        }
+
+        .mobile-dropdown-wrapper{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: $header-navBar-gap;
+            
+            .navbar-text{
+                padding: 10px 0px;
+            }
+        }
+
     }
 }

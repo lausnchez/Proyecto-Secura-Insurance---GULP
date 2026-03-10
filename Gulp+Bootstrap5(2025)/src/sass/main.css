@@ -19,7 +19,7 @@
 /* Nav-Dropdown */
 :root {
   /* Nav-Dropdown */
-  --dropdown-top-position: 120%;
+  --dropdown-top-position: 40px;
   --dropdown-bottom-position: 0;
   --dropdown-item-padding: 15px 24px;
   --dropdown-separator-weight: 1px;
@@ -86,11 +86,13 @@
   --icon-success-green: #45944D;
   --text-subtitle: #405258;
   --base-greyscale-700: #405258;
+  --base-greyscale-600: #596f76;
   --text-body-default: #4A4A68;
   --header-background-color: #FFFFFF;
   --header-dropdown-icon-content-text: #374649;
   --neutral-gray-100: #E6E7E8;
   --dropdown-shadow-color: #37464933;
+  --dropdown-hover-color: #EFF3F5;
 }
 
 /** CSS LIBS **/
@@ -413,6 +415,8 @@ template {
   display: none;
 }
 
+/** CSS LIBS **/
+/** HELPERS **/
 @font-face {
   font-family: "secura-insurance-icons";
   src: url("../fonts/icons/secura-insurance-icons.eot?ljd5n4");
@@ -631,6 +635,11 @@ template {
   color: var(--base-greyscale-700);
   font-weight: Bold;
   letter-spacing: 0%;
+}
+@media (max-width: 767px) {
+  .navbar-text {
+    display: none;
+  }
 }
 
 .item-dropdown-text {
@@ -891,7 +900,7 @@ a:hover, a:focus-visible {
   border-bottom: var(--dropdown-separator-weight) solid var(--neutral-gray-100);
 }
 .header__submenu__dropdown > li:hover {
-  background-color: #EFF3F5;
+  background-color: var(--dropdown-hover-color);
 }
 .header__submenu__dropdown .dropdown-icon-content {
   display: flex;
@@ -905,26 +914,59 @@ a:hover, a:focus-visible {
 
 .profile-dropdown {
   min-width: var(--profile-dropdown-min-width);
+  transition: 0.3s all ease-in;
+}
+.profile-dropdown li {
+  border-left: 3px solid transparent;
 }
 .profile-dropdown .profile-dropdown-context {
   padding: var(--profile-dropdown-context-padding);
+}
+.profile-dropdown li:hover {
+  border-left: 3px solid #4B98D9;
 }
 
 .language-dropdown {
   min-width: var(--language-dropdown-min-width);
 }
 
+/** CSS LIBS **/
+/** HELPERS **/
+.header__navBarLinks .header__mobile-submenu-navbar {
+  display: none;
+}
+.header__navBarLinks .header__desktop-submenu-navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+  text-align: center;
+}
+.header__navBarLinks a:hover {
+  color: var(--base-greyscale-600);
+}
+@media (max-width: 767px) {
+  .header__navBarLinks {
+    display: none;
+  }
+}
+
 /** COMPONENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
 .header {
+  padding: 8px 16px;
+  border: 1px solid var(--header-background-color);
+  background-color: var(--header-background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.header .header__contentPrincipal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 88px;
-  border: 1px solid var(--header-background-color);
-  background-color: var(--header-background-color);
 }
 .header .header__navBar {
   width: 100%;
@@ -938,16 +980,15 @@ a:hover, a:focus-visible {
   width: 5.5rem;
   border: none;
 }
-.header .header__navBarLinks {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-}
-.header .header__submenus {
+.header .header__desktop-submenu {
   display: flex;
   flex-direction: row;
   gap: 24px;
   list-style: none;
+  align-items: center;
+}
+.header .header__mobile-submenu {
+  display: none;
 }
 .header .header__submenus li {
   position: relative;
@@ -955,4 +996,28 @@ a:hover, a:focus-visible {
 .header .header__submenus li:hover .header__submenu__dropdown {
   display: flex;
   flex-direction: column;
+}
+.header .mobile-dropdown-wrapper {
+  display: none;
+}
+@media (max-width: 767px) {
+  .header .header__mobile-submenu {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    list-style: none;
+    align-items: center;
+  }
+  .header .header__desktop-submenu {
+    display: none;
+  }
+  .header .mobile-dropdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+  }
+  .header .mobile-dropdown-wrapper .navbar-text {
+    padding: 10px 0px;
+  }
 }/*# sourceMappingURL=main.css.map */

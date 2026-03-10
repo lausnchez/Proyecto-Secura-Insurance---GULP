@@ -27,22 +27,21 @@
   --profile-dropdown-context-padding: 24px;
 }
 
-.header__submenu__item {
+.header__navBarLinks .header__mobile-submenu-navbar {
+  display: none;
+}
+.header__navBarLinks .header__desktop-submenu-navbar {
   display: flex;
   flex-direction: row;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 40px;
-  justify-content: space-between;
+  gap: 32px;
   align-items: center;
-  min-width: 130px;
-  gap: 8px;
-  padding: 8px;
+  text-align: center;
 }
-.header__submenu__item .header-submenu-item__textContent {
-  white-space: nowrap;
-  color: var(--text-subtitle);
+.header__navBarLinks a:hover {
+  color: var(--base-greyscale-600);
 }
-.header__submenu__item:hover {
-  background-color: var(--base-primary-25);
-}/*# sourceMappingURL=header-submenu-item.css.map */
+@media (max-width: 767px) {
+  .header__navBarLinks {
+    display: none;
+  }
+}/*# sourceMappingURL=header-navbar-links.css.map */

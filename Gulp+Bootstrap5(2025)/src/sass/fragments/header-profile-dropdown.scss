@@ -1,7 +1,16 @@
 .profile-dropdown{
     min-width: var(--profile-dropdown-min-width);
+    transition: 0.3s all ease-in;
+
+    li{
+        border-left: 3px solid transparent;
+    }
 
     .profile-dropdown-context{
         padding: var(--profile-dropdown-context-padding);
+    }
+
+    li:hover{
+        border-left: 3px solid #4B98D9;
     }
 }
