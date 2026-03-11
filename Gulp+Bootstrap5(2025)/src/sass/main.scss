@@ -19,11 +19,11 @@
 @use "layout/navigation";
 
 /** FRAGMENTS **/
-@use "fragments/header-submenu-item";
-@use "fragments/header-submenu-dropdown";
-@use "fragments/header-profile-dropdown";
-@use "fragments/header-language-dropdown";
-@use "fragments/header-navbar-links";
+@use "fragments/header/header-submenu-item";
+@use "fragments/header/header-submenu-dropdown";
+@use "fragments/header/header-profile-dropdown";
+@use "fragments/header/header-language-dropdown";
+@use "fragments/header/header-navbar-links";
 
 /** COMPONENTS **/
 @use "components/header";
