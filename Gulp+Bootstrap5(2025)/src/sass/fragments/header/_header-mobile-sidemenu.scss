@@ -1,0 +1,16 @@
+@use "../../helpers/functions.scss" as *;
+@use "../../helpers/mixins.scss" as *;
+@use "../../helpers/variables.scss" as *;
+
+.header__submenus__mobile{
+    display: none;
+    .header__submenus__container{
+        display: flex;
+        flex-direction: column;
+        gap: toRem(20px);
+    }
+
+    @include mobile {
+        display: block;
+    }
+}

@@ -19,11 +19,13 @@
 @use "layout/navigation";
 
 /** FRAGMENTS **/
-@use "fragments/header/header-submenu-item";
-@use "fragments/header/header-submenu-dropdown";
-@use "fragments/header/header-profile-dropdown";
-@use "fragments/header/header-language-dropdown";
-@use "fragments/header/header-navbar-links";
+@use "fragments/header/_header-submenu-item";
+@use "fragments/header/_header-submenu-dropdown";
+@use "fragments/header/_header-profile-dropdown";
+@use "fragments/header/_header-language-dropdown";
+@use "fragments/header/_header-navbar-links";
+@use "fragments/header/_header-mobile-sidemenu";
+@use "fragments/header/_header-desktop-submenu";
 
 /** COMPONENTS **/
 @use "components/header";

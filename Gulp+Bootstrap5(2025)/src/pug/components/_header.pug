@@ -11,11 +11,5 @@ header.header
                     img(src="images/secura-insurance_logo.png", alt="Logotipo de Secura-Insurance")
             .header__navBarLinks
                 +header-navbar-links("header__desktop-submenu-navbar")
-        ul.header__submenus
-            .header__submenus__container
-                li
-                    +header-submenu-item("Mi perfil", "user")
-                    include ../fragments/header/_header-profile-dropdown.pug
-                li
-                    +header-submenu-item("Español", "globe")
-                    include ../fragments/header/_header-language-dropdown.pug
+        include ../fragments/header/_header-desktop-sidemenu.pug
+        include ../fragments/header/_header-mobile-sidemenu.pug

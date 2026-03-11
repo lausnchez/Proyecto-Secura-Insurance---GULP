@@ -59,6 +59,7 @@
     - example of usage: @include toRem(font-size, 20px);
 */
 /* Tira del mapa de iconos creado en icons-variables*/
+/* Media query mixins for each screen size */
 @font-face {
   font-family: "secura-insurance-icons";
   src: url("../fonts/icons/secura-insurance-icons.eot?ljd5n4");

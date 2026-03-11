@@ -101,6 +101,7 @@
     - example of usage: @include toRem(font-size, 20px);
 */
 /* Tira del mapa de iconos creado en icons-variables*/
+/* Media query mixins for each screen size */
 /** BASE **/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -936,7 +937,7 @@ ul {
 
 /** CSS LIBS **/
 /** HELPERS **/
-.header__navBarLinks .header__desktop-submenu-navbar {
+.header__navBarLinks {
   display: flex;
   flex-direction: row;
   gap: 32px;
@@ -950,6 +951,36 @@ ul {
   .header__navBarLinks {
     display: none;
   }
+}
+
+/** CSS LIBS **/
+/** HELPERS **/
+.header__submenus__mobile {
+  display: none;
+}
+.header__submenus__mobile .header__submenus__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media (min-width: 390px) and (max-width: 479px) {
+  .header__submenus__mobile {
+    display: block;
+  }
+}
+
+.header__submenus__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__submenus li {
+  position: relative;
+}
+
+.header__submenus li:hover .header__submenu__dropdown {
+  display: flex;
+  flex-direction: column;
 }
 
 /** COMPONENTS **/
@@ -988,24 +1019,7 @@ ul {
   list-style: none;
   align-items: center;
 }
-.header .header__mobile-submenu {
-  display: none;
-}
-.header .header__submenus__container {
-  display: flex;
-  flex-direction: row;
-}
-.header .header__submenus li {
-  position: relative;
-}
-.header .header__submenus li:hover .header__submenu__dropdown {
-  display: flex;
-  flex-direction: column;
-}
-.header .mobile-dropdown-wrapper {
-  display: none;
-}
-@media (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 479px) {
   .header .header__mobile-submenu {
     display: flex;
     flex-direction: row;

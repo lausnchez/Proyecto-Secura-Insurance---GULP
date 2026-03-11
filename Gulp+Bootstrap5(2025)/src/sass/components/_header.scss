@@ -1,6 +1,7 @@
 @use "../helpers/colors";
 @use "../helpers/variables" as *;
 @use "../helpers/functions" as *;
+@use "../helpers/mixins" as *;
 
 .header{
     padding: $header-padding-y $header-padding-x;
@@ -39,33 +40,10 @@
         align-items: center;
     }
 
-    .header__mobile-submenu{
-        display: none; 
-    }
-
-    .header__submenus__container{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .header__submenus li{
-        position: relative;
-    }
-
-    .header__submenus li:hover .header__submenu__dropdown{
-        display: flex;
-        flex-direction: column;
-    }
-
-    // Contiene los menús desplegables del mobile
-    .mobile-dropdown-wrapper{
-        display: none;
-    }
-
     // MEDIA QUERIES
     // ----------------------------------------------------------
 
-    @media (max-width: $mobilexlMax) {
+    @include mobile {
         // Cambiar entre menús de desktop y mobile
         .header__mobile-submenu{
             display: flex;
