@@ -858,6 +858,10 @@ a:hover, a:focus-visible {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 /** LAYOUT **/
 /** FRAGMENTS **/
 /** CSS LIBS **/
@@ -932,9 +936,6 @@ a:hover, a:focus-visible {
 
 /** CSS LIBS **/
 /** HELPERS **/
-.header__navBarLinks .header__mobile-submenu-navbar {
-  display: none;
-}
 .header__navBarLinks .header__desktop-submenu-navbar {
   display: flex;
   flex-direction: row;
@@ -960,7 +961,7 @@ a:hover, a:focus-visible {
   background-color: var(--header-background-color);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 }
 .header .header__contentPrincipal {
   display: flex;
@@ -990,6 +991,10 @@ a:hover, a:focus-visible {
 .header .header__mobile-submenu {
   display: none;
 }
+.header .header__submenus__container {
+  display: flex;
+  flex-direction: row;
+}
 .header .header__submenus li {
   position: relative;
 }
@@ -1018,6 +1023,6 @@ a:hover, a:focus-visible {
     gap: 32px;
   }
   .header .mobile-dropdown-wrapper .navbar-text {
-    padding: 10px 0px;
+    padding: 0.625rem 0px;
   }
 }/*# sourceMappingURL=main.css.map */

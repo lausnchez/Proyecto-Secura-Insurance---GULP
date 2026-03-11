@@ -27,10 +27,7 @@
   --profile-dropdown-context-padding: 24px;
 }
 
-.header__navBarLinks .header__mobile-submenu-navbar {
-  display: none;
-}
-.header__navBarLinks .header__desktop-submenu-navbar {
+.header__navBarLinks {
   display: flex;
   flex-direction: row;
   gap: 32px;

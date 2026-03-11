@@ -132,4 +132,8 @@ a {
 }
 a:hover, a:focus-visible {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }/*# sourceMappingURL=base.css.map */

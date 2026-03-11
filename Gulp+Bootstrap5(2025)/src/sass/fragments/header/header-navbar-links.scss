@@ -1,16 +1,11 @@
 @use "../../helpers/variables" as *;
 
 .header__navBarLinks{
-    .header__mobile-submenu-navbar{
-        display: none;
-    }
-    .header__desktop-submenu-navbar{
-        display: flex;
-        flex-direction: row;
-        gap: $header-navBar-gap;
-        align-items: center;
-        text-align: center;
-    }
+    display: flex;
+    flex-direction: row;
+    gap: $header-navBar-gap;
+    align-items: center;
+    text-align: center;
 
     a:hover{
         color: var(--base-greyscale-600);

@@ -12,19 +12,10 @@ header.header
             .header__navBarLinks
                 +header-navbar-links("header__desktop-submenu-navbar")
         ul.header__submenus
-            .header__desktop-submenu
+            .header__submenus__container
                 li
                     +header-submenu-item("Mi perfil", "user")
-                    include ../fragments/_header-profile-dropdown.pug
+                    include ../fragments/header/_header-profile-dropdown.pug
                 li
                     +header-submenu-item("Español", "globe")
-                    include ../fragments/_header-language-dropdown.pug
-            .header__mobile-submenu
-                li.header__mobile-submenu-item
-                    a(href="#")
-                        span.icon-user
-                li.header__mobile-submenu-item
-                    a(href="#")
-                        span.icon-burger_menu
-    .mobile-dropdown-wrapper
-        +header-navbar-links("header__mobile-submenu-navbar")
+                    include ../fragments/header/_header-language-dropdown.pug

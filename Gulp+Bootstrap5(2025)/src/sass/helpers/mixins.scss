@@ -33,3 +33,35 @@
     letter-spacing: $letter-spacing;
 }
 
+/* Media query mixins for each screen size */
+@mixin mobile {
+    @media (min-width: $mobile) and (max-width: $mobileMax) {
+        @content;
+    }
+}
+
+@mixin mobilemd {
+    @media (min-width: $mobilemd) and (max-width: $mobileemdMax) {
+        @content;
+    }
+}
+
+@mixin mobilexl {
+    @media (min-width: $mobilexl) and (max-width: $mobilexlMax) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) and (max-width: $tabletMax) {
+        @content;
+    }
+}
+
+@mixin tabletmd {
+    @media (min-width: $tabletmd) and (max-width: $tabletmdMax) {
+        @content;
+    }
+}
+
+

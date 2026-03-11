@@ -8,7 +8,7 @@
     background-color: var(--header-background-color);
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: toRem(24px);
     
     .header__contentPrincipal{
         display: flex;
@@ -41,6 +41,11 @@
 
     .header__mobile-submenu{
         display: none; 
+    }
+
+    .header__submenus__container{
+        display: flex;
+        flex-direction: row;
     }
 
     .header__submenus li{
@@ -81,7 +86,7 @@
             gap: $header-navBar-gap;
             
             .navbar-text{
-                padding: 10px 0px;
+                padding: toRem(10px) 0px;
             }
         }
 
