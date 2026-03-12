@@ -35,7 +35,7 @@
 
 /* Media query mixins for each screen size */
 @mixin mobile {
-    @media (min-width: $mobile) and (max-width: $mobileMax) {
+    @media (max-width: $mobileMax) {
         @content;
     }
 }

@@ -4,12 +4,18 @@
 
 .header__submenus__mobile{
     display: none;
+
     .header__submenus__container{
         display: flex;
-        flex-direction: column;
-        gap: toRem(20px);
+        flex-direction: row;
+        gap: toRem(24px);
     }
 
+    .mobile_submenu__button{
+        background-color: transparent;
+        border: none;
+    }
+    
     @include mobile {
         display: block;
     }
