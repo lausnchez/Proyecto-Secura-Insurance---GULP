@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     gap: toRem(24px);
+    height: auto;
     
     .header__contentPrincipal{
         display: flex;
@@ -40,33 +41,33 @@
         align-items: center;
     }
 
+    // Grid Areas para el mobile
+    //-----------------------------------------------------------
+    .header__navBar{
+        grid-area: navBar;
+    }
+
+    .header__submenus__mobile,
+    .header__submenus{
+        grid-area: sidemenu;
+    }
+
+    .header__mobile-burger-submenu,
+    .header__mobile-profile-submenu{
+        grid-area: submenu;
+    }
+
     // MEDIA QUERIES
     // ----------------------------------------------------------
 
     @include mobile {
-        // Cambiar entre menús de desktop y mobile
-        .header__mobile-submenu{
-            display: flex;
-            flex-direction: row;
-            gap: $header-submenus-gap;
-            list-style: none;
-            align-items: center;
+        .header__contentPrincipal{
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            grid-template-areas: 
+                "navBar sidemenu" "submenu submenu";
         }
 
-        .header__desktop-submenu{
-            display: none;
-        }
-
-        .mobile-dropdown-wrapper{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            gap: $header-navBar-gap;
-            
-            .navbar-text{
-                padding: toRem(10px) 0px;
-            }
-        }
 
     }
 }

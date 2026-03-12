@@ -917,23 +917,18 @@ ul {
   border-bottom: none;
 }
 
-.profile-dropdown {
+.profile-dropdown, .header__mobile-profile-submenu {
   min-width: var(--profile-dropdown-min-width);
   transition: 0.3s all ease-in;
 }
-.profile-dropdown .profile-dropdown-context {
+.profile-dropdown .profile-dropdown-context, .header__mobile-profile-submenu .profile-dropdown-context {
   padding: var(--profile-dropdown-context-padding);
 }
-.profile-dropdown li {
+.profile-dropdown li, .header__mobile-profile-submenu li {
   border-left: 3px solid transparent;
 }
-.profile-dropdown li:hover {
+.profile-dropdown li:hover, .header__mobile-profile-submenu li:hover {
   border-left: 3px solid #4B98D9;
-}
-@media (max-width: 479px) {
-  .profile-dropdown {
-    background-color: crimson;
-  }
 }
 
 .language-dropdown {
@@ -1005,16 +1000,26 @@ ul {
   display: none;
 }
 
-.header_mobile-profile-submenu.active {
+.header__mobile-profile-submenu.active {
   display: block;
 }
 
+/** CSS LIBS **/
+/** HELPERS **/
 .header__mobile-burger-submenu {
   display: none;
 }
 
 .header__mobile-burger-submenu.active {
   display: block;
+}
+.header__mobile-burger-submenu.active .navbar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 /** COMPONENTS **/
@@ -1027,6 +1032,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  height: auto;
 }
 .header .header__contentPrincipal {
   display: flex;
@@ -1053,24 +1059,21 @@ ul {
   list-style: none;
   align-items: center;
 }
+.header .header__navBar {
+  grid-area: navBar;
+}
+.header .header__submenus__mobile,
+.header .header__submenus {
+  grid-area: sidemenu;
+}
+.header .header__mobile-burger-submenu,
+.header .header__mobile-profile-submenu {
+  grid-area: submenu;
+}
 @media (max-width: 479px) {
-  .header .header__mobile-submenu {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    list-style: none;
-    align-items: center;
-  }
-  .header .header__desktop-submenu {
-    display: none;
-  }
-  .header .mobile-dropdown-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 32px;
-  }
-  .header .mobile-dropdown-wrapper .navbar-text {
-    padding: 0.625rem 0px;
+  .header .header__contentPrincipal {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-areas: "navBar sidemenu" "submenu submenu";
   }
 }/*# sourceMappingURL=main.css.map */

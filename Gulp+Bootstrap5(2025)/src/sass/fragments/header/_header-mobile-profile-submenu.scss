@@ -1,7 +1,11 @@
+@use "../../helpers/mixins" as *;
+@use "header-profile-dropdown";
+
 .header__mobile-profile-submenu{
-    display: none;    
+    @extend .profile-dropdown;
+    display: none;  
 }
 
-.header_mobile-profile-submenu.active{
+.header__mobile-profile-submenu.active{
     display: block;
 }

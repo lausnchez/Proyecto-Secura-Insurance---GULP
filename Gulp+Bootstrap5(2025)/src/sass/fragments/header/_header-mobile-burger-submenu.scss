@@ -1,7 +1,18 @@
+@use "../../helpers/variables" as *;
+
 .header__mobile-burger-submenu{
     display: none;
 }
 
 .header__mobile-burger-submenu.active{
     display: block;
+
+    .navbar-text{
+        display: flex;
+        flex-direction: column;
+        gap: $header-navBar-gap;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
 }

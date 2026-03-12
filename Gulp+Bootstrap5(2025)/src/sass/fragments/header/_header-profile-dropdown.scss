@@ -15,12 +15,5 @@
 
     li:hover{
         border-left: 3px solid #4B98D9;
-    }
-
-    // Responsive
-    //---------------------------------------------
-    @include mobile{
-        background-color: crimson;
-    }
-    
+    }    
 }
