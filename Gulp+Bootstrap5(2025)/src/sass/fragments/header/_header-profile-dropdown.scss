@@ -1,16 +1,26 @@
+@use "../../helpers/mixins.scss" as *;
 .profile-dropdown{
     min-width: var(--profile-dropdown-min-width);
     transition: 0.3s all ease-in;
 
-    li{
-        border-left: 3px solid transparent;
-    }
-
+    // Contenedor del dropdown
     .profile-dropdown-context{
         padding: var(--profile-dropdown-context-padding);
+    }
+
+    // Elementos individuales del dropdown
+    li{
+        border-left: 3px solid transparent;
     }
 
     li:hover{
         border-left: 3px solid #4B98D9;
     }
+
+    // Responsive
+    //---------------------------------------------
+    @include mobile{
+        background-color: crimson;
+    }
+    
 }

@@ -921,14 +921,19 @@ ul {
   min-width: var(--profile-dropdown-min-width);
   transition: 0.3s all ease-in;
 }
-.profile-dropdown li {
-  border-left: 3px solid transparent;
-}
 .profile-dropdown .profile-dropdown-context {
   padding: var(--profile-dropdown-context-padding);
 }
+.profile-dropdown li {
+  border-left: 3px solid transparent;
+}
 .profile-dropdown li:hover {
   border-left: 3px solid #4B98D9;
+}
+@media (max-width: 479px) {
+  .profile-dropdown {
+    background-color: crimson;
+  }
 }
 
 .language-dropdown {
@@ -966,6 +971,9 @@ ul {
 .header__submenus__mobile .mobile_submenu__button {
   background-color: transparent;
   border: none;
+}
+.header__submenus__mobile .mobile-submenu__toggle {
+  display: none;
 }
 @media (max-width: 479px) {
   .header__submenus__mobile {

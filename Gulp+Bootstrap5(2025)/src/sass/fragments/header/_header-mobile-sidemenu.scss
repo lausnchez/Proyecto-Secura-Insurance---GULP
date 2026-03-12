@@ -15,7 +15,11 @@
         background-color: transparent;
         border: none;
     }
-    
+
+    .mobile-submenu__toggle{
+        display: none;
+    }
+
     @include mobile {
         display: block;
     }
