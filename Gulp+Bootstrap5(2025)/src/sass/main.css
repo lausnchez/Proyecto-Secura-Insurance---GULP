@@ -1001,6 +1001,22 @@ ul {
   flex-direction: column;
 }
 
+.header__mobile-profile-submenu {
+  display: none;
+}
+
+.header_mobile-profile-submenu.active {
+  display: block;
+}
+
+.header__mobile-burger-submenu {
+  display: none;
+}
+
+.header__mobile-burger-submenu.active {
+  display: block;
+}
+
 /** COMPONENTS **/
 /** CSS LIBS **/
 /** HELPERS **/

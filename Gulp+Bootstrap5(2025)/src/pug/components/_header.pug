@@ -1,8 +1,6 @@
-//- include ../fragments/_header-submenu-item.pug
 include ../mixins/_header-submenu-item.pug
 include ../mixins/_header-navbar-links.pug
 
-//- logotipo, páginas de menu, desplegable de perfil, selector de idioma
 header.header
     .header__contentPrincipal 
         nav.header__navBar 
@@ -15,4 +13,5 @@ header.header
         include ../fragments/header/_header-desktop-sidemenu.pug
         include ../fragments/header/_header-mobile-sidemenu.pug
         //- Menús desplegables para mobile
-        //- include ../fragments/header/_header-mobile-extended-profile-submenu.pug
+        include ../fragments/header/_header-mobile-profile-submenu.pug
+        include ../fragments/header/_header-mobile-burger-submenu.pug
