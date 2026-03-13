@@ -140,6 +140,8 @@ $nav-dropdown-min-width: 130px;
 $nav-dropdown-gap: 8px;
 $nav-dropdown-padding: 8px;
 $nav-dropdown-height: 40px;
+$nav-dropdown-separator-border: 1px solid var(--dropdown-hover-color);
+$nav-dropdown-left-border: 3px solid var(--dropdown-left-border-color);
 
 :root{
 
@@ -147,6 +149,7 @@ $nav-dropdown-height: 40px;
     //----------------------------------------------
     /* Nav-Dropdown */
     --dropdown-top-position: 40px;
+    --dropdown-mobile-top-position: 65px;
     --dropdown-bottom-position: 0;
     --dropdown-item-padding: 15px 24px;
     --dropdown-separator-weight: 1px;

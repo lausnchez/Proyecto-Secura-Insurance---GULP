@@ -1,5 +1,6 @@
 @use "../../helpers/variables" as *;
 @use "../../helpers/colors" as *;
+@use "../../helpers/mixins" as *;
 
 .header__submenu__dropdown{
     display: none;
@@ -9,12 +10,13 @@
     box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
     border-radius: 5px;
     overflow: hidden;
+    width: 100%;
 
     position: absolute; // Para colocarlo respecto al padre con position relative
     top: var(--dropdown-top-position);
     right: var(--dropdown-bottom-position);
 
-    >li{
+    li{
         padding: var(--dropdown-item-padding);
         border-bottom: var(--dropdown-separator-weight) solid var(--neutral-gray-100);
         &:hover{
@@ -29,7 +31,26 @@
         gap: var(--dropdown-icon-content-gap);
     }
 
-    >li:last-child{
+    li:last-child{
         border-bottom: none;
+    }
+}
+
+.header__submenu__dropdown.mobile_active{
+    @include mobile{
+        display: block;
+        top: var(--dropdown-mobile-top-position);
+        height: calc(100vh - var(--dropdown-mobile-top-position));
+        border-radius: 0px;
+        border-top: $nav-dropdown-separator-border;
+
+        >li{
+            border-bottom: $nav-dropdown-separator-border;
+        }
+
+        .profile-dropdown-context{
+            border-top: $nav-dropdown-separator-border;
+            border-bottom: $nav-dropdown-separator-border;
+        }
     }
 }

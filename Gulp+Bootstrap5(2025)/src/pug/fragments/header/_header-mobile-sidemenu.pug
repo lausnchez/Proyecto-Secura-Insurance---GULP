@@ -1,9 +1,10 @@
 ul.header__submenus__mobile
     .header__submenus__container
-        //- input.mobile-submenu__toggle(type="checkbox")
         li
             button#header_submenu__button_profile.mobile_submenu__button
                 span.icon-user
+            include ./_header-profile-dropdown.pug
         li
             button#header_submenu__button_burger.mobile_submenu__button
                 span.icon-burger_menu
+            include ./_header-mobile-burger-submenu.pug

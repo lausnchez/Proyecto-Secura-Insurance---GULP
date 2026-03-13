@@ -1,4 +1,6 @@
 @use "../../helpers/mixins.scss" as *;
+@use "../../helpers/variables" as *;
+
 .profile-dropdown{
     min-width: var(--profile-dropdown-min-width);
     transition: 0.3s all ease-in;
@@ -14,6 +16,6 @@
     }
 
     li:hover{
-        border-left: 3px solid #4B98D9;
-    }    
+        border-left: $nav-dropdown-left-border;
+    } 
 }

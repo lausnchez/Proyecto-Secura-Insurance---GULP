@@ -2,7 +2,6 @@
 @use "header-profile-dropdown";
 
 .header__mobile-profile-submenu{
-    @extend .profile-dropdown;
     display: none;  
 }
 

@@ -10702,37 +10702,37 @@ if ( typeof noGlobal === "undefined" ) {
 
 return jQuery;
 } );
-// Recoger elementos del DOM
-const headerSubmenuButtonProfile = document.querySelector('#header_submenu__button_profile');
-const headerMobileProfileMenu = document.querySelector(".header__mobile-profile-submenu");
+// Elementos del profile
+const headerMobileButtonProfile = document.querySelector('#header_submenu__button_profile');
+const headerProfileMenu = document.querySelector('.header__submenus__mobile .profile-dropdown');
 
-const headerSubmenuButtonBurger = document.querySelector('#header_submenu__button_burger');
-const headerMobileBurgerMenu = document.querySelector(".header__mobile-burger-submenu");
+// Elementos del burger
+const headerMobileButtonBurger = document.querySelector('#header_submenu__button_burger');
+const headerBurgerMenu = document.querySelector('.header__submenus__mobile .header__mobile-burger-submenu');
 
-// Función para mostrar/ocultar el submenu del perfil
+const classToggle = "mobile_active";
+
+// Función para mostrar/ocultar el submenu del profile
 //---------------------------------------------------------------------------------
-headerSubmenuButtonProfile?.addEventListener('click', showProfileMobileSubmenu);
+headerMobileButtonProfile?.addEventListener('click', showProfileMobileSubmenu);
 
 function showProfileMobileSubmenu() {
-    headerMobileProfileMenu?.classList.toggle("active");
-    console.log("profile menu pulsado");
+    headerProfileMenu?.classList.toggle(classToggle);
 
-    if(headerMobileProfileMenu?.classList.contains("active")){
-        headerMobileBurgerMenu?.classList.remove("active");
+    if(headerProfileMenu?.classList.contains(classToggle)){
+        headerBurgerMenu?.classList.remove(classToggle);
     }
 }
 
-// Función para mostrar/ocultar el submenú hamburguesa
+// Función para mostrar/ocultar el submenu burger
 //---------------------------------------------------------------------------------
-headerSubmenuButtonBurger?.addEventListener('click', showBurgerMobileSubmenu);
+headerMobileButtonBurger?.addEventListener('click', showBurgerMobileSubmenu);
 
 function showBurgerMobileSubmenu(){
-    headerMobileBurgerMenu?.classList.toggle("active");
+    headerBurgerMenu?.classList.toggle(classToggle);
 
     // No mostrar menú de profile
-    if(headerMobileBurgerMenu?.classList.contains("active")){
-        headerMobileProfileMenu?.classList.remove("active");
+    if(headerBurgerMenu?.classList.contains(classToggle)){
+        headerProfileMenu?.classList.remove(classToggle);
     }
-
-    console.log("burguer menu pulsado");
 }
