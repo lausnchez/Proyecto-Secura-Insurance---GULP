@@ -1,0 +1,26 @@
+@use "../helpers/functions" as *;
+.hero{
+    background: 
+        linear-gradient(
+            var(--hero-background-translucent-color),
+            var(--hero-background-translucent-color)),
+        url("../images/hero-cover.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 500px;
+
+    .hero__contents{
+        max-width: 700px;
+        width: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: toRem(40px);
+    }
+}

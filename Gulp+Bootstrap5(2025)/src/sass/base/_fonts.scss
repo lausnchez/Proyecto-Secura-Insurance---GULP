@@ -112,9 +112,21 @@
   $weight: Bold
 )}
 
+.base_title-hero{@include text-format(
+  $size: var(--typo-size-title),
+  $weight: Bold,
+  $color: white
+)}
+
 .base_header2{@include text-format(
   $size: var(--typo-size-header2),
   $weight: Bold
+)}
+
+.base_header2-hero{@include text-format(
+  $size: var(--typo-size-header2),
+  $weight: Bold,
+  $color: white
 )}
 
 .base_header3{@include text-format(
@@ -125,6 +137,12 @@
 .base_subtitle{@include text-format(
   $size: var(--typo-size-subtitle),
   $weight: Regular
+)}
+
+.base_subtitle-hero{@include text-format(
+  $size: var(--typo-size-subtitle),
+  $weight: Regular,
+  $color: white
 )}
 
 .base_body{@include text-format(

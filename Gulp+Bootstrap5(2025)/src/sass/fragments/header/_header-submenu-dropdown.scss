@@ -7,8 +7,8 @@
 
     background-color: var(--header-background-color);
     list-style: none;
-    box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
-    border-radius: 5px;
+    box-shadow: $header-submenu-dropdown-box-shadow;
+    border-radius: var(--header-submenu-dropdown-border-radius);
     overflow: hidden;
     width: 100%;
 
@@ -37,12 +37,12 @@
 }
 
 .header__submenu__dropdown.mobile-active{
-    @include mobile{
+    @include mobilexl{
         display: flex;
         flex-direction: column;
         top: var(--dropdown-mobile-top-position);
         height: calc(100vh - var(--dropdown-mobile-top-position));
-        border-radius: 0px;
+        border-radius: var(--header-submenu-dropdown-mobilexl-border-radius);
         border-top: $nav-dropdown-separator-border;
 
         >li{
@@ -56,16 +56,16 @@
     }
 
     &.header__mobile-burger-submenu{
-        @include mobile{
+        @include mobilexl{
             justify-content: space-between;
         }
     }
 
     &.language-dropdown{
         width: fit-content;
-        min-width: 130px;
+        min-width: var(--header-submenu-language-dropdown-min-width);
         align-items: center;
-        padding: 0px;
+        padding: var(--header-submenu-language-dropdown-padding);
         height: fit-content;
         box-shadow: none;
         border: none;

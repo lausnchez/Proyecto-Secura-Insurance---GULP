@@ -18,6 +18,8 @@
 /* Header NavBar */
 /* Nav-Dropdown */
 :root {
+  --mobile: 390px;
+  --tablet: 768px;
   /* Nav-Dropdown */
   --dropdown-top-position: 40px;
   --dropdown-mobile-top-position: 65px;
@@ -31,6 +33,14 @@
   /* Language Dropdown*/
   --header-mobile-language-dropdown-margin: 8px;
   --header-mobile-language-dropdown-border-radius: 8px;
+  --header-language-dropdown-top: -250px;
+  /* Header Submenu Dropdown*/
+  --header-submenu-dropdown-border-radius: 5px;
+  --header-submenu-dropdown-mobilexl-border-radius: 0px;
+  --header-submenu-language-dropdown-min-width: 130px;
+  --header-submenu-language-dropdown-padding: 0px;
+  /* Hero */
+  --hero-background-translucent-color: rgba(0,0,0,0.5);
 }
 
 :root {
@@ -637,7 +647,7 @@ template {
 
 .navbar-text {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-body));
+  font-size: var(--typo-size-body);
   color: var(--base-greyscale-700);
   font-weight: Bold;
   letter-spacing: 0%;
@@ -650,7 +660,7 @@ template {
 
 .item-dropdown-text {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-body));
+  font-size: var(--typo-size-body);
   color: var(--text-subtitle);
   font-weight: normal;
   letter-spacing: 0%;
@@ -658,23 +668,39 @@ template {
 
 .base_title {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-title));
+  font-size: var(--typo-size-title);
   color: var(--text-body-default);
+  font-weight: Bold;
+  letter-spacing: 0%;
+}
+
+.base_title-hero {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-title);
+  color: white;
   font-weight: Bold;
   letter-spacing: 0%;
 }
 
 .base_header2 {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-header2));
+  font-size: var(--typo-size-header2);
   color: var(--text-body-default);
+  font-weight: Bold;
+  letter-spacing: 0%;
+}
+
+.base_header2-hero {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-header2);
+  color: white;
   font-weight: Bold;
   letter-spacing: 0%;
 }
 
 .base_header3 {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-header3));
+  font-size: var(--typo-size-header3);
   color: var(--text-body-default);
   font-weight: SemiBold;
   letter-spacing: 0%;
@@ -682,15 +708,23 @@ template {
 
 .base_subtitle {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-subtitle));
+  font-size: var(--typo-size-subtitle);
   color: var(--text-body-default);
+  font-weight: Regular;
+  letter-spacing: 0%;
+}
+
+.base_subtitle-hero {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-subtitle);
+  color: white;
   font-weight: Regular;
   letter-spacing: 0%;
 }
 
 .base_body {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-body));
+  font-size: var(--typo-size-body);
   color: var(--text-body-default);
   font-weight: Regular;
   letter-spacing: 0%;
@@ -698,7 +732,7 @@ template {
 
 .base_body--active {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-body));
+  font-size: var(--typo-size-body);
   color: var(--text-body-default);
   font-weight: Bold;
   letter-spacing: 0%;
@@ -706,7 +740,7 @@ template {
 
 .base_body_bold {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-body));
+  font-size: var(--typo-size-body);
   color: var(--text-body-default);
   font-weight: Bold;
   letter-spacing: 0%;
@@ -714,7 +748,7 @@ template {
 
 .base_small {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-title-small));
+  font-size: var(--typo-size-title-small);
   color: var(--text-body-default);
   font-weight: Medium;
   letter-spacing: 0%;
@@ -722,7 +756,7 @@ template {
 
 .base_small_title {
   font-family: var(--default-font-family);
-  font-size: toRem(var(--typo-size-title-small));
+  font-size: var(--typo-size-title-small);
   color: var(--text-body-default);
   font-weight: Bold;
   letter-spacing: 0%;
@@ -900,7 +934,7 @@ ul {
   background-color: var(--header-background-color);
   list-style: none;
   box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
-  border-radius: 5px;
+  border-radius: var(--header-submenu-dropdown-border-radius);
   overflow: hidden;
   width: 100%;
   position: absolute;
@@ -924,13 +958,13 @@ ul {
   border-bottom: none;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .header__submenu__dropdown.mobile-active {
     display: flex;
     flex-direction: column;
     top: var(--dropdown-mobile-top-position);
     height: calc(100vh - var(--dropdown-mobile-top-position));
-    border-radius: 0px;
+    border-radius: var(--header-submenu-dropdown-mobilexl-border-radius);
     border-top: 1px solid var(--dropdown-hover-color);
   }
   .header__submenu__dropdown.mobile-active > li {
@@ -941,7 +975,7 @@ ul {
     border-bottom: 1px solid var(--dropdown-hover-color);
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .header__submenu__dropdown.mobile-active.header__mobile-burger-submenu {
     justify-content: space-between;
   }
@@ -949,9 +983,9 @@ ul {
 .header__submenu__dropdown.mobile-active.language-dropdown {
   width: -moz-fit-content;
   width: fit-content;
-  min-width: 130px;
+  min-width: var(--header-submenu-language-dropdown-min-width);
   align-items: center;
-  padding: 0px;
+  padding: var(--header-submenu-language-dropdown-padding);
   height: -moz-fit-content;
   height: fit-content;
   box-shadow: none;
@@ -978,7 +1012,7 @@ ul {
   border-left: 3px solid var(--dropdown-left-border-color);
 }
 
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .header__mobile-burger-submenu__language-dropdown {
     position: relative;
     margin: var(--header-mobile-language-dropdown-margin);
@@ -988,7 +1022,7 @@ ul {
   }
   .header__mobile-burger-submenu__language-dropdown .language-dropdown {
     position: absolute;
-    top: -250px;
+    top: var(--header-language-dropdown-top);
   }
   .header__mobile-burger-submenu__language-dropdown li {
     width: -moz-fit-content;
@@ -1008,7 +1042,7 @@ ul {
 .header__navBarLinks a:hover {
   color: var(--base-greyscale-600);
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .header__navBarLinks {
     display: none;
   }
@@ -1031,7 +1065,7 @@ ul {
 .header__submenus__mobile .mobile-submenu__toggle {
   display: none;
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .header__submenus__mobile {
     display: block;
   }
@@ -1040,7 +1074,9 @@ ul {
   }
 }
 
-@media (max-width: 479px) {
+/** CSS LIBS **/
+/** HELPERS **/
+@media (max-width: 767px) {
   .header__submenus {
     display: none;
   }
@@ -1061,8 +1097,6 @@ ul {
   flex-direction: column;
 }
 
-/** CSS LIBS **/
-/** HELPERS **/
 /** COMPONENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
@@ -1111,10 +1145,29 @@ ul {
 .header .header__mobile-profile-submenu {
   grid-area: submenu;
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .header .header__contentPrincipal {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas: "navBar sidemenu" "submenu submenu";
   }
+}
+
+.hero {
+  background: linear-gradient(var(--hero-background-translucent-color), var(--hero-background-translucent-color)), url("../images/hero-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 500px;
+}
+.hero .hero__contents {
+  max-width: 700px;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }/*# sourceMappingURL=main.css.map */

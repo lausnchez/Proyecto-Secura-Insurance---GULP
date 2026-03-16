@@ -9,7 +9,7 @@
     background-color: var(--header-background-color);
     display: flex;
     flex-direction: column;
-    gap: toRem(24px);
+    gap: toRem($header-gap);
     height: auto;
     
     .header__contentPrincipal{
@@ -60,10 +60,9 @@
     // MEDIA QUERIES
     // ----------------------------------------------------------
 
-    @include mobile {
+    @include mobilexl{
         .header__contentPrincipal{
             display: grid;
-            // grid-template-columns: 5fr 1fr;
             grid-template-columns: auto auto;
             grid-template-areas: 
                 "navBar sidemenu" "submenu submenu";
