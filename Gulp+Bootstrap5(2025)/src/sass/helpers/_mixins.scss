@@ -27,7 +27,7 @@
     )
     {
     font-family: $font-family;
-    font-size: toRem($size);
+    font-size: $size;
     color: $color;
     font-weight: $weight;
     letter-spacing: $letter-spacing;

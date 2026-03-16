@@ -144,6 +144,10 @@ $nav-dropdown-separator-border: 1px solid var(--dropdown-hover-color);
 $nav-dropdown-left-border: 3px solid var(--dropdown-left-border-color);
 
 :root{
+    // TAMAÑOS DE PANTALLA
+    //----------------------------------------------
+    --mobile: #{$mobile};
+    --tablet: #{$tablet};
 
     // FRAGMENTS
     //----------------------------------------------
@@ -162,4 +166,9 @@ $nav-dropdown-left-border: 3px solid var(--dropdown-left-border-color);
     /* Language Dropdown*/
     --header-mobile-language-dropdown-margin: 8px;
     --header-mobile-language-dropdown-border-radius: 8px;
+
+    // COMPONENTS
+    //----------------------------------------------
+    /* Hero */
+    --hero-background-translucent-color: rgba(0,0,0,0.5);
 }
