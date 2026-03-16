@@ -129,9 +129,11 @@ $header-border-width: 1px;
 $header-padding-x: 16px;
 $header-padding-y: 8px;
 $header-submenus-gap: 24px;
+$header-submenus-container-gap: 24px;
 
 /* Header NavBar */
 $header-navBar-gap: 32px;
+$header-gap: 24px;
 
 // FRAGMENTS
 //----------------------------------------------
@@ -141,7 +143,9 @@ $nav-dropdown-gap: 8px;
 $nav-dropdown-padding: 8px;
 $nav-dropdown-height: 40px;
 $nav-dropdown-separator-border: 1px solid var(--dropdown-hover-color);
-$nav-dropdown-left-border: 3px solid var(--dropdown-left-border-color);
+$header-profile-dropdown-li-border-left: 3px solid transparent;
+$header-profile-dropdown-li-hover-left-border: 3px solid var(--dropdown-left-border-color);
+$header-submenu-dropdown-box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
 
 :root{
     // TAMAÑOS DE PANTALLA
@@ -166,7 +170,13 @@ $nav-dropdown-left-border: 3px solid var(--dropdown-left-border-color);
     /* Language Dropdown*/
     --header-mobile-language-dropdown-margin: 8px;
     --header-mobile-language-dropdown-border-radius: 8px;
+    --header-language-dropdown-top: -250px; 
 
+    /* Header Submenu Dropdown*/
+    --header-submenu-dropdown-border-radius: 5px;
+    --header-submenu-dropdown-mobilexl-border-radius: 0px;
+    --header-submenu-language-dropdown-min-width: 130px;
+    --header-submenu-language-dropdown-padding: 0px;
     // COMPONENTS
     //----------------------------------------------
     /* Hero */

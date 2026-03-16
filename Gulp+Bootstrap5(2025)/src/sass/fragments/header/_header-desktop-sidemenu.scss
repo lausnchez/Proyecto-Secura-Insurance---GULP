@@ -1,5 +1,6 @@
 @use "../../helpers/mixins.scss" as *;
 @use "../../helpers/functions" as *;
+@use "../../helpers/variables" as *;
 
 .header__submenus{
     @include mobilexl{
@@ -10,7 +11,7 @@
 .header__submenus__container{
     display: flex;
     flex-direction: row;
-    gap: toRem(24px);
+    gap: toRem($header-submenus-gap);
 }
 
 .header__submenus li{

@@ -10,7 +10,7 @@
 
         .language-dropdown{
             position: absolute;
-            top: -250px;
+            top: var(--header-language-dropdown-top);
         }
 
         li{

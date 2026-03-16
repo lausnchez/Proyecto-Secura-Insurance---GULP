@@ -8,7 +8,7 @@
     .header__submenus__container{
         display: flex;
         flex-direction: row;
-        gap: toRem(24px);
+        gap: toRem($header-submenus-container-gap);
     }
 
     .mobile_submenu__button{

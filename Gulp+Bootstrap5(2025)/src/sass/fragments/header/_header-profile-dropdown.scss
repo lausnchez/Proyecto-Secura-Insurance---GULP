@@ -12,10 +12,11 @@
 
     // Elementos individuales del dropdown
     li{
-        border-left: 3px solid transparent;
+        // border-left: 3px solid transparent;
+        border-left: $header-profile-dropdown-li-border-left;
     }
 
     li:hover{
-        border-left: $nav-dropdown-left-border;
+        border-left: $header-profile-dropdown-li-hover-left-border;
     } 
 }
