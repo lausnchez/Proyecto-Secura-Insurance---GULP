@@ -1,0 +1,9 @@
+@function toRem($pixeles) {
+  // Verificamos que el valor sea un número y quitamos la unidad si la trae
+  @if not unitless($pixeles) {
+    $pixeles: $pixeles / ($pixeles * 0 + 1);
+  }
+  
+  // Realizamos el cálculo
+  @return ($pixeles / 16) * 1rem;
+}

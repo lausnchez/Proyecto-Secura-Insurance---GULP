@@ -15,7 +15,7 @@ const mkdirp = require('mkdirp');
 const path = {
   pug: ['src/pug/*.pug'],
   sass: 'src/sass/main.scss',
-  images: ['src/images/**/*.*'],
+  images: ['src/assets/images/**/*.*'],
   js: ['src/javascript/custom/[^_]*.js'],
   jsLibs: ['src/javascript/libs/[^_]*.js'],
   jsPrimaryLibs: ['src/javascript/primaryLibs/[^_]*.js'],
@@ -25,7 +25,7 @@ const path = {
   localeComponents: ['src/pug/components/**/locale/**/[^_]*.json'],
   build: 'build/',
   buildCSS: 'build/css',
-  buildFONTS: 'build/css/fonts',
+  buildFONTS: 'build/fonts',
   buildJS: 'build/js/',
   buildIMAGES: 'build/images',
   buildLocale: 'build/locale/',

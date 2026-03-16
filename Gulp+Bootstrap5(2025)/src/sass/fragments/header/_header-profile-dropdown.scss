@@ -1,0 +1,21 @@
+@use "../../helpers/mixins.scss" as *;
+@use "../../helpers/variables" as *;
+
+.profile-dropdown{
+    min-width: var(--profile-dropdown-min-width);
+    transition: 0.3s all ease-in;
+
+    // Contenedor del dropdown
+    .profile-dropdown-context{
+        padding: var(--profile-dropdown-context-padding);
+    }
+
+    // Elementos individuales del dropdown
+    li{
+        border-left: 3px solid transparent;
+    }
+
+    li:hover{
+        border-left: $nav-dropdown-left-border;
+    } 
+}

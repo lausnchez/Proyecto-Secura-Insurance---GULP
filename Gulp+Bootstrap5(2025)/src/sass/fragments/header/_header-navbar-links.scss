@@ -1,0 +1,18 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.header__navBarLinks{
+    display: flex;
+    flex-direction: row;
+    gap: $header-navBar-gap;
+    align-items: center;
+    text-align: center;
+
+    a:hover{
+        color: var(--base-greyscale-600);
+    }
+
+    @include mobile{
+        display: none;
+    }
+}

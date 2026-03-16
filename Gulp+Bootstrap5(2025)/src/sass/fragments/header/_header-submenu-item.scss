@@ -1,0 +1,23 @@
+@use "../../helpers/variables" as *;
+
+.header__submenu__item{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: $nav-dropdown-height;
+    justify-content: space-between;
+    align-items: center;
+    min-width: $nav-dropdown-min-width;
+    gap: $nav-dropdown-gap;
+    padding: $nav-dropdown-padding;
+    border-radius: var(--header-mobile-language-dropdown-border-radius);
+
+    .header-submenu-item__textContent{
+        white-space: nowrap;
+        color: var(--text-subtitle);
+    }
+
+    &:hover{
+        background-color: var(--base-primary-25);
+    }
+}

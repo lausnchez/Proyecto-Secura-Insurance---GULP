@@ -1,0 +1,8 @@
+ul.header__submenus
+    .header__submenus__container
+        li
+            +header-submenu-item("Mi perfil", "user")
+            include ./_header-profile-dropdown.pug
+        li
+            +header-submenu-item("Español", "globe")
+            include ./_header-language-dropdown.pug

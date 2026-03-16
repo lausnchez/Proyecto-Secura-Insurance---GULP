@@ -3,32 +3,92 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/lib/jquery-ui.min.css" rel="stylesheet" media="all">
-    <link href="css/lib/bootstrap-grid.min.css" rel="stylesheet" media="all">
     <link href="css/main.min.css" rel="stylesheet" media="all">
     <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
-    <title>Homepage</title>
   </head>
-  <body>
-    <header class="header" id="header">
-      <div class="header__container"> </div>
+  <body class="default-font">
+    <header class="header">
+      <div class="header__contentPrincipal"> 
+        <nav class="header__navBar"> <a href="#">
+            <div class="header__logo-container"><img src="images/secura-insurance_logo.png" alt="Logotipo de Secura-Insurance"></div></a>
+              <div class="header__navBarLinks"><a class="navbar-text" href="#">Inicio</a><a class="navbar-text" href="#">Próximas renovaciones</a></div>
+        </nav>
+        <ul class="header__submenus">
+          <div class="header__submenus__container">
+            <li><a class="header__submenu__item" href="#"><span class="icon-user"></span><span class="header-submenu-item__textContent">Mi perfil</span><span class="icon-arrow-dropdown"></span></a>
+              <ul class="header__submenu__dropdown profile-dropdown">
+                <div class="profile-dropdown-context"><span class="base_body_bold">Mi perfil</span>
+                  <p>
+                    En este espacio puedes acceder, modificar, gestionar y 
+                    consultar todo lo relacionado con tus servicios de 
+                    energía. Fácil y rápido.
+                  </p>
+                </div>
+                <li> <a class="dropdown-icon-content" href="#"><span class="icon-user"> </span><span class="base_body">Mis datos personales</span></a></li>
+                <li> <a class="dropdown-icon-content" href="#"><span class="icon-lock"></span><span class="base_body">Mi contraseña</span></a></li>
+                <li> <a class="dropdown-icon-content" href="#"><span class="icon-telephone"></span><span class="base_body">Contacto</span></a></li>
+                <li> <a class="dropdown-icon-content" href="#"><span class="icon-power-off"></span><span class="base_body">Cerrar sesión</span></a></li>
+              </ul>
+            </li>
+            <li><a class="header__submenu__item" href="#"><span class="icon-globe"></span><span class="header-submenu-item__textContent">Español</span><span class="icon-arrow-dropdown"></span></a>
+              <ul class="header__submenu__dropdown language-dropdown">
+                <li><a class="base_body--active" href="#">Español</a></li>
+                <li> <a class="base_body" href="#">English</a></li>
+                <li> <a class="base_body" href="#">Catalan</a></li>
+                <li> <a class="base_body" href="#">Gallego</a></li>
+                <li> <a class="base_body" href="#">Euskera</a></li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+        <ul class="header__submenus__mobile">
+          <div class="header__submenus__container">
+            <li id="header_submenu__button_profile">
+              <button class="mobile_submenu__button"><span class="icon-user"></span></button>
+              <ul class="header__submenu__dropdown profile-dropdown">
+                <div class="profile-dropdown-context"><span class="base_body_bold">Mi perfil</span>
+                  <p>
+                    En este espacio puedes acceder, modificar, gestionar y 
+                    consultar todo lo relacionado con tus servicios de 
+                    energía. Fácil y rápido.
+                  </p>
+                </div>
+                <li> <a class="dropdown-icon-content" href="#"><span class="icon-user"> </span><span class="base_body">Mis datos personales</span></a></li>
+                <li> <a class="dropdown-icon-content" href="#"><span class="icon-lock"></span><span class="base_body">Mi contraseña</span></a></li>
+                <li> <a class="dropdown-icon-content" href="#"><span class="icon-telephone"></span><span class="base_body">Contacto</span></a></li>
+                <li> <a class="dropdown-icon-content" href="#"><span class="icon-power-off"></span><span class="base_body">Cerrar sesión</span></a></li>
+              </ul>
+            </li>
+            <li id="header_submenu__button_burger">
+              <button class="mobile_submenu__button"><span class="icon-burger_menu"></span></button>
+              <ul class="header__submenu__dropdown header__mobile-burger-submenu">
+                <div class="header__mobile-burger-submenu__links"> 
+                  <li> <a class="base_body" href="#">Inicio</a></li>
+                  <li> <a class="base_body" href="#">Próximas renovaciones</a></li>
+                </div>
+                <div class="header__mobile-burger-submenu__language-dropdown"><a class="header__submenu__item" href="#"><span class="icon-globe"></span><span class="header-submenu-item__textContent">Español</span><span class="icon-arrow-dropdown"></span></a>
+                  <ul class="header__submenu__dropdown language-dropdown">
+                    <li><a class="base_body--active" href="#">Español</a></li>
+                    <li> <a class="base_body" href="#">English</a></li>
+                    <li> <a class="base_body" href="#">Catalan</a></li>
+                    <li> <a class="base_body" href="#">Gallego</a></li>
+                    <li> <a class="base_body" href="#">Euskera</a></li>
+                  </ul>
+                </div>
+              </ul>
+            </li>
+            <li id="header_submenu__button_close">
+              <button class="mobile_submenu__button"><span class="icon-close"></span></button>
+            </li>
+          </div>
+        </ul>
+      </div>
     </header>
     <main class="main-content" id="main-content">
-      <div class="container"> 
-        <div class="row"><span class="icon-arrow-dropdown"></span>
-          <div class="col-3"> 
-            <h1>Homepage</h1>
-          </div>
-          <div class="col-9"> 
-            <p>Este proyecto utiliza Gulp con Bootstrap 5.</p>
-            <p>Se incluyen únicamente los estilos para el grid de Bootstrap. El resto de estilos se han eliminado para reducir el peso del proyecto.</p>
-          </div>
-        </div>
-      </div>
     </main>
     <footer class="footer" id="footer">
       <div class="footer__container"></div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

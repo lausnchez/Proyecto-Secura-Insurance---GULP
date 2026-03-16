@@ -1,0 +1,24 @@
+@use "../../helpers/mixins.scss" as *;
+@use "../../helpers/functions" as *;
+
+.header__submenus{
+    @include mobile {
+        display: none;
+    }
+}
+
+.header__submenus__container{
+    display: flex;
+    flex-direction: row;
+    gap: toRem(24px);
+}
+
+.header__submenus li{
+    position: relative;
+}
+
+.header__submenus li:hover .header__submenu__dropdown{
+    display: flex;
+    flex-direction: column;
+}
+

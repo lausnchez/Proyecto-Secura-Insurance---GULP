@@ -1,0 +1,68 @@
+@use "colors" as *;
+@use "../helpers/variables" as *;
+
+/* Convert px to rem 
+    - example of usage: @include toRem(font-size, 20px);
+*/
+@mixin toRem($property, $value, $base: 16px) {
+    #{$property}: #{$value / $base}rem;
+}
+
+/* Tira del mapa de iconos creado en icons-variables*/
+@mixin icon($name, $color : var(--base-primary)){
+    &::before{
+        font-family: var(--icon-font-family);
+        content: $name;
+        color: $color;
+        font-size: toRem(var(--icon-size));
+    }
+}
+
+@mixin text-format(
+    $font-family: var(--default-font-family),
+    $size: var(--typo-size-body),
+    $color: var(--text-body-default),
+    $weight: normal,
+    $letter-spacing: $spacing-default
+    )
+    {
+    font-family: $font-family;
+    font-size: toRem($size);
+    color: $color;
+    font-weight: $weight;
+    letter-spacing: $letter-spacing;
+}
+
+/* Media query mixins for each screen size */
+// -------------------------------------------------------------------------------
+@mixin mobile {
+    @media (max-width: $mobileMax) {
+        @content;
+    }
+}
+
+@mixin mobilemd {
+    @media (min-width: $mobilemd) and (max-width: $mobileemdMax) {
+        @content;
+    }
+}
+
+@mixin mobilexl {
+    @media (min-width: $mobilexl) and (max-width: $mobilexlMax) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) and (max-width: $tabletMax) {
+        @content;
+    }
+}
+
+@mixin tabletmd {
+    @media (min-width: $tabletmd) and (max-width: $tabletmdMax) {
+        @content;
+    }
+}
+
+

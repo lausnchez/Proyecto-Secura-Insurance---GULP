@@ -1,0 +1,154 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+@font-face {
+  font-family: 'secura-insurance-icons';
+  src:  url('../fonts/icons/secura-insurance-icons.eot?ljd5n4');
+  src:  url('../fonts/icons/secura-insurance-icons.eot?ljd5n4#iefix') format('embedded-opentype'),
+    url('../fonts/icons/secura-insurance-icons.ttf?ljd5n4') format('truetype'),
+    url('../fonts/icons/secura-insurance-icons.woff?ljd5n4') format('woff'),
+    url('../fonts/icons/secura-insurance-icons.svg?ljd5n4#secura-insurance-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'secura-insurance-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-filter{content: "\e90e"}
+// .icon-filter{@include icon(var(--icon-filter));}
+.icon-calendar{@include icon(var(--icon-calendar));}
+.icon-skip-right{@include icon(var(--icon-skip-right));}
+.icon-arrow-right{@include icon(var(--icon-arrow-right));}
+.icon-back{@include icon(var(--icon-back));}
+.icon-skip-left{@include icon(var(--icon-skip-left));}
+.icon-file{@include icon(var(--icon-file));}
+.icon-copyright{@include icon(var(--icon-copyright));}
+.icon-telephone{@include icon(var(--icon-telephone));}
+.icon-trash-alt{@include icon(var(--icon-trash-alt));}
+.icon-mail{@include icon(var(--icon-mail));}
+.icon-clock{@include icon(var(--icon-clock));}
+.icon-clock-subtitle{@include icon(var(--icon-clock), var(--text-subtitle));}
+.icon-check{@include icon(var(--icon-check));}
+.icon-check-green{@include icon(var(--icon-check), var(--icon-success-green));}
+.icon-arrow-dropdown{@include icon(var(--icon-arrow-dropdown));}
+.icon-burger_menu{@include icon(var(--icon-burger_menu));}
+.icon-close{@include icon(var(--icon-close));}
+.icon-globe{@include icon(var(--icon-globe));}
+.icon-lock{@include icon(var(--icon-lock));}
+.icon-phone{@include icon(var(--icon-phone));}
+.icon-power-off{@include icon(var(--icon-power-off));}
+.icon-user{@include icon(var(--icon-user));}
+
+// Font Imports
+//---------------------------------------------------------------------------------
+// Roboto Regular
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/roboto400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+// Roboto Medium
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/roboto500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+// Roboto SemiBold
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/roboto600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+// Roboto Bold
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/roboto700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+//  Formatos de texto
+//---------------------------------------------------------------------------------
+.default-font{
+  font-family: var(--default-font-family);
+}
+
+.navbar-text{@include text-format(
+  $color: var(--base-greyscale-700),
+  $weight: Bold
+);
+  @media (max-width: $mobilexlMax) {
+      display: none;
+  }
+}
+
+.item-dropdown-text{@include text-format(
+  $color: var(--text-subtitle)
+)}
+
+.base_title{@include text-format(
+  $size: var(--typo-size-title),
+  $weight: Bold
+)}
+
+.base_header2{@include text-format(
+  $size: var(--typo-size-header2),
+  $weight: Bold
+)}
+
+.base_header3{@include text-format(
+  $size: var(--typo-size-header3),
+  $weight: SemiBold
+)}
+
+.base_subtitle{@include text-format(
+  $size: var(--typo-size-subtitle),
+  $weight: Regular
+)}
+
+.base_body{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: Regular
+)}
+
+.base_body--active{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: Bold
+)}
+
+.base_body_bold{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: Bold
+)}
+
+.base_small{@include text-format(
+  $size: var(--typo-size-title-small),
+  $weight: Medium
+)}
+
+.base_small_title{@include text-format(
+  $size: var(--typo-size-title-small),
+  $weight: Bold
+)}
+

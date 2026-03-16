@@ -1,22 +1,34 @@
 /** CSS LIBS **/ 
 
 /** HELPERS **/
-@use "helpers/variables";
-@use "helpers/icons-variables";
-@use "helpers/mixins";
-@use "helpers/custom";
+@use "helpers/_variables";
+@use "helpers/_typo-variables";
+@use "helpers/_icons-variables";
+@use "helpers/_functions";
+@use "helpers/_mixins";
+@use "helpers/_custom";
+@use "helpers/_colors";
 
 /** BASE **/
-@use "base/normalize";
-@use "base/fonts";
-@use "base/base";
-@use "base/base-clases";
+@use "base/_normalize";
+@use "base/_fonts";
+@use "base/_base";
+@use "base/_base-clases";
 
 /** LAYOUT **/
-@use "layout/header";
-@use "layout/navigation";
-@use "layout/footer";
+@use "layout/_navigation";
 
 /** FRAGMENTS **/
+@use "fragments/header/_header-submenu-item";
+@use "fragments/header/_header-submenu-dropdown";
+@use "fragments/header/_header-profile-dropdown";
+@use "fragments/header/_header-mobile-language-dropdown";
+@use "fragments/header/_header-navbar-links";
+@use "fragments/header/_header-mobile-sidemenu";
+@use "fragments/header/_header-desktop-sidemenu";
+@use "fragments/header/_header-mobile-profile-submenu";
+@use "fragments/header/_header-mobile-burger-submenu";
 
 /** COMPONENTS **/
+@use "components/_header";
+@use "components/_footer"

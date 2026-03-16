@@ -1,0 +1,78 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/colors" as *;
+@use "../../helpers/mixins" as *;
+
+.header__submenu__dropdown{
+    display: none;
+
+    background-color: var(--header-background-color);
+    list-style: none;
+    box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+
+    position: absolute; // Para colocarlo respecto al padre con position relative
+    top: var(--dropdown-top-position);
+    right: var(--dropdown-bottom-position);
+
+    li{
+        padding: var(--dropdown-item-padding);
+        border-bottom: var(--dropdown-separator-weight) solid var(--neutral-gray-100);
+        &:hover{
+            background-color: var(--dropdown-hover-color);
+        }
+    }
+
+    .dropdown-icon-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--dropdown-icon-content-gap);
+    }
+
+    li:last-child{
+        border-bottom: none;
+    }
+}
+
+.header__submenu__dropdown.mobile-active{
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        top: var(--dropdown-mobile-top-position);
+        height: calc(100vh - var(--dropdown-mobile-top-position));
+        border-radius: 0px;
+        border-top: $nav-dropdown-separator-border;
+
+        >li{
+            border-bottom: $nav-dropdown-separator-border;
+        }
+
+        .profile-dropdown-context{
+            border-top: $nav-dropdown-separator-border;
+            border-bottom: $nav-dropdown-separator-border;
+        }
+    }
+
+    &.header__mobile-burger-submenu{
+        @include mobile{
+            justify-content: space-between;
+        }
+    }
+
+    &.language-dropdown{
+        width: fit-content;
+        min-width: 130px;
+        align-items: center;
+        padding: 0px;
+        height: fit-content;
+        box-shadow: none;
+        border: none;
+
+        >li{
+            width: 100%;
+            border: none;
+        }
+    }
+}
