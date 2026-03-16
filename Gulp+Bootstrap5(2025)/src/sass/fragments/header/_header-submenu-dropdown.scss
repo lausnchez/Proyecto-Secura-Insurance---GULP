@@ -36,7 +36,7 @@
     }
 }
 
-.header__submenu__dropdown.mobile_active{
+.header__submenu__dropdown.mobile-active{
     @include mobile{
         display: block;
         top: var(--dropdown-mobile-top-position);

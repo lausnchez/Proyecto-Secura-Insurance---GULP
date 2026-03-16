@@ -1,34 +1,62 @@
+// Recoger elementos del DOM
+//---------------------------------------------------------------------------------
 // Elementos del profile
-const headerMobileButtonProfile = document.querySelector('#header_submenu__button_profile');
+const headerProfileButton = document.querySelector('#header_submenu__button_profile button');
 const headerProfileMenu = document.querySelector('.header__submenus__mobile .profile-dropdown');
 
 // Elementos del burger
-const headerMobileButtonBurger = document.querySelector('#header_submenu__button_burger');
+const headerBurgerButton = document.querySelector('#header_submenu__button_burger button');
 const headerBurgerMenu = document.querySelector('.header__submenus__mobile .header__mobile-burger-submenu');
 
-const classToggle = "mobile_active";
+// Elementos del close
+const headerCloseButton = document.querySelector('#header_submenu__button_close');
+
+const classToggle = "mobile-active";    // Despliega un menú
+const hiddenClass = "header-submenu-button-hidden"; // Oculta un elemento
+
+// Ocultar el botón de cierre al inicializar
+headerCloseButton.classList.add(hiddenClass);
+
+// Función para cerrar el menú desplegado actualmente
+//---------------------------------------------------------------------------------
+headerCloseButton?.addEventListener('click', closeAllMenus);
+
+function closeAllMenus(){
+    // Mostrar botones
+    headerBurgerButton.classList.remove(hiddenClass);
+    headerProfileButton.classList.remove(hiddenClass);
+    // Ocultar botón de cierre
+    headerCloseButton.classList.add(hiddenClass);
+    // Ocultar menús desplegables
+    headerProfileMenu?.classList.remove(classToggle);
+    headerBurgerMenu?.classList.remove(classToggle);
+}
 
 // Función para mostrar/ocultar el submenu del profile
 //---------------------------------------------------------------------------------
-headerMobileButtonProfile?.addEventListener('click', showProfileMobileSubmenu);
+headerProfileButton?.addEventListener('click', showProfileMobileSubmenu);
 
-function showProfileMobileSubmenu() {
-    headerProfileMenu?.classList.toggle(classToggle);
+function showProfileMobileSubmenu(){
+    // Mostrar menú
+    headerProfileMenu?.classList.add(classToggle);
 
-    if(headerProfileMenu?.classList.contains(classToggle)){
-        headerBurgerMenu?.classList.remove(classToggle);
-    }
+    // Cambiar botones disponibles
+    headerProfileButton.classList.add(hiddenClass);
+    headerBurgerButton.classList.add(hiddenClass);
+    headerCloseButton.classList.remove(hiddenClass);
+
 }
 
 // Función para mostrar/ocultar el submenu burger
 //---------------------------------------------------------------------------------
-headerMobileButtonBurger?.addEventListener('click', showBurgerMobileSubmenu);
+headerBurgerButton?.addEventListener('click', showBurgerMobileSubmenu);
 
 function showBurgerMobileSubmenu(){
-    headerBurgerMenu?.classList.toggle(classToggle);
+    // Mostrar menú
+    headerBurgerMenu?.classList.add(classToggle);
 
-    // No mostrar menú de profile
-    if(headerBurgerMenu?.classList.contains(classToggle)){
-        headerProfileMenu?.classList.remove(classToggle);
-    }
+    // Cambiar botones disponibles
+    headerProfileButton.classList.add(hiddenClass);
+    headerBurgerButton.classList.add(hiddenClass);
+    headerCloseButton.classList.remove(hiddenClass);
 }

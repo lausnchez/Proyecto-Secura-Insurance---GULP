@@ -63,11 +63,10 @@
     @include mobile {
         .header__contentPrincipal{
             display: grid;
-            grid-template-columns: 5fr 1fr;
+            // grid-template-columns: 5fr 1fr;
+            grid-template-columns: auto auto;
             grid-template-areas: 
                 "navBar sidemenu" "submenu submenu";
         }
-
-
     }
 }
