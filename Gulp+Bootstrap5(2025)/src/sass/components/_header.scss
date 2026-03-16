@@ -60,7 +60,7 @@
     // MEDIA QUERIES
     // ----------------------------------------------------------
 
-    @include mobile {
+    @include mobilexl{
         .header__contentPrincipal{
             display: grid;
             // grid-template-columns: 5fr 1fr;

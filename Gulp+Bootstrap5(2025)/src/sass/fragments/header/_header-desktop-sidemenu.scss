@@ -2,7 +2,7 @@
 @use "../../helpers/functions" as *;
 
 .header__submenus{
-    @include mobile {
+    @include mobilexl{
         display: none;
     }
 }

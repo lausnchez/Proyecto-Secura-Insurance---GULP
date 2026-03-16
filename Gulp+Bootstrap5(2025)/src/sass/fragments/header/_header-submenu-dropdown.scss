@@ -37,7 +37,7 @@
 }
 
 .header__submenu__dropdown.mobile-active{
-    @include mobile{
+    @include mobilexl{
         display: flex;
         flex-direction: column;
         top: var(--dropdown-mobile-top-position);
@@ -56,7 +56,7 @@
     }
 
     &.header__mobile-burger-submenu{
-        @include mobile{
+        @include mobilexl{
             justify-content: space-between;
         }
     }

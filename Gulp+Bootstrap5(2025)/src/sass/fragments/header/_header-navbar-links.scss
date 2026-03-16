@@ -12,7 +12,7 @@
         color: var(--base-greyscale-600);
     }
 
-    @include mobile{
+    @include mobilexl{
         display: none;
     }
 }

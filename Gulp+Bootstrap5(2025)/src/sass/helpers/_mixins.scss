@@ -48,7 +48,7 @@
 }
 
 @mixin mobilexl {
-    @media (min-width: $mobilexl) and (max-width: $mobilexlMax) {
+    @media (max-width: $mobilexlMax) {
         @content;
     }
 }

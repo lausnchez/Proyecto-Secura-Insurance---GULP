@@ -20,7 +20,7 @@
         display: none;
     }
 
-    @include mobile {
+    @include mobilexl{
         display: block;
 
         .header-submenu-button-hidden{

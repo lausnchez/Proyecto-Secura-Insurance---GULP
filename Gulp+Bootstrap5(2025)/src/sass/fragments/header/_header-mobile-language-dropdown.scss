@@ -2,7 +2,7 @@
 
 // Clase exclusiva de mobile
 .header__mobile-burger-submenu__language-dropdown{
-    @include mobile{
+    @include mobilexl{
         position: relative;
         margin: var(--header-mobile-language-dropdown-margin);
         min-width: none;
