@@ -34,6 +34,7 @@
 }
 
 /* Media query mixins for each screen size */
+// -------------------------------------------------------------------------------
 @mixin mobile {
     @media (max-width: $mobileMax) {
         @content;

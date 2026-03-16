@@ -38,7 +38,8 @@
 
 .header__submenu__dropdown.mobile-active{
     @include mobile{
-        display: block;
+        display: flex;
+        flex-direction: column;
         top: var(--dropdown-mobile-top-position);
         height: calc(100vh - var(--dropdown-mobile-top-position));
         border-radius: 0px;
@@ -51,6 +52,27 @@
         .profile-dropdown-context{
             border-top: $nav-dropdown-separator-border;
             border-bottom: $nav-dropdown-separator-border;
+        }
+    }
+
+    &.header__mobile-burger-submenu{
+        @include mobile{
+            justify-content: space-between;
+        }
+    }
+
+    &.language-dropdown{
+        width: fit-content;
+        min-width: 130px;
+        align-items: center;
+        padding: 0px;
+        height: fit-content;
+        box-shadow: none;
+        border: none;
+
+        >li{
+            width: 100%;
+            border: none;
         }
     }
 }

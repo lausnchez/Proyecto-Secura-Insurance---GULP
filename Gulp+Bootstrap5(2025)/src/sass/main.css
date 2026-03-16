@@ -28,6 +28,9 @@
   --language-dropdown-min-width: 131px;
   --profile-dropdown-min-width: 300px;
   --profile-dropdown-context-padding: 24px;
+  /* Language Dropdown*/
+  --header-mobile-language-dropdown-margin: 8px;
+  --header-mobile-language-dropdown-border-radius: 8px;
 }
 
 :root {
@@ -880,6 +883,7 @@ ul {
   min-width: 130px;
   gap: 8px;
   padding: 8px;
+  border-radius: var(--header-mobile-language-dropdown-border-radius);
 }
 .header__submenu__item .header-submenu-item__textContent {
   white-space: nowrap;
@@ -922,7 +926,8 @@ ul {
 
 @media (max-width: 479px) {
   .header__submenu__dropdown.mobile-active {
-    display: block;
+    display: flex;
+    flex-direction: column;
     top: var(--dropdown-mobile-top-position);
     height: calc(100vh - var(--dropdown-mobile-top-position));
     border-radius: 0px;
@@ -935,6 +940,26 @@ ul {
     border-top: 1px solid var(--dropdown-hover-color);
     border-bottom: 1px solid var(--dropdown-hover-color);
   }
+}
+@media (max-width: 479px) {
+  .header__submenu__dropdown.mobile-active.header__mobile-burger-submenu {
+    justify-content: space-between;
+  }
+}
+.header__submenu__dropdown.mobile-active.language-dropdown {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 130px;
+  align-items: center;
+  padding: 0px;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: none;
+  border: none;
+}
+.header__submenu__dropdown.mobile-active.language-dropdown > li {
+  width: 100%;
+  border: none;
 }
 
 /** CSS LIBS **/
@@ -953,8 +978,22 @@ ul {
   border-left: 3px solid var(--dropdown-left-border-color);
 }
 
-.language-dropdown {
-  min-width: var(--language-dropdown-min-width);
+@media (max-width: 479px) {
+  .header__mobile-burger-submenu__language-dropdown {
+    position: relative;
+    margin: var(--header-mobile-language-dropdown-margin);
+    min-width: none;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .header__mobile-burger-submenu__language-dropdown .language-dropdown {
+    position: absolute;
+    top: -250px;
+  }
+  .header__mobile-burger-submenu__language-dropdown li {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 /** CSS LIBS **/
@@ -1010,6 +1049,7 @@ ul {
 .header__submenus__container {
   display: flex;
   flex-direction: row;
+  gap: 1.5rem;
 }
 
 .header__submenus li {

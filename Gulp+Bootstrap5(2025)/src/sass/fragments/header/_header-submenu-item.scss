@@ -10,6 +10,7 @@
     min-width: $nav-dropdown-min-width;
     gap: $nav-dropdown-gap;
     padding: $nav-dropdown-padding;
+    border-radius: var(--header-mobile-language-dropdown-border-radius);
 
     .header-submenu-item__textContent{
         white-space: nowrap;

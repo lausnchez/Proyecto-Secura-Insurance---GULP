@@ -11,6 +11,10 @@ const headerBurgerMenu = document.querySelector('.header__submenus__mobile .head
 // Elementos del close
 const headerCloseButton = document.querySelector('#header_submenu__button_close');
 
+// Elementos del language
+const headerLanguageButton = document.querySelector(".header__mobile-burger-submenu__language-dropdown a");
+const headerLanguageMenu = document.querySelector(".header__mobile-burger-submenu__language-dropdown ul");
+
 const classToggle = "mobile-active";    // Despliega un menú
 const hiddenClass = "header-submenu-button-hidden"; // Oculta un elemento
 
@@ -30,6 +34,7 @@ function closeAllMenus(){
     // Ocultar menús desplegables
     headerProfileMenu?.classList.remove(classToggle);
     headerBurgerMenu?.classList.remove(classToggle);
+    headerLanguageMenu?.classList.remove(classToggle);
 }
 
 // Función para mostrar/ocultar el submenu del profile
@@ -59,4 +64,13 @@ function showBurgerMobileSubmenu(){
     headerProfileButton.classList.add(hiddenClass);
     headerBurgerButton.classList.add(hiddenClass);
     headerCloseButton.classList.remove(hiddenClass);
+}
+
+// Función para mostrar/ocultar el submenu language
+//---------------------------------------------------------------------------------
+headerLanguageButton?.addEventListener('click', showLanguageMobileSubmenu);
+
+function showLanguageMobileSubmenu(){
+    // Mostrar menú
+    headerLanguageMenu?.classList.toggle(classToggle);
 }
