@@ -14,6 +14,7 @@
 /* FONTS */
 /* MEDIA QUERIES */
 /* Spacing */
+/* Font Weight*/
 /* Header */
 /* Header NavBar */
 /* Nav-Dropdown */
@@ -98,16 +99,21 @@
   --information-accent: #D8DBF5;
   --information-inverse-text: #F7F7FC;
   --icon-success-green: #45944D;
+  --icon-red-vencimiento: #B32E00;
   --text-subtitle: #405258;
   --base-greyscale-700: #405258;
   --base-greyscale-600: #596f76;
   --text-body-default: #4A4A68;
+  --main-background-color: #F7F9FA;
   --header-background-color: #FFFFFF;
   --header-dropdown-icon-content-text: #374649;
   --neutral-gray-100: #E6E7E8;
   --dropdown-shadow-color: #37464933;
   --dropdown-hover-color: #EFF3F5;
   --dropdown-left-border-color: #4B98D9;
+  --proximas-renovaciones-tag-pendiente-background-color: #FFE74F66;
+  --proximas-renovaciones-tag-pagada-background-color: #57AE6026;
+  --proximas-renovaciones-tag-vencido-background-color: #DB39001F;
 }
 
 /** CSS LIBS **/
@@ -578,6 +584,20 @@ template {
   font-size: toRem(var(--icon-size));
 }
 
+.icon-close-red::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-close);
+  color: var(--icon-red-vencimiento);
+  font-size: toRem(var(--icon-size));
+}
+
+.icon-close-grey::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-close);
+  color: var(--neutral-grey-75);
+  font-size: toRem(var(--icon-size));
+}
+
 .icon-globe::before {
   font-family: var(--icon-font-family);
   content: var(--icon-globe);
@@ -649,7 +669,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-body);
   color: var(--base-greyscale-700);
-  font-weight: Bold;
+  font-weight: 700;
   letter-spacing: 0%;
 }
 @media (max-width: 767px) {
@@ -670,7 +690,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-title);
   color: var(--text-body-default);
-  font-weight: Bold;
+  font-weight: 700;
   letter-spacing: 0%;
 }
 
@@ -678,7 +698,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-title);
   color: white;
-  font-weight: Bold;
+  font-weight: 700;
   letter-spacing: 0%;
 }
 
@@ -686,7 +706,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-header2);
   color: var(--text-body-default);
-  font-weight: Bold;
+  font-weight: 700;
   letter-spacing: 0%;
 }
 
@@ -694,7 +714,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-header2);
   color: white;
-  font-weight: Bold;
+  font-weight: 700;
   letter-spacing: 0%;
 }
 
@@ -702,7 +722,15 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-header3);
   color: var(--text-body-default);
-  font-weight: SemiBold;
+  font-weight: 600;
+  letter-spacing: 0%;
+}
+
+.base_header3-title-seccion {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-header3);
+  color: var(--neutral-grey-100);
+  font-weight: 600;
   letter-spacing: 0%;
 }
 
@@ -710,7 +738,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-subtitle);
   color: var(--text-body-default);
-  font-weight: Regular;
+  font-weight: 400;
   letter-spacing: 0%;
 }
 
@@ -718,7 +746,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-subtitle);
   color: white;
-  font-weight: Regular;
+  font-weight: 400;
   letter-spacing: 0%;
 }
 
@@ -726,7 +754,39 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-body);
   color: var(--text-body-default);
-  font-weight: Regular;
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--pendiente {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--text-subtitle);
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--pagada {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--icon-success-green);
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--vencido {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--icon-red-vencimiento);
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--none {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--text-body-default);
+  font-weight: 400;
   letter-spacing: 0%;
 }
 
@@ -734,7 +794,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-body);
   color: var(--text-body-default);
-  font-weight: Bold;
+  font-weight: 700;
   letter-spacing: 0%;
 }
 
@@ -742,7 +802,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-body);
   color: var(--text-body-default);
-  font-weight: Bold;
+  font-weight: 700;
   letter-spacing: 0%;
 }
 
@@ -750,7 +810,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-title-small);
   color: var(--text-body-default);
-  font-weight: Medium;
+  font-weight: 500;
   letter-spacing: 0%;
 }
 
@@ -758,7 +818,7 @@ template {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-title-small);
   color: var(--text-body-default);
-  font-weight: Bold;
+  font-weight: 700;
   letter-spacing: 0%;
 }
 
@@ -857,8 +917,8 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: var(--default-font-family);
-  background-color: var(--base-primary);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-background-color);
 }
 body.not-scroll {
   height: 100%;
@@ -902,7 +962,46 @@ ul {
   list-style: none;
 }
 
+button {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: var(--base-primary-25);
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+button:hover, button:active {
+  background-color: var(--base-primary-75);
+}
+
 /** LAYOUT **/
+.homepage_contents {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 24px 80px 24px;
+  min-height: 711px;
+}
+@media (max-width: 767px) {
+  .homepage_contents {
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+.proximas-renovaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 767px) {
+  .proximas-renovaciones {
+    gap: 24px;
+  }
+}
+
 /** FRAGMENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
@@ -1097,6 +1196,87 @@ ul {
   flex-direction: column;
 }
 
+.proximas-renovaciones-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: left;
+  align-items: center;
+  padding: 24px 16px;
+  box-shadow: 0px 6px 16px rgba(55, 70, 73, 0.1019607843);
+  border-radius: 8px;
+}
+.proximas-renovaciones-row .proximas-renovaciones__contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.proximas-renovaciones-row .proximas-renovaciones__contenedor-title {
+  display: none;
+}
+.proximas-renovaciones-row .proximas-renovaciones-row__numPoliza,
+.proximas-renovaciones-row .proximas-renovaciones-row__nombreRiesgo,
+.proximas-renovaciones-row .proximas-renovaciones-row__fechaContrato,
+.proximas-renovaciones-row .proximas-renovaciones-row__fechaVencimiento,
+.proximas-renovaciones-row .proximas-renovaciones-row__importe {
+  color: black;
+}
+@media (max-width: 767px) {
+  .proximas-renovaciones-row {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    padding: 16px;
+  }
+  .proximas-renovaciones-row .proximas-renovaciones__contenedor-title {
+    display: block;
+  }
+}
+
+.proxima-renovacion__tag {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 2px 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.tag-pendiente {
+  background-color: var(--proximas-renovaciones-tag-pendiente-background-color);
+}
+
+.tag-pagada {
+  background-color: var(--proximas-renovaciones-tag-pagada-background-color);
+}
+
+.tag-vencido {
+  background-color: var(--proximas-renovaciones-tag-vencido-background-color);
+}
+
+.proximas-renovaciones-tabla__header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: left;
+  align-items: center;
+  padding: 5px 16px;
+  border-bottom: 1px solid #A7B8BF;
+}
+@media (max-width: 767px) {
+  .proximas-renovaciones-tabla__header {
+    display: none;
+  }
+}
+
+.general-outline-button {
+  background-color: transparent;
+  border: 1px solid var(--base-primary-50);
+}
+.general-outline-button:hover, .general-outline-button:active {
+  border: 1px solid var(--base-primary-50);
+}
+
 /** COMPONENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
@@ -1170,4 +1350,10 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+
+.proximas-renovaciones-tabla {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }/*# sourceMappingURL=main.css.map */

@@ -93,8 +93,8 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: var(--default-font-family);
-  background-color: var(--base-primary);
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--main-background-color);
   &.not-scroll {
     height: 100%;
     overflow: hidden;
@@ -137,4 +137,18 @@ a {
 
 ul{
   list-style: none;
+}
+
+button{
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: var(--base-primary-25);
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+
+  &:hover, &:active{
+      background-color: var(--base-primary-75);
+  }
 }

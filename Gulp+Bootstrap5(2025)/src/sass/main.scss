@@ -17,6 +17,8 @@
 
 /** LAYOUT **/
 @use "layout/_navigation";
+@use "layout/_homepage-contents";
+@use "layout/_proximas-renovaciones";
 
 /** FRAGMENTS **/
 // HEADER
@@ -28,7 +30,16 @@
 @use "fragments/header/_header-mobile-sidemenu";
 @use "fragments/header/_header-desktop-sidemenu";
 
+// PRÓXIMAS RENOVACIONES
+@use "fragments/proximas_renovaciones/proximas-renovaciones-row";
+@use "fragments/proximas_renovaciones/proximas-renovaciones-tag";
+@use "fragments/proximas_renovaciones/proximas-renovaciones-table-header";
+
+// GENERALES
+@use "fragments/generales/general-outline-button";
+
 /** COMPONENTS **/
 @use "components/_header";
 @use "components/_footer";
 @use "components/_hero";
+@use "components/proximas-renovaciones-tabla";

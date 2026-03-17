@@ -47,6 +47,8 @@
 .icon-arrow-dropdown{@include icon(var(--icon-arrow-dropdown));}
 .icon-burger_menu{@include icon(var(--icon-burger_menu));}
 .icon-close{@include icon(var(--icon-close));}
+.icon-close-red{@include icon(var(--icon-close), var(--icon-red-vencimiento));}
+.icon-close-grey{@include icon(var(--icon-close), var(--neutral-grey-75));}
 .icon-globe{@include icon(var(--icon-globe));}
 .icon-lock{@include icon(var(--icon-lock));}
 .icon-phone{@include icon(var(--icon-phone));}
@@ -96,7 +98,7 @@
 
 .navbar-text{@include text-format(
   $color: var(--base-greyscale-700),
-  $weight: Bold
+  $weight: $font-weight-bold
 );
   @media (max-width: $mobilexlMax) {
       display: none;
@@ -109,64 +111,93 @@
 
 .base_title{@include text-format(
   $size: var(--typo-size-title),
-  $weight: Bold
+  $weight: $font-weight-bold
 )}
 
 .base_title-hero{@include text-format(
   $size: var(--typo-size-title),
-  $weight: Bold,
+  $weight: $font-weight-bold,
   $color: white
 )}
 
 .base_header2{@include text-format(
   $size: var(--typo-size-header2),
-  $weight: Bold
+  $weight: $font-weight-bold
 )}
 
 .base_header2-hero{@include text-format(
   $size: var(--typo-size-header2),
-  $weight: Bold,
+  $weight: $font-weight-bold,
   $color: white
 )}
 
 .base_header3{@include text-format(
   $size: var(--typo-size-header3),
-  $weight: SemiBold
+  $weight: $font-weight-semibold
+)}
+
+.base_header3-title-seccion{@include text-format(
+  $size: var(--typo-size-header3),
+  $weight: $font-weight-semibold,
+  $color: var(--neutral-grey-100)
 )}
 
 .base_subtitle{@include text-format(
   $size: var(--typo-size-subtitle),
-  $weight: Regular
+  $weight: $font-weight-regular
 )}
 
 .base_subtitle-hero{@include text-format(
   $size: var(--typo-size-subtitle),
-  $weight: Regular,
+  $weight: $font-weight-regular,
   $color: white
 )}
 
 .base_body{@include text-format(
   $size: var(--typo-size-body),
-  $weight: Regular
+  $weight: $font-weight-regular
+)}
+
+.base_body-tag--pendiente{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+  $color: var(--text-subtitle)
+)}
+
+.base_body-tag--pagada{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+  $color: var(--icon-success-green)
+)}
+
+.base_body-tag--vencido{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+  $color: var(--icon-red-vencimiento)
+)}
+
+.base_body-tag--none{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
 )}
 
 .base_body--active{@include text-format(
   $size: var(--typo-size-body),
-  $weight: Bold
+  $weight: $font-weight-bold
 )}
 
 .base_body_bold{@include text-format(
   $size: var(--typo-size-body),
-  $weight: Bold
+  $weight: $font-weight-bold
 )}
 
 .base_small{@include text-format(
   $size: var(--typo-size-title-small),
-  $weight: Medium
+  $weight: $font-weight-medium
 )}
 
 .base_small_title{@include text-format(
   $size: var(--typo-size-title-small),
-  $weight: Bold
+  $weight: $font-weight-bold
 )}
 

@@ -1,0 +1,18 @@
+.proxima-renovacion__tag{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    border-radius: 4px;
+    padding:2px 8px;
+    width: fit-content;
+}
+
+.tag-pendiente{
+    background-color: var(--proximas-renovaciones-tag-pendiente-background-color);
+}
+.tag-pagada{
+    background-color: var(--proximas-renovaciones-tag-pagada-background-color);
+}
+.tag-vencido{
+    background-color: var(--proximas-renovaciones-tag-vencido-background-color);
+}
