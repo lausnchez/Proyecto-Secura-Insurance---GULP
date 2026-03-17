@@ -3,9 +3,9 @@
 .proximas-renovaciones{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: var(--layouts-p-renovaciones-gap);
 
     @include mobilexl{
-        gap: 24px;
+        gap: var(--layouts-p-renovaciones-mobile-gap);
     }
 }

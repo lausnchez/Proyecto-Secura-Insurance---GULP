@@ -1,9 +1,9 @@
 .proxima-renovacion__tag{
     display: flex;
     flex-direction: row;
-    gap: 8px;
-    border-radius: 4px;
-    padding:2px 8px;
+    gap: var(--p-renovaciones-tag-gap);
+    border-radius: var(--p-renovaciones-tag-border-radius);
+    padding:var(--p-renovaciones-tag-padding);
     width: fit-content;
 }
 

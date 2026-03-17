@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** CSS LIBS **/
 /** HELPERS **/
 /* COLORS */
@@ -19,6 +20,16 @@
 /* Header NavBar */
 /* Nav-Dropdown */
 :root {
+  --button-default-border-radius: 8px;
+  --button-default-padding: 10px 16px;
+  --button-default-border-width: 1px;
+  --layouts-homepage-contents-gap: 40px;
+  --layouts-homepage-contents-padding: 40px 24px 80px 24px;
+  --layouts-homepage-contents-min-height: 711px;
+  --layouts-homepage-mobile-contents-gap: 16px;
+  --layouts-homepage-mobile-contents-padding: 16px;
+  --layouts-p-renovaciones-gap: 40px;
+  --layouts-p-renovaciones-mobile-gap: 40px;
   --mobile: 390px;
   --tablet: 768px;
   /* Nav-Dropdown */
@@ -42,6 +53,14 @@
   --header-submenu-language-dropdown-padding: 0px;
   /* Hero */
   --hero-background-translucent-color: rgba(0,0,0,0.5);
+  /* Próximas renovaciones tabla*/
+  --p-renovaciones-tabla-gap: 24px;
+  --p-renovaciones-tabla-header-columns: 6;
+  --p-renovaciones-tabla-header-padding: 5px 16px;
+  --p-renovaciones-tabla-header-border-bottom: 1px;
+  --p-renovaciones-tag-gap: 8px;
+  --p-renovaciones-tag-border-radius: 4px;
+  --p-renovaciones-tag-padding: 2px 8px;
 }
 
 :root {
@@ -964,8 +983,8 @@ ul {
 
 button {
   display: inline-block;
-  border-radius: 8px;
-  padding: 10px 16px;
+  border-radius: var(--button-default-border-radius);
+  padding: var(--button-default-padding);
   background-color: var(--base-primary-25);
   border: none;
   width: -moz-fit-content;
@@ -977,28 +996,34 @@ button:hover, button:active {
 }
 
 /** LAYOUT **/
+body.menu-open {
+  overflow: hidden; /* bloquea scroll vertical y horizontal */
+  position: fixed; /* fija la página para que no salte */
+  width: 100%; /* evita que aparezca scroll horizontal */
+}
+
 .homepage_contents {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 40px 24px 80px 24px;
-  min-height: 711px;
+  gap: var(--layouts-homepage-contents-gap);
+  padding: var(--layouts-homepage-contents-padding);
+  min-height: var(--layouts-homepage-contents-min-height);
 }
 @media (max-width: 767px) {
   .homepage_contents {
-    gap: 16px;
-    padding: 16px;
+    gap: var(--layouts-homepage-mobile-contents-gap);
+    padding: var(--layouts-homepage-mobile-contents-padding);
   }
 }
 
 .proximas-renovaciones {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--layouts-p-renovaciones-gap);
 }
 @media (max-width: 767px) {
   .proximas-renovaciones {
-    gap: 24px;
+    gap: var(--layouts-p-renovaciones-mobile-gap);
   }
 }
 
@@ -1236,9 +1261,9 @@ button:hover, button:active {
 .proxima-renovacion__tag {
   display: flex;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  padding: 2px 8px;
+  gap: var(--p-renovaciones-tag-gap);
+  border-radius: var(--p-renovaciones-tag-border-radius);
+  padding: var(--p-renovaciones-tag-padding);
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1257,11 +1282,11 @@ button:hover, button:active {
 
 .proximas-renovaciones-tabla__header {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(var(--p-renovaciones-tabla-header-columns), 1fr);
   justify-items: left;
   align-items: center;
-  padding: 5px 16px;
-  border-bottom: 1px solid #A7B8BF;
+  padding: var(--p-renovaciones-tabla-header-padding);
+  border-bottom: var(--p-renovaciones-tabla-header-border-bottom) solid #A7B8BF;
 }
 @media (max-width: 767px) {
   .proximas-renovaciones-tabla__header {
@@ -1271,10 +1296,10 @@ button:hover, button:active {
 
 .general-outline-button {
   background-color: transparent;
-  border: 1px solid var(--base-primary-50);
+  border: var(--button-default-border-width) solid var(--base-primary-50);
 }
 .general-outline-button:hover, .general-outline-button:active {
-  border: 1px solid var(--base-primary-50);
+  border: var(--button-default-border-width) solid var(--base-primary-50);
 }
 
 /** COMPONENTS **/
@@ -1355,5 +1380,5 @@ button:hover, button:active {
 .proximas-renovaciones-tabla {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--p-renovaciones-tabla-gap);
 }/*# sourceMappingURL=main.css.map */
