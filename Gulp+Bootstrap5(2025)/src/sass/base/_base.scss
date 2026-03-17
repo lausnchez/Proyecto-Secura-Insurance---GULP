@@ -94,7 +94,7 @@ html {
 body {
   min-height: 100vh;
   font-family: var(--default-font-family);
-  background-color: var(--base-primary);
+  // background-color: var(--base-primary);
   &.not-scroll {
     height: 100%;
     overflow: hidden;

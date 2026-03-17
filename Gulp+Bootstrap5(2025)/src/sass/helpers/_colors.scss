@@ -24,6 +24,7 @@
 
     // EXTRAS
     --icon-success-green: #45944D;
+    --icon-red-vencimiento: #B32E00;
     --text-subtitle: #405258;
     --base-greyscale-700: #405258;
     --base-greyscale-600: #596f76;
@@ -36,4 +37,9 @@
     --dropdown-shadow-color: #37464933;
     --dropdown-hover-color: #EFF3F5;
     --dropdown-left-border-color: #4B98D9;
+
+    // PRÓXIMAS RENOVACIONES
+    --proximas-renovaciones-tag-pendiente-background-color: #FFE74F66;
+    --proximas-renovaciones-tag-pagada-background-color: #57AE6026;
+    --proximas-renovaciones-tag-vencido-background-color: #DB39001F;
 }

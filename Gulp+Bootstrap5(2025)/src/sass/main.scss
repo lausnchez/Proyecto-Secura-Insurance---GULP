@@ -28,6 +28,10 @@
 @use "fragments/header/_header-mobile-sidemenu";
 @use "fragments/header/_header-desktop-sidemenu";
 
+// PRÓXIMAS RENOVACIONES
+@use "fragments/proximas_renovaciones/proximas-renovaciones-row";
+@use "fragments/proximas_renovaciones/proximas-renovaciones-tag";
+
 /** COMPONENTS **/
 @use "components/_header";
 @use "components/_footer";

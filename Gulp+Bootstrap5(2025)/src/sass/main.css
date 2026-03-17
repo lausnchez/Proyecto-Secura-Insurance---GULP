@@ -98,6 +98,7 @@
   --information-accent: #D8DBF5;
   --information-inverse-text: #F7F7FC;
   --icon-success-green: #45944D;
+  --icon-red-vencimiento: #B32E00;
   --text-subtitle: #405258;
   --base-greyscale-700: #405258;
   --base-greyscale-600: #596f76;
@@ -108,6 +109,9 @@
   --dropdown-shadow-color: #37464933;
   --dropdown-hover-color: #EFF3F5;
   --dropdown-left-border-color: #4B98D9;
+  --proximas-renovaciones-tag-pendiente-background-color: #FFE74F66;
+  --proximas-renovaciones-tag-pagada-background-color: #57AE6026;
+  --proximas-renovaciones-tag-vencido-background-color: #DB39001F;
 }
 
 /** CSS LIBS **/
@@ -578,6 +582,20 @@ template {
   font-size: toRem(var(--icon-size));
 }
 
+.icon-close-red::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-close);
+  color: var(--icon-red-vencimiento);
+  font-size: toRem(var(--icon-size));
+}
+
+.icon-close-grey::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-close);
+  color: var(--neutral-grey-75);
+  font-size: toRem(var(--icon-size));
+}
+
 .icon-globe::before {
   font-family: var(--icon-font-family);
   content: var(--icon-globe);
@@ -730,6 +748,38 @@ template {
   letter-spacing: 0%;
 }
 
+.base_body-tag--pendiente {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--text-subtitle);
+  font-weight: Regular;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--pagada {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--icon-success-green);
+  font-weight: Regular;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--vencido {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--icon-red-vencimiento);
+  font-weight: Regular;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--none {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--text-body-default);
+  font-weight: Regular;
+  letter-spacing: 0%;
+}
+
 .base_body--active {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-body);
@@ -858,7 +908,6 @@ html {
 body {
   min-height: 100vh;
   font-family: var(--default-font-family);
-  background-color: var(--base-primary);
 }
 body.not-scroll {
   height: 100%;
@@ -1095,6 +1144,28 @@ ul {
 .header__submenus li:hover .header__submenu__dropdown {
   display: flex;
   flex-direction: column;
+}
+
+.proxima-renovacion__tag {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 2px 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.tag-pendiente {
+  background-color: var(--proximas-renovaciones-tag-pendiente-background-color);
+}
+
+.tag-pagada {
+  background-color: var(--proximas-renovaciones-tag-pagada-background-color);
+}
+
+.tag-vencido {
+  background-color: var(--proximas-renovaciones-tag-vencido-background-color);
 }
 
 /** COMPONENTS **/

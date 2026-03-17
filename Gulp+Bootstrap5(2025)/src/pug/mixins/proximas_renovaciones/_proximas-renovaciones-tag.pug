@@ -1,0 +1,22 @@
+mixin proximas-renovaciones-tag(estado)
+    - var estadoNormalizado = estado.toLowerCase(); // opcional para consistencia
+    - var clases = ['Pendiente','Pagada','Vencido'].includes(estado) ? `tag-${estadoNormalizado}` : ''
+    
+    .proxima-renovacion__tag(class=clases)
+        //- PENDIENTE
+        if estado === 'Pendiente'
+            span(class='icon-clock-subtitle')
+            span.base_body-tag--pendiente Pendiente
+        //- PAGADA
+        else if estado === 'Pagada'
+            span(class='icon-check-green')
+            span.base_body-tag--pagada Pagada
+        //- VENCIDO
+        else if estado === 'Vencido'
+            span(class='icon-close-red')
+            span.base_body-tag--vencido Vencido
+        //- NO COINCIDE
+        else
+            //- Por si acaso no coincide ninguno no de error-// 
+            span(class='icon-close-grey') 
+            span.base_body-tag--none= estado
