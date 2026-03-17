@@ -1,0 +1,18 @@
+.proximas-renovaciones-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: left;
+    align-items: center;
+    padding: 24px 16px;
+    box-shadow: 0px 6px 16px #3746491A;
+    border-radius: 8px;
+
+    .proximas-renovaciones-row__numPoliza,
+    .proximas-renovaciones-row__nombreRiesgo,
+    .proximas-renovaciones-row__fechaContrato,
+    .proximas-renovaciones-row__fechaVencimiento,
+    .proximas-renovaciones-row__importe
+    {
+        color: black;
+    }
+}

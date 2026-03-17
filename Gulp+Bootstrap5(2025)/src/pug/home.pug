@@ -1,10 +1,15 @@
 extends layouts/layout-home
+include mixins/generales/_general-grey-button.pug
+include mixins/generales/_general-outline-button.pug
 
 block vars
     - var pageTitle = "Homepage";
     
 block content
     include components/_hero.pug
-    include fragments/proximas_renovaciones/_proximas-renovaciones-row.pug
-    
-    
+    .homepage_contents
+        .proximas-renovaciones
+            h2.base_header3 Próximas renovaciones
+            include components/_tabla-proximas-renovaciones.pug
+            +general-grey-button("Ver todas")
+            +general-outline-button("Ver todas")

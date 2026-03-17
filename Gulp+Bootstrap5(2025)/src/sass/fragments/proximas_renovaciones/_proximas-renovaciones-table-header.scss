@@ -1,0 +1,8 @@
+.proximas-renovaciones-tabla__header{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: left;
+    align-items: center;
+    padding: 5px 16px;
+    border-bottom: 1px solid #A7B8BF;
+}

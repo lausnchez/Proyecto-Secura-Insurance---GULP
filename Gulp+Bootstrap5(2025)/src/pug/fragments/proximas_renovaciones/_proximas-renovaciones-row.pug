@@ -1,6 +1,14 @@
 include ../../mixins/proximas_renovaciones/_proximas-renovaciones-tag.pug
 
-+proximas-renovaciones-tag('Pendiente')
-+proximas-renovaciones-tag('Pagada')
-+proximas-renovaciones-tag('Vencido')
-+proximas-renovaciones-tag('rgirghsgh')
+//- +proximas-renovaciones-tag('Pendiente')
+//- +proximas-renovaciones-tag('Pagada')
+//- +proximas-renovaciones-tag('Vencido')
+//- +proximas-renovaciones-tag('rgirghsgh')
+
+.proximas-renovaciones-row 
+    span.proximas-renovaciones-row__numPoliza 75846843
+    span.proximas-renovaciones-row__nombreRiesgo Hyundai Ioniq
+    span.proximas-renovaciones-row__fechaContrato 01/12/2022 
+    span.proximas-renovaciones-row__fechaVencimiento 01/12/2023
+    span.proximas-renovaciones-row__importe.base_body_bold 30.203,76 €
+    +proximas-renovaciones-tag('Pagada')

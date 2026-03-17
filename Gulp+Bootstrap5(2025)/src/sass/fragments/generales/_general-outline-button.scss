@@ -1,0 +1,8 @@
+.general-outline-button{
+    background-color: transparent;
+    border: 1px solid var(--base-primary-50);
+
+    &:hover,&:active{
+        border: 1px solid var(--base-primary-50);
+    }
+}
