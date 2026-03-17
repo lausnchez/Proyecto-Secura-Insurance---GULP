@@ -141,8 +141,8 @@ ul{
 
 button{
   display: inline-block;
-  border-radius: 8px;
-  padding: 10px 16px;
+  border-radius: var(--button-default-border-radius);
+  padding: var(--button-default-padding);
   background-color: var(--base-primary-25);
   border: none;
   width: fit-content;

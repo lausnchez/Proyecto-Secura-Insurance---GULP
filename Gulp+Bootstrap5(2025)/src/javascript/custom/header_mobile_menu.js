@@ -1,5 +1,7 @@
 // Recoger elementos del DOM
 //---------------------------------------------------------------------------------
+const body = document.querySelector("body");    // Para togglear el bloqueo del scroll
+
 // Elementos del profile
 const headerProfileButton = document.querySelector('#header_submenu__button_profile button');
 const headerProfileMenu = document.querySelector('.header__submenus__mobile .profile-dropdown');
@@ -17,6 +19,7 @@ const headerLanguageMenu = document.querySelector(".header__mobile-burger-submen
 
 const classToggle = "mobile-active";    // Despliega un menú
 const hiddenClass = "header-submenu-button-hidden"; // Oculta un elemento
+const bodyScrollBlock = "menu-open";    // Bloquea el scroll del body
 
 // Ocultar el botón de cierre al inicializar
 headerCloseButton.classList.add(hiddenClass);
@@ -35,6 +38,9 @@ function closeAllMenus(){
     headerProfileMenu?.classList.remove(classToggle);
     headerBurgerMenu?.classList.remove(classToggle);
     headerLanguageMenu?.classList.remove(classToggle);
+
+    // Habilitar de nuevo el scroll
+    body.classList.remove(bodyScrollBlock);
 }
 
 // Función para mostrar/ocultar el submenu del profile
@@ -50,6 +56,9 @@ function showProfileMobileSubmenu(){
     headerBurgerButton.classList.add(hiddenClass);
     headerCloseButton.classList.remove(hiddenClass);
 
+    // Bloquear scroll del body
+    body.classList.add(bodyScrollBlock);
+
 }
 
 // Función para mostrar/ocultar el submenu burger
@@ -64,6 +73,9 @@ function showBurgerMobileSubmenu(){
     headerProfileButton.classList.add(hiddenClass);
     headerBurgerButton.classList.add(hiddenClass);
     headerCloseButton.classList.remove(hiddenClass);
+
+    // Bloquear scroll del body
+    body.classList.add(bodyScrollBlock);
 }
 
 // Función para mostrar/ocultar el submenu language

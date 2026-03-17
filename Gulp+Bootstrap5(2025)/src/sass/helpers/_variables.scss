@@ -154,6 +154,26 @@ $header-profile-dropdown-li-hover-left-border: 3px solid var(--dropdown-left-bor
 $header-submenu-dropdown-box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
 
 :root{
+    // GENERALES
+    //----------------------------------------------
+    --button-default-border-radius: 8px;
+    --button-default-padding: 10px 16px;
+    --button-default-border-width: 1px;
+
+    // LAYOUTS
+    //----------------------------------------------
+    // HOMEPAGE
+    --layouts-homepage-contents-gap: 40px;
+    --layouts-homepage-contents-padding: 40px 24px 80px 24px;
+    --layouts-homepage-contents-min-height: 711px;
+    
+    --layouts-homepage-mobile-contents-gap: 16px;
+    --layouts-homepage-mobile-contents-padding: 16px;
+
+    // PROXIMAS RENOVACIONES
+    --layouts-p-renovaciones-gap: 40px;
+    --layouts-p-renovaciones-mobile-gap: 40px;
+
     // TAMAÑOS DE PANTALLA
     //----------------------------------------------
     --mobile: #{$mobile};
@@ -187,4 +207,14 @@ $header-submenu-dropdown-box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
     //----------------------------------------------
     /* Hero */
     --hero-background-translucent-color: rgba(0,0,0,0.5);
+
+    /* Próximas renovaciones tabla*/
+    --p-renovaciones-tabla-gap: 24px;
+    --p-renovaciones-tabla-header-columns: 6;
+    --p-renovaciones-tabla-header-padding: 5px 16px;
+    --p-renovaciones-tabla-header-border-bottom: 1px;
+
+    --p-renovaciones-tag-gap: 8px;
+    --p-renovaciones-tag-border-radius: 4px;
+    --p-renovaciones-tag-padding: 2px 8px;
 }
