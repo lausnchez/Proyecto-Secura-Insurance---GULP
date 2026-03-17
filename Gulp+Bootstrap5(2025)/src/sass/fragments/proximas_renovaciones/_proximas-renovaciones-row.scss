@@ -1,3 +1,5 @@
+@use "../../helpers/mixins" as *;
+
 .proximas-renovaciones-row {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -7,6 +9,16 @@
     box-shadow: 0px 6px 16px #3746491A;
     border-radius: 8px;
 
+    .proximas-renovaciones__contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .proximas-renovaciones__contenedor-title{
+        display: none;
+    }
+
+    // Datos de la póliza
     .proximas-renovaciones-row__numPoliza,
     .proximas-renovaciones-row__nombreRiesgo,
     .proximas-renovaciones-row__fechaContrato,
@@ -14,5 +26,11 @@
     .proximas-renovaciones-row__importe
     {
         color: black;
+    }
+
+    @include mobilexl{
+       .proximas-renovaciones__contenedor-title{
+            display: block;
+        } 
     }
 }

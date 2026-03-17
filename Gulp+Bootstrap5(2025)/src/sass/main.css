@@ -1186,12 +1186,24 @@ button:hover, button:active {
   box-shadow: 0px 6px 16px rgba(55, 70, 73, 0.1019607843);
   border-radius: 8px;
 }
+.proximas-renovaciones-row .proximas-renovaciones__contenedor {
+  display: flex;
+  flex-direction: column;
+}
+.proximas-renovaciones-row .proximas-renovaciones__contenedor-title {
+  display: none;
+}
 .proximas-renovaciones-row .proximas-renovaciones-row__numPoliza,
 .proximas-renovaciones-row .proximas-renovaciones-row__nombreRiesgo,
 .proximas-renovaciones-row .proximas-renovaciones-row__fechaContrato,
 .proximas-renovaciones-row .proximas-renovaciones-row__fechaVencimiento,
 .proximas-renovaciones-row .proximas-renovaciones-row__importe {
   color: black;
+}
+@media (max-width: 767px) {
+  .proximas-renovaciones-row .proximas-renovaciones__contenedor-title {
+    display: block;
+  }
 }
 
 .proxima-renovacion__tag {
@@ -1223,6 +1235,11 @@ button:hover, button:active {
   align-items: center;
   padding: 5px 16px;
   border-bottom: 1px solid #A7B8BF;
+}
+@media (max-width: 767px) {
+  .proximas-renovaciones-tabla__header {
+    display: none;
+  }
 }
 
 .general-outline-button {
