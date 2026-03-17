@@ -12,6 +12,7 @@
     .proximas-renovaciones__contenedor{
         display: flex;
         flex-direction: column;
+        gap: 4px;
     }
 
     .proximas-renovaciones__contenedor-title{
@@ -29,8 +30,14 @@
     }
 
     @include mobilexl{
-       .proximas-renovaciones__contenedor-title{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+        padding: 16px;
+        
+        .proximas-renovaciones__contenedor-title{
             display: block;
-        } 
+        }
     }
 }

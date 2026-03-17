@@ -726,6 +726,14 @@ template {
   letter-spacing: 0%;
 }
 
+.base_header3-title-seccion {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-header3);
+  color: var(--neutral-grey-100);
+  font-weight: 600;
+  letter-spacing: 0%;
+}
+
 .base_subtitle {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-subtitle);
@@ -976,11 +984,22 @@ button:hover, button:active {
   padding: 40px 24px 80px 24px;
   min-height: 711px;
 }
+@media (max-width: 767px) {
+  .homepage_contents {
+    gap: 16px;
+    padding: 16px;
+  }
+}
 
 .proximas-renovaciones {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+@media (max-width: 767px) {
+  .proximas-renovaciones {
+    gap: 24px;
+  }
 }
 
 /** FRAGMENTS **/
@@ -1189,6 +1208,7 @@ button:hover, button:active {
 .proximas-renovaciones-row .proximas-renovaciones__contenedor {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 .proximas-renovaciones-row .proximas-renovaciones__contenedor-title {
   display: none;
@@ -1201,6 +1221,13 @@ button:hover, button:active {
   color: black;
 }
 @media (max-width: 767px) {
+  .proximas-renovaciones-row {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    padding: 16px;
+  }
   .proximas-renovaciones-row .proximas-renovaciones__contenedor-title {
     display: block;
   }

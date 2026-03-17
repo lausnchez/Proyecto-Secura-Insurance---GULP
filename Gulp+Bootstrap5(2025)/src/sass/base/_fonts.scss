@@ -136,6 +136,12 @@
   $weight: $font-weight-semibold
 )}
 
+.base_header3-title-seccion{@include text-format(
+  $size: var(--typo-size-header3),
+  $weight: $font-weight-semibold,
+  $color: var(--neutral-grey-100)
+)}
+
 .base_subtitle{@include text-format(
   $size: var(--typo-size-subtitle),
   $weight: $font-weight-regular
