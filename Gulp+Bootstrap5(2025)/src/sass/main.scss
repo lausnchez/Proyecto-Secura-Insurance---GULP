@@ -19,6 +19,7 @@
 @use "layout/_navigation";
 @use "layout/_homepage-contents";
 @use "layout/_proximas-renovaciones";
+@use "layout/_clientes-potenciales";
 
 /** FRAGMENTS **/
 // HEADER
@@ -42,4 +43,5 @@
 @use "components/_header";
 @use "components/_footer";
 @use "components/_hero";
-@use "components/proximas-renovaciones-tabla";
+@use "components/_proximas-renovaciones-tabla";
+@use "components/_cliente-potencial-card";

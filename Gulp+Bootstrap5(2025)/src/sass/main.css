@@ -114,6 +114,7 @@
   --proximas-renovaciones-tag-pendiente-background-color: #FFE74F66;
   --proximas-renovaciones-tag-pagada-background-color: #57AE6026;
   --proximas-renovaciones-tag-vencido-background-color: #DB39001F;
+  --clientes-potenciales-card-title-color: #161C1F;
 }
 
 /** CSS LIBS **/
@@ -665,39 +666,10 @@ template {
   font-family: var(--default-font-family);
 }
 
-.navbar-text {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-body);
-  color: var(--base-greyscale-700);
-  font-weight: 700;
-  letter-spacing: 0%;
-}
-@media (max-width: 767px) {
-  .navbar-text {
-    display: none;
-  }
-}
-
-.item-dropdown-text {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-body);
-  color: var(--text-subtitle);
-  font-weight: normal;
-  letter-spacing: 0%;
-}
-
 .base_title {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-title);
   color: var(--text-body-default);
-  font-weight: 700;
-  letter-spacing: 0%;
-}
-
-.base_title-hero {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-title);
-  color: white;
   font-weight: 700;
   letter-spacing: 0%;
 }
@@ -710,26 +682,10 @@ template {
   letter-spacing: 0%;
 }
 
-.base_header2-hero {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-header2);
-  color: white;
-  font-weight: 700;
-  letter-spacing: 0%;
-}
-
 .base_header3 {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-header3);
   color: var(--text-body-default);
-  font-weight: 600;
-  letter-spacing: 0%;
-}
-
-.base_header3-title-seccion {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-header3);
-  color: var(--neutral-grey-100);
   font-weight: 600;
   letter-spacing: 0%;
 }
@@ -742,47 +698,7 @@ template {
   letter-spacing: 0%;
 }
 
-.base_subtitle-hero {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-subtitle);
-  color: white;
-  font-weight: 400;
-  letter-spacing: 0%;
-}
-
 .base_body {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-body);
-  color: var(--text-body-default);
-  font-weight: 400;
-  letter-spacing: 0%;
-}
-
-.base_body-tag--pendiente {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-body);
-  color: var(--text-subtitle);
-  font-weight: 400;
-  letter-spacing: 0%;
-}
-
-.base_body-tag--pagada {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-body);
-  color: var(--icon-success-green);
-  font-weight: 400;
-  letter-spacing: 0%;
-}
-
-.base_body-tag--vencido {
-  font-family: var(--default-font-family);
-  font-size: var(--typo-size-body);
-  color: var(--icon-red-vencimiento);
-  font-weight: 400;
-  letter-spacing: 0%;
-}
-
-.base_body-tag--none {
   font-family: var(--default-font-family);
   font-size: var(--typo-size-body);
   color: var(--text-body-default);
@@ -819,6 +735,115 @@ template {
   font-size: var(--typo-size-title-small);
   color: var(--text-body-default);
   font-weight: 700;
+  letter-spacing: 0%;
+}
+
+.base_header3-title-seccion {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-header3);
+  color: var(--neutral-grey-100);
+  font-weight: 600;
+  letter-spacing: 0%;
+}
+
+.base_body-bold-blue {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--base-primary);
+  font-weight: 700;
+  letter-spacing: 0%;
+}
+
+.navbar-text {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--base-greyscale-700);
+  font-weight: 700;
+  letter-spacing: 0%;
+}
+@media (max-width: 767px) {
+  .navbar-text {
+    display: none;
+  }
+}
+
+.item-dropdown-text {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--text-subtitle);
+  font-weight: normal;
+  letter-spacing: 0%;
+}
+
+.base_header2-hero {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-header2);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0%;
+}
+
+.base_title-hero {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-title);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0%;
+}
+
+.base_subtitle-hero {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-subtitle);
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--pendiente {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--text-subtitle);
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--pagada {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--icon-success-green);
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--vencido {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--icon-red-vencimiento);
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_body-tag--none {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--text-body-default);
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_subtitle-clientePotencial-title {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-subtitle);
+  color: var(--clientes-potenciales-card-title-color);
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.base_body-clientePotencial-subtitle {
+  font-family: var(--default-font-family);
+  font-size: var(--typo-size-body);
+  color: var(--base-primary-50);
+  font-weight: 400;
   letter-spacing: 0%;
 }
 
@@ -991,14 +1016,27 @@ button:hover, button:active {
   }
 }
 
-.proximas-renovaciones {
+.principal-section {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 @media (max-width: 767px) {
-  .proximas-renovaciones {
+  .principal-section {
     gap: 24px;
+  }
+}
+
+.clientes-potenciales-contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .clientes-potenciales-contents {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -1204,6 +1242,7 @@ button:hover, button:active {
   padding: 24px 16px;
   box-shadow: 0px 6px 16px rgba(55, 70, 73, 0.1019607843);
   border-radius: 8px;
+  background-color: white;
 }
 .proximas-renovaciones-row .proximas-renovaciones__contenedor {
   display: flex;
@@ -1356,4 +1395,55 @@ button:hover, button:active {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.cliente-potencial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0px 3px 5px 0px rgba(55, 70, 73, 0.2);
+  padding: 16px 24px;
+  border-radius: 12px;
+  width: 100%;
+  background-color: white;
+}
+.cliente-potencial-card .cliente-potencial-card__principal {
+  display: grid;
+  grid-template-columns: auto 20px;
+  justify-content: space-between;
+}
+.cliente-potencial-card .cliente-potencial-card__principal__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cliente-potencial-card .cliente-potencial-card__contact {
+  display: flex;
+  flex-direction: row;
+  min-height: 49px;
+  align-items: center;
+  gap: 24px;
+}
+.cliente-potencial-card .cliente-potencial-card__principal__button a {
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .cliente-potencial-card .cliente-potencial-card__principal {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .cliente-potencial-card .cliente-potencial-card__principal__button {
+    width: 100%;
+    text-align: end;
+  }
+  .cliente-potencial-card .cliente-potencial-card__principal__text {
+    gap: 10px;
+  }
+  .cliente-potencial-card .cliente-potencial-card__contact {
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 24px;
+    height: 126px;
+  }
 }/*# sourceMappingURL=main.css.map */

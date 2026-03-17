@@ -1,0 +1,61 @@
+@use "../helpers/mixins" as *;
+
+.cliente-potencial-card{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 0px 3px 5px 0px #37464933;
+    padding: 16px 24px;
+    border-radius: 12px;
+    width: 100%;
+    background-color: white;
+
+    .cliente-potencial-card__principal{
+        display: grid;
+        grid-template-columns: auto 20px;
+        justify-content: space-between;
+    }
+    .cliente-potencial-card__principal__text{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .cliente-potencial-card__contact{
+        display: flex;
+        flex-direction: row;
+        min-height: 49px;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .cliente-potencial-card__principal__button a{
+        cursor: pointer;
+    }
+
+    @include mobilexl{
+        // min-height: 326px;
+
+        .cliente-potencial-card__principal{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .cliente-potencial-card__principal__button{
+            width: 100%;
+            text-align: end;
+        }
+
+        .cliente-potencial-card__principal__text{
+            gap: 10px;
+        }
+
+        .cliente-potencial-card__contact{
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 24px;
+            height: 126px;
+        }
+    }
+}
+

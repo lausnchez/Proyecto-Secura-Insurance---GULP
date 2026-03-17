@@ -1,0 +1,11 @@
+mixin cliente-potencial-card(nombre, servicio, email, tlf)
+    .cliente-potencial-card
+        .cliente-potencial-card__principal
+            .cliente-potencial-card__principal__text
+                span.base_subtitle-clientePotencial-title= nombre
+                span.base_body-clientePotencial-subtitle Producto a ofrecer: #{servicio}
+            .cliente-potencial-card__principal__button
+                a.icon-trash-alt
+        .cliente-potencial-card__contact
+            span.base_body-bold-blue Email: #{email}
+            span.base_body-bold-blue Teléfono: #{tlf}
