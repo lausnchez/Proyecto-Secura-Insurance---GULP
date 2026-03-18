@@ -1,4 +1,6 @@
 @use "../helpers/functions" as *;
+@use "../helpers/variables" as *;
+
 .hero{
     background: 
         linear-gradient(
@@ -16,11 +18,11 @@
     min-height: 500px;
 
     .hero__contents{
-        max-width: 700px;
-        width: 80%;
+        max-width: var(--hero-contents-max-width);
+        width: var(--hero-contents-width);
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: toRem(40px);
+        gap: toRem($hero-contents-gap);
     }
 }

@@ -3,9 +3,9 @@
 .principal-section{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: var(--principal-section-gap);
 
     @include mobilexl{
-        gap: 24px;
+        gap: var(--principal-section-mobile-gap);
     }
 }

@@ -1,31 +1,32 @@
 @use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
 
 .cliente-potencial-card{
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    box-shadow: 0px 3px 5px 0px #37464933;
-    padding: 16px 24px;
-    border-radius: 12px;
+    gap: var(--cliente-potencial-card-gap);
+    box-shadow: $cliente-potencial-card-box-shadow;
+    padding: var(--cliente-potencial-card-padding);
+    border-radius: var(--cliente-potencial-card-border-radius);
     width: 100%;
-    background-color: white;
+    background-color: var(--clientes-potenciales-card-background-color);
 
     .cliente-potencial-card__principal{
         display: grid;
-        grid-template-columns: auto 20px;
+        grid-template-columns: auto var(--cliente-potencial-card-principal-column-icon);
         justify-content: space-between;
     }
     .cliente-potencial-card__principal__text{
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: var(--cliente-potencial-card-principal-text-gap);
     }
     .cliente-potencial-card__contact{
         display: flex;
         flex-direction: row;
-        min-height: 49px;
+        min-height: var(--cliente-potencial-card-contact-min-height);
         align-items: center;
-        gap: 24px;
+        gap: var(--cliente-potencial-card-contact-gap);
     }
 
     .cliente-potencial-card__principal__button a{
@@ -46,15 +47,15 @@
         }
 
         .cliente-potencial-card__principal__text{
-            gap: 10px;
+            gap: var(--cliente-potencial-card-principal-text-gap);
         }
 
         .cliente-potencial-card__contact{
             flex-direction: column;
             align-items: start;
             justify-content: center;
-            gap: 24px;
-            height: 126px;
+            gap: var(--cliente-potencial-card-contact-gap);
+            height: var(--cliente-potencial-card-contact-height);
         }
     }
 }

@@ -1,12 +1,13 @@
 @use "../../helpers/mixins" as *;
+@use "../../helpers/variables" as *;
 
 .proximas-renovaciones-tabla__header{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(var(--p-renovaciones-tabla-header-columns), 1fr);
     justify-items: left;
     align-items: center;
-    padding: 5px 16px;
-    border-bottom: 1px solid #A7B8BF;
+    padding: var(--p-renovaciones-tabla-header-padding);
+    border-bottom: $p-renovaciones-tabla-header-border-bottom;
 
     @include mobilexl{
         display: none;

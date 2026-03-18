@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    gap: 20px;
+    gap: var(--clientes-potenciales-contents-gap);
 
     @include mobilexl{
         display: flex;

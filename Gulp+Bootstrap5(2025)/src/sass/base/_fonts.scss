@@ -36,7 +36,7 @@
 .icon-back{@include icon(var(--icon-back));}
 .icon-skip-left{@include icon(var(--icon-skip-left));}
 .icon-file{@include icon(var(--icon-file));}
-.icon-copyright{@include icon(var(--icon-copyright));}
+.icon-copyright{@include icon(var(--icon-copyright), var(--base-greyscale-700));}
 .icon-telephone{@include icon(var(--icon-telephone));}
 .icon-trash-alt{@include icon(var(--icon-trash-alt));}
 .icon-mail{@include icon(var(--icon-mail));}
@@ -230,4 +230,18 @@
   $size: var(--typo-size-body),
   $weight: $font-weight-regular,
   $color: var(--base-primary-50)
+)}
+
+// Footer
+//--------------
+.base_body_footer{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+  $color: var(--text-subtitle)
+)}
+
+.base_body_footer_small{@include text-format(
+  $size: var(--typo-size-small),
+  $weight: $font-weight-medium,
+  $color: var(--text-subtitle)
 )}

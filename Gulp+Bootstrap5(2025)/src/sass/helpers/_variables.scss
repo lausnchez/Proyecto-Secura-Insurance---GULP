@@ -141,6 +141,9 @@ $header-submenus-container-gap: 24px;
 $header-navBar-gap: 32px;
 $header-gap: 24px;
 
+/* Hero */
+$hero-contents-gap: 40px;
+
 // FRAGMENTS
 //----------------------------------------------
 /* Nav-Dropdown */
@@ -153,11 +156,27 @@ $header-profile-dropdown-li-border-left: 3px solid transparent;
 $header-profile-dropdown-li-hover-left-border: 3px solid var(--dropdown-left-border-color);
 $header-submenu-dropdown-box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
 
+/* Proximas Renovaciones Tabla */
+$p-renovaciones-tabla-header-border-bottom: 1px solid var(--proximas-renovaciones-tabla-header-border-bottom); 
+$p-renovaciones-tabla-box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-box-shadow); 
+$p-renovaciones-tabla-row-box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-row-box-shadow);
+
+/* Cliente Potencial Card */
+$cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-card-box-shadow-color);
+
 :root{
     // TAMAÑOS DE PANTALLA
     //----------------------------------------------
     --mobile: #{$mobile};
     --tablet: #{$tablet};
+
+    // LAYOUTS
+    //----------------------------------------------
+    --homepage-contents-gap: 40px;
+    --homepage-contents-padding: 40px 24px 80px 24px;
+    --homepage-contents-min-height: 711px;
+    --homepage-contents-mobile-gap: 16px;
+    --homepage-contents-mobile-padding: 16px;
 
     // FRAGMENTS
     //----------------------------------------------
@@ -183,8 +202,44 @@ $header-submenu-dropdown-box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
     --header-submenu-dropdown-mobilexl-border-radius: 0px;
     --header-submenu-language-dropdown-min-width: 130px;
     --header-submenu-language-dropdown-padding: 0px;
+
+    /* Proximas Renovaciones Tabla */
+    --p-renovaciones-contenedor-gap: 4px;
+
+    --p-renovaciones-tabla-header-columns: 6;
+    --p-renovaciones-tabla-header-padding: 5px 16px;
+    --p-renovaciones-tabla-row-columns: 6;
+    --p-renovaciones-tabla-row-padding: 24px 16px;
+    --p-renovaciones-tabla-row-border-radius: 8px;
+
+    --p-renovaciones-tabla-row-mobile-gap: 16px;
+    --p-renovaciones-tabla-row-mobile-padding: 16px;
+    
+
+    /* Cliente Potencial Card*/
+    --cliente-potencial-card-principal-text-gap: 10px;
+    --cliente-potencial-card-contact-gap: 24px;
+    --cliente-potencial-card-contact-height: 126px;
+    --cliente-potencial-card-gap: 24px;
+    --cliente-potencial-card-box-shadow: 24px;
+    --cliente-potencial-card-padding: 16px 24px;
+    --cliente-potencial-card-border-radius: 12px;
+    --cliente-potencial-card-principal-column-icon: 20px;
+    --cliente-potencial-card-principal-text-gap: 24px;
+    --cliente-potencial-card-contact-gap: 24px;
+    --cliente-potencial-card-contact-min-height: 49px;
+
     // COMPONENTS
     //----------------------------------------------
+    /* Principal Section - Homepage */
+    --principal-section-gap: 40px;
+    --principal-section-mobile-gap: 24px;
+
     /* Hero */
     --hero-background-translucent-color: rgba(0,0,0,0.5);
+    --hero-contents-max-width: 700px;
+    --hero-contents-width: 80%;
+    
+    /* Clientes Potenciales*/
+    --clientes-potenciales-contents-gap: 20px;
 }

@@ -2,12 +2,12 @@
 .homepage_contents{
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 40px 24px 80px 24px;
-    min-height: 711px;
+    gap: var(--homepage-contents-gap);
+    padding: var(--homepage-contents-padding);
+    min-height: var(--homepage-contents-min-height);
 
     @include mobilexl{
-        gap: 16px;
-        padding: 16px;
+        gap: var(--homepage-contents-mobile-gap);
+        padding: var(--homepage-contents-mobile-padding);
     }
 }
