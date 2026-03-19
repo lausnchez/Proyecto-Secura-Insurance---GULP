@@ -1,20 +1,11 @@
 extends layouts/layout-home
-include mixins/generales/_general-grey-button.pug
-include mixins/generales/_general-outline-button.pug
-include mixins/clientes_potenciales/_cliente-potencial-card.pug
 
 block vars
     - var pageTitle = "Homepage";
     
 block content
     include components/_hero.pug
-    .homepage_contents
-        section.principal-section
-            h2.base_header3-title-seccion Próximas renovaciones
-            include components/_tabla-proximas-renovaciones.pug
-            +general-grey-button("Ver todas")
-        section.principal-section
-            h2.base_header3-title-seccion Clientes Potenciales
-            .clientes-potenciales-contents
-                +cliente-potencial-card("José Carlos Rodríguez", "Seguro de moto", " jose.rod@gmail.com", "+34 258 632 555")
-                +cliente-potencial-card("Ana Perffeti", "Seguro de casa", " ana.per@gmail.com", "+34 258 632 444")
+    .homepage_contents    
+        include components/_tabla-proximas-renovaciones.pug
+        include components/_clientes-potenciales.pug    
+        

@@ -1,5 +1,6 @@
 @use "../../helpers/mixins" as *;
 @use "../../helpers/variables" as *;
+@use "../../helpers/functions" as *;
 
 .proximas-renovaciones-row {
     display: grid;
@@ -10,7 +11,6 @@
     box-shadow: $p-renovaciones-tabla-row-box-shadow;
     border-radius: var(--p-renovaciones-tabla-row-border-radius);
     background-color: var(--proximas-renovaciones-tabla-row-background-color);
-
     .proximas-renovaciones__contenedor{
         display: flex;
         flex-direction: column;
@@ -35,7 +35,7 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: var(--p-renovacioones-tabla-row-mobile-padding);
+        gap: var(--p-renovaciones-tabla-row-mobile-gap);
         padding: var(--p-renovaciones-tabla-row-mobile-padding);
         
         .proximas-renovaciones__contenedor-title{
