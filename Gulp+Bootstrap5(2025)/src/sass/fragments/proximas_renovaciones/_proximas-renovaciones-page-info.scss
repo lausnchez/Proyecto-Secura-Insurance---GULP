@@ -1,0 +1,16 @@
+@use "../../helpers/font-mixins" as *;
+
+.p-renovaciones-page-info {
+    background-color: white;
+
+    .p-renovaciones-page-info__breadcrumbs{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .p-renovaciones-page-info__url__origin{
+        @include body;
+        color: var(--base-primary);
+    }
+}

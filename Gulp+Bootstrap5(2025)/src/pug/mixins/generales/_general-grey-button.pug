@@ -1,2 +1,4 @@
-mixin general-grey-button(textContent)
-    button= textContent
+mixin general-grey-button(textContent, iconClass = '')
+    .general-grey-button
+        span(class=`icon-${iconClass}`)
+        span #{textContent}
