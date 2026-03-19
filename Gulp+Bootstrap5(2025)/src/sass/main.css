@@ -1437,6 +1437,8 @@ button:hover, button:active {
 
 /** CSS LIBS **/
 /** HELPERS **/
+/** CSS LIBS **/
+/** HELPERS **/
 .footer__contentPrincipal {
   display: grid;
   grid-template-rows: auto auto;
@@ -1460,11 +1462,26 @@ button:hover, button:active {
   flex-direction: column;
   gap: 12px;
 }
+.footer__contentPrincipal .footer__data__contact__title {
+  font-family: var(--default-font-family);
+  font-weight: 700;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--base-primary);
+}
 .footer__contentPrincipal .footer__icon-data {
   display: flex;
   flex-direction: row;
   gap: 8px;
   align-items: center;
+}
+.footer__contentPrincipal .footer__icon-text {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
 }
 .footer__contentPrincipal .footer__links {
   display: flex;
@@ -1472,6 +1489,13 @@ button:hover, button:active {
   justify-content: space-between;
   padding-top: 16px;
   padding-bottom: 16px;
+}
+.footer__contentPrincipal .footer_small_text {
+  font-family: var(--default-font-family);
+  font-weight: 500;
+  font-size: var(--typo-size-small);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
 }
 .footer__contentPrincipal .footer__links ul {
   display: flex;

@@ -1,5 +1,6 @@
 @use "../helpers/variables" as *;
 @use "../helpers/mixins" as *;
+@use "../helpers/font-mixins" as *;
 
 .footer__contentPrincipal {
     display: grid;
@@ -28,11 +29,20 @@
         gap: 12px;
     }
 
+    .footer__data__contact__title{
+        @include bodyBold;
+        color: var(--base-primary);
+    }
+
     .footer__icon-data{
         display: flex;
         flex-direction: row;
         gap: 8px;
         align-items: center;
+    }
+
+    .footer__icon-text {
+        @include body;
     }
 
     .footer__links{
@@ -41,6 +51,10 @@
         justify-content: space-between;
         padding-top: 16px;
         padding-bottom: 16px;
+    }
+
+    .footer_small_text{
+        @include small;
     }
     
     .footer__links ul{

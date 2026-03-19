@@ -1,0 +1,83 @@
+@use "functions" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+@mixin title{
+    font-family: var(--default-font-family);
+    font-weight: $font-weight-bold;
+    font-size: toRem(var(--typo-size-title));
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+    
+    // @include mobilexl{}
+}
+
+@mixin header2{
+    font-family: var(--default-font-family);
+    font-weight: $font-weight-bold;
+    font-size: var(--typo-size-header2);
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+
+    // @include mobilexl{}
+}
+
+@mixin header3{
+    font-family: var(--default-font-family);
+    font-weight: $font-weight-semibold;
+    font-size: var(--typo-size-header3);
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+
+    // @include mobilexl{}
+}
+
+@mixin subtitle{
+    font-family: var(--default-font-family);
+    font-weight: $font-weight-regular;
+    font-size: var(--typo-size-subtitle);
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+
+    // @include mobilexl{}
+}
+
+@mixin body{
+    font-family: var(--default-font-family);
+    font-weight: $font-weight-regular;
+    font-size: var(--typo-size-body);
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+
+    // @include mobilexl{}
+}
+
+@mixin bodyBold{
+    font-family: var(--default-font-family);
+    font-weight: $font-weight-bold;
+    font-size: var(--typo-size-body);
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+
+    // @include mobilexl{}
+}
+
+@mixin small{
+    font-family: var(--default-font-family);
+    font-weight: $font-weight-medium;
+    font-size: var(--typo-size-small);
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+
+    // @include mobilexl{}
+}
+
+@mixin smallTitle{
+    font-family: var(--default-font-family);
+    font-weight: $font-weight-bold;
+    font-size: var(--typo-size-title-small);
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+
+    // @include mobilexl{}
+}
