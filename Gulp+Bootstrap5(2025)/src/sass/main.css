@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** CSS LIBS **/
 /** HELPERS **/
 /* COLORS */
@@ -20,6 +21,7 @@
 /* Hero */
 /* Nav-Dropdown */
 /* Proximas Renovaciones Tabla */
+/** Próximas Renovaciones Tag **/
 /* Cliente Potencial Card */
 :root {
   --mobile: 390px;
@@ -57,6 +59,9 @@
   --p-renovaciones-tabla-row-border-radius: 8px;
   --p-renovaciones-tabla-row-mobile-gap: 16px;
   --p-renovaciones-tabla-row-mobile-padding: 16px;
+  /* Próximas Renovaciones Tag */
+  --p-renovaciones-tag-gap: 8px;
+  --p-renovaciones-tag-border-radius: 4px;
   /* Cliente Potencial Card*/
   --cliente-potencial-card-principal-text-gap: 10px;
   --cliente-potencial-card-contact-gap: 24px;
@@ -72,6 +77,9 @@
   /* General Grey Button */
   --general-grey-button-border-radius: 8px;
   --general-grey-button-gap: 16px;
+  /* General Info Tag */
+  --general-info-tag-gap: 12px;
+  --general-info-tag-border-radius: 8px;
   /* Principal Section - Homepage */
   --principal-section-gap: 40px;
   --principal-section-mobile-gap: 24px;
@@ -127,11 +135,13 @@
   --base-primary-75: #6FA6D4;
   --base-primary-50: #9FC3E2;
   --base-primary-25: #CFE1F1;
+  --base-bg-100: #EFF3F5;
   --neutral-grey-100: #353535;
   --neutral-grey-75: #686868;
   --neutral-grey-50: #9A9A9A;
   --neutral-grey-25: #CDCDCD;
   --neutral-light: #FAFCFE;
+  --gray-01: #B7CBD3;
   --function-success: #3BD378;
   --function-error: #E75249;
   --information-text: #191C3D;
@@ -553,6 +563,13 @@ template {
   font-family: var(--icon-font-family);
   content: var(--icon-file);
   color: var(--base-primary);
+  font-size: toRem(var(--icon-size));
+}
+
+.icon-file-subtitle::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-file);
+  color: var(--text-subtitle);
   font-size: toRem(var(--icon-size));
 }
 
@@ -1340,11 +1357,14 @@ button {
   }
 }
 
+/** CSS LIBS **/
+/** HELPERS **/
 .proxima-renovacion__tag {
   display: flex;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  align-items: center;
+  gap: var(--p-renovaciones-tag-gap);
+  border-radius: var(--p-renovaciones-tag-border-radius);
   padding: 2px 8px;
   width: -moz-fit-content;
   width: fit-content;
@@ -1382,6 +1402,8 @@ button {
 /** HELPERS **/
 .p-renovaciones-page-info {
   background-color: var(--proximas-renovaciones-page-info-bg-color);
+  padding: 32px 88px;
+  border-bottom: 1px solid var(--gray-01);
 }
 .p-renovaciones-page-info .p-renovaciones-page-info__breadcrumbs {
   display: flex;
@@ -1395,6 +1417,19 @@ button {
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
   color: var(--base-primary);
+}
+.p-renovaciones-page-info .p-renovaciones-page-info__title-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-renovaciones-page-info .p-renovaciones-page-info__title-button h2 {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: var(--typo-size-subtitle);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
 }
 
 .general-outline-button {
@@ -1415,12 +1450,34 @@ button {
   background-color: var(--base-primary-75);
 }
 
+/** CSS LIBS **/
+/** HELPERS **/
+.general-info-tag {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--base-bg-100);
+  align-items: center;
+  gap: var(--general-info-tag-gap);
+  border-radius: var(--general-info-tag-border-radius);
+  padding: 10px 16px;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 /** COMPONENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
 .header {
   padding: 8px 16px;
   border: 1px solid var(--header-background-color);
+  border-bottom: 1px solid #EFF3F5;
   background-color: var(--header-background-color);
   display: flex;
   flex-direction: column;

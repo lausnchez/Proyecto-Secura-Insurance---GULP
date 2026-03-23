@@ -36,6 +36,7 @@
 .icon-back{@include icon(var(--icon-back));}
 .icon-skip-left{@include icon(var(--icon-skip-left));}
 .icon-file{@include icon(var(--icon-file));}
+.icon-file-subtitle{@include icon(var(--icon-file), var(--text-subtitle));}
 .icon-copyright{@include icon(var(--icon-copyright), var(--base-greyscale-700));}
 .icon-telephone{@include icon(var(--icon-telephone));}
 .icon-trash-alt{@include icon(var(--icon-trash-alt));}

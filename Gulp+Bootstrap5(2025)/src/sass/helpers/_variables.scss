@@ -166,6 +166,9 @@ $p-renovaciones-tabla-header-border-bottom: 1px solid var(--proximas-renovacione
 $p-renovaciones-tabla-box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-box-shadow); 
 $p-renovaciones-tabla-row-box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-row-box-shadow);
 
+/** Próximas Renovaciones Tag **/
+$p-renovaciones-tag-padding: 2px 8px;
+
 /* Cliente Potencial Card */
 $cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-card-box-shadow-color);
 
@@ -220,6 +223,10 @@ $cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-c
     --p-renovaciones-tabla-row-mobile-gap: 16px;
     --p-renovaciones-tabla-row-mobile-padding: 16px;
     
+    /* Próximas Renovaciones Tag */
+    --p-renovaciones-tag-gap: 8px;
+    --p-renovaciones-tag-border-radius: 4px;
+
     /* Cliente Potencial Card*/
     --cliente-potencial-card-principal-text-gap: 10px;
     --cliente-potencial-card-contact-gap: 24px;
@@ -236,6 +243,10 @@ $cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-c
     /* General Grey Button */
     --general-grey-button-border-radius: 8px;
     --general-grey-button-gap: 16px;
+
+    /* General Info Tag */
+    --general-info-tag-gap: 12px;
+    --general-info-tag-border-radius: 8px;
 
     // COMPONENTS
     //----------------------------------------------

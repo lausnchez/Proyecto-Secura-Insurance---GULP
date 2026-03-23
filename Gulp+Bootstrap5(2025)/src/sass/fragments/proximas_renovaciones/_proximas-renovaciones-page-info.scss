@@ -2,6 +2,8 @@
 
 .p-renovaciones-page-info {
     background-color: var(--proximas-renovaciones-page-info-bg-color);
+    padding: 32px 88px;
+    border-bottom: 1px solid var(--gray-01);
 
     .p-renovaciones-page-info__breadcrumbs{
         display: flex;
@@ -12,5 +14,16 @@
     .p-renovaciones-page-info__url__origin{
         @include body;
         color: var(--base-primary);
+    }
+
+    .p-renovaciones-page-info__title-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .p-renovaciones-page-info__title-button h2{
+        @include subtitle();
     }
 }

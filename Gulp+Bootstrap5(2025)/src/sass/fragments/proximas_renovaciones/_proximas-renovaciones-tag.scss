@@ -1,9 +1,12 @@
+@use "../../helpers/variables" as *;
+
 .proxima-renovacion__tag{
     display: flex;
     flex-direction: row;
-    gap: 8px;
-    border-radius: 4px;
-    padding:2px 8px;
+    align-items: center;
+    gap: var(--p-renovaciones-tag-gap);
+    border-radius: var(--p-renovaciones-tag-border-radius);
+    padding: $p-renovaciones-tag-padding;
     width: fit-content;
 }
 

@@ -1,0 +1,5 @@
+mixin general-info-tag(textContent, iconClass = '')
+    .general-info-tag
+        if iconClass
+            span(class=`icon-${iconClass}`)
+        span #{textContent}
