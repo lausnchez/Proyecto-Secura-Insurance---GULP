@@ -1,2 +1,5 @@
-mixin general-outline-button(textContent)
-    button.general-outline-button= textContent
+mixin general-outline-button(textContent, iconClass = '')
+    button.general-outline-button
+        if iconClass
+            span(class=`icon-${iconClass}`)
+        span #{textContent}

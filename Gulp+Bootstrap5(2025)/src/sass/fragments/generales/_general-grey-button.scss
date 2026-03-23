@@ -1,10 +1,7 @@
+@use "../../helpers/variables" as *;
+
 .general-grey-button{
     background-color: var(--base-primary-25);
-    padding: 10px 16px;
-    width: fit-content;
-    border-radius: 8px;
-    cursor: pointer;
-
     &:hover,&:active{
         background-color: var(--base-primary-75);
     }

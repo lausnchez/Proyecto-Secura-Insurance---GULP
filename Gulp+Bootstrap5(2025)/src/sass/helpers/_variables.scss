@@ -127,6 +127,11 @@ $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
+// BUTTON
+//----------------------------------------------
+$button-border-radius: 8px;
+$button-padding: 10px 16px;
+
 // COMPONENTS
 //----------------------------------------------
 /* Header */
@@ -215,7 +220,6 @@ $cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-c
     --p-renovaciones-tabla-row-mobile-gap: 16px;
     --p-renovaciones-tabla-row-mobile-padding: 16px;
     
-
     /* Cliente Potencial Card*/
     --cliente-potencial-card-principal-text-gap: 10px;
     --cliente-potencial-card-contact-gap: 24px;
@@ -228,6 +232,10 @@ $cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-c
     --cliente-potencial-card-principal-text-gap: 24px;
     --cliente-potencial-card-contact-gap: 24px;
     --cliente-potencial-card-contact-min-height: 49px;
+
+    /* General Grey Button */
+    --general-grey-button-border-radius: 8px;
+    --general-grey-button-gap: 16px;
 
     // COMPONENTS
     //----------------------------------------------
@@ -242,4 +250,8 @@ $cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-c
     
     /* Clientes Potenciales*/
     --clientes-potenciales-contents-gap: 20px;
+
+    // PÁGINA RENOVACIONES
+    //--------------------------------------------
+    --p-renovaciones-page-info-breadcrumbs-gap: 8px;
 }

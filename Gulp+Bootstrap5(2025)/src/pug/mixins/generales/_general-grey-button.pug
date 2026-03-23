@@ -1,4 +1,5 @@
 mixin general-grey-button(textContent, iconClass = '')
-    .general-grey-button
-        span(class=`icon-${iconClass}`)
+    button.general-grey-button
+        if iconClass
+            span(class=`icon-${iconClass}`)
         span #{textContent}
