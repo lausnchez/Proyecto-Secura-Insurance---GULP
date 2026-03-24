@@ -1,6 +1,8 @@
 // Recoger elementos del DOM
 //---------------------------------------------------------------------------------
-const body = document.querySelector("body");    // Para togglear el bloqueo del scroll
+
+// Body
+const body = document.querySelector("body");
 
 // Elementos del profile
 const headerProfileButton = document.querySelector('#header_submenu__button_profile button');
@@ -19,7 +21,7 @@ const headerLanguageMenu = document.querySelector(".header__mobile-burger-submen
 
 const classToggle = "mobile-active";    // Despliega un menú
 const hiddenClass = "header-submenu-button-hidden"; // Oculta un elemento
-const bodyScrollBlock = "menu-open";    // Bloquea el scroll del body
+const notScroll = "not-scroll"; // Clase para evitar el scroll en mobile
 
 // Ocultar el botón de cierre al inicializar
 headerCloseButton.classList.add(hiddenClass);
@@ -38,9 +40,8 @@ function closeAllMenus(){
     headerProfileMenu?.classList.remove(classToggle);
     headerBurgerMenu?.classList.remove(classToggle);
     headerLanguageMenu?.classList.remove(classToggle);
-
-    // Habilitar de nuevo el scroll
-    body.classList.remove(bodyScrollBlock);
+    // Desbloquear scroll
+    body.classList.remove(notScroll);
 }
 
 // Función para mostrar/ocultar el submenu del profile
@@ -55,10 +56,8 @@ function showProfileMobileSubmenu(){
     headerProfileButton.classList.add(hiddenClass);
     headerBurgerButton.classList.add(hiddenClass);
     headerCloseButton.classList.remove(hiddenClass);
-
-    // Bloquear scroll del body
-    body.classList.add(bodyScrollBlock);
-
+    // Bloquear scroll
+    body.classList.add(notScroll);
 }
 
 // Función para mostrar/ocultar el submenu burger
@@ -73,9 +72,8 @@ function showBurgerMobileSubmenu(){
     headerProfileButton.classList.add(hiddenClass);
     headerBurgerButton.classList.add(hiddenClass);
     headerCloseButton.classList.remove(hiddenClass);
-
-    // Bloquear scroll del body
-    body.classList.add(bodyScrollBlock);
+    // Bloquear scroll
+    body.classList.add(notScroll);
 }
 
 // Función para mostrar/ocultar el submenu language

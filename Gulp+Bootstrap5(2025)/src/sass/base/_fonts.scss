@@ -36,7 +36,8 @@
 .icon-back{@include icon(var(--icon-back));}
 .icon-skip-left{@include icon(var(--icon-skip-left));}
 .icon-file{@include icon(var(--icon-file));}
-.icon-copyright{@include icon(var(--icon-copyright));}
+.icon-file-subtitle{@include icon(var(--icon-file), var(--text-subtitle));}
+.icon-copyright{@include icon(var(--icon-copyright), var(--base-greyscale-700));}
 .icon-telephone{@include icon(var(--icon-telephone));}
 .icon-trash-alt{@include icon(var(--icon-trash-alt));}
 .icon-mail{@include icon(var(--icon-mail));}
@@ -96,28 +97,9 @@
   font-family: var(--default-font-family);
 }
 
-.navbar-text{@include text-format(
-  $color: var(--base-greyscale-700),
-  $weight: $font-weight-bold
-);
-  @media (max-width: $mobilexlMax) {
-      display: none;
-  }
-}
-
-.item-dropdown-text{@include text-format(
-  $color: var(--text-subtitle)
-)}
-
 .base_title{@include text-format(
   $size: var(--typo-size-title),
   $weight: $font-weight-bold
-)}
-
-.base_title-hero{@include text-format(
-  $size: var(--typo-size-title),
-  $weight: $font-weight-bold,
-  $color: white
 )}
 
 .base_header2{@include text-format(
@@ -125,21 +107,9 @@
   $weight: $font-weight-bold
 )}
 
-.base_header2-hero{@include text-format(
-  $size: var(--typo-size-header2),
-  $weight: $font-weight-bold,
-  $color: white
-)}
-
 .base_header3{@include text-format(
   $size: var(--typo-size-header3),
   $weight: $font-weight-semibold
-)}
-
-.base_header3-title-seccion{@include text-format(
-  $size: var(--typo-size-header3),
-  $weight: $font-weight-semibold,
-  $color: var(--neutral-grey-100)
 )}
 
 .base_subtitle{@include text-format(
@@ -147,38 +117,9 @@
   $weight: $font-weight-regular
 )}
 
-.base_subtitle-hero{@include text-format(
-  $size: var(--typo-size-subtitle),
-  $weight: $font-weight-regular,
-  $color: white
-)}
-
 .base_body{@include text-format(
   $size: var(--typo-size-body),
   $weight: $font-weight-regular
-)}
-
-.base_body-tag--pendiente{@include text-format(
-  $size: var(--typo-size-body),
-  $weight: $font-weight-regular,
-  $color: var(--text-subtitle)
-)}
-
-.base_body-tag--pagada{@include text-format(
-  $size: var(--typo-size-body),
-  $weight: $font-weight-regular,
-  $color: var(--icon-success-green)
-)}
-
-.base_body-tag--vencido{@include text-format(
-  $size: var(--typo-size-body),
-  $weight: $font-weight-regular,
-  $color: var(--icon-red-vencimiento)
-)}
-
-.base_body-tag--none{@include text-format(
-  $size: var(--typo-size-body),
-  $weight: $font-weight-regular,
 )}
 
 .base_body--active{@include text-format(
@@ -201,3 +142,107 @@
   $weight: $font-weight-bold
 )}
 
+// Specifics
+//----------------
+// Generals
+//-------------
+.base_header3-title-seccion{@include text-format(
+  $size: var(--typo-size-header3),
+  $weight: $font-weight-semibold,
+  $color: var(--neutral-grey-100)
+)}
+
+.base_body-bold-blue{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-bold,
+  $color: var(--base-primary)
+)}
+
+// Header
+//-------------
+.navbar-text{@include text-format(
+  $color: var(--base-greyscale-700),
+  $weight: $font-weight-bold
+  );
+  @media (max-width: $mobilexlMax) {
+    display: none;
+  }
+}
+
+.item-dropdown-text{@include text-format(
+  $color: var(--text-subtitle)
+)}
+
+// Hero
+//-------------
+.base_header2-hero{@include text-format(
+  $size: var(--typo-size-header2),
+  $weight: $font-weight-bold,
+  $color: white
+)}
+  
+.base_title-hero{@include text-format(
+  $size: var(--typo-size-title),
+  $weight: $font-weight-bold,
+  $color: white
+)}
+
+.base_subtitle-hero{@include text-format(
+  $size: var(--typo-size-subtitle),
+  $weight: $font-weight-regular,
+  $color: white
+)}
+    
+// Tags
+//-------------
+.base_body-tag--pendiente{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+  $color: var(--text-subtitle)
+  )}
+  
+.base_body-tag--pagada{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+  $color: var(--icon-success-green)
+)}
+  
+.base_body-tag--vencido{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+  $color: var(--icon-red-vencimiento)
+)}
+    
+.base_body-tag--none{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+)}
+        
+// Clientes potenciales
+//-------------
+
+.base_subtitle-clientePotencial-title{@include text-format(
+  $size: var(--typo-size-subtitle),
+  $weight: $font-weight-regular,
+  $color: var(--clientes-potenciales-card-title-color)
+)}
+
+.base_body-clientePotencial-subtitle{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+  $color: var(--base-primary-50)
+)}
+
+// Footer
+//--------------
+.base_body_footer{@include text-format(
+  $size: var(--typo-size-body),
+  $weight: $font-weight-regular,
+  $color: var(--text-subtitle)
+)}
+
+.base_body_footer_small{@include text-format(
+  $size: var(--typo-size-small),
+  $weight: $font-weight-medium,
+  $color: var(--text-subtitle)
+)}

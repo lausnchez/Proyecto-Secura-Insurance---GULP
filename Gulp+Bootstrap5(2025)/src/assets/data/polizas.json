@@ -1,394 +1,51 @@
 [
-  {
-    "no_poliza": "75846843",
-    "nombre_riesgo": "Hyundai Ioniq",
-    "fecha_contrato": "01/12/2022",
-    "fecha_vencimiento": "01/12/2023",
-    "importe": 30203.76,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "75846843",
-    "nombre_riesgo": "Hyundai Ioniq",
-    "fecha_contrato": "01/12/2022",
-    "fecha_vencimiento": "01/12/2023",
-    "importe": 30203.76,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "75846843",
-    "nombre_riesgo": "Hyundai Ioniq",
-    "fecha_contrato": "01/12/2022",
-    "fecha_vencimiento": "01/12/2023",
-    "importe": 30203.76,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "84721935",
-    "nombre_riesgo": "Toyota Corolla",
-    "fecha_contrato": "15/03/2023",
-    "fecha_vencimiento": "15/03/2024",
-    "importe": 18450.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "91234567",
-    "nombre_riesgo": "BMW Serie 3",
-    "fecha_contrato": "22/06/2023",
-    "fecha_vencimiento": "22/06/2024",
-    "importe": 52310.50,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "63847291",
-    "nombre_riesgo": "Seat León",
-    "fecha_contrato": "05/09/2022",
-    "fecha_vencimiento": "05/09/2023",
-    "importe": 12875.30,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "77392048",
-    "nombre_riesgo": "Volkswagen Golf",
-    "fecha_contrato": "10/01/2023",
-    "fecha_vencimiento": "10/01/2024",
-    "importe": 21600.00,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "58204719",
-    "nombre_riesgo": "Ford Focus",
-    "fecha_contrato": "28/11/2022",
-    "fecha_vencimiento": "28/11/2023",
-    "importe": 15990.75,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "32019485",
-    "nombre_riesgo": "Audi A4",
-    "fecha_contrato": "12/02/2024",
-    "fecha_vencimiento": "12/02/2025",
-    "importe": 38200.00,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "19827364",
-    "nombre_riesgo": "Mercedes Clase C",
-    "fecha_contrato": "07/03/2024",
-    "fecha_vencimiento": "07/03/2025",
-    "importe": 45500.50,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "74291830",
-    "nombre_riesgo": "Nissan Qashqai",
-    "fecha_contrato": "19/01/2024",
-    "fecha_vencimiento": "19/01/2025",
-    "importe": 28900.99,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "56018472",
-    "nombre_riesgo": "Renault Clio",
-    "fecha_contrato": "23/05/2023",
-    "fecha_vencimiento": "23/05/2024",
-    "importe": 13500.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "30958472",
-    "nombre_riesgo": "Peugeot 208",
-    "fecha_contrato": "01/06/2023",
-    "fecha_vencimiento": "01/06/2024",
-    "importe": 14280.25,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "98012345",
-    "nombre_riesgo": "Kia Sportage",
-    "fecha_contrato": "15/04/2023",
-    "fecha_vencimiento": "15/04/2024",
-    "importe": 23210.75,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "56231098",
-    "nombre_riesgo": "Volkswagen Tiguan",
-    "fecha_contrato": "08/07/2023",
-    "fecha_vencimiento": "08/07/2024",
-    "importe": 29870.10,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "41239876",
-    "nombre_riesgo": "Hyundai Tucson",
-    "fecha_contrato": "30/08/2023",
-    "fecha_vencimiento": "30/08/2024",
-    "importe": 27450.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "74829103",
-    "nombre_riesgo": "Mazda CX-5",
-    "fecha_contrato": "05/11/2023",
-    "fecha_vencimiento": "05/11/2024",
-    "importe": 31620.40,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "67583920",
-    "nombre_riesgo": "Volvo XC40",
-    "fecha_contrato": "21/12/2023",
-    "fecha_vencimiento": "21/12/2024",
-    "importe": 39250.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "21938475",
-    "nombre_riesgo": "Seat Ateca",
-    "fecha_contrato": "14/02/2024",
-    "fecha_vencimiento": "14/02/2025",
-    "importe": 24990.55,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "58493012",
-    "nombre_riesgo": "Citroën C3",
-    "fecha_contrato": "19/09/2023",
-    "fecha_vencimiento": "19/09/2024",
-    "importe": 12990.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "67321094",
-    "nombre_riesgo": "Ford Fiesta",
-    "fecha_contrato": "02/10/2023",
-    "fecha_vencimiento": "02/10/2024",
-    "importe": 13980.25,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "94271038",
-    "nombre_riesgo": "Audi Q3",
-    "fecha_contrato": "28/11/2023",
-    "fecha_vencimiento": "28/11/2024",
-    "importe": 36200.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "30871925",
-    "nombre_riesgo": "Mercedes GLA",
-    "fecha_contrato": "03/01/2024",
-    "fecha_vencimiento": "03/01/2025",
-    "importe": 41890.70,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "81567309",
-    "nombre_riesgo": "BMW X1",
-    "fecha_contrato": "17/02/2024",
-    "fecha_vencimiento": "17/02/2025",
-    "importe": 40520.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "29734581",
-    "nombre_riesgo": "Toyota RAV4",
-    "fecha_contrato": "09/03/2024",
-    "fecha_vencimiento": "09/03/2025",
-    "importe": 33100.99,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "60391824",
-    "nombre_riesgo": "Peugeot 3008",
-    "fecha_contrato": "01/04/2024",
-    "fecha_vencimiento": "01/04/2025",
-    "importe": 27560.25,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "49201738",
-    "nombre_riesgo": "Kia Niro",
-    "fecha_contrato": "18/05/2024",
-    "fecha_vencimiento": "18/05/2025",
-    "importe": 28200.00,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "71830945",
-    "nombre_riesgo": "Hyundai Kona",
-    "fecha_contrato": "10/06/2024",
-    "fecha_vencimiento": "10/06/2025",
-    "importe": 21990.50,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "25480931",
-    "nombre_riesgo": "Renault Captur",
-    "fecha_contrato": "22/07/2024",
-    "fecha_vencimiento": "22/07/2025",
-    "importe": 23780.00,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "64902187",
-    "nombre_riesgo": "Seat Ibiza",
-    "fecha_contrato": "14/08/2024",
-    "fecha_vencimiento": "14/08/2025",
-    "importe": 14850.25,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "38291047",
-    "nombre_riesgo": "Volkswagen Polo",
-    "fecha_contrato": "01/09/2024",
-    "fecha_vencimiento": "01/09/2025",
-    "importe": 16200.00,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "90561723",
-    "nombre_riesgo": "Citroën C4",
-    "fecha_contrato": "28/09/2024",
-    "fecha_vencimiento": "28/09/2025",
-    "importe": 19580.75,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "57091284",
-    "nombre_riesgo": "Ford Puma",
-    "fecha_contrato": "15/10/2024",
-    "fecha_vencimiento": "15/10/2025",
-    "importe": 20375.50,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "83920156",
-    "nombre_riesgo": "Opel Corsa",
-    "fecha_contrato": "01/11/2024",
-    "fecha_vencimiento": "01/11/2025",
-    "importe": 15390.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "61270498",
-    "nombre_riesgo": "Volkswagen T-Cross",
-    "fecha_contrato": "22/11/2024",
-    "fecha_vencimiento": "22/11/2025",
-    "importe": 24990.90,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "40321985",
-    "nombre_riesgo": "Hyundai Santa Fe",
-    "fecha_contrato": "10/12/2024",
-    "fecha_vencimiento": "10/12/2025",
-    "importe": 42990.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "75201934",
-    "nombre_riesgo": "Mercedes Clase A",
-    "fecha_contrato": "05/01/2025",
-    "fecha_vencimiento": "05/01/2026",
-    "importe": 34210.10,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "39105728",
-    "nombre_riesgo": "Audi A1",
-    "fecha_contrato": "20/01/2025",
-    "fecha_vencimiento": "20/01/2026",
-    "importe": 22990.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "81230957",
-    "nombre_riesgo": "BMW Serie 1",
-    "fecha_contrato": "12/02/2025",
-    "fecha_vencimiento": "12/02/2026",
-    "importe": 33100.50,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "50491827",
-    "nombre_riesgo": "Toyota Yaris",
-    "fecha_contrato": "04/03/2025",
-    "fecha_vencimiento": "04/03/2026",
-    "importe": 17450.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "62937018",
-    "nombre_riesgo": "Seat Arona",
-    "fecha_contrato": "18/04/2025",
-    "fecha_vencimiento": "18/04/2026",
-    "importe": 20500.00,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "74120938",
-    "nombre_riesgo": "Renault Megane",
-    "fecha_contrato": "30/05/2025",
-    "fecha_vencimiento": "30/05/2026",
-    "importe": 21990.25,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "90567213",
-    "nombre_riesgo": "Ford Kuga",
-    "fecha_contrato": "12/06/2025",
-    "fecha_vencimiento": "12/06/2026",
-    "importe": 31680.00,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "21839705",
-    "nombre_riesgo": "Nissan Juke",
-    "fecha_contrato": "25/07/2025",
-    "fecha_vencimiento": "25/07/2026",
-    "importe": 19840.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "63921187",
-    "nombre_riesgo": "Kia Ceed",
-    "fecha_contrato": "08/08/2025",
-    "fecha_vencimiento": "08/08/2026",
-    "importe": 21250.00,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "48721059",
-    "nombre_riesgo": "Peugeot 2008",
-    "fecha_contrato": "20/09/2025",
-    "fecha_vencimiento": "20/09/2026",
-    "importe": 23410.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "70491238",
-    "nombre_riesgo": "Skoda Octavia",
-    "fecha_contrato": "02/10/2025",
-    "fecha_vencimiento": "02/10/2026",
-    "importe": 27990.00,
-    "estado_poliza": "Pendiente"
-  },
-  {
-    "no_poliza": "83019247",
-    "nombre_riesgo": "Toyota C-HR",
-    "fecha_contrato": "15/11/2025",
-    "fecha_vencimiento": "15/11/2026",
-    "importe": 28650.00,
-    "estado_poliza": "Pagada"
-  },
-  {
-    "no_poliza": "19283746",
-    "nombre_riesgo": "Audi A6",
-    "fecha_contrato": "01/12/2025",
-    "fecha_vencimiento": "01/12/2026",
-    "importe": 51300.00,
-    "estado_poliza": "Pendiente"
-  }
+  {"no_poliza":"75846843","nombre_riesgo":"Hyundai Ioniq","fecha_contrato":"2022-12-01","fecha_vencimiento":"2023-12-01","importe":30203.76,"estado_poliza":"Pendiente"},
+  {"no_poliza":"75846843","nombre_riesgo":"Hyundai Ioniq","fecha_contrato":"2022-12-01","fecha_vencimiento":"2023-12-01","importe":30203.76,"estado_poliza":"Pagada"},
+  {"no_poliza":"75846843","nombre_riesgo":"Hyundai Ioniq","fecha_contrato":"2022-12-01","fecha_vencimiento":"2023-12-01","importe":30203.76,"estado_poliza":"Pagada"},
+  {"no_poliza":"84721935","nombre_riesgo":"Toyota Corolla","fecha_contrato":"2023-03-15","fecha_vencimiento":"2024-03-15","importe":18450.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"91234567","nombre_riesgo":"BMW Serie 3","fecha_contrato":"2023-06-22","fecha_vencimiento":"2024-06-22","importe":52310.50,"estado_poliza":"Pendiente"},
+  {"no_poliza":"63847291","nombre_riesgo":"Seat León","fecha_contrato":"2022-09-05","fecha_vencimiento":"2023-09-05","importe":12875.30,"estado_poliza":"Pagada"},
+  {"no_poliza":"77392048","nombre_riesgo":"Volkswagen Golf","fecha_contrato":"2023-01-10","fecha_vencimiento":"2024-01-10","importe":21600.00,"estado_poliza":"Pendiente"},
+  {"no_poliza":"58204719","nombre_riesgo":"Ford Focus","fecha_contrato":"2022-11-28","fecha_vencimiento":"2023-11-28","importe":15990.75,"estado_poliza":"Pagada"},
+  {"no_poliza":"32019485","nombre_riesgo":"Audi A4","fecha_contrato":"2024-02-12","fecha_vencimiento":"2025-02-12","importe":38200.00,"estado_poliza":"Pendiente"},
+  {"no_poliza":"19827364","nombre_riesgo":"Mercedes Clase C","fecha_contrato":"2024-03-07","fecha_vencimiento":"2025-03-07","importe":45500.50,"estado_poliza":"Pagada"},
+  {"no_poliza":"74291830","nombre_riesgo":"Nissan Qashqai","fecha_contrato":"2024-01-19","fecha_vencimiento":"2025-01-19","importe":28900.99,"estado_poliza":"Pendiente"},
+  {"no_poliza":"56018472","nombre_riesgo":"Renault Clio","fecha_contrato":"2023-05-23","fecha_vencimiento":"2024-05-23","importe":13500.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"30958472","nombre_riesgo":"Peugeot 208","fecha_contrato":"2023-06-01","fecha_vencimiento":"2024-06-01","importe":14280.25,"estado_poliza":"Pendiente"},
+  {"no_poliza":"98012345","nombre_riesgo":"Kia Sportage","fecha_contrato":"2023-04-15","fecha_vencimiento":"2024-04-15","importe":23210.75,"estado_poliza":"Pagada"},
+  {"no_poliza":"56231098","nombre_riesgo":"Volkswagen Tiguan","fecha_contrato":"2023-07-08","fecha_vencimiento":"2024-07-08","importe":29870.10,"estado_poliza":"Pendiente"},
+  {"no_poliza":"41239876","nombre_riesgo":"Hyundai Tucson","fecha_contrato":"2023-08-30","fecha_vencimiento":"2024-08-30","importe":27450.00,"estado_poliza":"Vencido"},
+  {"no_poliza":"74829103","nombre_riesgo":"Mazda CX-5","fecha_contrato":"2023-11-05","fecha_vencimiento":"2024-11-05","importe":31620.40,"estado_poliza":"Pendiente"},
+  {"no_poliza":"67583920","nombre_riesgo":"Volvo XC40","fecha_contrato":"2023-12-21","fecha_vencimiento":"2024-12-21","importe":39250.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"21938475","nombre_riesgo":"Seat Ateca","fecha_contrato":"2024-02-14","fecha_vencimiento":"2025-02-14","importe":24990.55,"estado_poliza":"Pendiente"},
+  {"no_poliza":"58493012","nombre_riesgo":"Citroën C3","fecha_contrato":"2023-09-19","fecha_vencimiento":"2024-09-19","importe":12990.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"67321094","nombre_riesgo":"Ford Fiesta","fecha_contrato":"2023-10-02","fecha_vencimiento":"2024-10-02","importe":13980.25,"estado_poliza":"Pendiente"},
+  {"no_poliza":"94271038","nombre_riesgo":"Audi Q3","fecha_contrato":"2023-11-28","fecha_vencimiento":"2024-11-28","importe":36200.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"30871925","nombre_riesgo":"Mercedes GLA","fecha_contrato":"2024-01-03","fecha_vencimiento":"2025-01-03","importe":41890.70,"estado_poliza":"Pendiente"},
+  {"no_poliza":"81567309","nombre_riesgo":"BMW X1","fecha_contrato":"2024-02-17","fecha_vencimiento":"2025-02-17","importe":40520.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"29734581","nombre_riesgo":"Toyota RAV4","fecha_contrato":"2024-03-09","fecha_vencimiento":"2025-03-09","importe":33100.99,"estado_poliza":"Pendiente"},
+  {"no_poliza":"60391824","nombre_riesgo":"Peugeot 3008","fecha_contrato":"2024-04-01","fecha_vencimiento":"2025-04-01","importe":27560.25,"estado_poliza":"Pagada"},
+  {"no_poliza":"49201738","nombre_riesgo":"Kia Niro","fecha_contrato":"2024-05-18","fecha_vencimiento":"2025-05-18","importe":28200.00,"estado_poliza":"Pendiente"},
+  {"no_poliza":"71830945","nombre_riesgo":"Hyundai Kona","fecha_contrato":"2024-06-10","fecha_vencimiento":"2025-06-10","importe":21990.50,"estado_poliza":"Pagada"},
+  {"no_poliza":"25480931","nombre_riesgo":"Renault Captur","fecha_contrato":"2024-07-22","fecha_vencimiento":"2025-07-22","importe":23780.00,"estado_poliza":"Pendiente"},
+  {"no_poliza":"64902187","nombre_riesgo":"Seat Ibiza","fecha_contrato":"2024-08-14","fecha_vencimiento":"2025-08-14","importe":14850.25,"estado_poliza":"Pagada"},
+  {"no_poliza":"38291047","nombre_riesgo":"Volkswagen Polo","fecha_contrato":"2024-09-01","fecha_vencimiento":"2025-09-01","importe":16200.00,"estado_poliza":"Pendiente"},
+  {"no_poliza":"90561723","nombre_riesgo":"Citroën C4","fecha_contrato":"2024-09-28","fecha_vencimiento":"2025-09-28","importe":19580.75,"estado_poliza":"Pagada"},
+  {"no_poliza":"57091284","nombre_riesgo":"Ford Puma","fecha_contrato":"2024-10-15","fecha_vencimiento":"2025-10-15","importe":20375.50,"estado_poliza":"Pendiente"},
+  {"no_poliza":"83920156","nombre_riesgo":"Opel Corsa","fecha_contrato":"2024-11-01","fecha_vencimiento":"2025-11-01","importe":15390.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"61270498","nombre_riesgo":"Volkswagen T-Cross","fecha_contrato":"2024-11-22","fecha_vencimiento":"2025-11-22","importe":24990.90,"estado_poliza":"Pendiente"},
+  {"no_poliza":"40321985","nombre_riesgo":"Hyundai Santa Fe","fecha_contrato":"2024-12-10","fecha_vencimiento":"2025-12-10","importe":42990.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"75201934","nombre_riesgo":"Mercedes Clase A","fecha_contrato":"2025-01-05","fecha_vencimiento":"2026-01-05","importe":34210.10,"estado_poliza":"Pendiente"},
+  {"no_poliza":"39105728","nombre_riesgo":"Audi A1","fecha_contrato":"2025-01-20","fecha_vencimiento":"2026-01-20","importe":22990.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"81230957","nombre_riesgo":"BMW Serie 1","fecha_contrato":"2025-02-12","fecha_vencimiento":"2026-02-12","importe":33100.50,"estado_poliza":"Pendiente"},
+  {"no_poliza":"50491827","nombre_riesgo":"Toyota Yaris","fecha_contrato":"2025-03-04","fecha_vencimiento":"2026-03-04","importe":17450.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"62937018","nombre_riesgo":"Seat Arona","fecha_contrato":"2025-04-18","fecha_vencimiento":"2026-04-18","importe":20500.00,"estado_poliza":"Pendiente"},
+  {"no_poliza":"74120938","nombre_riesgo":"Renault Megane","fecha_contrato":"2025-05-30","fecha_vencimiento":"2026-05-30","importe":21990.25,"estado_poliza":"Pagada"},
+  {"no_poliza":"90567213","nombre_riesgo":"Ford Kuga","fecha_contrato":"2025-06-12","fecha_vencimiento":"2026-06-12","importe":31680.00,"estado_poliza":"Pendiente"},
+  {"no_poliza":"21839705","nombre_riesgo":"Nissan Juke","fecha_contrato":"2025-07-25","fecha_vencimiento":"2026-07-25","importe":19840.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"63921187","nombre_riesgo":"Kia Ceed","fecha_contrato":"2025-08-08","fecha_vencimiento":"2026-08-08","importe":21250.00,"estado_poliza":"Pendiente"},
+  {"no_poliza":"48721059","nombre_riesgo":"Peugeot 2008","fecha_contrato":"2025-09-20","fecha_vencimiento":"2026-09-20","importe":23410.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"70491238","nombre_riesgo":"Skoda Octavia","fecha_contrato":"2025-10-02","fecha_vencimiento":"2026-10-02","importe":27990.00,"estado_poliza":"Pendiente"},
+  {"no_poliza":"83019247","nombre_riesgo":"Toyota C-HR","fecha_contrato":"2025-11-15","fecha_vencimiento":"2026-11-15","importe":28650.00,"estado_poliza":"Pagada"},
+  {"no_poliza":"19283746","nombre_riesgo":"Audi A6","fecha_contrato":"2025-12-01","fecha_vencimiento":"2026-12-01","importe":51300.00,"estado_poliza":"Pendiente"}
 ]

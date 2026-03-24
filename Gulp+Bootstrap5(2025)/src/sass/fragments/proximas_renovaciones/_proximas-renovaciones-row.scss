@@ -1,18 +1,20 @@
 @use "../../helpers/mixins" as *;
+@use "../../helpers/variables" as *;
+@use "../../helpers/functions" as *;
 
 .proximas-renovaciones-row {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(var(--p-renovaciones-tabla-row-columns), 1fr);
     justify-items: left;
     align-items: center;
-    padding: 24px 16px;
-    box-shadow: 0px 6px 16px #3746491A;
-    border-radius: 8px;
-
+    padding: var(--p-renovaciones-tabla-row-padding);
+    box-shadow: $p-renovaciones-tabla-row-box-shadow;
+    border-radius: var(--p-renovaciones-tabla-row-border-radius);
+    background-color: var(--proximas-renovaciones-tabla-row-background-color);
     .proximas-renovaciones__contenedor{
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: var(--p-renovaciones-contenedor-gap);
     }
 
     .proximas-renovaciones__contenedor-title{
@@ -26,15 +28,15 @@
     .proximas-renovaciones-row__fechaVencimiento,
     .proximas-renovaciones-row__importe
     {
-        color: black;
+        color: var(--proximas-renovaciones-tabla-row-data);
     }
 
     @include mobilexl{
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 16px;
-        padding: 16px;
+        gap: var(--p-renovaciones-tabla-row-mobile-gap);
+        padding: var(--p-renovaciones-tabla-row-mobile-padding);
         
         .proximas-renovaciones__contenedor-title{
             display: block;

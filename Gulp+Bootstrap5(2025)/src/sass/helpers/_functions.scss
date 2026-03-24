@@ -1,9 +1,5 @@
-@function toRem($pixeles) {
-  // Verificamos que el valor sea un número y quitamos la unidad si la trae
-  @if not unitless($pixeles) {
-    $pixeles: $pixeles / ($pixeles * 0 + 1);
-  }
-  
-  // Realizamos el cálculo
-  @return ($pixeles / 16) * 1rem;
+@use "sass:math";
+ 
+@function toRem($pixel) {
+  @return math.div(math.div($pixel, 1px), 16) * 1rem;
 }

@@ -5,12 +5,15 @@
     --base-primary-50: #9FC3E2;
     --base-primary-25: #CFE1F1;
 
+    --base-bg-100: #EFF3F5;
+
     // NEUTRAL
     --neutral-grey-100: #353535;
     --neutral-grey-75: #686868;
     --neutral-grey-50: #9A9A9A;
     --neutral-grey-25: #CDCDCD;
     --neutral-light: #FAFCFE;
+    --gray-01: #B7CBD3;
 
     // FUNCTION
     --function-success: #3BD378;
@@ -21,6 +24,7 @@
     --information-subtle-text: #7579A0;
     --information-accent: #D8DBF5;
     --information-inverse-text: #F7F7FC;
+    --text-label: #6B8893;
 
     // EXTRAS
     --icon-success-green: #45944D;
@@ -39,8 +43,21 @@
     --dropdown-hover-color: #EFF3F5;
     --dropdown-left-border-color: #4B98D9;
 
+    // FOOTER
+    --footer-links-separator-border-right: #A7B8BF;
+
     // PRÓXIMAS RENOVACIONES
     --proximas-renovaciones-tag-pendiente-background-color: #FFE74F66;
     --proximas-renovaciones-tag-pagada-background-color: #57AE6026;
     --proximas-renovaciones-tag-vencido-background-color: #DB39001F;
+    --proximas-renovaciones-tabla-header-border-bottom: #A7B8BF;
+    --proximas-renovaciones-tabla-row-box-shadow: #3746491A;
+    --proximas-renovaciones-tabla-row-background-color: white;
+    --proximas-renovaciones-tabla-row-data: black;
+    --proximas-renovaciones-page-info-bg-color: white;
+
+    // CLIENTES POTENCIALES
+    --clientes-potenciales-card-title-color: #161C1F;
+    --clientes-potenciales-card-background-color: white;
+    --clientes-potenciales-card-box-shadow-color: #37464933;
 }

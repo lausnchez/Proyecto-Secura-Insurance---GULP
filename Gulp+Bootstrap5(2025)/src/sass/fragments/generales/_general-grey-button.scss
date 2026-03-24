@@ -1,0 +1,8 @@
+@use "../../helpers/variables" as *;
+
+.general-grey-button{
+    background-color: var(--base-primary-25);
+    &:hover,&:active{
+        background-color: var(--base-primary-75);
+    }
+}

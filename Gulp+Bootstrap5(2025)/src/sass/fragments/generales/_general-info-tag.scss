@@ -1,0 +1,17 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/font-mixins" as *;
+
+.general-info-tag{
+    @include body($color: var(--text-subtitle));
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--base-bg-100);
+    align-items: center;
+    gap: var(--general-info-tag-gap);
+    border-radius: var(--general-info-tag-border-radius);
+    padding: $button-padding;
+    border: none;
+    width: fit-content;
+}

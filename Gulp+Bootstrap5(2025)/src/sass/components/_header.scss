@@ -6,6 +6,7 @@
 .header{
     padding: $header-padding-y $header-padding-x;
     border: $header-border-width solid var(--header-background-color);
+    border-bottom: 1px solid #EFF3F5;
     background-color: var(--header-background-color);
     display: flex;
     flex-direction: column;

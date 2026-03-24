@@ -1,0 +1,11 @@
+@use "../helpers/mixins" as *;
+
+.principal-section{
+    display: flex;
+    flex-direction: column;
+    gap: var(--principal-section-gap);
+
+    @include mobilexl{
+        gap: var(--principal-section-mobile-gap);
+    }
+}

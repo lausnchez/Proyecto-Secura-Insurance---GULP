@@ -3,6 +3,9 @@
     border: var(--button-default-border-width) solid var(--base-primary-50);
 
     &:hover,&:active{
-        border: var(--button-default-border-width) solid var(--base-primary-50);
+        border: 1px solid var(--base-primary-50);
+        background-color: var(--base-primary-75);
     }
+
+    
 }

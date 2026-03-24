@@ -1,0 +1,62 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.cliente-potencial-card{
+    display: flex;
+    flex-direction: column;
+    gap: var(--cliente-potencial-card-gap);
+    box-shadow: $cliente-potencial-card-box-shadow;
+    padding: var(--cliente-potencial-card-padding);
+    border-radius: var(--cliente-potencial-card-border-radius);
+    width: 100%;
+    background-color: var(--clientes-potenciales-card-background-color);
+
+    .cliente-potencial-card__principal{
+        display: grid;
+        grid-template-columns: auto var(--cliente-potencial-card-principal-column-icon);
+        justify-content: space-between;
+    }
+    .cliente-potencial-card__principal__text{
+        display: flex;
+        flex-direction: column;
+        gap: var(--cliente-potencial-card-principal-text-gap);
+    }
+    .cliente-potencial-card__contact{
+        display: flex;
+        flex-direction: row;
+        min-height: var(--cliente-potencial-card-contact-min-height);
+        align-items: center;
+        gap: var(--cliente-potencial-card-contact-gap);
+    }
+
+    .cliente-potencial-card__principal__button a{
+        cursor: pointer;
+    }
+
+    @include mobilexl{
+        // min-height: 326px;
+
+        .cliente-potencial-card__principal{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .cliente-potencial-card__principal__button{
+            width: 100%;
+            text-align: end;
+        }
+
+        .cliente-potencial-card__principal__text{
+            gap: var(--cliente-potencial-card-principal-text-gap);
+        }
+
+        .cliente-potencial-card__contact{
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: var(--cliente-potencial-card-contact-gap);
+            height: var(--cliente-potencial-card-contact-height);
+        }
+    }
+}
+
