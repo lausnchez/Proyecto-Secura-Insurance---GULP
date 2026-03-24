@@ -28,8 +28,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-filter{content: "\e90e"}
-// .icon-filter{@include icon(var(--icon-filter));}
+// .icon-filter{content: "\e90e"}
+.icon-filter{@include icon(var(--icon-filter), var(--base-primary))}
 .icon-calendar{@include icon(var(--icon-calendar));}
 .icon-skip-right{@include icon(var(--icon-skip-right));}
 .icon-arrow-right{@include icon(var(--icon-arrow-right));}

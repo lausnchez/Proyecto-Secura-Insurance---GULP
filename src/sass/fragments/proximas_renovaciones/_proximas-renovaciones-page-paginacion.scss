@@ -1,0 +1,29 @@
+@use "../../helpers/font-mixins" as *;
+
+.p-renovaciones__paginacion{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-xl);
+    align-items: center;
+    justify-content: end;
+
+    .p-renovaciones__paginacion__orderBy{
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-12);
+    }
+
+    .p-renovaciones__paginacion__orderBy span{
+        @include bodyBold;
+    }
+
+    .p-renovaciones__paginacion__buttons{
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-xs);
+    }
+
+    .p-renovaciones__paginacion__totalPages{
+        @include bodyBold;
+    }
+}

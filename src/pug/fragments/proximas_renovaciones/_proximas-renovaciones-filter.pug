@@ -1,0 +1,14 @@
+include ../../mixins/generales/_general-outline-button.pug 
+
+.proximas-renovaciones__filter 
+    +general-outline-button("Filtros","filter")
+    .p-renovaciones__filter__num-selector
+        span 770 pólizas 
+        .p-renovaciones__filter__num-selector__selector 
+            span Ordenar por: 
+            select
+                option(value="no-poliza") No. de póliza
+                option(value="nombre-riesgo") Nombre del riesgo
+                option(value="fecha-validez") Fecha de validez
+                option(value="importe") Importe
+                option(value="estado") Estado

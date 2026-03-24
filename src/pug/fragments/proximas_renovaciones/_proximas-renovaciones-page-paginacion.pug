@@ -1,0 +1,16 @@
+include ../../mixins/generales/_general-paginacion-button.pug 
+.p-renovaciones__paginacion
+    .p-renovaciones__paginacion__orderBy
+        span Filas por página: 
+        select
+            option(value="filas-10") 10
+            option(value="filas-25") 25
+            option(value="filas-50") 50
+            option(value="filas-75") 75
+            option(value="filas-100") 100
+    span.p-renovaciones__paginacion__totalPages Página 1 de 77
+    .p-renovaciones__paginacion__buttons
+        +general-paginacion-button("skip-left")
+        +general-paginacion-button("back")
+        +general-paginacion-button("arrow-right")
+        +general-paginacion-button("skip-right")

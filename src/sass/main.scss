@@ -22,6 +22,13 @@
 @use "layout/_clientes-potenciales";
 
 /** FRAGMENTS **/
+
+// GENERALES
+@use "fragments/generales/general-outline-button";
+@use "fragments/generales/general-grey-button";
+@use "fragments/generales/general-info-tag";
+@use "fragments/generales/general-paginacion-button";
+
 // HEADER
 @use "fragments/header/_header-submenu-item";
 @use "fragments/header/_header-submenu-dropdown";
@@ -38,11 +45,7 @@
 
 @use "fragments/proximas_renovaciones/proximas-renovaciones-page-info";
 @use "fragments/proximas_renovaciones/proximas-renovaciones-filter";
-
-// GENERALES
-@use "fragments/generales/general-outline-button";
-@use "fragments/generales/general-grey-button";
-@use "fragments/generales/general-info-tag";
+@use "fragments/proximas_renovaciones/proximas-renovaciones-page-paginacion";
 
 /** COMPONENTS **/
 @use "components/_header";

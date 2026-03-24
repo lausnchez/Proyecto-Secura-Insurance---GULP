@@ -1,0 +1,42 @@
+@use "../../helpers/font-mixins" as *;
+@use "../../helpers/mixins" as *;
+
+.proximas-renovaciones__filter{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l);
+
+    .p-renovaciones__filter__num-selector{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .p-renovaciones__filter__num-selector >span{
+        @include bodyBold;
+        color: var(--text-subtitle);
+    }
+
+    .p-renovaciones__filter__num-selector__selector{
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-14);
+    }
+
+    .p-renovaciones__filter__num-selector__selector >span{
+        @include body;
+        color: var(--text-subtitle);
+    }
+
+    @include mobilexl{
+        .p-renovaciones__filter__num-selector{
+            flex-direction: column-reverse;
+            gap: var(--spacing-l);
+        }
+
+        .general-outline-button{
+            display: none;  // Cambiarlo al display abajo
+        }
+    }
+}
+    

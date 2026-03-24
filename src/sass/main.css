@@ -20,6 +20,8 @@
   --spacing-xxs: 0.25rem;
   --spacing-xs: 0.5rem;
   --spacing-s: 0.625rem;
+  --spacing-12: 0.75rem;
+  --spacing-14: 0.875rem;
   --spacing-m: 1rem;
   --spacing-l: 1.5rem;
   --spacing-xl: 2rem;
@@ -534,8 +536,11 @@ template {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-filter {
-  content: "\e90e";
+.icon-filter::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-filter);
+  color: var(--base-primary);
+  font-size: toRem(var(--icon-size));
 }
 
 .icon-calendar::before {
@@ -1146,6 +1151,65 @@ body.menu-open {
 /** FRAGMENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
+.general-outline-button {
+  background-color: transparent;
+  border: 1px solid var(--base-primary-50);
+}
+.general-outline-button:hover, .general-outline-button:active {
+  border: 1px solid var(--base-primary-50);
+  background-color: var(--base-primary-75);
+}
+
+/** CSS LIBS **/
+/** HELPERS **/
+.general-grey-button {
+  background-color: var(--base-primary-25);
+}
+.general-grey-button:hover, .general-grey-button:active {
+  background-color: var(--base-primary-75);
+}
+
+/** CSS LIBS **/
+/** HELPERS **/
+/** CSS LIBS **/
+/** HELPERS **/
+.general-info-tag {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--base-bg-100);
+  align-items: center;
+  gap: var(--general-info-tag-gap);
+  border-radius: var(--general-info-tag-border-radius);
+  padding: 10px 16px;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 767px) {
+  .general-info-tag {
+    padding: var(--spacing-xxs) var(--spacing-xs);
+  }
+}
+
+.paginacion_button {
+  border-radius: 8px;
+  height: 48px;
+  width: 48px;
+  background-color: white;
+  box-shadow: 0px 6px 16px 0px rgba(55, 70, 73, 0.1019607843);
+}
+.paginacion_button:hover, .paginacion_button:active {
+  background-color: var(--base-primary-25);
+}
+
+/** CSS LIBS **/
+/** HELPERS **/
 .header__submenu__item {
   display: flex;
   flex-direction: row;
@@ -1419,8 +1483,6 @@ body.menu-open {
   }
 }
 
-/** CSS LIBS **/
-/** HELPERS **/
 .p-renovaciones-page-info {
   background-color: var(--proximas-renovaciones-page-info-bg-color);
   padding: var(--spacing-xl) var(--spacing-88);
@@ -1474,48 +1536,77 @@ body.menu-open {
   }
 }
 
-.general-outline-button {
-  background-color: transparent;
-  border: var(--button-default-border-width) solid var(--base-primary-50);
+.proximas-renovaciones__filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
 }
-.general-outline-button:hover, .general-outline-button:active {
-  border: 1px solid var(--base-primary-50);
-  background-color: var(--base-primary-75);
+.proximas-renovaciones__filter .p-renovaciones__filter__num-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-/** CSS LIBS **/
-/** HELPERS **/
-.general-grey-button {
-  background-color: var(--base-primary-25);
+.proximas-renovaciones__filter .p-renovaciones__filter__num-selector > span {
+  font-family: var(--default-font-family);
+  font-weight: 700;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--text-subtitle);
 }
-.general-grey-button:hover, .general-grey-button:active {
-  background-color: var(--base-primary-75);
+.proximas-renovaciones__filter .p-renovaciones__filter__num-selector__selector {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-14);
 }
-
-/** CSS LIBS **/
-/** HELPERS **/
-.general-info-tag {
+.proximas-renovaciones__filter .p-renovaciones__filter__num-selector__selector > span {
   font-family: var(--default-font-family);
   font-weight: 400;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: var(--base-bg-100);
-  align-items: center;
-  gap: var(--general-info-tag-gap);
-  border-radius: var(--general-info-tag-border-radius);
-  padding: 10px 16px;
-  border: none;
-  width: -moz-fit-content;
-  width: fit-content;
+  color: var(--text-subtitle);
 }
 @media (max-width: 767px) {
-  .general-info-tag {
-    padding: var(--spacing-xxs) var(--spacing-xs);
+  .proximas-renovaciones__filter .p-renovaciones__filter__num-selector {
+    flex-direction: column-reverse;
+    gap: var(--spacing-l);
   }
+  .proximas-renovaciones__filter .general-outline-button {
+    display: none;
+  }
+}
+
+.p-renovaciones__paginacion {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xl);
+  align-items: center;
+  justify-content: end;
+}
+.p-renovaciones__paginacion .p-renovaciones__paginacion__orderBy {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-12);
+}
+.p-renovaciones__paginacion .p-renovaciones__paginacion__orderBy span {
+  font-family: var(--default-font-family);
+  font-weight: 700;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+}
+.p-renovaciones__paginacion .p-renovaciones__paginacion__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+}
+.p-renovaciones__paginacion .p-renovaciones__paginacion__totalPages {
+  font-family: var(--default-font-family);
+  font-weight: 700;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
 }
 
 /** COMPONENTS **/
