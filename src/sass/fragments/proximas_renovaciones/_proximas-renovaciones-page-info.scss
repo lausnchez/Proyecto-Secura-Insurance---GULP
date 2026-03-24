@@ -4,21 +4,25 @@
     background-color: var(--proximas-renovaciones-page-info-bg-color);
     padding: 32px 88px;
     border-bottom: 1px solid var(--gray-01);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxl);
 
     .p-renovaciones-page-info__breadcrumbs{
         display: flex;
         flex-direction: row;
-        gap: var(--p-renovaciones-page-info-breadcrumbs-gap);
+        gap: var(--spacing-xs);
     }
 
-    .p-renovaciones-page-info__url__origin{
-        color: var(--base-primary);
-    }
-    
-    .p-renovaciones-page-info__url__origin span{
+    .p-renovaciones-page-info__breadcrumbs span{
         @include body;
         color: var(--text-label);
     }
+
+    .p-renovaciones-page-info__breadcrumbs span.p-renovaciones-page-info__breadcrumbs__highlight{
+        color: var(--base-primary);
+    }
+    
 
 
     .p-renovaciones-page-info__title-button{

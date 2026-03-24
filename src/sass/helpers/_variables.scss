@@ -126,11 +126,13 @@ $spacing-default: 0%;
 
 /* Spacing Propios */
 :root {
+  --spacing-xxs: 0.25rem;     // 4px
   --spacing-xs: 0.5rem;     // 8px
   --spacing-s: 0.625rem;   // 10px
   --spacing-m: 1rem;        // 16px
   --spacing-l: 1.5rem;      // 24px
   --spacing-xl: 2rem;        // 32px
+  --spacing-xxl: 2.5rem;      //40px
 }
 
 /* Font Weight*/
@@ -175,19 +177,15 @@ $header-profile-dropdown-li-hover-left-border: 3px solid
 $header-submenu-dropdown-box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
 
 /* Proximas Renovaciones Tabla */
-$p-renovaciones-tabla-header-border-bottom: 1px solid
-  var(--proximas-renovaciones-tabla-header-border-bottom);
-$p-renovaciones-tabla-box-shadow: 0px 6px 16px
-  var(--proximas-renovaciones-tabla-box-shadow);
-$p-renovaciones-tabla-row-box-shadow: 0px 6px 16px
-  var(--proximas-renovaciones-tabla-row-box-shadow);
+$p-renovaciones-tabla-header-border-bottom: 1px solid var(--proximas-renovaciones-tabla-header-border-bottom);
+$p-renovaciones-tabla-box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-box-shadow);
+$p-renovaciones-tabla-row-box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-row-box-shadow);
 
 /** Próximas Renovaciones Tag **/
 $p-renovaciones-tag-padding: 2px 8px;
 
 /* Cliente Potencial Card */
-$cliente-potencial-card-box-shadow: 0px 3px 5px 0px
-  var(--clientes-potenciales-card-box-shadow-color);
+$cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-card-box-shadow-color);
 
 :root {
   // TAMAÑOS DE PANTALLA

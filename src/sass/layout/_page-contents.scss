@@ -1,8 +1,8 @@
 @use "../helpers/mixins" as *;
-.homepage_contents{
+.homepage_contents, .pr-page_contents{
     display: flex;
     flex-direction: column;
-    gap: var(--homepage-contents-gap);
+    gap: var(--spacing-l);
     padding: var(--homepage-contents-padding);
     min-height: var(--homepage-contents-min-height);
 

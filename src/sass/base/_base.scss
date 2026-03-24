@@ -97,6 +97,7 @@ body {
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   background-color: var(--main-background-color);
+
   &.not-scroll {
     height: 100%;
     overflow: hidden;
