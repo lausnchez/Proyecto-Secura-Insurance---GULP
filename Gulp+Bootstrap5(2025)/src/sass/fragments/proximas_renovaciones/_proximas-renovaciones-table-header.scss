@@ -4,6 +4,7 @@
 .proximas-renovaciones-tabla__header{
     display: grid;
     grid-template-columns: repeat(var(--p-renovaciones-tabla-header-columns), 1fr);
+    grid-template-columns: repeat(var(--p-renovaciones-tabla-header-columns), 1fr);
     justify-items: left;
     align-items: center;
     padding: var(--p-renovaciones-tabla-header-padding);

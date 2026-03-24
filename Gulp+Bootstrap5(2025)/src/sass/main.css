@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@charset "UTF-8";
 /** CSS LIBS **/
 /** HELPERS **/
 /* COLORS */
@@ -33,6 +34,16 @@
 /** Próximas Renovaciones Tag **/
 /* Cliente Potencial Card */
 :root {
+  --button-default-border-radius: 8px;
+  --button-default-padding: 10px 16px;
+  --button-default-border-width: 1px;
+  --layouts-homepage-contents-gap: 40px;
+  --layouts-homepage-contents-padding: 40px 24px 80px 24px;
+  --layouts-homepage-contents-min-height: 711px;
+  --layouts-homepage-mobile-contents-gap: 16px;
+  --layouts-homepage-mobile-contents-padding: 16px;
+  --layouts-p-renovaciones-gap: 40px;
+  --layouts-p-renovaciones-mobile-gap: 40px;
   --mobile: 390px;
   --tablet: 768px;
   --homepage-contents-gap: 40px;
@@ -1095,6 +1106,12 @@ button {
 }
 
 /** LAYOUT **/
+body.menu-open {
+  overflow: hidden; /* bloquea scroll vertical y horizontal */
+  position: fixed; /* fija la página para que no salte */
+  width: 100%; /* evita que aparezca scroll horizontal */
+}
+
 .homepage_contents {
   display: flex;
   flex-direction: column;
@@ -1397,6 +1414,7 @@ button {
 .proximas-renovaciones-tabla__header {
   display: grid;
   grid-template-columns: repeat(var(--p-renovaciones-tabla-header-columns), 1fr);
+  grid-template-columns: repeat(var(--p-renovaciones-tabla-header-columns), 1fr);
   justify-items: left;
   align-items: center;
   padding: var(--p-renovaciones-tabla-header-padding);
@@ -1447,7 +1465,7 @@ button {
 
 .general-outline-button {
   background-color: transparent;
-  border: 1px solid var(--base-primary-50);
+  border: var(--button-default-border-width) solid var(--base-primary-50);
 }
 .general-outline-button:hover, .general-outline-button:active {
   border: 1px solid var(--base-primary-50);

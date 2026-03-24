@@ -1,0 +1,6 @@
+// BLOCK DEL SCROLL CUANDO SE ABRA EL MENÚ DE MOBILE
+body.menu-open {
+  overflow: hidden;      /* bloquea scroll vertical y horizontal */
+  position: fixed;       /* fija la página para que no salte */
+  width: 100%;           /* evita que aparezca scroll horizontal */
+}
