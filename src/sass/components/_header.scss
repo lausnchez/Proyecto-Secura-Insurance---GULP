@@ -4,7 +4,7 @@
 @use "../helpers/mixins" as *;
 
 .header{
-    padding: $header-padding-y $header-padding-x;
+    padding: var(--spacing-m) var(--spacing-88);
     border: $header-border-width solid var(--header-background-color);
     border-bottom: 1px solid #EFF3F5;
     background-color: var(--header-background-color);
@@ -62,6 +62,8 @@
     // ----------------------------------------------------------
 
     @include mobilexl{
+        padding: var(--spacing-xs) var(--spacing-m);
+
         .header__contentPrincipal{
             display: grid;
             grid-template-columns: auto auto;

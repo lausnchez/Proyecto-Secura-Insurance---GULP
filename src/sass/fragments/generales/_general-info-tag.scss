@@ -1,5 +1,6 @@
 @use "../../helpers/variables" as *;
 @use "../../helpers/font-mixins" as *;
+@use "../../helpers/mixins" as *;
 
 .general-info-tag{
     @include body($color: var(--text-subtitle));
@@ -14,4 +15,8 @@
     padding: $button-padding;
     border: none;
     width: fit-content;
+
+    @include mobilexl{
+        padding: var(--spacing-xxs) var(--spacing-xs);
+    }
 }

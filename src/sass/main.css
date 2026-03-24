@@ -24,6 +24,7 @@
   --spacing-l: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-xxl: 2.5rem;
+  --spacing-88: 5.5rem;
 }
 
 /* Font Weight*/
@@ -160,6 +161,7 @@
   --information-accent: #D8DBF5;
   --information-inverse-text: #F7F7FC;
   --text-label: #6B8893;
+  --text-title: #161C1F;
   --icon-success-green: #45944D;
   --icon-red-vencimiento: #B32E00;
   --text-subtitle: #405258;
@@ -1421,7 +1423,7 @@ body.menu-open {
 /** HELPERS **/
 .p-renovaciones-page-info {
   background-color: var(--proximas-renovaciones-page-info-bg-color);
-  padding: 32px 88px;
+  padding: var(--spacing-xl) var(--spacing-88);
   border-bottom: 1px solid var(--gray-01);
   display: flex;
   flex-direction: column;
@@ -1455,6 +1457,21 @@ body.menu-open {
   font-size: var(--typo-size-subtitle);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
+  color: var(--text-title);
+}
+@media (max-width: 767px) {
+  .p-renovaciones-page-info {
+    padding: var(--spacing-l) var(--spacing-m);
+  }
+  .p-renovaciones-page-info .p-renovaciones-page-info__breadcrumbs {
+    display: none;
+  }
+  .p-renovaciones-page-info .p-renovaciones-page-info__title-button {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: var(--spacing-m);
+  }
 }
 
 .general-outline-button {
@@ -1495,12 +1512,17 @@ body.menu-open {
   width: -moz-fit-content;
   width: fit-content;
 }
+@media (max-width: 767px) {
+  .general-info-tag {
+    padding: var(--spacing-xxs) var(--spacing-xs);
+  }
+}
 
 /** COMPONENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
 .header {
-  padding: 8px 16px;
+  padding: var(--spacing-m) var(--spacing-88);
   border: 1px solid var(--header-background-color);
   border-bottom: 1px solid #EFF3F5;
   background-color: var(--header-background-color);
@@ -1546,6 +1568,9 @@ body.menu-open {
   grid-area: submenu;
 }
 @media (max-width: 767px) {
+  .header {
+    padding: var(--spacing-xs) var(--spacing-m);
+  }
   .header .header__contentPrincipal {
     display: grid;
     grid-template-columns: auto auto;

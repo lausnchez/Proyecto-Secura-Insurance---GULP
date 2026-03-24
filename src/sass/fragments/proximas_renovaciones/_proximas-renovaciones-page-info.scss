@@ -1,8 +1,9 @@
 @use "../../helpers/font-mixins" as *;
+@use "../../helpers/mixins" as *;
 
 .p-renovaciones-page-info {
     background-color: var(--proximas-renovaciones-page-info-bg-color);
-    padding: 32px 88px;
+    padding: var(--spacing-xl) var(--spacing-88);
     border-bottom: 1px solid var(--gray-01);
     display: flex;
     flex-direction: column;
@@ -23,8 +24,6 @@
         color: var(--base-primary);
     }
     
-
-
     .p-renovaciones-page-info__title-button{
         display: flex;
         flex-direction: row;
@@ -34,5 +33,20 @@
 
     .p-renovaciones-page-info__title-button h2{
         @include subtitle();
+        color: var(--text-title);
+    }
+
+    @include mobilexl{
+        padding: var(--spacing-l) var(--spacing-m);
+        .p-renovaciones-page-info__breadcrumbs{
+            display: none;
+        }
+
+        .p-renovaciones-page-info__title-button{
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: var(--spacing-m);
+        }
     }
 }
