@@ -15,6 +15,15 @@
 /* FONTS */
 /* MEDIA QUERIES */
 /* Spacing */
+/* Spacing Propios */
+:root {
+  --spacing-xs: 0.5rem;
+  --spacing-s: 0.625rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
 /* Font Weight*/
 /* Header */
 /* Header NavBar */
@@ -84,7 +93,7 @@
   --principal-section-gap: 40px;
   --principal-section-mobile-gap: 24px;
   /* Hero */
-  --hero-background-translucent-color: rgba(0,0,0,0.5);
+  --hero-background-translucent-color: rgba(0, 0, 0, 0.5);
   --hero-contents-max-width: 700px;
   --hero-contents-width: 80%;
   /* Clientes Potenciales*/
@@ -148,6 +157,7 @@
   --information-subtle-text: #7579A0;
   --information-accent: #D8DBF5;
   --information-inverse-text: #F7F7FC;
+  --text-label: #6B8893;
   --icon-success-green: #45944D;
   --icon-red-vencimiento: #B32E00;
   --text-subtitle: #405258;
@@ -1411,12 +1421,15 @@ button {
   gap: var(--p-renovaciones-page-info-breadcrumbs-gap);
 }
 .p-renovaciones-page-info .p-renovaciones-page-info__url__origin {
+  color: var(--base-primary);
+}
+.p-renovaciones-page-info .p-renovaciones-page-info__url__origin span {
   font-family: var(--default-font-family);
   font-weight: 400;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
-  color: var(--base-primary);
+  color: var(--text-label);
 }
 .p-renovaciones-page-info .p-renovaciones-page-info__title-button {
   display: flex;

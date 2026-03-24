@@ -2,42 +2,43 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-@mixin title{
+@mixin title($color: var(--text-subtitle)){
     font-family: var(--default-font-family);
     font-weight: $font-weight-bold;
     font-size: toRem(var(--typo-size-title));
     letter-spacing: var(--default-letter-spacing);
-    color: var(--text-subtitle);
+    $color: color;
     
     // @include mobilexl{}
 }
 
-@mixin header2{
+@mixin header2($color: var(--text-subtitle)){
     font-family: var(--default-font-family);
     font-weight: $font-weight-bold;
     font-size: var(--typo-size-header2);
     letter-spacing: var(--default-letter-spacing);
-    color: var(--text-subtitle);
+    color: $color;
 
     // @include mobilexl{}
 }
 
-@mixin header3{
+@mixin header3($color: var(--text-subtitle)){
     font-family: var(--default-font-family);
     font-weight: $font-weight-semibold;
     font-size: var(--typo-size-header3);
     letter-spacing: var(--default-letter-spacing);
-    color: var(--text-subtitle);
+    color: $color;
 
     // @include mobilexl{}
 }
 
-@mixin subtitle{
+@mixin subtitle($color: var(--text-subtitle)){
     font-family: var(--default-font-family);
     font-weight: $font-weight-regular;
     font-size: var(--typo-size-subtitle);
     letter-spacing: var(--default-letter-spacing);
-    color: var(--text-subtitle);
+    color: $color
+    ;
 
     // @include mobilexl{}
 }
@@ -52,32 +53,32 @@
     // @include mobilexl{}
 }
 
-@mixin bodyBold{
+@mixin bodyBold($color: var(--text-subtitle)){
     font-family: var(--default-font-family);
     font-weight: $font-weight-bold;
     font-size: var(--typo-size-body);
     letter-spacing: var(--default-letter-spacing);
-    color: var(--text-subtitle);
+    color: $color;
 
     // @include mobilexl{}
 }
 
-@mixin small{
+@mixin small($color: var(--text-subtitle)){
     font-family: var(--default-font-family);
     font-weight: $font-weight-medium;
     font-size: var(--typo-size-small);
     letter-spacing: var(--default-letter-spacing);
-    color: var(--text-subtitle);
+    color: $color;
 
     // @include mobilexl{}
 }
 
-@mixin smallTitle{
+@mixin smallTitle($color: var(--text-subtitle)){
     font-family: var(--default-font-family);
     font-weight: $font-weight-bold;
     font-size: var(--typo-size-title-small);
     letter-spacing: var(--default-letter-spacing);
-    color: var(--text-subtitle);
+    color: $color;
 
     // @include mobilexl{}
 }

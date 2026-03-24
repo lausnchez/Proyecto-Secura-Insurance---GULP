@@ -1,67 +1,69 @@
+@use "../helpers/functions" as *;
+
 /* COLORS */
 /* Primary */
-$primary500: #002E4B;
-$primary400: #004D7F;
-$primary300: #006DB3;
-$primary200: #8ABCDC;
-$primary100: #B0D2E7;
-$primary50: #E6F0F7;
+$primary500: #002e4b;
+$primary400: #004d7f;
+$primary300: #006db3;
+$primary200: #8abcdc;
+$primary100: #b0d2e7;
+$primary50: #e6f0f7;
 
 /* Secondary */
-$secondary500: #470E19;
-$secondary400: #79182B;
-$secondary300: #AA223C;
-$secondary200: #D899A5;
-$secondary100: #E5BAC3;
-$secondary50: #F7E9EC;
+$secondary500: #470e19;
+$secondary400: #79182b;
+$secondary300: #aa223c;
+$secondary200: #d899a5;
+$secondary100: #e5bac3;
+$secondary50: #f7e9ec;
 
 /* Neutral */
-$neutral500: #1F2937;
+$neutral500: #1f2937;
 $neutral400: #374151;
-$neutral300: #6B7280;
-$neutral200: #9CA3AF;
-$neutral100: #D1D5DB;
-$neutral50: #E8EAED;
-$neutral10: #F5F5F5;
+$neutral300: #6b7280;
+$neutral200: #9ca3af;
+$neutral100: #d1d5db;
+$neutral50: #e8eaed;
+$neutral10: #f5f5f5;
 
 /* Generic */
 $black: #000;
 $white: #fff;
-$alert: #FDEDB5;
+$alert: #fdedb5;
 
 /* States */
-$stateSuccess: #12B76A;
-$stateWarning: #F7C309;
-$stateError: #F04438;
+$stateSuccess: #12b76a;
+$stateWarning: #f7c309;
+$stateError: #f04438;
 
 /* Labels */
-$laberlGreen50: #D1FADF;
-$labelGreen100: #054F31;
-$labelRed50: #FEE4E2;
-$labelRed100: #7A271A;
-$labelOrange50: #FFEAD5;
-$labelOrange100: #7E2410;
-$labelBlue50: #D1E9FF;
+$laberlGreen50: #d1fadf;
+$labelGreen100: #054f31;
+$labelRed50: #fee4e2;
+$labelRed100: #7a271a;
+$labelOrange50: #ffead5;
+$labelOrange100: #7e2410;
+$labelBlue50: #d1e9ff;
 $labelBlue100: #194185;
-$labelYellow50: #FEF0C7;
-$labelYellow100: #7A2E0E;
-$labelIndigo50: #E0EAFF;
-$labelIndigo100: #292BA3;
-$labelPurple50: #EBE9FE;
-$labelPurple100: #3E1C96;
-$labelRose50: #FFE4E8;
-$labelRose100: #89123E;
-$labelPink50: #FCE7F6;
+$labelYellow50: #fef0c7;
+$labelYellow100: #7a2e0e;
+$labelIndigo50: #e0eaff;
+$labelIndigo100: #292ba3;
+$labelPurple50: #ebe9fe;
+$labelPurple100: #3e1c96;
+$labelRose50: #ffe4e8;
+$labelRose100: #89123e;
+$labelPink50: #fce7f6;
 $labelPink100: #851651;
-$labelBlueDark50: #E6EDF7;
-$labelBlueDark100: #001F48;
+$labelBlueDark50: #e6edf7;
+$labelBlueDark100: #001f48;
 
 /* Special */
-$special50: #DD5143;
-$biblio: #AB263E;
+$special50: #dd5143;
+$biblio: #ab263e;
 
 /* Gradient */
-$gradient: linear-gradient(133deg, #002B47 33.55%, #006DB3 81.08%);
+$gradient: linear-gradient(133deg, #002b47 33.55%, #006db3 81.08%);
 
 /* Background opacity */
 $blue20: rgba(68, 125, 165, 0.2);
@@ -73,14 +75,15 @@ $white20: rgba(255, 255, 255, 0.2);
 $shadow-xsmall: 0px 1px 4px 0px rgba(0, 0, 0, 0.04);
 $shadow-small: 0px 2px 6px 0px rgba(0, 0, 0, 0.06);
 $shadow-medium: 0px 6px 15px -2px rgba(0, 0, 0, 0.08);
-$shadow-large: 0px 8px 24px -3px rgba(0, 0, 0, 0.10), 0px 8px 24px -3px rgba(0, 0, 0, 0.05);
+$shadow-large:
+  0px 8px 24px -3px rgba(0, 0, 0, 0.1),
+  0px 8px 24px -3px rgba(0, 0, 0, 0.05);
 
 /* FONTS */
 $fontReg: "Inter Regular";
 $fontMed: "Inter Medium";
 $fontBold: "Inter Bold";
 $fontSemiBold: "Inter SemiBold";
-
 
 /* MEDIA QUERIES */
 $mobile: 390px;
@@ -121,6 +124,15 @@ $spacing-xl: 16px;
 $spacing-m: 12px;
 $spacing-default: 0%;
 
+/* Spacing Propios */
+:root {
+  --spacing-xs: 0.5rem;     // 8px
+  --spacing-s: 0.625rem;   // 10px
+  --spacing-m: 1rem;        // 16px
+  --spacing-l: 1.5rem;      // 24px
+  --spacing-xl: 2rem;        // 32px
+}
+
 /* Font Weight*/
 $font-weight-regular: 400;
 $font-weight-medium: 500;
@@ -158,111 +170,116 @@ $nav-dropdown-padding: 8px;
 $nav-dropdown-height: 40px;
 $nav-dropdown-separator-border: 1px solid var(--dropdown-hover-color);
 $header-profile-dropdown-li-border-left: 3px solid transparent;
-$header-profile-dropdown-li-hover-left-border: 3px solid var(--dropdown-left-border-color);
+$header-profile-dropdown-li-hover-left-border: 3px solid
+  var(--dropdown-left-border-color);
 $header-submenu-dropdown-box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
 
 /* Proximas Renovaciones Tabla */
-$p-renovaciones-tabla-header-border-bottom: 1px solid var(--proximas-renovaciones-tabla-header-border-bottom); 
-$p-renovaciones-tabla-box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-box-shadow); 
-$p-renovaciones-tabla-row-box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-row-box-shadow);
+$p-renovaciones-tabla-header-border-bottom: 1px solid
+  var(--proximas-renovaciones-tabla-header-border-bottom);
+$p-renovaciones-tabla-box-shadow: 0px 6px 16px
+  var(--proximas-renovaciones-tabla-box-shadow);
+$p-renovaciones-tabla-row-box-shadow: 0px 6px 16px
+  var(--proximas-renovaciones-tabla-row-box-shadow);
 
 /** Próximas Renovaciones Tag **/
 $p-renovaciones-tag-padding: 2px 8px;
 
 /* Cliente Potencial Card */
-$cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-card-box-shadow-color);
+$cliente-potencial-card-box-shadow: 0px 3px 5px 0px
+  var(--clientes-potenciales-card-box-shadow-color);
 
-:root{
-    // TAMAÑOS DE PANTALLA
-    //----------------------------------------------
-    --mobile: #{$mobile};
-    --tablet: #{$tablet};
+:root {
+  // TAMAÑOS DE PANTALLA
+  //----------------------------------------------
+  --mobile: #{$mobile};
+  --tablet: #{$tablet};
 
-    // LAYOUTS
-    //----------------------------------------------
-    --homepage-contents-gap: 40px;
-    --homepage-contents-padding: 40px 24px 80px 24px;
-    --homepage-contents-min-height: 711px;
-    --homepage-contents-mobile-gap: 16px;
-    --homepage-contents-mobile-padding: 16px;
+  // LAYOUTS
+  //----------------------------------------------
+  --homepage-contents-gap: 40px;
+  --homepage-contents-padding: 40px 24px 80px 24px;
+  --homepage-contents-min-height: 711px;
+  --homepage-contents-mobile-gap: 16px;
+  --homepage-contents-mobile-padding: 16px;
 
-    // FRAGMENTS
-    //----------------------------------------------
-    /* Nav-Dropdown */
-    --dropdown-top-position: 40px;
-    --dropdown-mobile-top-position: 65px;
-    --dropdown-bottom-position: 0;
-    --dropdown-item-padding: 15px 24px;
-    --dropdown-separator-weight: 1px;
-    --dropdown-icon-content-gap: 14px;
+  // FRAGMENTS
+  //----------------------------------------------
+  /* Nav-Dropdown */
+  --dropdown-top-position: 40px;
+  --dropdown-mobile-top-position: 65px;
+  --dropdown-bottom-position: 0;
+  --dropdown-item-padding: 15px 24px;
+  --dropdown-separator-weight: 1px;
+  --dropdown-icon-content-gap: 14px;
 
-    --language-dropdown-min-width: 131px;
-    --profile-dropdown-min-width: 300px;
-    --profile-dropdown-context-padding: 24px;
+  --language-dropdown-min-width: 131px;
+  --profile-dropdown-min-width: 300px;
+  --profile-dropdown-context-padding: 24px;
 
-    /* Language Dropdown*/
-    --header-mobile-language-dropdown-margin: 8px;
-    --header-mobile-language-dropdown-border-radius: 8px;
-    --header-language-dropdown-top: -250px; 
+  /* Language Dropdown*/
+  --header-mobile-language-dropdown-margin: 8px;
+  --header-mobile-language-dropdown-border-radius: 8px;
+  --header-language-dropdown-top: -250px;
 
-    /* Header Submenu Dropdown*/
-    --header-submenu-dropdown-border-radius: 5px;
-    --header-submenu-dropdown-mobilexl-border-radius: 0px;
-    --header-submenu-language-dropdown-min-width: 130px;
-    --header-submenu-language-dropdown-padding: 0px;
+  /* Header Submenu Dropdown*/
+  --header-submenu-dropdown-border-radius: 5px;
+  --header-submenu-dropdown-mobilexl-border-radius: 0px;
+  --header-submenu-language-dropdown-min-width: 130px;
+  --header-submenu-language-dropdown-padding: 0px;
 
-    /* Proximas Renovaciones Tabla */
-    --p-renovaciones-contenedor-gap: 4px;
+  /* Proximas Renovaciones Tabla */
+  --p-renovaciones-contenedor-gap: 4px;
 
-    --p-renovaciones-tabla-header-columns: 6;
-    --p-renovaciones-tabla-header-padding: 5px 16px 5px 40px;
-    --p-renovaciones-tabla-row-columns: 6;
-    --p-renovaciones-tabla-row-padding: 24px 16px 24px 40px;
-    --p-renovaciones-tabla-row-border-radius: 8px;
+  --p-renovaciones-tabla-header-columns: 6;
+  --p-renovaciones-tabla-header-padding: 5px 16px 5px 40px;
+  --p-renovaciones-tabla-row-columns: 6;
+  --p-renovaciones-tabla-row-padding: 24px 16px 24px 40px;
+  --p-renovaciones-tabla-row-border-radius: 8px;
 
-    --p-renovaciones-tabla-row-mobile-gap: 16px;
-    --p-renovaciones-tabla-row-mobile-padding: 16px;
-    
-    /* Próximas Renovaciones Tag */
-    --p-renovaciones-tag-gap: 8px;
-    --p-renovaciones-tag-border-radius: 4px;
+  --p-renovaciones-tabla-row-mobile-gap: 16px;
+  --p-renovaciones-tabla-row-mobile-padding: 16px;
 
-    /* Cliente Potencial Card*/
-    --cliente-potencial-card-principal-text-gap: 10px;
-    --cliente-potencial-card-contact-gap: 24px;
-    --cliente-potencial-card-contact-height: 126px;
-    --cliente-potencial-card-gap: 24px;
-    --cliente-potencial-card-box-shadow: 24px;
-    --cliente-potencial-card-padding: 16px 24px;
-    --cliente-potencial-card-border-radius: 12px;
-    --cliente-potencial-card-principal-column-icon: 20px;
-    --cliente-potencial-card-principal-text-gap: 24px;
-    --cliente-potencial-card-contact-gap: 24px;
-    --cliente-potencial-card-contact-min-height: 49px;
+  /* Próximas Renovaciones Tag */
+  --p-renovaciones-tag-gap: 8px;
+  --p-renovaciones-tag-border-radius: 4px;
 
-    /* General Grey Button */
-    --general-grey-button-border-radius: 8px;
-    --general-grey-button-gap: 16px;
+  /* Cliente Potencial Card*/
+  --cliente-potencial-card-principal-text-gap: 10px;
+  --cliente-potencial-card-contact-gap: 24px;
+  --cliente-potencial-card-contact-height: 126px;
+  --cliente-potencial-card-gap: 24px;
+  --cliente-potencial-card-box-shadow: 24px;
+  --cliente-potencial-card-padding: 16px 24px;
+  --cliente-potencial-card-border-radius: 12px;
+  --cliente-potencial-card-principal-column-icon: 20px;
+  --cliente-potencial-card-principal-text-gap: 24px;
+  --cliente-potencial-card-contact-gap: 24px;
+  --cliente-potencial-card-contact-min-height: 49px;
 
-    /* General Info Tag */
-    --general-info-tag-gap: 12px;
-    --general-info-tag-border-radius: 8px;
+  /* General Grey Button */
+  --general-grey-button-border-radius: 8px;
+  --general-grey-button-gap: 16px;
 
-    // COMPONENTS
-    //----------------------------------------------
-    /* Principal Section - Homepage */
-    --principal-section-gap: 40px;
-    --principal-section-mobile-gap: 24px;
+  /* General Info Tag */
+  --general-info-tag-gap: 12px;
+  --general-info-tag-border-radius: 8px;
 
-    /* Hero */
-    --hero-background-translucent-color: rgba(0,0,0,0.5);
-    --hero-contents-max-width: 700px;
-    --hero-contents-width: 80%;
-    
-    /* Clientes Potenciales*/
-    --clientes-potenciales-contents-gap: 20px;
+  // COMPONENTS
+  //----------------------------------------------
+  /* Principal Section - Homepage */
+  --principal-section-gap: 40px;
+  --principal-section-mobile-gap: 24px;
 
-    // PÁGINA RENOVACIONES
-    //--------------------------------------------
-    --p-renovaciones-page-info-breadcrumbs-gap: 8px;
+  /* Hero */
+  --hero-background-translucent-color: rgba(0, 0, 0, 0.5);
+  --hero-contents-max-width: 700px;
+  --hero-contents-width: 80%;
+
+  /* Clientes Potenciales*/
+  --clientes-potenciales-contents-gap: 20px;
+
+  // PÁGINA RENOVACIONES
+  //--------------------------------------------
+  --p-renovaciones-page-info-breadcrumbs-gap: 8px;
 }

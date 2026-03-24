@@ -12,9 +12,14 @@
     }
 
     .p-renovaciones-page-info__url__origin{
-        @include body;
         color: var(--base-primary);
     }
+    
+    .p-renovaciones-page-info__url__origin span{
+        @include body;
+        color: var(--text-label);
+    }
+
 
     .p-renovaciones-page-info__title-button{
         display: flex;
