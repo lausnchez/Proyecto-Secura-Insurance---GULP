@@ -6,7 +6,7 @@
     flex-direction: row;
     gap: $header-navBar-gap;
     align-items: center;
-    text-align: center;
+    text-align: left;
 
     a:hover{
         color: var(--base-greyscale-600);

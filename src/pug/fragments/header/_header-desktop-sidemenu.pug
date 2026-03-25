@@ -1,8 +1,10 @@
+include ../../mixins/header/_header-submenu-item.pug
+
 ul.header__submenus
     .header__submenus__container
         li
-            +header-submenu-item("Mi perfil", "user")
+            +header-submenu-item("Mi perfil", "user", "desktop__profile")
             include ./_header-profile-dropdown.pug
         li
-            +header-submenu-item("Español", "globe")
+            +header-submenu-item("Español", "globe", "desktop__language")
             include ./_header-language-dropdown.pug

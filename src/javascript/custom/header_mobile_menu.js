@@ -5,9 +5,14 @@
 const body = document.querySelector("body");
 
 // Elementos del profile
-const headerProfileButton = document.querySelector(
+const headerProfileButtonMobile = document.querySelector(
   "#header_submenu__button_profile button",
 );
+
+const headerProfileButtonDesktop = document.querySelector(
+  "#header-submenu-item-desktop__profile"
+);
+
 const headerProfileMenu = document.querySelector(
   ".header__submenus__mobile .profile-dropdown",
 );
@@ -18,6 +23,11 @@ const headerBurgerButton = document.querySelector(
 );
 const headerBurgerMenu = document.querySelector(
   ".header__submenus__mobile .header__mobile-burger-submenu",
+);
+
+// Elementos del language
+const headerLanguageButtonDesktop = document.querySelector(
+  "#header-submenu-item-desktop__language"
 );
 
 // Elementos del close
@@ -33,6 +43,8 @@ const headerLanguageMenu = document.querySelector(
   ".header__mobile-burger-submenu__language-dropdown ul",
 );
 
+
+// Variables de control de los elementos
 const classToggle = "mobile-active"; // Despliega un menú
 const hiddenClass = "header-submenu-button-hidden"; // Oculta un elemento
 const notScroll = "not-scroll"; // Clase para evitar el scroll en mobile
@@ -48,7 +60,7 @@ body.classList.remove(notScroll);
 function closeAllMenus() {
   // Mostrar botones
   headerBurgerButton.classList.remove(hiddenClass);
-  headerProfileButton.classList.remove(hiddenClass);
+  headerProfileButtonMobile.classList.remove(hiddenClass);
   // Ocultar botón de cierre
   headerCloseButton.classList.add(hiddenClass);
   // Ocultar menús desplegables
@@ -61,14 +73,14 @@ function closeAllMenus() {
 
 // Función para mostrar/ocultar el submenu del profile
 //---------------------------------------------------------------------------------
-headerProfileButton?.addEventListener("click", showProfileMobileSubmenu);
+headerProfileButtonMobile?.addEventListener("click", showProfileMobileSubmenu);
 
 function showProfileMobileSubmenu() {
   // Mostrar menú
   headerProfileMenu?.classList.add(classToggle);
 
   // Cambiar botones disponibles
-  headerProfileButton.classList.add(hiddenClass);
+  headerProfileButtonMobile.classList.add(hiddenClass);
   headerBurgerButton.classList.add(hiddenClass);
   headerCloseButton.classList.remove(hiddenClass);
   // Bloquear scroll
@@ -84,7 +96,7 @@ function showBurgerMobileSubmenu() {
   headerBurgerMenu?.classList.add(classToggle);
 
   // Cambiar botones disponibles
-  headerProfileButton.classList.add(hiddenClass);
+  headerProfileButtonMobile.classList.add(hiddenClass);
   headerBurgerButton.classList.add(hiddenClass);
   headerCloseButton.classList.remove(hiddenClass);
   // Bloquear scroll

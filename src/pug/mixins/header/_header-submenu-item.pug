@@ -1,6 +1,9 @@
-
-mixin header-submenu-item(textContent, iconContent)
-    a(href="#").header__submenu__item
+mixin header-submenu-item(textContent, iconContent, id = '')
+    //- a(href="#", id = id).header__submenu__item
+    a.header__submenu__item(
+        href="#",
+        id=id ? `header-submenu-item-${id}` : null
+    )
         span(class=`icon-${iconContent}`)
         span.header-submenu-item__textContent= textContent
         span.icon-arrow-dropdown
