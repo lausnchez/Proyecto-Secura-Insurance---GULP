@@ -10,6 +10,7 @@
     .p-renovaciones__paginacion__orderBy{
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: var(--spacing-12);
     }
 

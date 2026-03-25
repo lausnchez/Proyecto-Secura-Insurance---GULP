@@ -171,6 +171,7 @@
   --base-greyscale-600: #596f76;
   --text-body-default: #4A4A68;
   --main-background-color: #F7F9FA;
+  --select-default-border: #B7CBD3;
   --header-background-color: #FFFFFF;
   --header-dropdown-icon-content-text: #374649;
   --neutral-gray-100: #E6E7E8;
@@ -1103,6 +1104,19 @@ button {
   cursor: pointer;
 }
 
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid var(--select-default-border);
+  border-radius: 4px;
+}
+
 /** LAYOUT **/
 body.menu-open {
   overflow: hidden; /* bloquea scroll vertical y horizontal */
@@ -1558,6 +1572,7 @@ body.menu-open {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-14);
+  align-items: center;
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector__selector > span {
   font-family: var(--default-font-family);
@@ -1587,6 +1602,7 @@ body.menu-open {
 .p-renovaciones__paginacion .p-renovaciones__paginacion__orderBy {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: var(--spacing-12);
 }
 .p-renovaciones__paginacion .p-renovaciones__paginacion__orderBy span {

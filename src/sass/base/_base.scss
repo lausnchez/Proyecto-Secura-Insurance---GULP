@@ -154,3 +154,23 @@ button{
   width: fit-content;
   cursor: pointer;
 }
+
+select {
+  // Retirar estilos por defecto del navegador
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  // Formato select
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  padding: 12px;
+
+  border: 1px solid var(--select-default-border);
+  border-radius: 4px;
+
+  // Flecha
+  
+}
