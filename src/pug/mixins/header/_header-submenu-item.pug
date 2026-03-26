@@ -1,7 +1,5 @@
 mixin header-submenu-item(textContent, iconContent, id = '')
-    //- a(href="#", id = id).header__submenu__item
     a.header__submenu__item(
-        href="#",
         id=id ? `header-submenu-item-${id}` : null
     )
         span(class=`icon-${iconContent}`)

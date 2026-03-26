@@ -1248,7 +1248,9 @@ body.menu-open {
 /** CSS LIBS **/
 /** HELPERS **/
 .header__submenu__dropdown {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   background-color: var(--header-background-color);
   list-style: none;
   box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
@@ -1259,11 +1261,12 @@ body.menu-open {
   top: var(--dropdown-top-position);
   right: var(--dropdown-bottom-position);
 }
-.header__submenu__dropdown li {
+.header__submenu__dropdown a {
+  display: block;
   padding: var(--dropdown-item-padding);
   border-bottom: var(--dropdown-separator-weight) solid var(--neutral-gray-100);
 }
-.header__submenu__dropdown li:hover {
+.header__submenu__dropdown a:hover {
   background-color: var(--dropdown-hover-color);
 }
 .header__submenu__dropdown .dropdown-icon-content {
@@ -1280,6 +1283,8 @@ body.menu-open {
   .header__submenu__dropdown.mobile-active {
     display: flex;
     flex-direction: column;
+    opacity: 1;
+    visibility: visible;
     top: var(--dropdown-mobile-top-position);
     height: calc(100vh - var(--dropdown-mobile-top-position));
     border-radius: var(--header-submenu-dropdown-mobilexl-border-radius);
@@ -1312,6 +1317,12 @@ body.menu-open {
 .header__submenu__dropdown.mobile-active.language-dropdown > li {
   width: 100%;
   border: none;
+}
+
+.header__sd-desktop--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 /** CSS LIBS **/
@@ -1408,11 +1419,6 @@ body.menu-open {
 
 .header__submenus li {
   position: relative;
-}
-
-.header__submenus li:hover .header__submenu__dropdown {
-  display: flex;
-  flex-direction: column;
 }
 
 /** CSS LIBS **/

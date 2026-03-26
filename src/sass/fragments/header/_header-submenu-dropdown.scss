@@ -3,7 +3,11 @@
 @use "../../helpers/mixins" as *;
 
 .header__submenu__dropdown{
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    // display: none;
 
     background-color: var(--header-background-color);
     list-style: none;
@@ -16,7 +20,8 @@
     top: var(--dropdown-top-position);
     right: var(--dropdown-bottom-position);
 
-    li{
+    a{
+        display: block;
         padding: var(--dropdown-item-padding);
         border-bottom: var(--dropdown-separator-weight) solid var(--neutral-gray-100);
         &:hover{
@@ -36,10 +41,13 @@
     }
 }
 
+// Opciones del mobile cuando están activos
 .header__submenu__dropdown.mobile-active{
     @include mobilexl{
         display: flex;
         flex-direction: column;
+        opacity: 1;
+        visibility: visible;
         top: var(--dropdown-mobile-top-position);
         height: calc(100vh - var(--dropdown-mobile-top-position));
         border-radius: var(--header-submenu-dropdown-mobilexl-border-radius);
@@ -75,4 +83,11 @@
             border: none;
         }
     }
+}
+
+// Clase para mostrar los dropdowns de los submenús
+.header__sd-desktop--visible{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
