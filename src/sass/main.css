@@ -1251,6 +1251,7 @@ body.menu-open {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: all 0.3s ease-in;
   background-color: var(--header-background-color);
   list-style: none;
   box-shadow: 0px 4px 5px var(--dropdown-shadow-color);
@@ -1647,11 +1648,10 @@ body.menu-open {
 .header .header__contentPrincipal {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .header .header__navBar {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1662,6 +1662,11 @@ body.menu-open {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xl);
+}
+.header .header__navBar-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .header .header__logo-container {
   width: 5.5rem;

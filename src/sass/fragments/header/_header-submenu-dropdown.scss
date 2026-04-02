@@ -6,8 +6,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
-    // display: none;
+    transition: all 0.3s ease-in;
 
     background-color: var(--header-background-color);
     list-style: none;
