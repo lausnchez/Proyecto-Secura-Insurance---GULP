@@ -40,6 +40,13 @@
     }
 }
 
+.header__submenu__dropdown.desktop-active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
 // Opciones del mobile cuando están activos
 .header__submenu__dropdown.mobile-active{
     @include mobilexl{
