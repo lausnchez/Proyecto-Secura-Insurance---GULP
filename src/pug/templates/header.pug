@@ -1,14 +1,12 @@
-include ../mixins/header/_header-submenu-item.pug
 include ../mixins/header/_header-navbar-links.pug
 
-header
-    .header__contentPrincipal 
-        nav.header__navBar 
+.header__contentPrincipal 
+        .header__navBar-left
             a(href="#")
                 .header__logo-container
                     img(src="images/secura-insurance_logo.png", alt="Logotipo de Secura-Insurance")
             +header-navbar-links()
-        //- Side menu para desktop y mobile
-        include ../fragments/header/_header-desktop-sidemenu.pug
-        include ../fragments/header/_header-mobile-sidemenu.pug 
-    
+        .header__navBar-right
+            //- Side menu para desktop y mobile
+            include ../fragments/header/_header-desktop-sidemenu.pug
+            include ../fragments/header/_header-mobile-sidemenu.pug 

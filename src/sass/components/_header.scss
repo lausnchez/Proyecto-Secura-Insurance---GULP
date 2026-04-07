@@ -10,23 +10,35 @@
     background-color: var(--header-background-color);
     display: flex;
     flex-direction: column;
-    gap: toRem($header-gap);
+    gap: var(--spacing-l);
     height: auto;
     
     .header__contentPrincipal{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
     }
     
     .header__navBar{
-        width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: left;
+        justify-content: space-between;
         align-items: center;
         gap: $header-navBar-gap;
+    }
+
+    .header__navBar-left{
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-xl);
+    }
+
+    .header__navBar-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // gap: $header-submenus-gap; // o el gap que corresponda
     }
 
     .header__logo-container{

@@ -1,10 +1,15 @@
 @use "../helpers/mixins" as *;
+@use "../helpers/functions" as *;
+@use "../helpers/variables" as *;
+
 .homepage_contents, .pr-page_contents{
     display: flex;
     flex-direction: column;
     gap: var(--spacing-l);
     padding: var(--homepage-contents-padding);
     min-height: var(--homepage-contents-min-height);
+    // max-width: toRem($page-contents-max-width);
+    align-items: center;
 
     @include mobilexl{
         gap: var(--homepage-contents-mobile-gap);

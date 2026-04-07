@@ -116,6 +116,8 @@ $desktopxlMax: 1919px;
 $fullHd: 1920px;
 
 /* Spacing */
+$page-contents-max-width: 1440px;
+
 $spacing-5xl: 54px;
 $spacing-4xl: 48px;
 $spacing-3xl: 32px;
@@ -192,6 +194,7 @@ $p-renovaciones-tag-padding: 2px 8px;
 $cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-card-box-shadow-color);
 
 :root {
+
   // TAMAÑOS DE PANTALLA
   //----------------------------------------------
   --mobile: #{$mobile};
