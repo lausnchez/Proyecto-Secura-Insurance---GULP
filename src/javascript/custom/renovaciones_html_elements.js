@@ -1,5 +1,11 @@
 // ─── VALIDACIONES ─────────────────────────────────────────────────────────────
 
+/**
+ * Valida los datos que se le pasan antes de pintarlos en la página
+ * para asegurarnos que no dan ningún tipo de problema
+ * @param {*} content 
+ * @returns 
+ */
 function validateRenovacionesContent(content) {
     
     const fecha_Hoy = new Date();
@@ -29,67 +35,72 @@ function validateRenovacionesContent(content) {
     };
 }
 
-// ─── DISPLAY ─────────────────────────────────────────────────────────────
+// ─── ELEMENTS HTML ─────────────────────────────────────────────────────────────
 
+/**
+ * LLama a la función de validación de los datos y devuelve una row con
+ * los datos correctos ya insertados
+ * @param {*} renovacionContents 
+ * @returns 
+ */
 function displayRenovacion(renovacionContents){
     const renovacionData = validateRenovacionesContent(renovacionContents); // Validar datos previamente
-
+    
     const renovacionRow = document.createElement('div');
     renovacionRow.classList.add('proximas-renovaciones-row');
-
+    
     // Número de póliza
     const poliza = document.createElement('div');
     poliza.classList.add('proximas-renovaciones__contenedor');
     poliza.innerHTML = `
-        <span class='proximas-renovaciones__contenedor-title base_body'>No. de póliza</span>
-        <span class='proximas-renovaciones-row__numPoliza'>${renovacionData.no_poliza}</span>
+    <span class='proximas-renovaciones__contenedor-title base_body'>No. de póliza</span>
+    <span class='proximas-renovaciones-row__numPoliza'>${renovacionData.no_poliza}</span>
     `;
     renovacionRow.appendChild(poliza);
-
-
+    
+    
     // Nombre del riesgo
     const riesgo = document.createElement('div');
     riesgo.classList.add('proximas-renovaciones__contenedor');
     riesgo.innerHTML = `
-        <span class='proximas-renovaciones__contenedor-title base_body'>Nombre del riesgo</span>
-        <span class='proximas-renovaciones-row__nombreRiesgo'>${renovacionData.nombre_riesgo}</span>
+    <span class='proximas-renovaciones__contenedor-title base_body'>Nombre del riesgo</span>
+    <span class='proximas-renovaciones-row__nombreRiesgo'>${renovacionData.nombre_riesgo}</span>
     `;
     renovacionRow.appendChild(riesgo);
-
+    
     // Fecha de contrato
     const contrato = document.createElement('div');
     contrato.classList.add('proximas-renovaciones__contenedor');
     contrato.innerHTML = `
-        <span class='proximas-renovaciones__contenedor-title base_body'>Fecha de contrato</span>
-        <span class='proximas-renovaciones-row__fechaContrato'>${renovacionData.fecha_contrato.toLocaleDateString('es-ES')}</span>
+    <span class='proximas-renovaciones__contenedor-title base_body'>Fecha de contrato</span>
+    <span class='proximas-renovaciones-row__fechaContrato'>${renovacionData.fecha_contrato.toLocaleDateString('es-ES')}</span>
     `;
     renovacionRow.appendChild(contrato);
-
+    
     // Fecha de vencimiento
     const vencimiento = document.createElement('div');
     vencimiento.classList.add('proximas-renovaciones__contenedor');
     vencimiento.innerHTML = `
-        <span class='proximas-renovaciones__contenedor-title base_body'>Fecha de Vencimiento</span>
-        <span class='proximas-renovaciones-row__fechaVencimiento'>${renovacionData.fecha_vencimiento.toLocaleDateString('es-ES')}</span>
+    <span class='proximas-renovaciones__contenedor-title base_body'>Fecha de Vencimiento</span>
+    <span class='proximas-renovaciones-row__fechaVencimiento'>${renovacionData.fecha_vencimiento.toLocaleDateString('es-ES')}</span>
     `;
     renovacionRow.appendChild(vencimiento);
-
+    
     // Importe
     const importeDiv = document.createElement('div');
     importeDiv.classList.add('proximas-renovaciones__contenedor');
     importeDiv.innerHTML = `
-        <span class='proximas-renovaciones__contenedor-title base_body'>Importe</span>
-        <span class='proximas-renovaciones-row__importe'>${renovacionData.importe}€</span>
+    <span class='proximas-renovaciones__contenedor-title base_body'>Importe</span>
+    <span class='proximas-renovaciones-row__importe'>${renovacionData.importe}€</span>
     `;
     renovacionRow.appendChild(importeDiv);
-
+    
     // Tag 
     const tag = tagDisplay(renovacionData.estado);
     renovacionRow.appendChild(tag);
-
+    
     return renovacionRow;
 }
-
 
 /**
  * Devuelve la tag correspondiente al dato pasado por parámetro

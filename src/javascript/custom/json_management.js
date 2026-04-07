@@ -1,7 +1,7 @@
 // RECOGER LOS DATOS TOTALES DE LAS PÓLIZAS
 // ---------------------------------------------------------------------------
 
-function loadTotalPolizasData() {
+function loadPolizasData() {
     return fetch('assets/data/polizas.json')
     .then(response => {
         if (!response.ok) {
@@ -17,12 +17,3 @@ function loadTotalPolizasData() {
         console.error('Error:', error);
     });
 }
-
-loadTotalPolizasData();
-// loadTotalPolizasData().then(polizas => {
-    
-// });
-
-// RECOGER DATOS DE LAS PÓLIZAS FILTRADOS
-// ---------------------------------------------------------------------------
-

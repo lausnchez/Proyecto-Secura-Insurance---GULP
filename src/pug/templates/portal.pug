@@ -6,9 +6,11 @@ html(lang="es")
 		link(href="css/main.min.css" rel="stylesheet" media="all")
 		block head
 
-	body.default-font
+	block vars
+		- var pageID = typeof pageID !== 'undefined' ? pageID : ''
+		- var pageClass = typeof pageClass !== 'undefined' ? pageClass : ''
 
-		block vars
+	body.default-font(data-page=pageID)
 
 		- var mainClass = "main-content";
 

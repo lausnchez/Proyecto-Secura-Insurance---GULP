@@ -2,10 +2,10 @@ extends layouts/layout-home
 
 block vars
     - var pageTitle = "Homepage";
+    - var pageID = "home";
     
 block content
     include components/_hero.pug
     .pr-page_contents    
         include components/_tabla-proximas-renovaciones.pug
         include components/_clientes-potenciales.pug    
-        
