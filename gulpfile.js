@@ -16,6 +16,7 @@ const path = {
   pug: ['src/pug/*.pug'],
   sass: 'src/sass/main.scss',
   images: ['src/assets/images/**/*.*'],
+  data: ['src/assets/data/**/*.*'],
   js: ['src/javascript/custom/[^_]*.js'],
   jsLibs: ['src/javascript/libs/[^_]*.js'],
   jsPrimaryLibs: ['src/javascript/primaryLibs/[^_]*.js'],
@@ -28,6 +29,7 @@ const path = {
   buildFONTS: 'build/fonts',
   buildJS: 'build/js/',
   buildIMAGES: 'build/images',
+  buildDATA: 'build/assets/data',
   buildLocale: 'build/locale/',
   libCSS: 'src/sass/lib/*.css',
   buildLibCSS: 'build/css/lib/'
@@ -138,6 +140,12 @@ gulp.task('deployIMAGES', gulp.series('buildIMAGES', function deployIMAGES() {
   return Promise.resolve();
 }));
 
+gulp.task('buildDATA', () => gulp.src(path.data).pipe(gulp.dest(path.buildDATA)));
+
+gulp.task('deployDATA', gulp.series('buildDATA', function deployDATA() {
+  return Promise.resolve();
+}));
+
 gulp.task('deployJS', gulp.series('buildJS', function ensureJsFolder(cb) {
   return Promise.resolve();
 }));
@@ -148,6 +156,7 @@ gulp.task('build', gulp.series(
   'buildFONTS',
   'buildJS',
   'buildIMAGES',
+  'buildDATA',
   'buildLocale',
   'buildLocaleComponents',
   'copyMinifyedLibs'
@@ -159,6 +168,7 @@ gulp.task('deploy', gulp.series(
   'deployFONTS',
   'deployJS',
   'deployIMAGES',
+  'deployDATA',
   'copyMinifyedLibs',
   function startServer(cb) {
     browserSync.init({ server: { baseDir: "./build", directory: true } });
@@ -170,6 +180,7 @@ gulp.task('watch', () => {
   gulp.watch('src/pug/**/*.pug', gulp.series('deployPUG'));
   gulp.watch('src/sass/**/*.scss', gulp.series('deployCSS'));
   gulp.watch('src/images/**/*.*', gulp.series('deployIMAGES'));
+  gulp.watch('src/assets/data/**/*.*', gulp.series('deployDATA'));
   gulp.watch('src/javascript/**/*.js', gulp.series('deployJS'));
   gulp.watch('src/pug/locale/**/*.json', gulp.series('deployPUG'));
   gulp.watch('src/pug/components/**/locale/**/*.json', gulp.series('deployPUG'));

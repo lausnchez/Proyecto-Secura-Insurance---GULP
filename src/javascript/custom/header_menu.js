@@ -1,10 +1,8 @@
-// Recoger elementos del DOM
-//---------------------------------------------------------------------------------
-
 // Body
 const body = document.querySelector("body");
 
 // Elementos del profile mobile
+// ----------------------------------------------------------------
 const headerProfileButton = document.querySelector(
   "#header_submenu__button_profile button",
 );
@@ -14,6 +12,7 @@ const headerProfileMenu = document.querySelector(
 );
 
 // Elementos del profile Desktop
+// ----------------------------------------------------------------
 const headerProfileDesktopButton = document.querySelector(
   "#header-submenu-item-desktop__profile",
 );
@@ -23,6 +22,7 @@ const headerProfileDesktopMenu = document.querySelector(
 );
 
 // Elementos del burger
+// ----------------------------------------------------------------
 const headerBurgerButton = document.querySelector(
   "#header_submenu__button_burger button",
 );
@@ -31,11 +31,16 @@ const headerBurgerMenu = document.querySelector(
 );
 
 // Elementos del close
+// ----------------------------------------------------------------
 const headerCloseButton = document.querySelector(
   "#header_submenu__button_close",
 );
 
 // Elementos del language mobile
+// ----------------------------------------------------------------
+// const headerLanguageButton = document.querySelector(
+//   ".header__mobile-burger-submenu__language-dropdown a",
+// );
 const headerLanguageButton = document.querySelector(
   ".header__mobile-burger-submenu__language-dropdown a",
 );
@@ -44,6 +49,7 @@ const headerLanguageMenu = document.querySelector(
 );
 
 // Elementos del language desktop
+// ----------------------------------------------------------------
 const headerLanguageDesktopButton = document.querySelector(
   "#header-submenu-item-desktop__language",
 );
@@ -51,6 +57,8 @@ const headerLanguageDesktopButton = document.querySelector(
 const headerLanguageDesktopMenu = document.querySelector(
   ".header__submenu__dropdown.language-dropdown",
 );
+
+// ----------------------------------------------------------------
 
 const classToggle = "mobile-active"; // Despliega un menú en mobile
 const classToggleDesktop = "desktop-active"; // Despliega un menú en mobile
@@ -124,6 +132,7 @@ function showBurgerMobileSubmenu() {
 headerLanguageButton?.addEventListener("click", showLanguageMobileSubmenu);
 
 function showLanguageMobileSubmenu() {
+  console.log("Menú de language mobile pulsado");
   // Mostrar menú
   headerLanguageMenu?.classList.toggle(classToggle);
 }
