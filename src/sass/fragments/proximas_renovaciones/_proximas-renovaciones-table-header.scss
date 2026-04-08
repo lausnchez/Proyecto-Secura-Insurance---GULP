@@ -9,6 +9,7 @@
     align-items: center;
     padding: var(--p-renovaciones-tabla-header-padding);
     border-bottom: $p-renovaciones-tabla-header-border-bottom;
+    gap: var(--spacing-m);
 
     @include mobilexl{
         display: none;

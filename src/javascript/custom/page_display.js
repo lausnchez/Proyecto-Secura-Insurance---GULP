@@ -22,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 // ─── PAGE HOME ─────────────────────────────────────────────────────────────
+
 function displayDataHome(content){
     const container = document.querySelector('#prt-home .proximas-renovaciones-tabla__contents');
     content.forEach(element => {
@@ -50,7 +52,10 @@ function heroManagementHome(){
     window.addEventListener("resize", updateLayout);
 }
 
+
 // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
+
+
 function displayDataProximasRenovaciones(content){
     // TABLA
     const table_container = document.querySelector('#prt-proximas-renovaciones .proximas-renovaciones-tabla__contents');

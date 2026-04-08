@@ -1,11 +1,13 @@
 @use "../../helpers/font-mixins" as *;
 @use "../../helpers/mixins" as *;
+@use "../../helpers/variables" as *;
 
 .proximas-renovaciones__filter{
     display: flex;
     flex-direction: column;
     gap: var(--spacing-l);
     width: 100%;
+    max-width: $page-contents-max-width;
 
     .p-renovaciones__filter__num-selector{
         display: flex;

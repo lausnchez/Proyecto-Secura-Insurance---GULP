@@ -1442,6 +1442,7 @@ body.menu-open {
   box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-row-box-shadow);
   border-radius: var(--p-renovaciones-tabla-row-border-radius);
   background-color: var(--proximas-renovaciones-tabla-row-background-color);
+  gap: 16px;
 }
 .proximas-renovaciones-row .proximas-renovaciones__contenedor {
   display: flex;
@@ -1506,6 +1507,7 @@ body.menu-open {
   align-items: center;
   padding: var(--p-renovaciones-tabla-header-padding);
   border-bottom: 1px solid var(--proximas-renovaciones-tabla-header-border-bottom);
+  gap: var(--spacing-m);
 }
 @media (max-width: 767px) {
   .proximas-renovaciones-tabla__header {
@@ -1566,11 +1568,14 @@ body.menu-open {
   }
 }
 
+/** CSS LIBS **/
+/** HELPERS **/
 .proximas-renovaciones__filter {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-l);
   width: 100%;
+  max-width: 1440px;
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector {
   display: flex;

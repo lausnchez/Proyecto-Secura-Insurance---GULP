@@ -11,6 +11,7 @@
     box-shadow: $p-renovaciones-tabla-row-box-shadow;
     border-radius: var(--p-renovaciones-tabla-row-border-radius);
     background-color: var(--proximas-renovaciones-tabla-row-background-color);
+    gap:16px;
     .proximas-renovaciones__contenedor{
         display: flex;
         flex-direction: column;
