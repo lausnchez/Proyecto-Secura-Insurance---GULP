@@ -31,5 +31,9 @@ function displayDataHome(content){
 
 function displayDataProximasRenovaciones(content){
     const container = document.querySelector('#prt-proximas-renovaciones .proximas-renovaciones-tabla__contents');
+    content.forEach(element =>{
+        let row = displayRenovacion(element);
+        container.appendChild(row);
+    });
     
 }
