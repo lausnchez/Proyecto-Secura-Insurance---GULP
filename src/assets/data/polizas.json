@@ -1,7 +1,7 @@
 [
-  {"no_poliza":"75846843","nombre_riesgo":"Hyundai Ioniq","fecha_contrato":"2022-12-01","fecha_vencimiento":"2023-12-01","importe":30203.76,"estado_poliza":"Pendiente"},
-  {"no_poliza":"75846843","nombre_riesgo":"Hyundai Ioniq","fecha_contrato":"2022-12-01","fecha_vencimiento":"2023-12-01","importe":30203.76,"estado_poliza":"Pagada"},
-  {"no_poliza":"75846843","nombre_riesgo":"Hyundai Ioniq","fecha_contrato":"2022-12-01","fecha_vencimiento":"2023-12-01","importe":30203.76,"estado_poliza":"Pagada"},
+  {"no_poliza":"75846843","nombre_riesgo":"Hyundai Ioniq","fecha_contrato":"2022-12-01","fecha_vencimiento":"2027-05-11","importe":30203.76,"estado_poliza":"Pendiente"},
+  {"no_poliza":"75844689","nombre_riesgo":"Dacia Sandero","fecha_contrato":"2023-06-03","fecha_vencimiento":"2025-12-31","importe":23778.65,"estado_poliza":"Pagada"},
+  {"no_poliza":"42810462","nombre_riesgo":"Renault Clio","fecha_contrato":"2020-11-02","fecha_vencimiento":"2023-12-01","importe":37954.70,"estado_poliza":"Vencido"},
   {"no_poliza":"84721935","nombre_riesgo":"Toyota Corolla","fecha_contrato":"2023-03-15","fecha_vencimiento":"2024-03-15","importe":18450.00,"estado_poliza":"Pagada"},
   {"no_poliza":"91234567","nombre_riesgo":"BMW Serie 3","fecha_contrato":"2023-06-22","fecha_vencimiento":"2024-06-22","importe":52310.50,"estado_poliza":"Pendiente"},
   {"no_poliza":"63847291","nombre_riesgo":"Seat León","fecha_contrato":"2022-09-05","fecha_vencimiento":"2023-09-05","importe":12875.30,"estado_poliza":"Pagada"},

@@ -9,18 +9,27 @@ document.addEventListener('DOMContentLoaded', () => {
             
         // ─── PAGE HOME ─────────────────────────────────────────────────────────────
         if (actualPage === 'home') {
-            // Código específico para home
-            console.log("Página actual: " + actualPage );
             const home_data = original_data.slice(0,3); // 3 primeros elementos
-            console.log(home_data);
+            displayDataHome(home_data);
         } 
         
         // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
         else if (actualPage === 'proximas-renovaciones') {
-            // Código específico para próximas renovaciones
-            console.log("Página actual: " + actualPage );
-            const home_data = original_data.slice(0,11); // 3 primeros elementos
-            console.log(home_data);
+            const proximas_renovaciones_data = original_data.slice(0,10); // 10 primeros elementos
+            displayDataProximasRenovaciones(proximas_renovaciones_data);
         }
     });
 });
+
+function displayDataHome(content){
+    const container = document.querySelector('#prt-home .proximas-renovaciones-tabla__contents');
+    content.forEach(element => {
+        let row = displayRenovacion(element);
+        container.appendChild(row);
+    });
+}
+
+function displayDataProximasRenovaciones(content){
+    const container = document.querySelector('#prt-proximas-renovaciones .proximas-renovaciones-tabla__contents');
+    
+}

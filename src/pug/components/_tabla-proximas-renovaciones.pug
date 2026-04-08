@@ -2,7 +2,7 @@ include ../mixins/generales/_general-grey-button.pug
 include ../fragments/proximas_renovaciones/_proximas-renovaciones-row.pug
 
 section.principal-section
-    .proximas-renovaciones-tabla
+    .proximas-renovaciones-tabla(id='prt-home')
         //- TÍTULO DE LA SECCIÓN
         h2.base_header3-title-seccion Próximas renovaciones
 
@@ -10,9 +10,10 @@ section.principal-section
         include ../fragments/proximas_renovaciones/_proximas-renovaciones-table-header.pug
 
         //- FILAS DE LA TABLA
-        +p-renovaciones-row({"no_poliza":"77392048","nombre_riesgo":"Volkswagen Golf","fecha_contrato":"2023-01-10","fecha_vencimiento":"2024-01-10","importe":21600.00,"estado_poliza":"Pendiente"})
-        +p-renovaciones-row({"no_poliza":"60391824","nombre_riesgo":"Peugeot 3008","fecha_contrato":"2024-04-01","fecha_vencimiento":"2025-04-01","importe":27560.25,"estado_poliza":"Pagada"})
-        +p-renovaciones-row({"no_poliza":"41239876","nombre_riesgo":"Hyundai Tucson","fecha_contrato":"2023-08-30","fecha_vencimiento":"2024-08-30","importe":27450.00,"estado_poliza":"Vencido"})
+        .proximas-renovaciones-tabla__contents
+        //- +p-renovaciones-row({"no_poliza":"77392048","nombre_riesgo":"Volkswagen Golf","fecha_contrato":"2023-01-10","fecha_vencimiento":"2024-01-10","importe":21600.00,"estado_poliza":"Pendiente"})
+        //- +p-renovaciones-row({"no_poliza":"60391824","nombre_riesgo":"Peugeot 3008","fecha_contrato":"2024-04-01","fecha_vencimiento":"2025-04-01","importe":27560.25,"estado_poliza":"Pagada"})
+        //- +p-renovaciones-row({"no_poliza":"41239876","nombre_riesgo":"Hyundai Tucson","fecha_contrato":"2023-08-30","fecha_vencimiento":"2024-08-30","importe":27450.00,"estado_poliza":"Vencido"})
         
         //- BOTÓN DE VER MÁS
         +general-grey-button("Ver todas")

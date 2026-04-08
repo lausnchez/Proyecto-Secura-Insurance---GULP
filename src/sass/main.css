@@ -1839,6 +1839,12 @@ body.menu-open {
   gap: var(--spacing-l);
 }
 
+.proximas-renovaciones-tabla__contents {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+}
+
 /** CSS LIBS **/
 /** HELPERS **/
 .cliente-potencial-card {
