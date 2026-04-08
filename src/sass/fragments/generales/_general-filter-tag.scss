@@ -1,0 +1,32 @@
+@use "../../helpers/font-mixins" as *;
+
+.general-filter-tag{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-xs);
+    justify-content: center;
+    align-items: center;
+    border-radius: 99px;
+
+    padding: 8px 16px;
+
+    height: 36px;
+
+    background-color: var(--base-primary);
+    color: white;
+
+    .general-filter-tag__totalFilters{
+        @include bodyBold($color: var(--base-primary));
+
+        background-color: white;
+        padding: 2px 8px;
+        border-radius: 40px;
+    }
+
+    .icon-close-white{
+        background-color: transparent;
+        padding: 0px;
+        height: 16px;
+        width: 16px;
+    }
+}

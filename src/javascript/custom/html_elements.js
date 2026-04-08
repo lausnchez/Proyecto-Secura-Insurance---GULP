@@ -124,11 +124,28 @@ function filterTagDisplay(filterContent){
 
     const textContent = document.createElement('span');
     textContent.classList.add('general-filter-tag__textContent');
-    textContent.textContent = filterContent;
-    general_filter_tag.appendChild(textContent);
+    
+    if(Array.isArray(filterContent)){
+        // Texto del filtro (primer elemento del array)
+        textContent.textContent = filterContent[0];
+        general_filter_tag.appendChild(textContent);
 
+        // Número de póliza multiselector
+        const totalFiltersSelected = document.createElement('span');
+        totalFiltersSelected.classList.add('general-filter-tag__totalFilters');
+        totalFiltersSelected.textContent = '+' + (filterContent.length-1);
+        general_filter_tag.appendChild(totalFiltersSelected);
+        
+    }else{
+        // Texto del filtro
+        textContent.textContent = filterContent;
+        general_filter_tag.appendChild(textContent);
+    }
+
+    
+    // Botón de eliminar filtro
     const close_button = document.createElement('button');
-    close_button.classList.add('icon-close');
+    close_button.classList.add('icon-close-white');
     general_filter_tag.appendChild(close_button);
 
     close_button.addEventListener('click', ()=>{

@@ -70,4 +70,8 @@ function displayDataProximasRenovaciones(content){
     // NÚMERO DE PÓLIZAS
     const num_polizas = document.querySelector('.p-renovaciones__filter__num-selector span');
     num_polizas.textContent = original_data.length + ' Pólizas';
+
+    // RELLENAR SELECTOR DE ORDEN
+    orderByOptionsPolizasDisplay();
+    quantitySelectorPolizasDisplay();
 }

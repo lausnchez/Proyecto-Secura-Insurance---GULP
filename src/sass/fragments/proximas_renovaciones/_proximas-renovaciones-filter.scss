@@ -9,6 +9,21 @@
     width: 100%;
     max-width: $page-contents-max-width;
 
+    // Sistema de filtrado de pólizas
+    .p-renovaciones__filter__filter{
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-12);
+    }
+
+    .p-renovaciones__filter__filterContainer{
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-12);
+        flex-wrap: wrap;
+    }
+
+    // Sistema de ordenar y vista total de las pólizas
     .p-renovaciones__filter__num-selector{
         display: flex;
         flex-direction: row;

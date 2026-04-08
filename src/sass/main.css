@@ -670,6 +670,13 @@ template {
   font-size: toRem(var(--icon-size));
 }
 
+.icon-close-white::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-close);
+  color: white;
+  font-size: toRem(var(--icon-size));
+}
+
 .icon-close-red::before {
   font-family: var(--icon-font-family);
   content: var(--icon-close);
@@ -1171,6 +1178,8 @@ body.menu-open {
 .general-outline-button {
   background-color: transparent;
   border: 1px solid var(--base-primary-50);
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .general-outline-button:hover, .general-outline-button:active {
   border: 1px solid var(--base-primary-50);
@@ -1223,6 +1232,35 @@ body.menu-open {
 }
 .paginacion_button:hover, .paginacion_button:active {
   background-color: var(--base-primary-25);
+}
+
+.general-filter-tag {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  padding: 8px 16px;
+  height: 36px;
+  background-color: var(--base-primary);
+  color: white;
+}
+.general-filter-tag .general-filter-tag__totalFilters {
+  font-family: var(--default-font-family);
+  font-weight: 600;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--base-primary);
+  background-color: white;
+  padding: 2px 8px;
+  border-radius: 40px;
+}
+.general-filter-tag .icon-close-white {
+  background-color: transparent;
+  padding: 0px;
+  height: 16px;
+  width: 16px;
 }
 
 /** CSS LIBS **/
@@ -1577,6 +1615,17 @@ body.menu-open {
   width: 100%;
   max-width: 1440px;
 }
+.proximas-renovaciones__filter .p-renovaciones__filter__filter {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-12);
+}
+.proximas-renovaciones__filter .p-renovaciones__filter__filterContainer {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-12);
+  flex-wrap: wrap;
+}
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector {
   display: flex;
   flex-direction: row;
@@ -1585,7 +1634,7 @@ body.menu-open {
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector > span {
   font-family: var(--default-font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -1631,7 +1680,7 @@ body.menu-open {
 }
 .p-renovaciones__paginacion .p-renovaciones__paginacion__orderBy span {
   font-family: var(--default-font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -1643,7 +1692,7 @@ body.menu-open {
 }
 .p-renovaciones__paginacion .p-renovaciones__paginacion__totalPages {
   font-family: var(--default-font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -1745,7 +1794,7 @@ body.menu-open {
 }
 .footer__contentPrincipal .footer__data__contact__title {
   font-family: var(--default-font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);

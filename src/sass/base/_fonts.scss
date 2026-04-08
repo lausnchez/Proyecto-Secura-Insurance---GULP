@@ -48,6 +48,7 @@
 .icon-arrow-dropdown{@include icon(var(--icon-arrow-dropdown));}
 .icon-burger_menu{@include icon(var(--icon-burger_menu));}
 .icon-close{@include icon(var(--icon-close));}
+.icon-close-white{@include icon(var(--icon-close), white);}
 .icon-close-red{@include icon(var(--icon-close), var(--icon-red-vencimiento));}
 .icon-close-grey{@include icon(var(--icon-close), var(--neutral-grey-75));}
 .icon-globe{@include icon(var(--icon-globe));}

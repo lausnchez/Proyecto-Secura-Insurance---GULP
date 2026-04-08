@@ -3,6 +3,7 @@
 .general-outline-button{
     background-color: transparent;
     border: $button-general-border-width solid var(--base-primary-50);
+    height: fit-content;
 
     &:hover,&:active{
         border: 1px solid var(--base-primary-50);
