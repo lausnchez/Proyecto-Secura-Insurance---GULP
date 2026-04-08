@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (actualPage === 'home') {
             const home_data = original_data.slice(0,3);
             displayDataHome(home_data);
+            heroManagementHome();
         } 
         
         // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
@@ -28,6 +29,25 @@ function displayDataHome(content){
         let row = displayRenovacion(element);
         container.appendChild(row);
     });
+}
+
+function heroManagementHome(){
+    // Recoger los elementos del Hero y variables de pantalla
+    const hero_header = document.querySelector(".hero__contents h2");
+    const mobileVariable = getComputedStyle(document.documentElement).getPropertyValue("--tablet");
+    const mobileScreenWidth = parseInt(mobileVariable);
+
+    // Cambiar de clase según el tamaño de la ventana
+    function updateLayout() {
+        if (window.innerWidth <= mobileScreenWidth) {
+        hero_header.classList.replace("base_title-hero", "base_header2-hero");
+        } else {
+        hero_header.classList.replace("base_header2-hero", "base_title-hero");
+        }
+    }
+
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
 }
 
 // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
