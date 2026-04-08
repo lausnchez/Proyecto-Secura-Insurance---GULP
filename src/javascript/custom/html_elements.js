@@ -1,48 +1,11 @@
-// ─── VALIDACIONES ─────────────────────────────────────────────────────────────
-
-/**
- * Valida los datos que se le pasan antes de pintarlos en la página
- * para asegurarnos que no dan ningún tipo de problema
- * @param {*} content 
- * @returns 
- */
-function validateRenovacionesContent(content) {
-    
-    const fecha_Hoy = new Date();
-    const fecha_Vencimiento_Default = new Date(fecha_Hoy);
-    fecha_Vencimiento_Default.setFullYear(fecha_Hoy.getFullYear() + 1);
-    
-    const parseDate = (value, fallback) => {
-        if (!value) return fallback;
-        const d = new Date(value);
-        return isNaN(d.getTime()) ? fallback : d;
-    };
-    
-    const parseImporte = (value) => {
-        const val = parseFloat(value);
-        return isNaN(val)
-        ? '0'
-        : val.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    };
-    
-    return {
-        no_poliza:        content?.no_poliza ?? '0',
-        nombre_riesgo:    content?.nombre_riesgo ?? 'No definido',
-        fecha_contrato:   parseDate(content?.fecha_contrato, fecha_Hoy),    // Fecha, fallback
-        fecha_vencimiento: parseDate(content?.fecha_vencimiento, fecha_Vencimiento_Default),    // Fecha, fallback
-        importe:          parseImporte(content?.importe),
-        estado:           content?.estado_poliza ?? '',
-    };
-}
-
-// ─── ELEMENTS HTML ─────────────────────────────────────────────────────────────
+// ─── RENOVACIONES ─────────────────────────────────────────────────────────────
 
 /**
  * LLama a la función de validación de los datos y devuelve una row con
  * los datos correctos ya insertados
  * @param {*} renovacionContents 
  * @returns 
- */
+*/
 function displayRenovacion(renovacionContents){
     const renovacionData = validateRenovacionesContent(renovacionContents); // Validar datos previamente
     
@@ -96,7 +59,7 @@ function displayRenovacion(renovacionContents){
     renovacionRow.appendChild(importeDiv);
     
     // Tag 
-    const tag = tagDisplay(renovacionData.estado);
+    const tag = renovacionTagDisplay(renovacionData.estado);
     renovacionRow.appendChild(tag);
     
     return renovacionRow;
@@ -107,8 +70,8 @@ function displayRenovacion(renovacionContents){
  * y dato por el contenido de una renovación
  * @param {string} renovacionState 
  * @returns {HTMLElement} tag
- */
-function tagDisplay(renovacionState){
+*/
+function renovacionTagDisplay(renovacionState){
     // Diferentes estados de las etiquetas con su respectivo icono y clase de texto
     const estadosMap = {
         Pendiente: {
@@ -130,7 +93,7 @@ function tagDisplay(renovacionState){
     
     const tag = document.createElement('div');
     tag.classList.add('proxima-renovacion__tag');
-
+    
     if (config) {
         tag.classList.add(`tag-${stateLowerCase}`);
     }
@@ -139,11 +102,38 @@ function tagDisplay(renovacionState){
     const iconClass = config?.icon || 'icon-close-red';
     const textClass = config?.textClass || 'base_body-tag--none';
     const text = renovacionState || 'Desconocido';
-
+    
     tag.innerHTML = `
-        <span class="${iconClass}"></span>
-        <span class="${textClass}">${text}</span>
+    <span class="${iconClass}"></span>
+    <span class="${textClass}">${text}</span>
     `;
 
     return tag;
+}
+
+// ─── FILTROS ─────────────────────────────────────────────────────────────
+/**
+ * Genera una etiqueta por filtro aplicado con un icono de cierre para eliminar ese
+ * mismo filtro de la búsqueda de pólizas
+ * @param {string} filterContent 
+ * @returns 
+ */
+function filterTagDisplay(filterContent){
+    const general_filter_tag = document.createElement('div');
+    general_filter_tag.classList.add('general-filter-tag');
+
+    const textContent = document.createElement('span');
+    textContent.classList.add('general-filter-tag__textContent');
+    textContent.textContent = filterContent;
+    general_filter_tag.appendChild(textContent);
+
+    const close_button = document.createElement('button');
+    close_button.classList.add('icon-close');
+    general_filter_tag.appendChild(close_button);
+
+    close_button.addEventListener('click', ()=>{
+
+    });
+
+    return general_filter_tag;
 }

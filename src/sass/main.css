@@ -1570,11 +1570,13 @@ body.menu-open {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-l);
+  width: 100%;
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector > span {
   font-family: var(--default-font-family);
@@ -1602,6 +1604,7 @@ body.menu-open {
   .proximas-renovaciones__filter .p-renovaciones__filter__num-selector {
     flex-direction: column-reverse;
     gap: var(--spacing-l);
+    align-items: start;
   }
   .proximas-renovaciones__filter .general-outline-button {
     display: none;
