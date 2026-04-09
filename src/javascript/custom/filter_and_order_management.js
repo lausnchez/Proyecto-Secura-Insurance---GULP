@@ -9,10 +9,20 @@ let renovacionesCurrentPage = 1;
 let renovacionesPerPage = 0;
 let renovacionesMaxPages = 0;
 
+function comprobarValoresPaginacion(){
+    console.log('Current page: ' + renovacionesCurrentPage);
+    console.log('Max pages: ' + renovacionesMaxPages);
+    console.log('Per page: ' + renovacionesPerPage);
+    console.log('');
+}
+
 function nextPage(){
     if(renovacionesCurrentPage < renovacionesMaxPages){
         renovacionesCurrentPage++;
         updateCurrentAndMaxPages();
+        fillRenovationsTable();
+
+        comprobarValoresPaginacion();
     }
 }
 
@@ -20,17 +30,26 @@ function previousPage(){
     if(renovacionesCurrentPage > 1){
         renovacionesCurrentPage--;
         updateCurrentAndMaxPages();
+        fillRenovationsTable();
+
+        comprobarValoresPaginacion();
     }
 }
 
 function firstPage(){
     renovacionesCurrentPage = 1;
     updateCurrentAndMaxPages();
+    fillRenovationsTable();
+
+    comprobarValoresPaginacion();
 }
 
 function lastPage(){
     renovacionesCurrentPage = renovacionesMaxPages;
     updateCurrentAndMaxPages();
+    fillRenovationsTable();
+
+    comprobarValoresPaginacion();
 }
 
 function updateMaxPages(){
@@ -106,7 +125,10 @@ function quantitySelectorPolizasDisplay(){
     });
 
     selectorQuantityPolizas.addEventListener('change', (e)=>{
-        renovacionesPerPage = e.target.value;
-        changeRowsPerPage();
+        renovacionesPerPage = Number(e.target.value);
+        renovacionesCurrentPage = 1; // Resetear a la primera página al cambiar cantidad
+        updateMaxPages();
+        fillRenovationsTable();
+        updateCurrentAndMaxPages();
     });
 }

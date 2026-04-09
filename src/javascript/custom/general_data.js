@@ -14,6 +14,7 @@ const selectorOptionsOrdenarData = [
 
 // Array para los datos del selector de cantidad de pólizas mostradas en 'próximas-renovaciones'
 const selectorCantidadPolizasData = [
+    {value: '3', content: '3'},
     {value: '5', content: '5'},
     {value: '10', content: '10'},
     {value: '25', content: '25'},

@@ -39,13 +39,15 @@ function heroManagementHome(){
 
 function displayDataProximasRenovaciones(content){
     // TABLA
-    const table_container = document.querySelector('#prt-proximas-renovaciones .proximas-renovaciones-tabla__contents');
-    table_container.innerHTML = '';
+    // const table_container = document.querySelector('#prt-proximas-renovaciones .proximas-renovaciones-tabla__contents');
+    // table_container.innerHTML = '';
 
-    content.forEach(element =>{
-        let row = displayRenovacion(element);
-        table_container.appendChild(row);
-    });
+    // content.forEach(element =>{
+    //     let row = displayRenovacion(element);
+    //     table_container.appendChild(row);
+    // });
+
+    fillRenovationsTable();
 
     // NÚMERO DE PÓLIZAS CABECERA
     const num_polizas_cabecera = document.querySelector('.p-renovaciones-page-info__title-button .general-info-tag__textContent');
@@ -84,14 +86,12 @@ function fillRenovationsTable(){
     // Recoger datos del json correspondientes
     let page = paginatePolizasData();
 
+    console.log('--------------------------------------------');
+    console.log("Páginas recuperadas: " + page.length);
+
     // Display de los datos
     page.forEach(element =>{
         let row = displayRenovacion(element);
         table_container.appendChild(row);
     });
-}
-
-function changeRowsPerPage(){
-    updateCurrentAndMaxPages(); // Actualizar total de páginas
-    fillRenovationsTable(); // Rellenar tabla
 }
