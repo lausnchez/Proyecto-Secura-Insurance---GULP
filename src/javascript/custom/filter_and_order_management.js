@@ -6,7 +6,7 @@
 // ─── PAGINACIÓN ─────────────────────────────────────────────────────────────
 
 let renovacionesCurrentPage = 1;
-let renovacionesPerPage = 5;
+let renovacionesPerPage = 0;
 let renovacionesMaxPages = 0;
 
 function nextPage(){
@@ -35,7 +35,6 @@ function lastPage(){
 
 function updateMaxPages(){
     renovacionesMaxPages = Math.ceil(original_renovaciones_data.length / renovacionesPerPage);
-    console.log('RenovacionesMaxPages: ' + renovacionesMaxPages);
 }
 
 // BOTONES DE MANEJO DE PAGINACIÓN

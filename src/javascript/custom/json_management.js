@@ -12,9 +12,9 @@ let original_renovaciones_data = [];
 document.addEventListener('DOMContentLoaded', () => {
     loadPolizasData().then(data =>{
         original_renovaciones_data = data;
+        renovacionesPerPage = Number(selectorCantidadPolizasData?.[0]?.value ?? 1);
 
         const actualPage = document.body.dataset.page;
-        console.log("Actual page: " + actualPage);
             
         // ─── PAGE HOME ─────────────────────────────────────────────────────────────
         if (actualPage === 'home') {

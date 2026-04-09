@@ -112,8 +112,6 @@ function showProfileMobileSubmenu() {
   headerCloseButton.classList.remove(hiddenClass);
   // Bloquear scroll
   body.classList.add(notScroll);
-
-  console.log("Botón de perfil pulsado");
 }
 
 // Función para mostrar/ocultar el submenu burger
@@ -137,7 +135,6 @@ function showBurgerMobileSubmenu() {
 headerLanguageButton?.addEventListener("click", showLanguageMobileSubmenu);
 
 function showLanguageMobileSubmenu() {
-  console.log("Menú de language mobile pulsado");
   // Mostrar menú
   headerLanguageMenu?.classList.toggle(classToggle);
 }
@@ -154,7 +151,6 @@ function showLanguageMobileSubmenu() {
 headerProfileDesktopButton?.addEventListener("click", showProfileMenuDesktop);
 
 function showProfileMenuDesktop(){
-  console.log("Has pulsado el botón de profile");
   headerProfileDesktopMenu?.classList.toggle(classToggleDesktop);
 }
 
@@ -163,6 +159,5 @@ function showProfileMenuDesktop(){
 headerLanguageDesktopButton?.addEventListener("click", showLanguageMenuDesktop);
 
 function showLanguageMenuDesktop(){
-  console.log("Has pulsado el botón de language");
   headerLanguageDesktopMenu?.classList.toggle(classToggleDesktop);
 }
