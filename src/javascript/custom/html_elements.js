@@ -1,3 +1,8 @@
+/**
+ * En éste archivo se encuentran todas las funciones en lo relativo a generar
+ * elementos HTML en la página.
+ */
+
 // ─── RENOVACIONES ─────────────────────────────────────────────────────────────
 
 /**

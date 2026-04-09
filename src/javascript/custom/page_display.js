@@ -1,31 +1,12 @@
-const actual_page = document.body.dataset.page;
-let original_data = [];
-document.addEventListener('DOMContentLoaded', () => {
-    loadPolizasData().then(data =>{
-        original_data = data;
-
-        const actualPage = document.body.dataset.page;
-        console.log("Actual page: " + actualPage);
-            
-        // ─── PAGE HOME ─────────────────────────────────────────────────────────────
-        if (actualPage === 'home') {
-            const home_data = original_data.slice(0,3);
-            displayDataHome(home_data);
-            heroManagementHome();
-        } 
-        
-        // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
-        else if (actualPage === 'proximas-renovaciones') {
-            const proximas_renovaciones_data = original_data.slice(0,10);
-            displayDataProximasRenovaciones(proximas_renovaciones_data);
-        }
-    });
-});
+/**
+ * En éste archivo se encuentran todos las funciones que se encargan
+ * de mostrar datos por pantalla.
+ */
 
 
 // ─── PAGE HOME ─────────────────────────────────────────────────────────────
 
-function displayDataHome(content){
+function displayRenovacionesDataHome(content){
     const container = document.querySelector('#prt-home .proximas-renovaciones-tabla__contents');
     content.forEach(element => {
         let row = displayRenovacion(element);
@@ -59,19 +40,37 @@ function heroManagementHome(){
 function displayDataProximasRenovaciones(content){
     // TABLA
     const table_container = document.querySelector('#prt-proximas-renovaciones .proximas-renovaciones-tabla__contents');
+    table_container.innerHTML = '';
+
     content.forEach(element =>{
         let row = displayRenovacion(element);
         table_container.appendChild(row);
     });
+
     // NÚMERO DE PÓLIZAS CABECERA
     const num_polizas_cabecera = document.querySelector('.p-renovaciones-page-info__title-button .general-info-tag__textContent');
-    num_polizas_cabecera.textContent = original_data.length + ' Pólizas';
+    num_polizas_cabecera.textContent = original_renovaciones_data.length + ' Pólizas';
 
     // NÚMERO DE PÓLIZAS
     const num_polizas = document.querySelector('.p-renovaciones__filter__num-selector span');
-    num_polizas.textContent = original_data.length + ' Pólizas';
+    num_polizas.textContent = original_renovaciones_data.length + ' Pólizas';
 
-    // RELLENAR SELECTOR DE ORDEN
+    // NÚMERO DE PÁGINAS
+    const num_paginas_totales = document.querySelector('.p-renovaciones__paginacion__totalPages');
+    num_paginas_totales.textContent = 'Página ' + renovacionesCurrentPage + ' de ' + renovacionesMaxPages;
+
+    // RELLENAR SELECTORES
     orderByOptionsPolizasDisplay();
     quantitySelectorPolizasDisplay();
+
+    // PAGINACIÓN
+    btnPaginacionSetter();
+
+    newFilterTag(["Múltiple",'filtro3', 'filtro2', 'filtro3', 'filtro4']);
+    newFilterTag('Filtro nuevo');
+}
+
+function updateCurrentAndMaxPages(){
+    const num_paginas_totales = document.querySelector('.p-renovaciones__paginacion__totalPages');
+    num_paginas_totales.textContent = 'Página ' + renovacionesCurrentPage + ' de ' + renovacionesMaxPages;
 }

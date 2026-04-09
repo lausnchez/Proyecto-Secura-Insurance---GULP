@@ -1148,10 +1148,14 @@ body.menu-open {
   }
 }
 
+/** CSS LIBS **/
+/** HELPERS **/
 .principal-section {
   display: flex;
   flex-direction: column;
   gap: var(--principal-section-gap);
+  width: 100%;
+  max-width: 90rem;
 }
 @media (max-width: 767px) {
   .principal-section {
@@ -1613,7 +1617,7 @@ body.menu-open {
   flex-direction: column;
   gap: var(--spacing-l);
   width: 100%;
-  max-width: 1440px;
+  max-width: 90rem;
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__filter {
   display: flex;

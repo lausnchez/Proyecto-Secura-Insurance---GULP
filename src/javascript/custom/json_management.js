@@ -1,5 +1,39 @@
-// ─── CARGAR DATOS DEL JSON ─────────────────────────────────────────────────────────────
+/**
+ * Este archivo se encarga de manejar todo lo relativo al json principal de
+ * datos y el manejo de esos propios datos.
+ * 
+ * Llama a todos los métodos necesarios al cargar los datos de la página,
+ * como mostrar los datos recogidos en la tabla, paginación...
+ */
 
+const actual_page = document.body.dataset.page;
+let original_renovaciones_data = [];
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadPolizasData().then(data =>{
+        original_renovaciones_data = data;
+
+        const actualPage = document.body.dataset.page;
+        console.log("Actual page: " + actualPage);
+            
+        // ─── PAGE HOME ─────────────────────────────────────────────────────────────
+        if (actualPage === 'home') {
+            const home_data = original_renovaciones_data.slice(0,3);
+            displayRenovacionesDataHome(home_data);
+            heroManagementHome();
+        } 
+        
+        // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
+        else if (actualPage === 'proximas-renovaciones') {
+            const proximas_renovaciones_data = original_renovaciones_data.slice(0,10);
+            updateMaxPages();
+            displayDataProximasRenovaciones(proximas_renovaciones_data);
+            paginatePolizasData();
+        }
+    });
+});
+
+// ─── CARGAR DATOS DEL JSON ─────────────────────────────────────────────────────────────
 function loadPolizasData() {
     return fetch('assets/data/polizas.json')
     .then(response => {
@@ -15,6 +49,14 @@ function loadPolizasData() {
     .catch(error => {
         console.error('Error:', error);
     });
+}
+
+function paginatePolizasData(){
+    let start = (renovacionesCurrentPage - 1) * renovacionesPerPage;
+    let end = start + renovacionesPerPage;
+
+    let paginacion = original_renovaciones_data.slice(start, end);
+    return paginacion;
 }
 
 // ─── VALIDACIONES ─────────────────────────────────────────────────────────────

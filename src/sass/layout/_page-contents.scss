@@ -8,7 +8,7 @@
     gap: var(--spacing-l);
     padding: var(--homepage-contents-padding);
     min-height: var(--homepage-contents-min-height);
-    // max-width: toRem($page-contents-max-width);
+    
     align-items: center;
 
     @include mobilexl{

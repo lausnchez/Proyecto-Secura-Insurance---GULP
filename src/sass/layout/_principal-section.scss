@@ -1,9 +1,12 @@
 @use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
 
 .principal-section{
     display: flex;
     flex-direction: column;
     gap: var(--principal-section-gap);
+    width: 100%;
+    max-width: $page-contents-max-width;
 
     @include mobilexl{
         gap: var(--principal-section-mobile-gap);

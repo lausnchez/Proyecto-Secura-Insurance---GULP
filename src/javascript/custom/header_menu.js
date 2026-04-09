@@ -1,3 +1,8 @@
+/**
+ * En éste archivo se encuentra todo lo relativo al header y su funcionalidad
+ * en desktop y mobile.
+ */
+
 // Body
 const body = document.querySelector("body");
 
