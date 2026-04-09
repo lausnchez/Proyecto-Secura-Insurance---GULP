@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
         else if (actualPage === 'proximas-renovaciones') {
-            const proximas_renovaciones_data = original_renovaciones_data.slice(0,10);
+            const proximas_renovaciones_data = original_renovaciones_data.slice(0,renovacionesPerPage);
             updateMaxPages();
             displayDataProximasRenovaciones(proximas_renovaciones_data);
             paginatePolizasData();

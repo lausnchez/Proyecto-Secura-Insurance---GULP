@@ -72,5 +72,26 @@ function displayDataProximasRenovaciones(content){
 
 function updateCurrentAndMaxPages(){
     const num_paginas_totales = document.querySelector('.p-renovaciones__paginacion__totalPages');
-    num_paginas_totales.textContent = 'Página ' + renovacionesCurrentPage + ' de ' + renovacionesMaxPages;
+    updateMaxPages();
+    num_paginas_totales.textContent = 'Página ' + renovacionesCurrentPage + ' de ' + renovacionesMaxPages;  // Mostrar página en la que se está
+}
+
+function fillRenovationsTable(){
+    // Vaciar tabla
+    const table_container = document.querySelector('#prt-proximas-renovaciones .proximas-renovaciones-tabla__contents');
+    table_container.innerHTML = '';
+
+    // Recoger datos del json correspondientes
+    let page = paginatePolizasData();
+
+    // Display de los datos
+    page.forEach(element =>{
+        let row = displayRenovacion(element);
+        table_container.appendChild(row);
+    });
+}
+
+function changeRowsPerPage(){
+    updateCurrentAndMaxPages(); // Actualizar total de páginas
+    fillRenovationsTable(); // Rellenar tabla
 }

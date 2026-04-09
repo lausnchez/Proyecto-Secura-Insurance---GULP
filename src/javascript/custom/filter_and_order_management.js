@@ -6,7 +6,7 @@
 // ─── PAGINACIÓN ─────────────────────────────────────────────────────────────
 
 let renovacionesCurrentPage = 1;
-let renovacionesPerPage = 10;
+let renovacionesPerPage = 5;
 let renovacionesMaxPages = 0;
 
 function nextPage(){
@@ -108,6 +108,6 @@ function quantitySelectorPolizasDisplay(){
 
     selectorQuantityPolizas.addEventListener('change', (e)=>{
         renovacionesPerPage = e.target.value;
-        console.log(renovacionesPerPage);
+        changeRowsPerPage();
     });
 }
