@@ -31,9 +31,36 @@
         align-items: center;
     }
 
-    .p-renovaciones__filter__num-selector >span{
+    .p-renovaciones__filter__num-selector__totalPolizas{
         @include bodyBold;
         color: var(--text-subtitle);
+    }
+
+    .p-renovaciones__filter__filter__dataContainer{
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-m);
+        flex-wrap: wrap;
+    }
+
+    .p-renovaciones__filter__num-selector__totalFiltros{
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-m);
+    }
+
+    .p-renovaciones__filter__num-selector__totalFiltros__filtros{
+        @include bodyBold;
+        color: var(--text-subtitle);
+        border-left: 2px solid var(--filter-container-left-border-color);
+        padding-left: var(--spacing-m);
+    }
+
+    .p-renovaciones__filter__num-selector__totalFiltros__borrarFiltros{
+        @include bodyBold;
+        color: var(--base-primary);
+        background-color: transparent;
+        padding: 0px;
     }
 
     .p-renovaciones__filter__num-selector__selector{
@@ -47,6 +74,8 @@
         @include body;
         color: var(--text-subtitle);
     }
+
+
 
     @include mobilexl{
         .p-renovaciones__filter__num-selector{

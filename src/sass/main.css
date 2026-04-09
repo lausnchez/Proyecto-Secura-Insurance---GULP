@@ -187,6 +187,7 @@
   --proximas-renovaciones-tabla-row-background-color: white;
   --proximas-renovaciones-tabla-row-data: black;
   --proximas-renovaciones-page-info-bg-color: white;
+  --filter-container-left-border-color: #A7B8BF;
   --clientes-potenciales-card-title-color: #161C1F;
   --clientes-potenciales-card-background-color: white;
   --clientes-potenciales-card-box-shadow-color: #37464933;
@@ -1637,13 +1638,44 @@ body.menu-open {
   justify-content: space-between;
   align-items: center;
 }
-.proximas-renovaciones__filter .p-renovaciones__filter__num-selector > span {
+.proximas-renovaciones__filter .p-renovaciones__filter__num-selector__totalPolizas {
   font-family: var(--default-font-family);
   font-weight: 600;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
   color: var(--text-subtitle);
+}
+.proximas-renovaciones__filter .p-renovaciones__filter__filter__dataContainer {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-m);
+  flex-wrap: wrap;
+}
+.proximas-renovaciones__filter .p-renovaciones__filter__num-selector__totalFiltros {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-m);
+}
+.proximas-renovaciones__filter .p-renovaciones__filter__num-selector__totalFiltros__filtros {
+  font-family: var(--default-font-family);
+  font-weight: 600;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--text-subtitle);
+  border-left: 2px solid var(--filter-container-left-border-color);
+  padding-left: var(--spacing-m);
+}
+.proximas-renovaciones__filter .p-renovaciones__filter__num-selector__totalFiltros__borrarFiltros {
+  font-family: var(--default-font-family);
+  font-weight: 600;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--base-primary);
+  background-color: transparent;
+  padding: 0px;
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector__selector {
   display: flex;

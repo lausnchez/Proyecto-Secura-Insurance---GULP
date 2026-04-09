@@ -9,6 +9,10 @@ let renovacionesCurrentPage = 1;
 let renovacionesPerPage = 0;
 let renovacionesMaxPages = 0;
 
+let filters = [
+    {no_poliza: '75846843'}
+];
+
 function comprobarValoresPaginacion(){
     console.log('Current page: ' + renovacionesCurrentPage);
     console.log('Max pages: ' + renovacionesMaxPages);
@@ -53,7 +57,7 @@ function lastPage(){
 }
 
 function updateMaxPages(){
-    renovacionesMaxPages = Math.ceil(original_renovaciones_data.length / renovacionesPerPage);
+    renovacionesMaxPages = Math.ceil(current_renovaciones_data.length / renovacionesPerPage);
 }
 
 // BOTONES DE MANEJO DE PAGINACIÓN
@@ -94,6 +98,37 @@ function newFilterTag(filterContent){
     filterTagContainer.appendChild(filterTag);
 }
 
+function deleteFilters(){
+    // Borrar filtros
+    const filterTagContainer = document.querySelector('.p-renovaciones__filter__filterContainer');
+    filterTagContainer.innerHTML = '';
+}
+
+// ─── SISTEMA DE ORDEN ─────────────────────────────────────────────────────────────
+function sortRenovaciones(criterio){
+    switch(criterio){
+        case 'no-poliza':
+            sortNoPoliza();
+            break;
+            
+        case 'nombre-riesgo':
+            sortNombreRiesgo();
+            break;
+            
+        case 'fecha-validez':
+            sortFechaValidez();
+            break;
+            
+        case 'importe':
+            sortImporte();
+            break;
+            
+        case 'estado':
+            sortEstado();
+            break;   
+    }
+}
+
 // ─── SELECTOR DE ORDEN ─────────────────────────────────────────────────────────────
 function orderByOptionsPolizasDisplay(){
     const selectorOrden = document.querySelector('.p-renovaciones__filter__num-selector__selector select');
@@ -108,7 +143,7 @@ function orderByOptionsPolizasDisplay(){
     });
 
     selectorOrden.addEventListener('change', (e)=>{
-
+        sortRenovaciones(e.target.value);
     });
 }
 

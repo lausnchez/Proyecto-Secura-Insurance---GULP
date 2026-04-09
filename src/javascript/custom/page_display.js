@@ -51,11 +51,11 @@ function displayDataProximasRenovaciones(content){
 
     // NÚMERO DE PÓLIZAS CABECERA
     const num_polizas_cabecera = document.querySelector('.p-renovaciones-page-info__title-button .general-info-tag__textContent');
-    num_polizas_cabecera.textContent = original_renovaciones_data.length + ' Pólizas';
+    num_polizas_cabecera.textContent = current_renovaciones_data.length + ' Pólizas';
 
     // NÚMERO DE PÓLIZAS
     const num_polizas = document.querySelector('.p-renovaciones__filter__num-selector span');
-    num_polizas.textContent = original_renovaciones_data.length + ' Pólizas';
+    num_polizas.textContent = current_renovaciones_data.length + ' Pólizas';
 
     // NÚMERO DE PÁGINAS
     const num_paginas_totales = document.querySelector('.p-renovaciones__paginacion__totalPages');
@@ -67,6 +67,13 @@ function displayDataProximasRenovaciones(content){
 
     // PAGINACIÓN
     btnPaginacionSetter();
+
+    // Borrar filtros
+    const btn_delete_filters = document.querySelector('.p-renovaciones__filter__num-selector__totalFiltros__borrarFiltros');
+    btn_delete_filters.addEventListener('click', (e)=>{
+        deleteFilters();
+    });
+
 
     newFilterTag(["Múltiple",'filtro3', 'filtro2', 'filtro3', 'filtro4']);
     newFilterTag('Filtro nuevo');

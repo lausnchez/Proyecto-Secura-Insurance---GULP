@@ -8,24 +8,27 @@
 
 const actual_page = document.body.dataset.page;
 let original_renovaciones_data = [];
+let current_renovaciones_data = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     loadPolizasData().then(data =>{
         original_renovaciones_data = data;
+        current_renovaciones_data = [...data];
+
         renovacionesPerPage = Number(selectorCantidadPolizasData?.[0]?.value ?? 1);
 
         const actualPage = document.body.dataset.page;
             
         // ─── PAGE HOME ─────────────────────────────────────────────────────────────
         if (actualPage === 'home') {
-            const home_data = original_renovaciones_data.slice(0,3);
+            const home_data = current_renovaciones_data.slice(0,3);
             displayRenovacionesDataHome(home_data);
             heroManagementHome();
         } 
         
         // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
         else if (actualPage === 'proximas-renovaciones') {
-            const proximas_renovaciones_data = original_renovaciones_data.slice(0,renovacionesPerPage);
+            const proximas_renovaciones_data = current_renovaciones_data.slice(0,renovacionesPerPage);
             updateMaxPages();
             displayDataProximasRenovaciones(proximas_renovaciones_data);
             paginatePolizasData();
@@ -55,7 +58,7 @@ function paginatePolizasData(){
     let start = (renovacionesCurrentPage - 1) * renovacionesPerPage;
     let end = start + renovacionesPerPage;
 
-    let paginacion = original_renovaciones_data.slice(start, end);
+    let paginacion = current_renovaciones_data.slice(start, end);
     return paginacion;
 }
 
@@ -66,7 +69,7 @@ function paginatePolizasData(){
  * para asegurarnos que no dan ningún tipo de problema
  * @param {*} content 
  * @returns 
- */
+*/
 function validateRenovacionesContent(content) {
     
     const fecha_Hoy = new Date();
@@ -94,4 +97,26 @@ function validateRenovacionesContent(content) {
         importe:          parseImporte(content?.importe),
         estado:           content?.estado_poliza ?? '',
     };
+}
+
+// ─── ORDEN DE DATOS ─────────────────────────────────────────────────────────────
+
+function sortNoPoliza(){
+
+}
+
+function sortNombreRiesgo(){
+
+}
+
+function sortFechaValidez(){
+
+}
+
+function sortImporte(){
+
+}
+
+function sortEstado(){
+
 }
