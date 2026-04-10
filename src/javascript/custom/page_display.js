@@ -38,15 +38,6 @@ function heroManagementHome(){
 
 
 function displayDataProximasRenovaciones(content){
-    // TABLA
-    // const table_container = document.querySelector('#prt-proximas-renovaciones .proximas-renovaciones-tabla__contents');
-    // table_container.innerHTML = '';
-
-    // content.forEach(element =>{
-    //     let row = displayRenovacion(element);
-    //     table_container.appendChild(row);
-    // });
-
     fillRenovationsTable();
 
     // NÚMERO DE PÓLIZAS CABECERA
@@ -67,6 +58,9 @@ function displayDataProximasRenovaciones(content){
 
     // PAGINACIÓN
     btnPaginacionSetter();
+
+    // FILTROS
+    updateTotalFiltersCounter();
 
     // Borrar filtros
     const btn_delete_filters = document.querySelector('.p-renovaciones__filter__num-selector__totalFiltros__borrarFiltros');
@@ -101,4 +95,20 @@ function fillRenovationsTable(){
         let row = displayRenovacion(element);
         table_container.appendChild(row);
     });
+}
+
+function updateTotalFiltersCounter(){
+    const filterCounter = document.querySelector('.p-renovaciones__filter__num-selector__totalFiltros__filtros');
+    
+    let totalFilters = 0;
+    filters.forEach(filter =>{
+        const value = Object.values(filter)[0];
+        if(Array.isArray(value)){
+            totalFilters += value.length;
+        }else if(value !== null && value !== undefined && value !== ''){
+            totalFilters++;
+        }
+    });
+
+    filterCounter.textContent = totalFilters + ' filtros aplicados';
 }

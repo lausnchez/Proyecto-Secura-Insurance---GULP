@@ -3,13 +3,25 @@
  * la página de alguna manera: filtros, selectores...
  */
 
+// Datos necesarios para la paginación
+let renovacionesCurrentPage = 1;
+let renovacionesPerPage = 0;
+let renovacionesMaxPages = 0;
+
+
+// Datos necesarios para el filtrado
+let filters = [
+    {no_poliza: ['75846843']},
+    {importe: '30.000'}
+];
+
 // Array para los datos del selector de orden en 'próximas renovaciones'
 const selectorOptionsOrdenarData = [
-    {value: 'no-poliza', content: 'No. de póliza'},
-    {value: 'nombre-riesgo', content: 'Nombre del riesgo'},
-    {value: 'fecha-validez', content: 'Fecha de validez'},
+    {value: 'no_poliza', content: 'No. de póliza'},
+    {value: 'nombre_riesgo', content: 'Nombre del riesgo'},
+    {value: 'fecha_vencimiento', content: 'Fecha de validez'},
     {value: 'importe', content: 'Importe'},
-    {value: 'estado', content: 'Estado'},
+    {value: 'estado_poliza', content: 'Estado'},
 ];
 
 // Array para los datos del selector de cantidad de pólizas mostradas en 'próximas-renovaciones'
