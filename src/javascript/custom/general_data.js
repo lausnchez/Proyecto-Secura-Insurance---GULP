@@ -33,3 +33,9 @@ const selectorCantidadPolizasData = [
     {value: '75', content: '75'},
     {value: '100', content: '100'},
 ];
+
+const selectorEstadoFilterModal = [
+    {value: 'Pendiente', content: 'Pendiente'},
+    {value: 'Pagada', content: 'Pagada'},
+    {value: 'Vencido', content: 'Vencido'},
+];

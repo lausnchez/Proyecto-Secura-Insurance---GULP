@@ -1,5 +1,5 @@
 mixin general-grey-button(textContent, iconClass = '')
-    button.general-grey-button
+    button.general-grey-button&attributes(attributes)
         if iconClass
             span(class=`icon-${iconClass}`)
         span #{textContent}

@@ -55,6 +55,7 @@ function displayDataProximasRenovaciones(content){
     // RELLENAR SELECTORES
     orderByOptionsPolizasDisplay();
     quantitySelectorPolizasDisplay();
+    estadoSelectorFilterModalDisplay();
     
     // PAGINACIÓN
     btnPaginacionSetter();
@@ -90,9 +91,6 @@ function fillRenovationsTable(){
     
     // Recoger datos del json correspondientes
     let page = paginatePolizasData();
-    
-    console.log('--------------------------------------------');
-    console.log("Páginas recuperadas: " + page.length);
     
     // Display de los datos
     page.forEach(element =>{
@@ -134,22 +132,24 @@ function displayModalFunctionability(){
     const btn_modal_close = document.querySelector('.modal-filtros-pr-header .icon-close');
 
     btn_displayModal.addEventListener('click', ()=>{
-        console.log('btn_displayModal pulsado');
         openModal(modal);
     });
     
     btn_aplicarFiltros.addEventListener('click', ()=>{
-        console.log('btn_aplicarFiltros pulsado');
         closeModal(modal);
     });
     
     btn_borrarFiltros.addEventListener('click', ()=>{
-        console.log('btn_borrarFiltros pulsado'); 
-        closeModal(modal);
+        // closeModal(modal);
+        resetFilterValuesModal();
+        deleteFilters();
     });
     
     btn_modal_close.addEventListener('click', ()=>{
-        console.log('btn_closeModal pulsado');
+        closeModal(modal);
+    });
+
+    overlay.addEventListener('click', ()=>{
         closeModal(modal);
     });
 }
@@ -157,14 +157,27 @@ function displayModalFunctionability(){
 function initializeModal(){
     if (modal) modal.classList.add(modal_hidden_class);
     if (overlay) overlay.classList.add(modal_overlay_hidden_class);
+
+    // Create datalist para el autocomplete de número de póliza
 }
 
 function closeModal(modal){
     modal.classList.add(modal_hidden_class);
     overlay.classList.add(modal_overlay_hidden_class);
+
+    const body = document.querySelector('body');
+    body.classList.remove(notScroll);
 }
 
 function openModal(modal){
     modal.classList.remove(modal_hidden_class);
     overlay.classList.remove(modal_overlay_hidden_class);
+
+    const body = document.querySelector('body');
+    body.classList.add(notScroll);
+}
+
+function resetFilterValuesModal(){
+    const formulario = document.querySelector('.modal-filtros-pr-filters');
+    formulario.reset();
 }

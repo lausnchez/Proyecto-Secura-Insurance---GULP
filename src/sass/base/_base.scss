@@ -155,7 +155,7 @@ button{
   cursor: pointer;
 }
 
-select {
+input, select, option {
   // Retirar estilos por defecto del navegador
   appearance: none;
   -webkit-appearance: none;

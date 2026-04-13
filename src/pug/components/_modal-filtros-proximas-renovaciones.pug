@@ -1,27 +1,70 @@
 include ../mixins/generales/_modal.pug
+include ../mixins/generales/_general-outline-button.pug
 
 +modal('pr-filtros')
-    .modal-filtros-pr
     .modal-filtros-pr-header 
         span.modal-filtros-pr-header__filter Filtros
         span.icon-close
-    .modal-filtros-pr-filters
+    form.modal-filtros-pr-filters
         .modal-filtros-pr-filters__no-poliza 
-            span.modal-filters__no-poliza__label.modal__label No. de póliza
-            input.modal-filters__no-poliza__input(placeholder = 'Todas las pólizas')
+            label.modal-filters__no-poliza__label.modal__label(
+                for='modal-filtros-pr-filters__no-poliza-input'
+                ) No. de póliza
+            input.modal-filters__no-poliza__input(
+                id='modal-filtros-pr-filters__no-poliza-input'
+                name='no-poliza'
+                placeholder = 'Todas las pólizas')
         .modal-filtros-pr-filters__no-riesgo 
-            span.modal-filters__no-riesgo__label.modal__label Nombre del riesgo
-            input.modal-filters__no-riesgo__input(placeholder = 'Introduce el nombre del riesgo')
+            label.modal-filters__no-riesgo__label.modal__label(
+                for='modal-filtros-pr-filters__no-riesgo-input'
+            ) Nombre del riesgo
+            input.modal-filters__no-riesgo__input(
+                id='modal-filtros-pr-filters__no-riesgo-input'
+                name='no-riesgo'
+                placeholder = 'Introduce el nombre del riesgo')
         .modal-filtros-pr-filters__fecha-validez 
-            span.modal-filters__fecha-validez__label.modal__label Fecha de validez
-            input.modal-filters__fecha-validez__input(type='date' placeholder='Fecha inicio')
-            input.modal-filters__fecha-validez__input(type='date' placeholder='Fechs fin')
+            label.modal-filters__fecha-validez__label.modal__label(
+                for='modal-filtros-pr-filters__fecha-contrato-input'
+            ) Fecha de validez
+            .modal-filtros-pr-filters__fecha-validez__selectors
+                input.modal-filters__fecha-validez__input(
+                    id='modal-filtros-pr-filters__fecha-contrato-input'
+                    name='fecha-validez'
+                    type='date' 
+                    placeholder='Fecha inicio')
+                span al
+                input.modal-filters__fecha-validez__input(
+                    id='modal-filtros-pr-filters__fecha-vencimiento-input'
+                    type='date' 
+                    placeholder='Fech fin')
         .modal-filtros-pr-filters__importe
             span.modal-filters__importe__label.modal__label Importe
-            input.modal-filters__importe__input(placeholder='Introduzca importe')
+            .modal-filtros-pr-filters__importe_minimo
+                label(for='modal-filtros-pr-filters__importe-min-input'
+                ) Importe mínimo
+                input.modal-filters__importe__input(
+                    id='modal-filtros-pr-filters__importe-min-input'
+                    name='importe-minimo'
+                    type='number'
+                    placeholder='Introduzca importe' )
+            .modal-filtros-pr-filters__importe_maximo
+                label(for='modal-filtros-pr-filters__importe-max-input'
+                ) Importe máximo
+                input.modal-filters__importe__input(
+                    id='modal-filtros-pr-filters__importe-max-input'
+                    name='importe-maximo'
+                    type='number'
+                    placeholder='Introduzca importe')
         .modal-filtros-pr-filters__estado
-            span.modal-filters__estado__label.modal__label Estado
-            select.modal-filters__estado__select(placeholder='Todos los estados')
+            label.modal-filters__estado__label.modal__label(
+                for='modal-filtros-pr-filters__estado-input'
+                ) Estado
+            select.modal-filters__estado__select(
+                id='modal-filtros-pr-filters__estado-input'
+                name='estado'
+                placeholder='Todos los estados')
     .modal-filtros-pr-buttons 
-        button.modal-filtros-pr-buttons-borrarFiltros Borrar filtros
+        //- button.modal-filtros-pr-buttons-borrarFiltros Borrar filtros
+        +general-outline-button('Borrar filtros')(
+            class='modal-filtros-pr-buttons-borrarFiltros')
         button.modal-filtros-pr-buttons-aplicarFiltros  Aplicar filtros

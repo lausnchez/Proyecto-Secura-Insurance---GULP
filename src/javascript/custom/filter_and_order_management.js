@@ -101,7 +101,7 @@ function deleteFilters(id = ''){
     closeModal(id);
 }
 
-// ─── SELECTOR DE ORDEN ─────────────────────────────────────────────────────────────
+// ─── SELECTORES ─────────────────────────────────────────────────────────────
 function orderByOptionsPolizasDisplay(){
     const selectorOrden = document.querySelector('.p-renovaciones__filter__num-selector__selector select');
 
@@ -138,5 +138,17 @@ function quantitySelectorPolizasDisplay(){
         updateMaxPages();
         fillRenovationsTable();
         updateCurrentAndMaxPages();
+    });
+}
+
+function estadoSelectorFilterModalDisplay(){
+    const selectorFilterModal = document.querySelector('.modal-filters__estado__select');
+    selectorFilterModal.innerHTML = '';
+
+    selectorEstadoFilterModal.forEach((data) =>{
+        const option = document.createElement('option');
+        option.value = data.value;
+        option.textContent = data.content;
+        selectorFilterModal.appendChild(option);
     });
 }

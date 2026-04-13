@@ -100,10 +100,35 @@ function validateRenovacionesContent(content) {
     };
 }
 
+function validateFilterInput(){
+    // Inputs de los filters
+    const filter_no_poliza = document.querySelector('#modal-filtros-pr-filters__no-poliza-input');
+    const filter_no_riesgo = document.querySelector('#modal-filtros-pr-filters__no-riesgo-input');
+    const filter_fecha_contrato = document.querySelector('#modal-filtros-pr-filters__fecha-contrato-input');
+    const filter_fecha_vencimiento = document.querySelector('#modal-filtros-pr-filters__fecha-vencimiento-input');
+    const filter_importe_min = document.querySelector('#modal-filtros-pr-filters__importe-min-input');
+    const filter_importe_max = document.querySelector('#modal-filtros-pr-filters__importe-max-input');
+    const filter_estado = document.querySelector('#modal-filtros-pr-filters__estado-input');
+
+    // Número de póliza
+    const no_poliza = filter_no_poliza.innerHTML;
+
+
+    // Nombre del riesgo
+
+    // Fecha de contrato
+
+    // Fecha de vencimiento
+
+    // Importe
+
+    // Estado
+
+}
+
 // ─── SISTEMA DE ORDENACIÓN DE DATOS ─────────────────────────────────────────────────────────────
 
 function sortRenovaciones(propiedad, ascendente = true){
-    console.log("Sorteando a: '" + propiedad + '\'');
     current_renovaciones_data.sort((a,b) =>{
         let valorA = a[propiedad];
         let valorB = b[propiedad];
@@ -131,5 +156,4 @@ function sortRenovaciones(propiedad, ascendente = true){
         if(valorA > valorB) return ascendente ? 1 : -1;
         return 0;
     });
-    console.log("Finish sorting : '" + propiedad + '\'');
 }
