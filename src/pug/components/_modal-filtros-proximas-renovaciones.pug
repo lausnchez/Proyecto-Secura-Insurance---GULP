@@ -1,0 +1,27 @@
+include ../mixins/generales/_modal.pug
+
++modal('pr-filtros')
+    .modal-filtros-pr
+    .modal-filtros-pr-header 
+        span.modal-filtros-pr-header__filter Filtros
+        span.icon-close
+    .modal-filtros-pr-filters
+        .modal-filtros-pr-filters__no-poliza 
+            span.modal-filters__no-poliza__label.modal__label No. de póliza
+            input.modal-filters__no-poliza__input(placeholder = 'Todas las pólizas')
+        .modal-filtros-pr-filters__no-riesgo 
+            span.modal-filters__no-riesgo__label.modal__label Nombre del riesgo
+            input.modal-filters__no-riesgo__input(placeholder = 'Introduce el nombre del riesgo')
+        .modal-filtros-pr-filters__fecha-validez 
+            span.modal-filters__fecha-validez__label.modal__label Fecha de validez
+            input.modal-filters__fecha-validez__input(type='date' placeholder='Fecha inicio')
+            input.modal-filters__fecha-validez__input(type='date' placeholder='Fechs fin')
+        .modal-filtros-pr-filters__importe
+            span.modal-filters__importe__label.modal__label Importe
+            input.modal-filters__importe__input(placeholder='Introduzca importe')
+        .modal-filtros-pr-filters__estado
+            span.modal-filters__estado__label.modal__label Estado
+            select.modal-filters__estado__select(placeholder='Todos los estados')
+    .modal-filtros-pr-buttons 
+        button.modal-filtros-pr-buttons-borrarFiltros(onclick=`deleteFilters('${id}'))`) Borrar filtros
+        button.modal-filtros-pr-buttons-aplicarFiltros  Aplicar filtros

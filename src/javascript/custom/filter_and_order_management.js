@@ -90,12 +90,15 @@ function newFilterTag(filterContent){
     filterTagContainer.appendChild(filterTag);
 }
 
-function deleteFilters(){
+function deleteFilters(id = ''){
     filters.length = 0;
+    updateTotalFiltersCounter();
 
     // Borrar filtros
     const filterTagContainer = document.querySelector('.p-renovaciones__filter__filterContainer');
     filterTagContainer.innerHTML = '';
+
+    closeModal(id);
 }
 
 // ─── SELECTOR DE ORDEN ─────────────────────────────────────────────────────────────

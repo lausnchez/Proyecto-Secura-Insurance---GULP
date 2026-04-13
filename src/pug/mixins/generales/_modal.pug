@@ -1,0 +1,5 @@
+mixin modal(id)
+    div(id=`modal-${id}`).modal
+        .modal__overlay(id=`modal-${id}-overlay`)
+        .modal__container(id=`modal-${id}-contents`)
+            block

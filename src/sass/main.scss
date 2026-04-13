@@ -20,6 +20,7 @@
 @use "layout/_page-contents";
 @use "layout/_principal-section";
 @use "layout/_clientes-potenciales";
+@use "layout/_modal";
 
 /** FRAGMENTS **/
 
@@ -54,3 +55,4 @@
 @use "components/_hero";
 @use "components/_proximas-renovaciones-tabla";
 @use "components/_cliente-potencial-card";
+@use "components/_modal-filtros-proximas-renovaciones";
