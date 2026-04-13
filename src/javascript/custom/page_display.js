@@ -70,7 +70,7 @@ function displayDataProximasRenovaciones(content){
     });
     
     // MODAL
-    initializeModal();
+    initializeModal();  // Poner los modales en hidden
     displayModalFunctionability();
 
     newFilterTag(["Múltiple",'filtro3', 'filtro2', 'filtro3', 'filtro4']);
@@ -121,9 +121,13 @@ function updateTotalFiltersCounter(){
 const modal_hidden_class = 'modal__container--hidden';
 const modal_overlay_hidden_class = 'modal__overlay--hidden';
 
+// const modal = document.querySelector('#modal-pr-filtros .modal__container');
+const modal = document.querySelector('#modal-pr-filtros-contents');
+const overlay = document.querySelector('#modal-pr-filtros-overlay');
+
 function displayModalFunctionability(){
-    const btn_displayModal = document.querySelector('.p-renovaciones__filter__filter button');
-    const modal = document.querySelector('#modal-pr-filtros-contents');
+    const btn_displayModal = document.querySelector('.p-renovaciones__filter__filter >button');
+    // const modal = document.querySelector('#modal-pr-filtros-contents');
     
     const btn_borrarFiltros = document.querySelector('.modal-filtros-pr-buttons-borrarFiltros');
     const btn_aplicarFiltros = document.querySelector('.modal-filtros-pr-buttons-aplicarFiltros');
@@ -131,38 +135,36 @@ function displayModalFunctionability(){
 
     btn_displayModal.addEventListener('click', ()=>{
         console.log('btn_displayModal pulsado');
-        openModal(modal.id);
+        openModal(modal);
     });
     
     btn_aplicarFiltros.addEventListener('click', ()=>{
         console.log('btn_aplicarFiltros pulsado');
-        modal?.classList.add(modal_hidden_class);
+        closeModal(modal);
     });
     
     btn_borrarFiltros.addEventListener('click', ()=>{
         console.log('btn_borrarFiltros pulsado'); 
+        closeModal(modal);
     });
     
     btn_modal_close.addEventListener('click', ()=>{
         console.log('btn_closeModal pulsado');
-        modal?.classList.add(modal_hidden_class);
+        closeModal(modal);
     });
 }
 
 function initializeModal(){
-    const modal = document.querySelector('#modal-pr-filtros .modal__container');
-    const overlay = document.querySelector('#modal-pr-filtros .modal__overlay');
+    if (modal) modal.classList.add(modal_hidden_class);
+    if (overlay) overlay.classList.add(modal_overlay_hidden_class);
+}
 
+function closeModal(modal){
     modal.classList.add(modal_hidden_class);
     overlay.classList.add(modal_overlay_hidden_class);
 }
 
-function closeModal(id){
-    document.querySelector(id)?.classList.add(modal_overlay_hidden_class);
-    document.querySelector(id)?.classList.add(modal_hidden_class);
-}
-
-function openModal(id){
-    document.querySelector(id)?.classList.remove(modal_hidden_class);
-    document.querySelector(id)?.classList.remove(modal_overlay_hidden_class);
+function openModal(modal){
+    modal.classList.remove(modal_hidden_class);
+    overlay.classList.remove(modal_overlay_hidden_class);
 }

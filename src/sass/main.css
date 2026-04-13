@@ -1195,6 +1195,7 @@ body.menu-open {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.1607843137);
+  z-index: 200;
 }
 
 .modal__overlay.modal__overlay--hidden {
@@ -2016,7 +2017,7 @@ body.menu-open {
   }
 }
 
-.modal-pr-filtros {
+#modal-pr-filtros-contents {
   top: 0;
   left: 0;
   height: 100vh;
