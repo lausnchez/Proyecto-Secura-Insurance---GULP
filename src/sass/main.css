@@ -142,6 +142,7 @@
   --icon-phone: "\e905";
   --icon-power-off: "\e906";
   --icon-user: "\e907";
+  --icon-arrow-down: "\e915";
 }
 
 :root {
@@ -730,6 +731,13 @@ template {
   font-size: toRem(var(--icon-size));
 }
 
+.icon-arrow-down::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-arrow-down);
+  color: var(--base-primary);
+  font-size: toRem(var(--icon-size));
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/roboto/roboto400.woff2") format("woff2");
@@ -961,6 +969,8 @@ template {
 
 /** CSS LIBS **/
 /** HELPERS **/
+/** CSS LIBS **/
+/** HELPERS **/
 html,
 body,
 div,
@@ -1115,10 +1125,7 @@ button {
   cursor: pointer;
 }
 
-input, select, option {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+input, select {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -1126,6 +1133,42 @@ input, select, option {
   padding: 12px;
   border: 1px solid var(--select-default-border);
   border-radius: 4px;
+}
+
+option {
+  padding-right: 8px;
+}
+
+select {
+  -webkit-appearance: base-select;
+     -moz-appearance: base-select;
+          appearance: base-select;
+  font-family: var(--default-font-family);
+  font-weight: 700;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--text-title);
+}
+
+select:open {
+  border: 1px solid var(--select-default-border);
+}
+
+select::picker-icon {
+  transition: transform 0.2s ease;
+  font-family: "secura-insurance-icons";
+  content: var(--icon-arrow-down);
+  color: var(--base-primary);
+}
+
+select:open::picker-icon {
+  transform: rotate(180deg);
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(180deg);
+  cursor: pointer;
 }
 
 /** LAYOUT **/
@@ -1240,8 +1283,6 @@ body.menu-open {
 
 /** CSS LIBS **/
 /** HELPERS **/
-/** CSS LIBS **/
-/** HELPERS **/
 .general-info-tag {
   font-family: var(--default-font-family);
   font-weight: 400;
@@ -1292,7 +1333,7 @@ body.menu-open {
 }
 .general-filter-tag .general-filter-tag__totalFilters {
   font-family: var(--default-font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--base-primary);
@@ -1678,7 +1719,7 @@ body.menu-open {
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector__totalPolizas {
   font-family: var(--default-font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -1697,7 +1738,7 @@ body.menu-open {
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector__totalFiltros__filtros {
   font-family: var(--default-font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -1707,7 +1748,7 @@ body.menu-open {
 }
 .proximas-renovaciones__filter .p-renovaciones__filter__num-selector__totalFiltros__borrarFiltros {
   font-family: var(--default-font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -1755,7 +1796,7 @@ body.menu-open {
 }
 .p-renovaciones__paginacion .p-renovaciones__paginacion__orderBy span {
   font-family: var(--default-font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -1767,7 +1808,7 @@ body.menu-open {
 }
 .p-renovaciones__paginacion .p-renovaciones__paginacion__totalPages {
   font-family: var(--default-font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -1869,7 +1910,7 @@ body.menu-open {
 }
 .footer__contentPrincipal .footer__data__contact__title {
   font-family: var(--default-font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -2053,7 +2094,7 @@ body.menu-open {
 }
 #modal-pr-filtros-contents .modal-filtros-pr-header .modal-filtros-pr-header__filter {
   font-family: var(--default-font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
@@ -2076,7 +2117,7 @@ body.menu-open {
 }
 #modal-pr-filtros-contents .modal__label {
   font-family: var(--default-font-family);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--typo-size-body);
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);

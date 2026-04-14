@@ -124,7 +124,6 @@ function displayModalFunctionability(){
     });
     
     btn_borrarFiltros.addEventListener('click', ()=>{
-        // closeModal(modal);
         resetFilterValuesModal();
         deleteAllFilters();
         closeModal(modal);

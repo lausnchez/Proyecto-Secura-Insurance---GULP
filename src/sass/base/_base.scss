@@ -1,4 +1,5 @@
 @use "../helpers/variables" as *;
+@use "../helpers/font-mixins" as *;
 
 html,
 body,
@@ -155,11 +156,11 @@ button{
   cursor: pointer;
 }
 
-input, select, option {
+input, select {
   // Retirar estilos por defecto del navegador
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  // appearance: none;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
 
   // Formato select
   display: flex;
@@ -173,4 +174,39 @@ input, select, option {
 
   // Flecha
   
+}
+
+option{
+  padding-right: 8px;
+}
+
+select{
+  appearance: base-select;
+  @include bodyBold();
+  color: var(--text-title);
+}
+
+select:open{
+  border: 1px solid var(--select-default-border);
+}
+
+select::picker-icon {
+  transition: transform 0.2s ease;
+  font-family: 'secura-insurance-icons';
+  content: var(--icon-arrow-down);
+  color: var(--base-primary);
+}
+
+select:open::picker-icon {
+  transform: rotate(180deg);
+}
+
+// CALENDARIOS
+// input[type='date']::picker-icon{
+//   color: var(--base-primary);
+// }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(180deg);
+  cursor: pointer;
 }
