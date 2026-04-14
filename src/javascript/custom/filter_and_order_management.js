@@ -96,7 +96,9 @@ function deleteSpecificFilter(key){
     updateTotalFiltersCounter();
 }
 
-function validateFilterInput(){
+function filter(){
+    let newData = [...original_renovaciones_data];
+
     // Inputs de los filters
     const filter_no_poliza = document.querySelector('#modal-filtros-pr-filters__no-poliza-input');
     const filter_no_riesgo = document.querySelector('#modal-filtros-pr-filters__no-riesgo-input');
@@ -107,25 +109,78 @@ function validateFilterInput(){
     const filter_estado = document.querySelector('#modal-filtros-pr-filters__estado-input');
 
     // Número de póliza
-    const no_poliza = filter_no_poliza.value;
+    const no_poliza = filter_no_poliza.value.trim();
+    if(no_poliza != ''){
+        newData = newData.filter(f=>
+           String(f.no_poliza).startsWith(no_poliza) // f.no_poliza == no_poliza
+        );
+    }
 
     // Nombre del riesgo
-    const no_riesgo = filter_no_riesgo.value;
+    const no_riesgo = filter_no_riesgo.value.trim().toLowerCase();
+    if(no_riesgo != ''){
+        newData = newData.filter(f =>
+            f.nombre_riesgo.toLowerCase().includes(no_riesgo)
+        );
+    }
+    
 
     // Fecha de contrato
-    const f_contrato = filter_fecha_contrato.value;
+    const f_contrato = filter_fecha_contrato.value.trim();
+
+    if(f_contrato != null && f_contrato != ''){
+        let date_filter_contrato = new Date(f_contrato.replace(/-/g, '\/'));   // Fecha del selector
+        newData = newData.filter(f=>{
+            const date_registro_contrato = new Date(f.fecha_contrato.replace(/-/g, '\/'));   // Fecha del registro
+            return date_filter_contrato.getTime() <= date_registro_contrato.getTime();
+        });
+    }
+    
 
     // Fecha de vencimiento
-    const f_vencimiento = filter_fecha_vencimiento.value;
+    const f_vencimiento = filter_fecha_vencimiento.value.trim();
+
+    if(f_vencimiento != null && f_vencimiento != ''){
+        let date_filter_venc = new Date(f_vencimiento.replace(/-/g, "\/")); // FEcha del selector
+        newData = newData.filter(f=>{
+            const date_registro_venc = new Date(f.fecha_vencimiento.replace(/-/g, "\/"));
+            return date_filter_venc.getTime() >= date_registro_venc.getTime();
+        });
+    }
 
     // Importe
-    const importe_min = filter_importe_min.value;
-    const importe_max = filter_importe_max.value;
+    const importe_min = filter_importe_min.value.trim();
+    const importe_max = filter_importe_max.value.trim();
+
+    if(importe_min != ''){
+        let min_number = Number.parseFloat(importe_min);
+        newData = newData.filter(f => f.importe >= min_number);
+    }
+
+    if(importe_max  != ''){
+        let max_number = Number.parseFloat(importe_max);
+        newData = newData.filter(f=> f.importe <= max_number);
+
+    }
 
     // Estado
     const estado = filter_estado.value;
+    if(estado != -1){
+        newData = newData.filter(f=>f.estado_poliza === estado);
+    }
+
+    console.log(newData);
+}
+
+function validateFilterInput(){
+    
+}
+
+function addNewFilter(key, value){
 
 }
+
+
 
 /**
  * Vacía el contenedor de filtros y genera una tag por cada uno de los
@@ -198,6 +253,11 @@ function quantitySelectorPolizasDisplay(){
 function estadoSelectorFilterModalDisplay(){
     const selectorFilterModal = document.querySelector('.modal-filters__estado__select');
     selectorFilterModal.innerHTML = '';
+
+    const opcion0 = document.createElement('option');
+    opcion0.value = -1;
+    opcion0.textContent = 'Seleccione un estado de póliza';
+    selectorFilterModal.appendChild(opcion0);
 
     selectorEstadoFilterModal.forEach((data) =>{
         const option = document.createElement('option');

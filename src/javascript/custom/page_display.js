@@ -121,6 +121,7 @@ function displayModalFunctionability(){
     btn_aplicarFiltros.addEventListener('click', ()=>{
         closeModal(modal);
         validateFilterInput();
+        filter();
     });
     
     btn_borrarFiltros.addEventListener('click', ()=>{
