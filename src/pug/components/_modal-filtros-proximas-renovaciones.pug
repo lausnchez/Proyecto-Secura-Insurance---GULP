@@ -13,7 +13,11 @@ include ../mixins/generales/_general-outline-button.pug
             input.modal-filters__no-poliza__input(
                 id='modal-filtros-pr-filters__no-poliza-input'
                 name='no-poliza'
-                placeholder = 'Todas las pólizas')
+                placeholder = 'Todas las pólizas'
+                autocomplete='off')
+            .modal-filters__no-poliza__datalist(
+                id='modal-filters__no-poliza__dropdown'
+                role='listbox')
         .modal-filtros-pr-filters__no-riesgo 
             label.modal-filters__no-riesgo__label.modal__label(
                 for='modal-filtros-pr-filters__no-riesgo-input'

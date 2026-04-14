@@ -101,6 +101,37 @@ function deleteFilters(id = ''){
     closeModal(id);
 }
 
+function validateFilterInput(){
+    // Inputs de los filters
+    const filter_no_poliza = document.querySelector('#modal-filtros-pr-filters__no-poliza-input');
+    const filter_no_riesgo = document.querySelector('#modal-filtros-pr-filters__no-riesgo-input');
+    const filter_fecha_contrato = document.querySelector('#modal-filtros-pr-filters__fecha-contrato-input');
+    const filter_fecha_vencimiento = document.querySelector('#modal-filtros-pr-filters__fecha-vencimiento-input');
+    const filter_importe_min = document.querySelector('#modal-filtros-pr-filters__importe-min-input');
+    const filter_importe_max = document.querySelector('#modal-filtros-pr-filters__importe-max-input');
+    const filter_estado = document.querySelector('#modal-filtros-pr-filters__estado-input');
+
+    // Número de póliza
+    const no_poliza = filter_no_poliza.value;
+
+    // Nombre del riesgo
+    const no_riesgo = filter_no_riesgo.value;
+
+    // Fecha de contrato
+    const f_contrato = filter_fecha_contrato.value;
+
+    // Fecha de vencimiento
+    const f_vencimiento = filter_fecha_vencimiento.value;
+
+    // Importe
+    const importe_min = filter_importe_min.value;
+    const importe_max = filter_importe_max.value;
+
+    // Estado
+    const estado = filter_estado.value;
+
+}
+
 // ─── SELECTORES ─────────────────────────────────────────────────────────────
 function orderByOptionsPolizasDisplay(){
     const selectorOrden = document.querySelector('.p-renovaciones__filter__num-selector__selector select');

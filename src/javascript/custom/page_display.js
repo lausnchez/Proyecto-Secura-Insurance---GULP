@@ -73,6 +73,7 @@ function displayDataProximasRenovaciones(content){
     // MODAL
     initializeModal();  // Poner los modales en hidden
     displayModalFunctionability();
+    // fillDatalistNoPoliza();
 
     newFilterTag(["Múltiple",'filtro3', 'filtro2', 'filtro3', 'filtro4']);
     newFilterTag('Filtro nuevo');
@@ -137,6 +138,7 @@ function displayModalFunctionability(){
     
     btn_aplicarFiltros.addEventListener('click', ()=>{
         closeModal(modal);
+        validateFilterInput();
     });
     
     btn_borrarFiltros.addEventListener('click', ()=>{
@@ -180,4 +182,23 @@ function openModal(modal){
 function resetFilterValuesModal(){
     const formulario = document.querySelector('.modal-filtros-pr-filters');
     formulario.reset();
+}
+
+// MODAL NÚMERO DE PÓLIZAS 
+
+function fillDatalistNoPoliza(){
+    const datalist_element = document.querySelector('#modal-filters__no-poliza__dropdown');
+    const datalist_input = document.querySelector('#modal-filtros-pr-filters__no-poliza-input');
+    
+
+    original_renovaciones_data.forEach(data =>{
+        const option = document.createElement('div');
+        option.textContent = data.value;
+
+        datalist_element.appendChild(option);
+    });
+}
+
+function highlightCoincidences(text, query){
+    return text.replace(new RegExp(`(${query})`, 'gi'), '<mark>$1</mark>');
 }
