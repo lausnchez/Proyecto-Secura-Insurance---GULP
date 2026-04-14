@@ -79,26 +79,21 @@ function btnPaginacionSetter(){
 
 // ─── ETIQUETAS DE FILTRO ─────────────────────────────────────────────────────────────
 
-/**
- * Genera una nueva estiqueta de filtro a partir de una string,
- * o un array mostrando el primer elemento de éste
- * @param {string/array} filterContent 
-*/
-function newFilterTag(filterContent){
-    const filterTagContainer = document.querySelector('.p-renovaciones__filter__filterContainer');
-    let filterTag = filterTagDisplay(filterContent);    
-    filterTagContainer.appendChild(filterTag);
-}
-
-function deleteFilters(id = ''){
+function deleteAllFilters(id = ''){
     filters.length = 0;
     updateTotalFiltersCounter();
 
-    // Borrar filtros
     const filterTagContainer = document.querySelector('.p-renovaciones__filter__filterContainer');
     filterTagContainer.innerHTML = '';
+}
 
-    closeModal(id);
+function deleteSpecificFilter(key){
+    const index = filters.findIndex(f => f[key]);
+    if(index != -1){
+        filters.splice(index,1);
+    }
+    updateFilterOutput();
+    updateTotalFiltersCounter();
 }
 
 function validateFilterInput(){
@@ -130,6 +125,34 @@ function validateFilterInput(){
     // Estado
     const estado = filter_estado.value;
 
+}
+
+/**
+ * Vacía el contenedor de filtros y genera una tag por cada uno de los
+ * filtros aplicados al registro de pólizas
+ */
+function updateFilterOutput(){
+    const filterTagContainer = document.querySelector('.p-renovaciones__filter__filterContainer');
+    filterTagContainer.innerHTML = '';
+    filters.forEach((filter) =>{ 
+        const [[key, value]] = Object.entries(filter);
+        filterTagContainer.appendChild(filterTagDisplay(key, value));
+    });
+}
+
+function updateTotalFiltersCounter(){
+    const filterCounter = document.querySelector('.p-renovaciones__filter__num-selector__totalFiltros__filtros');
+    
+    let totalFilters = 0;
+    filters.forEach(filter =>{
+        const value = Object.values(filter)[0];
+        if(Array.isArray(value)){
+            totalFilters += value.length;
+        }else if(value !== null && value !== undefined && value !== ''){
+            totalFilters++;
+        }
+    });   
+    filterCounter.textContent = totalFilters + ' filtros aplicados';
 }
 
 // ─── SELECTORES ─────────────────────────────────────────────────────────────

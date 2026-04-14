@@ -1,5 +1,5 @@
 mixin modal(id)
     div(id=`modal-${id}`).modal
-        .modal__overlay(id=`modal-${id}-overlay`)
-        .modal__container(id=`modal-${id}-contents`)
+        .modal__overlay.modal__overlay--hidden(id=`modal-${id}-overlay`)
+        .modal__container.modal__container--hidden(id=`modal-${id}-contents`)
             block

@@ -9,10 +9,14 @@ let renovacionesPerPage = 0;
 let renovacionesMaxPages = 0;
 
 
-// Datos necesarios para el filtrado
+// Filtros aplicados actualmente al registro de pólizas
 let filters = [
-    {no_poliza: ['75846843']},
-    {importe: '30.000'}
+    {no_poliza: ['75846843','75846843']},
+    {importe: '30.000'},
+    {nombre_riesgo: 'Dacia Sandero'},
+    {fecha_contrato: '2024-09-28'},
+    {fecha_vencimiento: '2027-05-11'},
+    {estado_poliza: 'Pagada'}
 ];
 
 // Array para los datos del selector de orden en 'próximas renovaciones'

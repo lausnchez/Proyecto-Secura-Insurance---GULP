@@ -62,21 +62,18 @@ function displayDataProximasRenovaciones(content){
     
     // FILTROS
     updateTotalFiltersCounter();
+    updateFilterOutput();
     
     // Borrar filtros
     const btn_delete_filters = document.querySelector('.p-renovaciones__filter__num-selector__totalFiltros__borrarFiltros');
     btn_delete_filters.addEventListener('click', (e)=>{
-        deleteFilters();
+        deleteAllFilters();
         updateTotalFiltersCounter();
     });
     
     // MODAL
-    initializeModal();  // Poner los modales en hidden
     displayModalFunctionability();
-    // fillDatalistNoPoliza();
 
-    newFilterTag(["Múltiple",'filtro3', 'filtro2', 'filtro3', 'filtro4']);
-    newFilterTag('Filtro nuevo');
 }
 
 function updateCurrentAndMaxPages(){
@@ -98,21 +95,6 @@ function fillRenovationsTable(){
         let row = displayRenovacion(element);
         table_container.appendChild(row);
     });
-}
-
-function updateTotalFiltersCounter(){
-    const filterCounter = document.querySelector('.p-renovaciones__filter__num-selector__totalFiltros__filtros');
-    
-    let totalFilters = 0;
-    filters.forEach(filter =>{
-        const value = Object.values(filter)[0];
-        if(Array.isArray(value)){
-            totalFilters += value.length;
-        }else if(value !== null && value !== undefined && value !== ''){
-            totalFilters++;
-        }
-    });   
-    filterCounter.textContent = totalFilters + ' filtros aplicados';
 }
 
 // ─── PAGE PRÓXIMAS RENOVACIONES - MODAL ─────────────────────────────────────────────────────────────
@@ -144,7 +126,8 @@ function displayModalFunctionability(){
     btn_borrarFiltros.addEventListener('click', ()=>{
         // closeModal(modal);
         resetFilterValuesModal();
-        deleteFilters();
+        deleteAllFilters();
+        closeModal(modal);
     });
     
     btn_modal_close.addEventListener('click', ()=>{
@@ -154,13 +137,6 @@ function displayModalFunctionability(){
     overlay.addEventListener('click', ()=>{
         closeModal(modal);
     });
-}
-
-function initializeModal(){
-    if (modal) modal.classList.add(modal_hidden_class);
-    if (overlay) overlay.classList.add(modal_overlay_hidden_class);
-
-    // Create datalist para el autocomplete de número de póliza
 }
 
 function closeModal(modal){
@@ -190,15 +166,10 @@ function fillDatalistNoPoliza(){
     const datalist_element = document.querySelector('#modal-filters__no-poliza__dropdown');
     const datalist_input = document.querySelector('#modal-filtros-pr-filters__no-poliza-input');
     
-
     original_renovaciones_data.forEach(data =>{
         const option = document.createElement('div');
         option.textContent = data.value;
 
         datalist_element.appendChild(option);
     });
-}
-
-function highlightCoincidences(text, query){
-    return text.replace(new RegExp(`(${query})`, 'gi'), '<mark>$1</mark>');
 }

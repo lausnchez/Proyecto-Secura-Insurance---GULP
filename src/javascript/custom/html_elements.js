@@ -123,9 +123,10 @@ function renovacionTagDisplay(renovacionState){
  * @param {string} filterContent 
  * @returns 
  */
-function filterTagDisplay(filterContent){
+function filterTagDisplay(filterKey, filterContent){
     const general_filter_tag = document.createElement('div');
     general_filter_tag.classList.add('general-filter-tag');
+    general_filter_tag.dataset.key = filterKey;
 
     const textContent = document.createElement('span');
     textContent.classList.add('general-filter-tag__textContent');
@@ -154,7 +155,7 @@ function filterTagDisplay(filterContent){
     general_filter_tag.appendChild(close_button);
 
     close_button.addEventListener('click', ()=>{
-
+        deleteSpecificFilter(general_filter_tag.dataset.key);
     });
 
     return general_filter_tag;

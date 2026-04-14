@@ -2034,12 +2034,15 @@ body.menu-open {
   top: 0;
   left: 0;
   height: 100vh;
-  max-height: 100vh;
+  min-height: 100vh;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   min-width: 496px;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: auto;
 }
 #modal-pr-filtros-contents .modal-filtros-pr-header {
   display: flex;
