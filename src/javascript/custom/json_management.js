@@ -28,11 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
         else if (actualPage === 'proximas-renovaciones') {
-            const proximas_renovaciones_data = current_renovaciones_data.slice(0,renovacionesPerPage);
             sortRenovaciones('no_poliza');
             updateMaxPages();
-            displayDataProximasRenovaciones(proximas_renovaciones_data);
-            paginatePolizasData();
+            displayDataProximasRenovaciones();
         }
     });
 });

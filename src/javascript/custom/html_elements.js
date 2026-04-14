@@ -156,6 +156,7 @@ function filterTagDisplay(filterKey, filterContent){
 
     close_button.addEventListener('click', ()=>{
         deleteSpecificFilter(general_filter_tag.dataset.key);
+        updateFilter();
     });
 
     return general_filter_tag;

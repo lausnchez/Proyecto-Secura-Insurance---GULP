@@ -37,16 +37,12 @@ function heroManagementHome(){
 // ─── PAGE PRÓXIMAS RENOVACIONES ─────────────────────────────────────────────────────────────
 
 
-function displayDataProximasRenovaciones(content){
+function displayDataProximasRenovaciones(){
     fillRenovationsTable();
     
     // NÚMERO DE PÓLIZAS CABECERA
     const num_polizas_cabecera = document.querySelector('.p-renovaciones-page-info__title-button .general-info-tag__textContent');
     num_polizas_cabecera.textContent = current_renovaciones_data.length + ' Pólizas';
-    
-    // NÚMERO DE PÓLIZAS
-    const num_polizas = document.querySelector('.p-renovaciones__filter__num-selector span');
-    num_polizas.textContent = current_renovaciones_data.length + ' Pólizas';
     
     // NÚMERO DE PÁGINAS
     const num_paginas_totales = document.querySelector('.p-renovaciones__paginacion__totalPages');
@@ -61,7 +57,6 @@ function displayDataProximasRenovaciones(content){
     btnPaginacionSetter();
     
     // FILTROS
-    updateTotalFiltersCounter();
     updateFilterOutput();
     
     // Borrar filtros
@@ -114,26 +109,32 @@ function displayModalFunctionability(){
     const btn_aplicarFiltros = document.querySelector('.modal-filtros-pr-buttons-aplicarFiltros');
     const btn_modal_close = document.querySelector('.modal-filtros-pr-header .icon-close');
 
+    // ABRIR MODAL
     btn_displayModal.addEventListener('click', ()=>{
         openModal(modal);
     });
     
+    // APLICAR FILTROS
     btn_aplicarFiltros.addEventListener('click', ()=>{
         closeModal(modal);
-        validateFilterInput();
-        filter();
+        updateInternalFilters();    // Actualizar filtros
+        internalFilter();   // Filtrar según nuevos parámetros
+        updateFilterOutput();   // Actualizar visualmente la pantalla
     });
     
+    // BORRAR FILTROS
     btn_borrarFiltros.addEventListener('click', ()=>{
         resetFilterValuesModal();
         deleteAllFilters();
         closeModal(modal);
     });
     
+    // CERRAR MODAL
     btn_modal_close.addEventListener('click', ()=>{
         closeModal(modal);
     });
 
+    // CIERRE POR OVERLAY
     overlay.addEventListener('click', ()=>{
         closeModal(modal);
     });
