@@ -174,3 +174,63 @@ function fillDatalistNoPoliza(){
         datalist_element.appendChild(option);
     });
 }
+
+
+// ─── SELECTORES ─────────────────────────────────────────────────────────────
+
+
+function orderByOptionsPolizasDisplay(){
+    const selectorOrden = document.querySelector('.p-renovaciones__filter__num-selector__selector select');
+
+    selectorOptionsOrdenarData.forEach((option) =>{
+        const selectorOptionsContent= document.createElement('option');
+        
+        selectorOptionsContent.value = option.value;
+        selectorOptionsContent.textContent = option.content;
+
+        selectorOrden.appendChild(selectorOptionsContent);
+    });
+
+    selectorOrden.addEventListener('change', (e)=>{
+        sortRenovaciones(e.target.value);
+        fillRenovationsTable();
+    });
+}
+
+function quantitySelectorPolizasDisplay(){
+    const selectorQuantityPolizas = document.querySelector('.p-renovaciones__paginacion__orderBy select');
+
+    selectorCantidadPolizasData.forEach((option) =>{
+        const selectorQuantityPolizasOption= document.createElement('option');
+        
+        selectorQuantityPolizasOption.value = option.value;
+        selectorQuantityPolizasOption.textContent = option.content;
+
+        selectorQuantityPolizas.appendChild(selectorQuantityPolizasOption);
+    });
+
+    selectorQuantityPolizas.addEventListener('change', (e)=>{
+        renovacionesPerPage = Number(e.target.value);
+        renovacionesCurrentPage = 1; // Resetear a la primera página al cambiar cantidad
+        updateMaxPages();
+        fillRenovationsTable();
+        updateCurrentAndMaxPages();
+    });
+}
+
+function estadoSelectorFilterModalDisplay(){
+    const selectorFilterModal = document.querySelector('.modal-filters__estado__select');
+    selectorFilterModal.innerHTML = '';
+
+    const opcion0 = document.createElement('option');
+    opcion0.value = -1;
+    opcion0.textContent = 'Seleccione un estado de póliza';
+    selectorFilterModal.appendChild(opcion0);
+
+    selectorEstadoFilterModal.forEach((data) =>{
+        const option = document.createElement('option');
+        option.value = data.value;
+        option.textContent = data.content;
+        selectorFilterModal.appendChild(option);
+    });
+}

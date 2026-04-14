@@ -3,6 +3,15 @@
  * filtros y ordenado de los datos de la página.
  */
 
+// Inputs de los filters
+const filter_no_poliza = document.querySelector('#modal-filtros-pr-filters__no-poliza-input');
+const filter_no_riesgo = document.querySelector('#modal-filtros-pr-filters__no-riesgo-input');
+const filter_fecha_contrato = document.querySelector('#modal-filtros-pr-filters__fecha-contrato-input');
+const filter_fecha_vencimiento = document.querySelector('#modal-filtros-pr-filters__fecha-vencimiento-input');
+const filter_importe_min = document.querySelector('#modal-filtros-pr-filters__importe-min-input');
+const filter_importe_max = document.querySelector('#modal-filtros-pr-filters__importe-max-input');
+const filter_estado = document.querySelector('#modal-filtros-pr-filters__estado-input');
+
 // ─── PAGINACIÓN ─────────────────────────────────────────────────────────────
 
 function comprobarValoresPaginacion(){
@@ -104,21 +113,27 @@ function deleteSpecificFilter(key){
     updateFilterOutput();
 }
 
+/***
+ * Pensada para cuando se borra un filtro por etiqueta.
+ * Dependiendo de la key de la etiqueta se vaciará un campo
+ * específico del modal.
+ */
+function deleteFilterFromModal(key){
+    if(key === 'no_poliza'){filter_no_poliza.value = '';}
+    if(key === 'nombre_riesgo'){filter_no_riesgo.value = '';}
+    if(key === 'fecha_contrato'){filter_fecha_contrato.value = '';}
+    if(key === 'fecha_vencimiento'){filter_fecha_vencimiento.value = '';}
+    if(key === 'importe_minimo'){filter_importe_min.value = '';}
+    if(key === 'importe_maximo'){filter_importe_max.value = '';}
+    if(key === 'estado_poliza'){filter_estado.value = '';}
+}
+
 /**
  * Actualiza los filtros internos dependiendo de los valores insertados en el modal
  */
 function updateInternalFilters(){
     // Reseteamos los filtros
     deleteAllFilters();
-
-    // Inputs de los filters
-    const filter_no_poliza = document.querySelector('#modal-filtros-pr-filters__no-poliza-input');
-    const filter_no_riesgo = document.querySelector('#modal-filtros-pr-filters__no-riesgo-input');
-    const filter_fecha_contrato = document.querySelector('#modal-filtros-pr-filters__fecha-contrato-input');
-    const filter_fecha_vencimiento = document.querySelector('#modal-filtros-pr-filters__fecha-vencimiento-input');
-    const filter_importe_min = document.querySelector('#modal-filtros-pr-filters__importe-min-input');
-    const filter_importe_max = document.querySelector('#modal-filtros-pr-filters__importe-max-input');
-    const filter_estado = document.querySelector('#modal-filtros-pr-filters__estado-input');
 
     // Número de póliza
     const no_poliza = filter_no_poliza.value.trim();
@@ -264,61 +279,4 @@ function updateTotalFiltersCounter(){
         }
     });   
     filterCounter.textContent = totalFilters + ' filtros aplicados';
-}
-
-// ─── SELECTORES ─────────────────────────────────────────────────────────────
-function orderByOptionsPolizasDisplay(){
-    const selectorOrden = document.querySelector('.p-renovaciones__filter__num-selector__selector select');
-
-    selectorOptionsOrdenarData.forEach((option) =>{
-        const selectorOptionsContent= document.createElement('option');
-        
-        selectorOptionsContent.value = option.value;
-        selectorOptionsContent.textContent = option.content;
-
-        selectorOrden.appendChild(selectorOptionsContent);
-    });
-
-    selectorOrden.addEventListener('change', (e)=>{
-        sortRenovaciones(e.target.value);
-        fillRenovationsTable();
-    });
-}
-
-function quantitySelectorPolizasDisplay(){
-    const selectorQuantityPolizas = document.querySelector('.p-renovaciones__paginacion__orderBy select');
-
-    selectorCantidadPolizasData.forEach((option) =>{
-        const selectorQuantityPolizasOption= document.createElement('option');
-        
-        selectorQuantityPolizasOption.value = option.value;
-        selectorQuantityPolizasOption.textContent = option.content;
-
-        selectorQuantityPolizas.appendChild(selectorQuantityPolizasOption);
-    });
-
-    selectorQuantityPolizas.addEventListener('change', (e)=>{
-        renovacionesPerPage = Number(e.target.value);
-        renovacionesCurrentPage = 1; // Resetear a la primera página al cambiar cantidad
-        updateMaxPages();
-        fillRenovationsTable();
-        updateCurrentAndMaxPages();
-    });
-}
-
-function estadoSelectorFilterModalDisplay(){
-    const selectorFilterModal = document.querySelector('.modal-filters__estado__select');
-    selectorFilterModal.innerHTML = '';
-
-    const opcion0 = document.createElement('option');
-    opcion0.value = -1;
-    opcion0.textContent = 'Seleccione un estado de póliza';
-    selectorFilterModal.appendChild(opcion0);
-
-    selectorEstadoFilterModal.forEach((data) =>{
-        const option = document.createElement('option');
-        option.value = data.value;
-        option.textContent = data.content;
-        selectorFilterModal.appendChild(option);
-    });
 }
