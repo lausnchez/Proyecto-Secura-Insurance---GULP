@@ -80,6 +80,8 @@
     }
 
     @include mobilexl{
+        padding-top: 24px;
+
         .p-renovaciones__filter__num-selector{
             flex-direction: column-reverse;
             gap: var(--spacing-l);

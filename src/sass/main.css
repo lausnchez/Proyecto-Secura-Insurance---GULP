@@ -1804,6 +1804,9 @@ body.menu-open {
   display: none;
 }
 @media (max-width: 767px) {
+  .proximas-renovaciones__filter {
+    padding-top: 24px;
+  }
   .proximas-renovaciones__filter .p-renovaciones__filter__num-selector {
     flex-direction: column-reverse;
     gap: var(--spacing-l);

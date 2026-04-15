@@ -101,6 +101,7 @@ function fillRenovationsTable(){
     });
 }
 
+
 // ─── PAGE PRÓXIMAS RENOVACIONES - MODAL ─────────────────────────────────────────────────────────────
 
 const modal_hidden_class = 'modal__container--hidden';
@@ -194,20 +195,6 @@ function modalMobileDisplay(){
 
     updateLayoutModal();
     window.addEventListener("resize", updateLayoutModal);
-}
-
-// MODAL NÚMERO DE PÓLIZAS 
-
-function fillDatalistNoPoliza(){
-    const datalist_element = document.querySelector('#modal-filters__no-poliza__dropdown');
-    const datalist_input = document.querySelector('#modal-filtros-pr-filters__no-poliza-input');
-    
-    original_renovaciones_data.forEach(data =>{
-        const option = document.createElement('div');
-        option.textContent = data.value;
-
-        datalist_element.appendChild(option);
-    });
 }
 
 
