@@ -1349,6 +1349,8 @@ body.menu-open {
   border-radius: 99px;
   padding: 8px 16px;
   height: 36px;
+  min-width: -moz-max-content;
+  min-width: max-content;
   background-color: var(--base-primary);
   color: white;
 }
@@ -1829,6 +1831,11 @@ body.menu-open {
     color: white;
     border-radius: 40px;
     padding: 2px 8px;
+  }
+  .proximas-renovaciones__filter .p-renovaciones__filter__filterContainer {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-right: -16px;
   }
 }
 
