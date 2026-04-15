@@ -56,6 +56,14 @@ function displayDataProximasRenovaciones(){
     // PAGINACIÓN
     btnPaginacionSetter();
     
+    // Crear contador de filtros si no existe
+    const opening_button = document.querySelector('#pr-filter-modal-button');
+    if (!document.querySelector('#pr-filter-button__contadorFiltros')) {
+        const contadorFiltros = document.createElement('span');
+        contadorFiltros.setAttribute('id', 'pr-filter-button__contadorFiltros');
+        opening_button.appendChild(contadorFiltros);
+    }
+    
     // FILTROS
     updateFilterOutput();
     
@@ -68,6 +76,7 @@ function displayDataProximasRenovaciones(){
     
     // MODAL
     displayModalFunctionability();
+    updateButtonFilterCounter();
 
 }
 
@@ -102,12 +111,13 @@ const modal = document.querySelector('#modal-pr-filtros-contents');
 const overlay = document.querySelector('#modal-pr-filtros-overlay');
 
 function displayModalFunctionability(){
-    const btn_displayModal = document.querySelector('.p-renovaciones__filter__filter >button');
-    // const modal = document.querySelector('#modal-pr-filtros-contents');
-    
+    const btn_displayModal = document.querySelector('.p-renovaciones__filter__filter >button');    
     const btn_borrarFiltros = document.querySelector('.modal-filtros-pr-buttons-borrarFiltros');
     const btn_aplicarFiltros = document.querySelector('.modal-filtros-pr-buttons-aplicarFiltros');
     const btn_modal_close = document.querySelector('.modal-filtros-pr-header .icon-close');
+
+    // RESPONSIVE DEL MODAL
+    modalMobileDisplay();
 
     // ABRIR MODAL
     btn_displayModal.addEventListener('click', ()=>{
@@ -159,6 +169,31 @@ function openModal(modal){
 function resetFilterValuesModal(){
     const formulario = document.querySelector('.modal-filtros-pr-filters');
     formulario.reset();
+}
+
+function modalMobileDisplay(){
+    const modal = document.querySelector('#modal-pr-filtros-contents');
+    const overlay = document.querySelector('#modal-pr-filtros-overlay');
+    const opening_button = document.querySelector('#pr-filter-modal-button');
+
+    const mobileVariable = getComputedStyle(document.documentElement).getPropertyValue("--tablet");
+    const mobileScreenWidth = parseInt(mobileVariable);
+
+    function updateLayoutModal(){
+        if(window.innerWidth <= mobileScreenWidth){
+            modal.classList.add("modal--mobile");
+            overlay.classList.add("overlay--mobile");
+            opening_button.classList.add("filter-button--mobile");            
+
+        }else{
+            modal.classList.remove("modal--mobile");
+            overlay.classList.remove("overlay--mobile");
+            opening_button.classList.remove("filter-button--mobile");
+        }
+    }
+
+    updateLayoutModal();
+    window.addEventListener("resize", updateLayoutModal);
 }
 
 // MODAL NÚMERO DE PÓLIZAS 

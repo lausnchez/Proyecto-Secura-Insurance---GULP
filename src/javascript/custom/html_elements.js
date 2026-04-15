@@ -14,8 +14,9 @@
 function displayRenovacion(renovacionContents){
     const renovacionData = validateRenovacionesContent(renovacionContents); // Validar datos previamente
     
-    const renovacionRow = document.createElement('div');
+    const renovacionRow = document.createElement('a');
     renovacionRow.classList.add('proximas-renovaciones-row');
+    renovacionRow.setAttribute('href', '#');
     
     // Número de póliza
     const poliza = document.createElement('div');

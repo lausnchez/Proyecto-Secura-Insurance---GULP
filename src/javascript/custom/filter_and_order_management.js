@@ -239,6 +239,7 @@ function addFilter(key, value){
 function updateFilterOutput(){
     updateFiltersTags();    // Genera las etiquetas
     updateTotalFiltersCounter();    // Recuenta los filters y actualiza el número en la web
+    updateButtonFilterCounter();    // Actualiza el contador del botón
     fillRenovationsTable(); // Actualiza la tabla de renovaciones
     updateCurrentAndMaxPages(); // Actualiza la paginación
     updateTotalPolizas();   // Actualiza el total de pólizas que cumplen los filtros
@@ -267,8 +268,7 @@ function updateFiltersTags(){
  * Actualiza los contadores de filtros de la página de nuevas renovaciones
  */
 function updateTotalFiltersCounter(){
-    const filterCounter = document.querySelector('.p-renovaciones__filter__num-selector__totalFiltros__filtros');
-    
+    const filterCounter = document.querySelector('.p-renovaciones__filter__num-selector__totalFiltros__filtros'); 
     let totalFilters = 0;
     filters.forEach(filter =>{
         const value = Object.values(filter)[0];
@@ -279,4 +279,11 @@ function updateTotalFiltersCounter(){
         }
     });   
     filterCounter.textContent = totalFilters + ' filtros aplicados';
+}
+
+function updateButtonFilterCounter(){
+    const button = document.querySelector('#pr-filter-button__contadorFiltros');
+    if(button){
+        button.textContent = filters.length.toString();
+    }else button.textContent = '0';
 }

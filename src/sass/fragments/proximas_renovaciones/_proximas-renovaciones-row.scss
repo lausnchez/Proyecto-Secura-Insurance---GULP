@@ -12,6 +12,7 @@
     border-radius: var(--p-renovaciones-tabla-row-border-radius);
     background-color: var(--proximas-renovaciones-tabla-row-background-color);
     gap:16px;
+    transition: all 0.3s ease-in;
     .proximas-renovaciones__contenedor{
         display: flex;
         flex-direction: column;
@@ -43,4 +44,10 @@
             display: block;
         }
     }
+}
+
+.proximas-renovaciones-row:hover{
+    transform: translateY(-5px);
+    background-color: var(--base-bg-100);
+    box-shadow: $p-renovaciones-tabla-row-box-shadow-hover;
 }

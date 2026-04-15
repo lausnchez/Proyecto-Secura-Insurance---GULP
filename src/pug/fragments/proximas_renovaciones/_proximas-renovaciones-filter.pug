@@ -2,7 +2,7 @@ include ../../mixins/generales/_general-outline-button.pug
 
 .proximas-renovaciones__filter 
     .p-renovaciones__filter__filter
-        +general-outline-button("Filtros","filter")
+        +general-outline-button("Filtros","filter")(id = 'pr-filter-modal-button')
         .p-renovaciones__filter__filterContainer
     .p-renovaciones__filter__num-selector
         .p-renovaciones__filter__filter__dataContainer
@@ -13,8 +13,3 @@ include ../../mixins/generales/_general-outline-button.pug
         .p-renovaciones__filter__num-selector__selector 
             span Ordenar por: 
             select#p-renovaciones__filter__num-selector__selector-input
-                //- option(value="no-poliza") No. de póliza
-                //- option(value="nombre-riesgo") Nombre del riesgo
-                //- option(value="fecha-validez") Fecha de validez
-                //- option(value="importe") Importe
-                //- option(value="estado") Estado
