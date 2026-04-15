@@ -49,6 +49,9 @@
 @use "fragments/proximas_renovaciones/proximas-renovaciones-filter";
 @use "fragments/proximas_renovaciones/proximas-renovaciones-page-paginacion";
 
+// DETALLE DE PÓLIZA
+@use "fragments/detalle-poliza/detalle-poliza-page-info";
+
 /** COMPONENTS **/
 @use "components/_header";
 @use "components/_footer";

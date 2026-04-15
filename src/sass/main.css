@@ -1884,6 +1884,73 @@ body.menu-open {
   color: var(--text-subtitle);
 }
 
+.detalle-poliza-info {
+  background-color: var(--proximas-renovaciones-page-info-bg-color);
+  padding: var(--spacing-xl) var(--spacing-88);
+  border-bottom: 1px solid var(--gray-01);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+}
+.detalle-poliza-info .detalle.poliza-page-info__breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+}
+.detalle-poliza-info .detalle.poliza-page-info__breadcrumbs span {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--text-label);
+}
+.detalle-poliza-info .detalle.poliza-page-info__breadcrumbs .detalle-poliza-page-info__breadcrumbs__highlight {
+  color: var(--base-primary);
+}
+.detalle-poliza-info .detalle-poliza-page-info__title-button {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+.detalle-poliza-info .detalle-poliza-page-info__title-button h2 {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: var(--typo-size-subtitle);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--text-title);
+  height: 40px;
+}
+.detalle-poliza-info .detalle-poliza-page-info__title-button span {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--text-label);
+}
+@media (max-width: 767px) {
+  .detalle-poliza-info {
+    gap: var(--spacing-l);
+    padding: var(--spacing-l) var(--spacing-m);
+  }
+  .detalle-poliza-info .detalle-poliza-page-info__breadcrumbs {
+    display: none;
+  }
+  .detalle-poliza-info .detalle-poliza-page-info__title-button {
+    gap: 0px;
+  }
+  .detalle-poliza-info .detalle-poliza-page-info__title-button h2 {
+    font-family: var(--default-font-family);
+    font-weight: 700;
+    font-size: var(--typo-size-body);
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+    height: auto;
+  }
+}
+
 /** COMPONENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
