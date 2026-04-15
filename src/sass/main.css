@@ -1837,6 +1837,15 @@ body.menu-open {
     overflow-x: auto;
     margin-right: -16px;
   }
+  .proximas-renovaciones__filter .p-renovaciones__filter__filter__dataContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-content: start;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
 }
 
 .p-renovaciones__paginacion {

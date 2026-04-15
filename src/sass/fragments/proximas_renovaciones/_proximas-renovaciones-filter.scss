@@ -112,6 +112,16 @@
             overflow-x: auto;
             margin-right: -16px;
         }
+
+        .p-renovaciones__filter__filter__dataContainer{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: auto auto;
+            align-content: center;
+            justify-content: start;
+            column-gap: 0px;
+        }
+
     }
 }
     
