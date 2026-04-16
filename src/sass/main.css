@@ -37,6 +37,7 @@
 /* Proximas Renovaciones Tabla */
 /** Próximas Renovaciones Tag **/
 /* Cliente Potencial Card */
+/* Card Detalle Póliza */
 :root {
   --mobile: 390px;
   --tablet: 768px;
@@ -103,6 +104,7 @@
   --hero-contents-width: 80%;
   /* Clientes Potenciales*/
   --clientes-potenciales-contents-gap: 20px;
+  /* Card Detalle Póliza */
   --p-renovaciones-page-info-breadcrumbs-gap: 8px;
 }
 
@@ -143,6 +145,7 @@
   --icon-power-off: "\e906";
   --icon-user: "\e907";
   --icon-arrow-down: "\e915";
+  --icon-edit: "\e916";
 }
 
 :root {
@@ -198,6 +201,7 @@
   --modal-pr-filtros-header-border-color: #EFF3F5;
   --modal-pr-filtros-header-title-color: #161C1F;
   --modal-pr-filtros-filter-title-color: #161C1F;
+  --detalles-poliza-card-box-shadow-color: #37464933;
 }
 
 /** CSS LIBS **/
@@ -741,6 +745,13 @@ template {
   font-size: toRem(var(--icon-size));
 }
 
+.icon-edit::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-edit);
+  color: var(--base-primary);
+  font-size: toRem(var(--icon-size));
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/roboto/roboto400.woff2") format("woff2");
@@ -1279,6 +1290,33 @@ body.menu-open {
   display: none;
 }
 
+/** CSS LIBS **/
+/** HELPERS **/
+.detalle-poliza-card {
+  background-color: white;
+  border-radius: var(--spacing-xs);
+  padding: var(--spacing-l);
+  box-shadow: 0px 3px 5px var(--detalles-poliza-card-box-shadow-color);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+.detalle-poliza-card .detalle-poliza-personal-info__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.detalle-poliza-card .detalle-poliza-personal-info__header h2 {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: var(--typo-size-subtitle);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--text-title);
+}
+
 /** FRAGMENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
@@ -1369,6 +1407,20 @@ body.menu-open {
   padding: 0px;
   height: 16px;
   width: 16px;
+}
+
+.general-update-button {
+  background-color: transparent;
+  gap: 10px;
+  padding: 0px;
+}
+.general-update-button .general-update-button__textContent {
+  font-family: var(--default-font-family);
+  font-weight: 700;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--base-primary);
 }
 
 /** CSS LIBS **/
@@ -1892,12 +1944,12 @@ body.menu-open {
   flex-direction: column;
   gap: var(--spacing-xxl);
 }
-.detalle-poliza-info .detalle.poliza-page-info__breadcrumbs {
+.detalle-poliza-info .detalle-poliza-page-info__breadcrumbs {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xs);
 }
-.detalle-poliza-info .detalle.poliza-page-info__breadcrumbs span {
+.detalle-poliza-info .detalle-poliza-page-info__breadcrumbs span {
   font-family: var(--default-font-family);
   font-weight: 400;
   font-size: var(--typo-size-body);
@@ -1905,7 +1957,7 @@ body.menu-open {
   color: var(--text-subtitle);
   color: var(--text-label);
 }
-.detalle-poliza-info .detalle.poliza-page-info__breadcrumbs .detalle-poliza-page-info__breadcrumbs__highlight {
+.detalle-poliza-info .detalle-poliza-page-info__breadcrumbs .detalle-poliza-page-info__breadcrumbs__highlight {
   color: var(--base-primary);
 }
 .detalle-poliza-info .detalle-poliza-page-info__title-button {
@@ -1913,7 +1965,7 @@ body.menu-open {
   flex-direction: column;
   gap: var(--spacing-xs);
 }
-.detalle-poliza-info .detalle-poliza-page-info__title-button h2 {
+.detalle-poliza-info .detalle-poliza-page-info__title .detalle-poliza-noRiesgo {
   font-family: var(--default-font-family);
   font-weight: 400;
   font-size: var(--typo-size-subtitle);
@@ -1922,7 +1974,7 @@ body.menu-open {
   color: var(--text-title);
   height: 40px;
 }
-.detalle-poliza-info .detalle-poliza-page-info__title-button span {
+.detalle-poliza-info .detalle-poliza-page-info__title .detalle-poliza-numPoliza {
   font-family: var(--default-font-family);
   font-weight: 400;
   font-size: var(--typo-size-body);

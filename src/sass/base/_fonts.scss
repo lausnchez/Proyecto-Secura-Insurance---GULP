@@ -57,6 +57,7 @@
 .icon-power-off{@include icon(var(--icon-power-off));}
 .icon-user{@include icon(var(--icon-user));}
 .icon-arrow-down{@include icon(var(--icon-arrow-down))}
+.icon-edit{@include icon(var(--icon-edit), var(--base-primary))}
 
 // Font Imports
 //---------------------------------------------------------------------------------

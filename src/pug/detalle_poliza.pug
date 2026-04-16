@@ -1,8 +1,14 @@
 extends layouts/layout-home 
+include mixins/detalle-poliza/_detalle-poliza-page-info.pug
 
 block vars 
     - var pageTitle = "Detalle de la póliza";
-    - var pageID = "detalle-poliza";
+    - var pageID = "detalle_poliza";
 
 block content
-    include fragments/detalle_poliza/_detalle-poliza-page-info.pug
+    include components/detalle_poliza/_detalle-poliza-page-info.pug
+    .homepage_contents
+        section.detalle-polizas__principal-data
+             include components/detalle_poliza/_detalle-poliza-personal-info.pug
+        section.detalle-polizas__ultimas-cuotas
+        section.detalle-polizas__personal-data

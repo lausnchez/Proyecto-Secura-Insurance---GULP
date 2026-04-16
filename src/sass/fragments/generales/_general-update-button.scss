@@ -1,0 +1,12 @@
+@use "../../helpers/font-mixins" as *;
+
+.general-update-button{
+    background-color: transparent;
+    gap: 10px;
+    padding: 0px;
+
+    .general-update-button__textContent{
+        @include bodyBold();
+        color: var(--base-primary);
+    }
+}

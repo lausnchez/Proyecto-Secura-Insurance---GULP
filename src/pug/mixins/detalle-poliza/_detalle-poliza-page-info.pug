@@ -1,0 +1,9 @@
+mixin detalle-poliza-page-info(poliza-info)
+    .detalle-poliza-info 
+        .detalle.poliza-page-info__breadcrumbs
+            span.detalle-poliza-page-info__breadcrumbs__highlight Detalle de póliza
+            span /
+            span #{poliza-info.no_poliza}
+        .detalle-poliza-page-info__title-button 
+            h2 #{poliza-info.nombre_riesgo}
+            span No. de póliza: #{poliza-info.no_poliza}

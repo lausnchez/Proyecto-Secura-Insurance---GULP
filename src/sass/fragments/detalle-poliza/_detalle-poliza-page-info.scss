@@ -9,18 +9,18 @@
     flex-direction: column;
     gap: var(--spacing-xxl);
 
-    .detalle.poliza-page-info__breadcrumbs{
+    .detalle-poliza-page-info__breadcrumbs{
         display: flex;
         flex-direction: row;
         gap: var(--spacing-xs);
     }
 
-    .detalle.poliza-page-info__breadcrumbs span{
+    .detalle-poliza-page-info__breadcrumbs span{
         @include body;
         color: var(--text-label);
     }
 
-    .detalle.poliza-page-info__breadcrumbs .detalle-poliza-page-info__breadcrumbs__highlight{
+    .detalle-poliza-page-info__breadcrumbs .detalle-poliza-page-info__breadcrumbs__highlight{
         color: var(--base-primary);
     }
     
@@ -30,13 +30,13 @@
         gap: var(--spacing-xs)
     }
 
-    .detalle-poliza-page-info__title-button h2{
+    .detalle-poliza-page-info__title .detalle-poliza-noRiesgo{
         @include subtitle();
         color: var(--text-title);
         height: 40px;
     }
 
-    .detalle-poliza-page-info__title-button span{
+    .detalle-poliza-page-info__title .detalle-poliza-numPoliza{
         @include body();
         color: var(--text-label);
     }

@@ -32,6 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
             updateMaxPages();
             displayDataProximasRenovaciones();
         }
+        
+        // ─── PAGE DETALLE POLIZA ─────────────────────────────────────────────────────────────
+        else if (actualPage === 'detalle_poliza') {
+            const selectedPoliza = JSON.parse(localStorage.getItem('selectedPoliza'));
+            const completeData = retrieveCompletePolizaData(selectedPoliza);
+
+            if (completeData) {
+                displayDetallePoliza(selectedPoliza);
+            }else console.log('No existe póliza');
+        }
     });
 });
 
@@ -51,6 +61,12 @@ function loadPolizasData() {
     .catch(error => {
         console.error('Error:', error);
     });
+}
+
+function retrieveCompletePolizaData(no_poliza){
+    let poliza = original_renovaciones_data.find(p => p.no_poliza == no_poliza);
+    console.log(poliza);
+
 }
 
 function paginatePolizasData(){

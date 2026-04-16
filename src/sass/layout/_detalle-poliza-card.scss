@@ -1,0 +1,25 @@
+@use "../helpers/font-mixins" as *;
+@use "../helpers/variables" as *;
+
+.detalle-poliza-card{
+    background-color: white;
+    border-radius: var(--spacing-xs);
+    padding: var(--spacing-l);
+    box-shadow: $detalle-poliza-card-box-shadow;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+
+    .detalle-poliza-personal-info__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .detalle-poliza-personal-info__header h2{
+        @include subtitle();
+        color: var(--text-title);
+    }
+}

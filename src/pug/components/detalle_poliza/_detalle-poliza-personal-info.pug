@@ -1,0 +1,25 @@
+include ../../mixins/detalle-poliza/_detalle-poliza-card.pug
+include ../../mixins/detalle-poliza/_detalle-poliza-card-info-container.pug
+
+- 
+    var poliza = {
+        cardTitle: "Titular",
+        cardContents: {
+        cif: "H59721886",
+        nombre: "José Martínez",
+        direccionFiscal: "Casanova 128",
+        estado: "Vigente"
+        }
+    }
+
+- var cardName = "personalInfo";
+
++detalle-poliza-card(cardName, poliza)
+    +detalle-poliza-info-container(cardName, "CIF", "CIF", poliza.cardContents.cif)
+    +detalle-poliza-info-container(cardName, "nombre", "Nombre", poliza.cardContents.nombre)
+    +detalle-poliza-info-container(cardName, "direccionFiscal", "Dirección Fiscal", poliza.cardContents.direccionFiscal)
+    .detalle-poliza-info-container(id=`detalle-poliza-card-${cardName}-estado`)
+        span(id=`detalle-poliza-info-${idCard}-${idData}-title` class="detalle-poliza-info-container__title") Estado de la póliza 
+            //- Insertar tag y selector para el edit
+    
+

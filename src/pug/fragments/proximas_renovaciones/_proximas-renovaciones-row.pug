@@ -14,7 +14,7 @@ mixin p-renovaciones-row(content)
     - var importe = content.importe || '0';
     - var estado = content.estado_poliza || 'Pendiente';
 
-    .proximas-renovaciones-row 
+    .proximas-renovaciones-row(data-poliza-id= no_poliza) 
         .proximas-renovaciones__contenedor
             span.proximas-renovaciones__contenedor-title.base_body No. de póliza
             span.proximas-renovaciones-row__numPoliza= no_poliza

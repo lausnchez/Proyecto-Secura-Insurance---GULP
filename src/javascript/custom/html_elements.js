@@ -15,7 +15,8 @@ function displayRenovacion(renovacionContents){
     const renovacionData = validateRenovacionesContent(renovacionContents); // Validar datos previamente
     
     const renovacionRow = document.createElement('a');
-    renovacionRow.classList.add('proximas-renovaciones-row');
+    renovacionRow.classList.add('proximas-renovaciones-row');    
+    renovacionRow.setAttribute('data-poliza-id', renovacionData.no_poliza);
     renovacionRow.setAttribute('href', '#');
     
     // Número de póliza
@@ -67,6 +68,12 @@ function displayRenovacion(renovacionContents){
     // Tag 
     const tag = renovacionTagDisplay(renovacionData.estado);
     renovacionRow.appendChild(tag);
+
+    // Agregar Event Listener
+    renovacionRow.addEventListener('click', ()=>{
+        localStorage.setItem('selectedPoliza', JSON.stringify(renovacionContents));
+        window.location.href = 'detalle_poliza.html';
+    });
     
     return renovacionRow;
 }
@@ -91,7 +98,11 @@ function renovacionTagDisplay(renovacionState){
         Vencido: {
             icon: 'icon-close-red',
             textClass: 'base_body-tag--vencido'
-        }
+        },
+        Vigente: {
+            icon: 'icon-check-green',
+            textClass: 'base_body-tag--pagada'
+        },
     };
     
     const config = estadosMap[renovacionState];

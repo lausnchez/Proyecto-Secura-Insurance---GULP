@@ -1,0 +1,5 @@
+mixin detalle-poliza-info-container(idCard, idData, titulo, contenido)
+    div(class="detalle-poliza-info-container" id=`detalle-poliza-card-${idCard}-${idData}`)
+        span(id=`detalle-poliza-info-${idCard}-${idData}-title` class="detalle-poliza-info-container__title") #{titulo}
+        span(id=`detalle-poliza-info-${idCard}-${idData}-content` class="detalle-poliza-info-container__content") #{contenido} 
+        input(id=`detalle-poliza-info-${idCard}-${idData}-edit` class="detalle-poliza-info-container__input" placeholder=`${contenido}`)

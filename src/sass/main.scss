@@ -21,8 +21,10 @@
 @use "layout/_principal-section";
 @use "layout/_clientes-potenciales";
 @use "layout/_modal";
+@use "layout/detalle-poliza-card";
 
 /** FRAGMENTS **/
+//-------------------------------------------------------------------------
 
 // GENERALES
 @use "fragments/generales/general-outline-button";
@@ -30,6 +32,7 @@
 @use "fragments/generales/general-info-tag";
 @use "fragments/generales/general-paginacion-button";
 @use "fragments/generales/general-filter-tag";
+@use "fragments/generales/general-update-button";
 
 // HEADER
 @use "fragments/header/_header-submenu-item";
@@ -52,10 +55,18 @@
 // DETALLE DE PÓLIZA
 @use "fragments/detalle-poliza/detalle-poliza-page-info";
 
+
 /** COMPONENTS **/
+//-------------------------------------------------------------------------
+
 @use "components/_header";
 @use "components/_footer";
 @use "components/_hero";
 @use "components/_proximas-renovaciones-tabla";
 @use "components/_cliente-potencial-card";
 @use "components/_modal-filtros-proximas-renovaciones";
+
+// DETALLE DE PÓLIZA
+@use "components/detalle-poliza/detalle-poliza-personal-data";
+@use "components/detalle-poliza/detalle-poliza-principal-data";
+@use "components/detalle-poliza/detalle-poliza-ultimas-cuotas";

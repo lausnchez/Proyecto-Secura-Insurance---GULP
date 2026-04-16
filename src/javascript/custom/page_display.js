@@ -77,7 +77,7 @@ function displayDataProximasRenovaciones(){
     // MODAL
     displayModalFunctionability();
     updateButtonFilterCounter();
-
+    
 }
 
 function updateCurrentAndMaxPages(){
@@ -116,10 +116,10 @@ function displayModalFunctionability(){
     const btn_borrarFiltros = document.querySelector('.modal-filtros-pr-buttons-borrarFiltros');
     const btn_aplicarFiltros = document.querySelector('.modal-filtros-pr-buttons-aplicarFiltros');
     const btn_modal_close = document.querySelector('.modal-filtros-pr-header .icon-close');
-
+    
     // RESPONSIVE DEL MODAL
     modalMobileDisplay();
-
+    
     // ABRIR MODAL
     btn_displayModal.addEventListener('click', ()=>{
         openModal(modal);
@@ -144,7 +144,7 @@ function displayModalFunctionability(){
     btn_modal_close.addEventListener('click', ()=>{
         closeModal(modal);
     });
-
+    
     // CIERRE POR OVERLAY
     overlay.addEventListener('click', ()=>{
         closeModal(modal);
@@ -154,7 +154,7 @@ function displayModalFunctionability(){
 function closeModal(modal){
     modal.classList.add(modal_hidden_class);
     overlay.classList.add(modal_overlay_hidden_class);
-
+    
     const body = document.querySelector('body');
     body.classList.remove(notScroll);
 }
@@ -162,7 +162,7 @@ function closeModal(modal){
 function openModal(modal){
     modal.classList.remove(modal_hidden_class);
     overlay.classList.remove(modal_overlay_hidden_class);
-
+    
     const body = document.querySelector('body');
     body.classList.add(notScroll);
 }
@@ -176,25 +176,46 @@ function modalMobileDisplay(){
     const modal = document.querySelector('#modal-pr-filtros-contents');
     const overlay = document.querySelector('#modal-pr-filtros-overlay');
     const opening_button = document.querySelector('#pr-filter-modal-button');
-
+    
     const mobileVariable = getComputedStyle(document.documentElement).getPropertyValue("--tablet");
     const mobileScreenWidth = parseInt(mobileVariable);
-
+    
     function updateLayoutModal(){
         if(window.innerWidth <= mobileScreenWidth){
             modal.classList.add("modal--mobile");
             overlay.classList.add("overlay--mobile");
             opening_button.classList.add("filter-button--mobile");            
-
+            
         }else{
             modal.classList.remove("modal--mobile");
             overlay.classList.remove("overlay--mobile");
             opening_button.classList.remove("filter-button--mobile");
         }
     }
-
+    
     updateLayoutModal();
     window.addEventListener("resize", updateLayoutModal);
+}
+
+
+// ─── PAGE DETALLE POLIZA ─────────────────────────────────────────────────────────────
+
+
+function displayDetallePoliza(poliza) {
+    console.log(poliza);
+    updateDataDetallePolizaInfo(poliza);
+}
+
+function updateDataDetallePolizaInfo(poliza){
+    // Elementos HTML
+    const breadcrumbsNumPoliza = document.querySelector('.detalle-poliza-page-info__breadcrumbs__highlight .detalle-poliza-numPoliza');
+    const titleNombreRiesgo = document.querySelector('.detalle-poliza-info .detalle-poliza-noRiesgo');
+    const titleNumPoliza = document.querySelector('.detalle-poliza-info .detalle-poliza-numPoliza');
+
+    // Update data
+    breadcrumbsNumPoliza.textContent = poliza.no_poliza;
+    titleNombreRiesgo.textContent = poliza.nombre_riesgo;
+    titleNumPoliza.textContent = "No. de póliza: " + poliza.no_poliza;
 }
 
 
@@ -203,16 +224,16 @@ function modalMobileDisplay(){
 
 function orderByOptionsPolizasDisplay(){
     const selectorOrden = document.querySelector('.p-renovaciones__filter__num-selector__selector select');
-
+    
     selectorOptionsOrdenarData.forEach((option) =>{
         const selectorOptionsContent= document.createElement('option');
         
         selectorOptionsContent.value = option.value;
         selectorOptionsContent.textContent = option.content;
-
+        
         selectorOrden.appendChild(selectorOptionsContent);
     });
-
+    
     selectorOrden.addEventListener('change', (e)=>{
         sortRenovaciones(e.target.value);
         fillRenovationsTable();
@@ -221,16 +242,16 @@ function orderByOptionsPolizasDisplay(){
 
 function quantitySelectorPolizasDisplay(){
     const selectorQuantityPolizas = document.querySelector('.p-renovaciones__paginacion__orderBy select');
-
+    
     selectorCantidadPolizasData.forEach((option) =>{
         const selectorQuantityPolizasOption= document.createElement('option');
         
         selectorQuantityPolizasOption.value = option.value;
         selectorQuantityPolizasOption.textContent = option.content;
-
+        
         selectorQuantityPolizas.appendChild(selectorQuantityPolizasOption);
     });
-
+    
     selectorQuantityPolizas.addEventListener('change', (e)=>{
         renovacionesPerPage = Number(e.target.value);
         renovacionesCurrentPage = 1; // Resetear a la primera página al cambiar cantidad
@@ -243,12 +264,12 @@ function quantitySelectorPolizasDisplay(){
 function estadoSelectorFilterModalDisplay(){
     const selectorFilterModal = document.querySelector('.modal-filters__estado__select');
     selectorFilterModal.innerHTML = '';
-
+    
     const opcion0 = document.createElement('option');
     opcion0.value = -1;
     opcion0.textContent = 'Seleccione un estado de póliza';
     selectorFilterModal.appendChild(opcion0);
-
+    
     selectorEstadoFilterModal.forEach((data) =>{
         const option = document.createElement('option');
         option.value = data.value;

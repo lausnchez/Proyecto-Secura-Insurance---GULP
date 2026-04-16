@@ -194,6 +194,9 @@ $p-renovaciones-tag-padding: 2px 8px;
 /* Cliente Potencial Card */
 $cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-card-box-shadow-color);
 
+/* Card Detalle Póliza */
+$detalle-poliza-card-box-shadow: 0px 3px 5px var(--detalles-poliza-card-box-shadow-color);
+
 :root {
 
   // TAMAÑOS DE PANTALLA
@@ -284,6 +287,9 @@ $cliente-potencial-card-box-shadow: 0px 3px 5px 0px var(--clientes-potenciales-c
 
   /* Clientes Potenciales*/
   --clientes-potenciales-contents-gap: 20px;
+
+  /* Card Detalle Póliza */
+
 
   // PÁGINA RENOVACIONES
   //--------------------------------------------
