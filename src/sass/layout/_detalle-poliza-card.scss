@@ -11,15 +11,21 @@
     gap: 32px;
     width: 100%;
 
-    .detalle-poliza-personal-info__header {
+    .detalle-poliza__header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    .detalle-poliza-personal-info__header h2{
+    .detalle-poliza__header h2{
         @include subtitle();
         color: var(--text-title);
+    }
+
+    .detalle-poliza__contents{
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xl);
     }
 }

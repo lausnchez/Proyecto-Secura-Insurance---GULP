@@ -1,0 +1,7 @@
+.detalle-polizas__principal-data{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 20px;
+}

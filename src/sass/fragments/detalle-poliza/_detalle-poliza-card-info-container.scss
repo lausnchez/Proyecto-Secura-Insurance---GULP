@@ -1,0 +1,21 @@
+@use "../../helpers/font-mixins" as *;
+
+.detalle-poliza-info-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+
+    .detalle-poliza-info-container__title{
+        @include body();
+        color: var(--text-label);
+    }
+
+    .detalle-poliza-info-container__content{
+        @include bodyBold();
+        color: var(--text-title);
+    }
+
+    .detalle-poliza-info-container__input{
+        display: none;
+    }
+}

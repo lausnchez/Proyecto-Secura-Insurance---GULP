@@ -2,10 +2,10 @@ include ../generales/_general-update-button.pug
 
 mixin detalle-poliza-card(id, data)
     div(id=`detalle-poliza-card-${id}`).detalle-poliza-card
-        .detalle-poliza-personal-info__header 
+        .detalle-poliza__header 
             h2= data.cardTitle 
             +general-update-button("Actualizar")
-        div(class=`detalle-poliza-contents-${id}`)
+        .detalle-poliza__contents
             block
 
         
