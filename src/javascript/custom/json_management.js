@@ -36,10 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // ─── PAGE DETALLE POLIZA ─────────────────────────────────────────────────────────────
         else if (actualPage === 'detalle_poliza') {
             const selectedPoliza = JSON.parse(localStorage.getItem('selectedPoliza'));
-            const completeData = retrieveCompletePolizaData(selectedPoliza);
+            let completeData = retrieveCompletePolizaData(selectedPoliza);
+
+            console.log("selectedPoliza");
+            console.log(selectedPoliza);
+            console.log("completeData");
+            console.log(completeData);
 
             if (completeData) {
-                displayDetallePoliza(selectedPoliza);
+                displayDetallePoliza(completeData);
             }else console.log('No existe póliza');
         }
     });
@@ -63,10 +68,10 @@ function loadPolizasData() {
     });
 }
 
-function retrieveCompletePolizaData(no_poliza){
-    let poliza = original_renovaciones_data.find(p => p.no_poliza == no_poliza);
-    console.log(poliza);
-
+function retrieveCompletePolizaData(originalPoliza){
+    let poliza = original_renovaciones_data.find(p => p.no_poliza == originalPoliza.no_poliza);
+    
+    return poliza;
 }
 
 function paginatePolizasData(){

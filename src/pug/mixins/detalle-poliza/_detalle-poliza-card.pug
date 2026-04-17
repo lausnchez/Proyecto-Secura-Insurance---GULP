@@ -1,11 +1,14 @@
 include ../generales/_general-update-button.pug
+include ../generales/_general-outline-button.pug
 
-mixin detalle-poliza-card(id, data)
+mixin detalle-poliza-card(id, cardTitle)
     div(id=`detalle-poliza-card-${id}`).detalle-poliza-card
         .detalle-poliza__header 
-            h2= data.cardTitle 
-            +general-update-button("Actualizar")
+            h2= cardTitle 
+            +general-update-button("Actualizar")(id=`detalle-poliza__header-update-${id}`)
         .detalle-poliza__contents
             block
+            +general-outline-button("Actualizar")(id=`detalle-poliza__header-save-${id}`)
+            
 
         

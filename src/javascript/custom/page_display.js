@@ -198,27 +198,6 @@ function modalMobileDisplay(){
 }
 
 
-// ─── PAGE DETALLE POLIZA ─────────────────────────────────────────────────────────────
-
-
-function displayDetallePoliza(poliza) {
-    console.log(poliza);
-    updateDataDetallePolizaInfo(poliza);
-}
-
-function updateDataDetallePolizaInfo(poliza){
-    // Elementos HTML
-    const breadcrumbsNumPoliza = document.querySelector('.detalle-poliza-page-info__breadcrumbs__highlight .detalle-poliza-numPoliza');
-    const titleNombreRiesgo = document.querySelector('.detalle-poliza-info .detalle-poliza-noRiesgo');
-    const titleNumPoliza = document.querySelector('.detalle-poliza-info .detalle-poliza-numPoliza');
-
-    // Update data
-    breadcrumbsNumPoliza.textContent = poliza.no_poliza;
-    titleNombreRiesgo.textContent = poliza.nombre_riesgo;
-    titleNumPoliza.textContent = "No. de póliza: " + poliza.no_poliza;
-}
-
-
 // ─── SELECTORES ─────────────────────────────────────────────────────────────
 
 

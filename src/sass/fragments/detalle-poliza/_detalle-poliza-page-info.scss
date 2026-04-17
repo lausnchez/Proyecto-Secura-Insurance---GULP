@@ -20,7 +20,7 @@
         color: var(--text-label);
     }
 
-    .detalle-poliza-page-info__breadcrumbs .detalle-poliza-page-info__breadcrumbs__highlight{
+    #detalle-poliza-page-info__breadcrumbs__highlight{
         color: var(--base-primary);
     }
     
@@ -30,13 +30,13 @@
         gap: var(--spacing-xs)
     }
 
-    .detalle-poliza-page-info__title .detalle-poliza-noRiesgo{
+    #detalle-poliza-page-info__noRiesgo{
         @include subtitle();
         color: var(--text-title);
         height: 40px;
     }
 
-    .detalle-poliza-page-info__title .detalle-poliza-numPoliza{
+    #detalle-poliza-page-info__noPoliza{
         @include body();
         color: var(--text-label);
     }
@@ -45,15 +45,11 @@
         gap: var(--spacing-l);
         padding: var(--spacing-l) var(--spacing-m);
 
-        .detalle-poliza-page-info__breadcrumbs{
-            display: none;
-        }
-
-        .detalle-poliza-page-info__title-button{
+        .detalle-poliza-page-info__title{
             gap: 0px;
         }
 
-        .detalle-poliza-page-info__title-button h2{
+        #detalle-poliza-page-info__noRiesgo{
             @include bodyBold();    
             height: auto;
         }
