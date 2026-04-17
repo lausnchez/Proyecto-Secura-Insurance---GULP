@@ -64,8 +64,9 @@ function loadPolizasData() {
 }
 
 function retrieveCompletePolizaData(originalPoliza){
-    let poliza = original_renovaciones_data.find(p => p.no_poliza == originalPoliza.no_poliza);
-    
+    let poliza = original_renovaciones_data.filter(p => p.no_poliza == originalPoliza.no_poliza);
+    console.log("completeData");
+    console.log(poliza);
     return poliza;
 }
 
@@ -117,8 +118,8 @@ function validateRenovacionesContent(content) {
 
 // ─── SISTEMA DE ORDENACIÓN DE DATOS ─────────────────────────────────────────────────────────────
 
-function sortRenovaciones(propiedad, ascendente = true){
-    current_renovaciones_data.sort((a,b) =>{
+function sortRenovaciones(propiedad, ascendente = true, listado = current_renovaciones_data){
+    listado.sort((a,b) =>{
         let valorA = a[propiedad];
         let valorB = b[propiedad];
         

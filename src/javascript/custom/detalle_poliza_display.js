@@ -32,9 +32,9 @@ function updateDetallePolizaPageInfo(){
     const titleNumPoliza = document.querySelector('#detalle-poliza-page-info__noPoliza');
     
     // Update data
-    breadcrumbsNumPoliza.textContent = polizaActual.no_poliza;
-    titleNombreRiesgo.textContent = polizaActual.nombre_riesgo;
-    titleNumPoliza.textContent = "No. de póliza: " + polizaActual.no_poliza;
+    breadcrumbsNumPoliza.textContent = polizaActual[0].no_poliza;
+    titleNombreRiesgo.textContent = polizaActual[0].nombre_riesgo;
+    titleNumPoliza.textContent = "No. de póliza: " + polizaActual[0].no_poliza;
 }
 
 function updateDetallePolizaTitular(){
@@ -76,10 +76,11 @@ function updateDetallePolizaDireccionFacturacion(){
 function displayDetallePolizasUltimasCuotas(){
     const container = document.querySelector(".detalle-poliza-u_cuotas__table");
     container.innerHTML = '';
-    
-    for(let i = 0; i < 3; i++){
-        const newRow = displayRenovacionDetallePoliza(polizaActual);
-        container.appendChild(newRow);
 
-    }
+    sortRenovaciones('fecha_emision', false, polizaActual);
+    
+    polizaActual.forEach((poliza) =>{
+        const newRow = displayRenovacionDetallePoliza(poliza);
+        container.appendChild(newRow);
+    });
 }
