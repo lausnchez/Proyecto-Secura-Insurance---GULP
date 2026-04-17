@@ -38,11 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedPoliza = JSON.parse(localStorage.getItem('selectedPoliza'));
             let completeData = retrieveCompletePolizaData(selectedPoliza);
 
-            console.log("selectedPoliza");
-            console.log(selectedPoliza);
-            console.log("completeData");
-            console.log(completeData);
-
             if (completeData) {
                 displayDetallePoliza(completeData);
             }else console.log('No existe póliza');

@@ -1,0 +1,11 @@
+include ../../mixins/detalle-poliza/_detalle-poliza-card.pug
+include ../../mixins/detalle-poliza/_detalle-poliza-card-info-container.pug
+
+- var cardTitle = "Dirección de facturación"
+- var cardName = "facturacion"
+
++detalle-poliza-card(cardName, cardTitle)
+    +detalle-poliza-info-container(cardName, "direccion", "Dirección", "CP LLUIS COMPANYS Nº 6, CL")
+    +detalle-poliza-info-container(cardName, "numero", "Número", 71)
+    +detalle-poliza-info-container(cardName, "ciudad", "Ciudad", "Barcelona")
+    +detalle-poliza-info-container(cardName, "cp", "Código Postal", "09001")

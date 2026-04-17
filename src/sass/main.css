@@ -1321,6 +1321,19 @@ body.menu-open {
   flex-direction: column;
   gap: var(--spacing-xl);
 }
+.detalle-poliza-card .detalle-poliza__header-save-button {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  display: block;
+  transition: all 0.3s ease-in;
+}
+.detalle-poliza-card .detalle-poliza__header-save-button--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: none;
+}
 
 /** FRAGMENTS **/
 /** CSS LIBS **/
@@ -1962,7 +1975,7 @@ body.menu-open {
   color: var(--text-subtitle);
   color: var(--text-label);
 }
-.detalle-poliza-info .detalle-poliza-page-info__breadcrumbs .detalle-poliza-page-info__breadcrumbs__highlight {
+.detalle-poliza-info #detalle-poliza-page-info__breadcrumbs__highlight {
   color: var(--base-primary);
 }
 .detalle-poliza-info .detalle-poliza-page-info__title-button {
@@ -1970,7 +1983,7 @@ body.menu-open {
   flex-direction: column;
   gap: var(--spacing-xs);
 }
-.detalle-poliza-info .detalle-poliza-page-info__title .detalle-poliza-noRiesgo {
+.detalle-poliza-info #detalle-poliza-page-info__noRiesgo {
   font-family: var(--default-font-family);
   font-weight: 400;
   font-size: var(--typo-size-subtitle);
@@ -1979,7 +1992,7 @@ body.menu-open {
   color: var(--text-title);
   height: 40px;
 }
-.detalle-poliza-info .detalle-poliza-page-info__title .detalle-poliza-numPoliza {
+.detalle-poliza-info #detalle-poliza-page-info__noPoliza {
   font-family: var(--default-font-family);
   font-weight: 400;
   font-size: var(--typo-size-body);
@@ -1992,13 +2005,10 @@ body.menu-open {
     gap: var(--spacing-l);
     padding: var(--spacing-l) var(--spacing-m);
   }
-  .detalle-poliza-info .detalle-poliza-page-info__breadcrumbs {
-    display: none;
-  }
-  .detalle-poliza-info .detalle-poliza-page-info__title-button {
+  .detalle-poliza-info .detalle-poliza-page-info__title {
     gap: 0px;
   }
-  .detalle-poliza-info .detalle-poliza-page-info__title-button h2 {
+  .detalle-poliza-info #detalle-poliza-page-info__noRiesgo {
     font-family: var(--default-font-family);
     font-weight: 700;
     font-size: var(--typo-size-body);

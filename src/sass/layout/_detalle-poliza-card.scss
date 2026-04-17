@@ -28,4 +28,20 @@
         flex-direction: column;
         gap: var(--spacing-xl);
     }
+
+    .detalle-poliza__header-save-button{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        display: block;
+
+        transition: all 0.3s ease-in;
+    }
+
+    .detalle-poliza__header-save-button--hidden{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        display: none;
+    }
 }

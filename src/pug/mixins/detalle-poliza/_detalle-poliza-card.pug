@@ -8,7 +8,7 @@ mixin detalle-poliza-card(id, cardTitle)
             +general-update-button("Actualizar")(id=`detalle-poliza__header-update-${id}`)
         .detalle-poliza__contents
             block
-            +general-outline-button("Actualizar")(id=`detalle-poliza__header-save-${id}`)
+            +general-outline-button("Guardar cambios")(id=`detalle-poliza__header-save-${id}` class="detalle-poliza__header-save-button detalle-poliza__header-save-button--hidden")
             
 
         

@@ -99,6 +99,10 @@ function renovacionTagDisplay(renovacionState){
             icon: 'icon-close-red',
             textClass: 'base_body-tag--vencido'
         },
+        Expirada: {
+            icon: 'icon-close-red',
+            textClass: 'base_body-tag--vencido'
+        },
         Vigente: {
             icon: 'icon-check-green',
             textClass: 'base_body-tag--pagada'
