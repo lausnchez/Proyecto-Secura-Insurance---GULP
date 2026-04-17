@@ -1,0 +1,16 @@
+@use "../../helpers/font-mixins" as *;
+
+.detalle-poliza-u_cuotas__header{
+    border-bottom: 1px solid var(--general-gray);
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-m);
+    padding: 5px 16px;
+
+    .detalle-poliza-u_cuotas__header__comp{
+        @include bodyBold();
+        color: var(--text-subtitle);
+        width: var(--d-polizas-tabla-columns-width);
+        height: 19px;
+    }
+}

@@ -1,0 +1,12 @@
+@use "../../helpers/font-mixins" as *;
+
+.detalle-polizas__ultimas-cuotas{
+   display: flex;
+   flex-direction: column;
+   gap: var(--spacing-xl); 
+
+    .detalle-poliza-u_cuotas__title{
+        @include subtitle();
+        color: var(--text-title);
+    }
+}

@@ -78,6 +78,52 @@ function displayRenovacion(renovacionContents){
     return renovacionRow;
 }
 
+function displayRenovacionDetallePoliza(renovacionContents){
+    const renovacionData = validateRenovacionesContent(renovacionContents); // Validar datos previamente
+    
+    const renovacionRow = document.createElement('a');
+    renovacionRow.classList.add('detalle-poliza-ultimas-cuotas-row');    
+    
+    // d-poliza-cuotas__contenedor-title
+    // base_body
+    // d-poliza-cuotas__row__fechaEmision
+    
+    // Fecha emisión
+    const emision = document.createElement('div');
+    emision.classList.add('d-poliza-cuotas__contenedor');
+    emision.innerHTML = `
+    <span class='d-poliza-cuotas__contenedor-title base_body'>Fecha de emisión</span>
+    <span class='d-poliza-cuotas__row__content'>${renovacionData.fecha_contrato.toLocaleDateString('es-ES')}</span>
+    `;
+    renovacionRow.appendChild(emision);
+
+    // Periodo
+    const periodo = document.createElement('div');
+    periodo.classList.add('d-poliza__u-cuotas__contenedor');
+    periodo.innerHTML = `
+    <span class='d-poliza-cuotas__contenedor-title base_body'>Periodo</span>
+    <span class='d-poliza-cuotas__row__content'>${renovacionData.fecha_contrato.toLocaleDateString('es-ES')} - ${renovacionData.fecha_vencimiento.toLocaleDateString('es-ES')}</span>
+    `;
+    renovacionRow.appendChild(periodo);
+    
+    // Importe
+    const importeDiv = document.createElement('div');
+    importeDiv.classList.add('d-poliza__u-cuotas__contenedor');
+    importeDiv.classList.add('d-poliza__u-cuotas__contenedor--highlight');
+    importeDiv.innerHTML = `
+    <span class='d-poliza-cuotas__contenedor-title base_body'>Importe</span>
+    <span class='d-poliza-cuotas__row__content'>${renovacionData.importe}€</span>
+    `;
+
+    renovacionRow.appendChild(importeDiv);
+    
+    // Tag 
+    const tag = renovacionTagDisplay(renovacionData.estado);
+    renovacionRow.appendChild(tag);
+    
+    return renovacionRow;
+}
+
 /**
  * Devuelve la tag correspondiente al dato pasado por parámetro
  * y dato por el contenido de una renovación

@@ -1,0 +1,66 @@
+@use "../../helpers/mixins" as *;
+@use "../../helpers/variables" as *;
+@use "../../helpers/functions" as *;
+@use "../../helpers/font-mixins" as *;
+
+// TABLA
+.detalle-poliza-u_cuotas__table{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+
+    .detalle-poliza-u_cuotas__table__row{
+        background-color: white;
+    }
+}
+
+// ROW
+.detalle-poliza-ultimas-cuotas-row{
+    display: grid;
+    grid-template-columns: repeat(var(--d-polizas-tabla-columns), var(--d-polizas-tabla-columns-width));
+    justify-items: left;
+    align-items: center;
+    padding: var(--d-poliza-tabla-row-padding);
+    box-shadow: $d-poliza-tabla-row-box-shadow;
+    border-radius: var(--d-poliza-tabla-row-border-radius);
+    background-color: var(--d-poliza-tabla-row-background-color);
+    gap: var(--spacing-m);
+    transition: all 0.3s ease-in;
+    
+    .d-poliza-cuotas__contenedor{
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xxs);
+    }
+
+    .d-poliza__u-cuotas__contenedor--highlight{
+        @include bodyBold();
+    }
+
+    .d-poliza-cuotas__contenedor-title{
+        display: none;
+    }
+
+    // Datos de la póliza
+    .d-poliza-cuotas__row__content{
+        color: var(--d-poliza-tabla-row-data);
+    }
+
+    @include mobilexl{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: var(--d-poliza-tabla-row-mobile-gap);
+        padding: var(--d-poliza-tabla-row-mobile-padding);
+        
+        .d-poliza-cuotas__contenedor-title{
+            display: block;
+        }
+    }
+}
+
+.detalle-poliza-ultimas-cuotas-row:hover{
+    transform: translateY(-5px);
+    background-color: var(--base-bg-100);
+    box-shadow: $d-poliza-tabla-row-box-shadow-hover;
+}

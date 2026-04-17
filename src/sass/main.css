@@ -35,6 +35,7 @@
 /* Hero */
 /* Nav-Dropdown */
 /* Proximas Renovaciones Tabla */
+/* Detalle Póliza Tabla */
 /** Próximas Renovaciones Tag **/
 /* Cliente Potencial Card */
 /* Card Detalle Póliza */
@@ -106,6 +107,15 @@
   --clientes-potenciales-contents-gap: 20px;
   /* Card Detalle Póliza */
   --p-renovaciones-page-info-breadcrumbs-gap: 8px;
+  /* Proximas Renovaciones Tabla */
+  --p-renovaciones-contenedor-gap: 4px;
+  --d-polizas-tabla-columns: 4;
+  --d-polizas-tabla-columns-width: 240px;
+  --d-polizas-tabla-header-padding: 5px 16px 5px 40px;
+  --d-poliza-tabla-row-padding: 24px 16px 24px 16px;
+  --d-poliza-tabla-row-border-radius: 8px;
+  --d-poliza-tabla-row-mobile-gap: 16px;
+  --d-poliza-tabla-row-mobile-padding: 16px;
 }
 
 :root {
@@ -160,6 +170,7 @@
   --neutral-grey-25: #CDCDCD;
   --neutral-light: #FAFCFE;
   --gray-01: #B7CBD3;
+  --general-gray: #A7B8BF;
   --function-success: #3BD378;
   --function-error: #E75249;
   --information-text: #191C3D;
@@ -202,6 +213,8 @@
   --modal-pr-filtros-header-title-color: #161C1F;
   --modal-pr-filtros-filter-title-color: #161C1F;
   --detalles-poliza-card-box-shadow-color: #37464933;
+  --d-poliza-tabla-row-background-color: white;
+  --d-poliza-tabla-row-data: black;
 }
 
 /** CSS LIBS **/
@@ -2043,6 +2056,84 @@ body.menu-open {
   display: none;
 }
 
+.detalle-poliza-u_cuotas__header {
+  border-bottom: 1px solid var(--general-gray);
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-m);
+  padding: 5px 16px;
+}
+.detalle-poliza-u_cuotas__header .detalle-poliza-u_cuotas__header__comp {
+  font-family: var(--default-font-family);
+  font-weight: 700;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--text-subtitle);
+  width: var(--d-polizas-tabla-columns-width);
+  height: 19px;
+}
+
+/** CSS LIBS **/
+/** HELPERS **/
+.detalle-poliza-u_cuotas__table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+.detalle-poliza-u_cuotas__table .detalle-poliza-u_cuotas__table__row {
+  background-color: white;
+}
+
+.detalle-poliza-ultimas-cuotas-row {
+  display: grid;
+  grid-template-columns: repeat(var(--d-polizas-tabla-columns), var(--d-polizas-tabla-columns-width));
+  justify-items: left;
+  align-items: center;
+  padding: var(--d-poliza-tabla-row-padding);
+  box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-row-box-shadow);
+  border-radius: var(--d-poliza-tabla-row-border-radius);
+  background-color: var(--d-poliza-tabla-row-background-color);
+  gap: var(--spacing-m);
+  transition: all 0.3s ease-in;
+}
+.detalle-poliza-ultimas-cuotas-row .d-poliza-cuotas__contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+}
+.detalle-poliza-ultimas-cuotas-row .d-poliza__u-cuotas__contenedor--highlight {
+  font-family: var(--default-font-family);
+  font-weight: 700;
+  font-size: var(--typo-size-body);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+}
+.detalle-poliza-ultimas-cuotas-row .d-poliza-cuotas__contenedor-title {
+  display: none;
+}
+.detalle-poliza-ultimas-cuotas-row .d-poliza-cuotas__row__content {
+  color: var(--d-poliza-tabla-row-data);
+}
+@media (max-width: 767px) {
+  .detalle-poliza-ultimas-cuotas-row {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--d-poliza-tabla-row-mobile-gap);
+    padding: var(--d-poliza-tabla-row-mobile-padding);
+  }
+  .detalle-poliza-ultimas-cuotas-row .d-poliza-cuotas__contenedor-title {
+    display: block;
+  }
+}
+
+.detalle-poliza-ultimas-cuotas-row:hover {
+  transform: translateY(-5px);
+  background-color: var(--base-bg-100);
+  box-shadow: 0px 6px 16px var(--proximas-renovaciones-tabla-row-box-shadow-hover);
+}
+
 /** COMPONENTS **/
 /** CSS LIBS **/
 /** HELPERS **/
@@ -2403,4 +2494,18 @@ body.menu-open {
   width: 100%;
   -moz-column-gap: 20px;
        column-gap: 20px;
+}
+
+.detalle-polizas__ultimas-cuotas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+.detalle-polizas__ultimas-cuotas .detalle-poliza-u_cuotas__title {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: var(--typo-size-subtitle);
+  letter-spacing: var(--default-letter-spacing);
+  color: var(--text-subtitle);
+  color: var(--text-title);
 }/*# sourceMappingURL=main.css.map */

@@ -12,17 +12,6 @@ let personalInfo = {
     "d_ciudad" : "Madrid",
     "d_cp" : "28915" 
 };
-// let personalInfo = {
-//     "no_poliza": 75844689,
-//     "CIF": "H59721886",
-//     "nombre": "José Martínez",
-//     "d_fiscal": "Casanova 128",
-//     "estado_poliza": "Vigente",  // Preguntar a Ale
-//     "d_direccion" : "CP LLUIS COMPANYS Nº 6, CL",
-//     "d_numero" : "71",
-//     "d_ciudad" : "Barcelona",
-//     "d_cp" : "09001" 
-// };
 
 let polizaActual;
 
@@ -32,6 +21,7 @@ function displayDetallePoliza(poliza) {
     updateDetallePolizaPageInfo();  // Page Info
     updateDetallePolizaTitular();   // Titular
     updateDetallePolizaDireccionFacturacion();  // Dirección de facturación
+    displayDetallePolizasUltimasCuotas();   // Últimas cuotas
 
 }
 
@@ -81,4 +71,15 @@ function updateDetallePolizaDireccionFacturacion(){
     pi_numero.textContent =personalInfo.d_numero;
     pi_ciudad.textContent = personalInfo.d_ciudad;
     pi_cp.textContent = personalInfo.d_cp;
+}
+
+function displayDetallePolizasUltimasCuotas(){
+    const container = document.querySelector(".detalle-poliza-u_cuotas__table");
+    container.innerHTML = '';
+    
+    for(let i = 0; i < 3; i++){
+        const newRow = displayRenovacionDetallePoliza(polizaActual);
+        container.appendChild(newRow);
+
+    }
 }
