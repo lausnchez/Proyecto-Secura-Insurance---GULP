@@ -26,6 +26,7 @@
   --spacing-l: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-xxl: 2.5rem;
+  --spacing-48: 3rem;
   --spacing-88: 5.5rem;
 }
 
@@ -1217,6 +1218,21 @@ body.menu-open {
 }
 @media (max-width: 767px) {
   .homepage_contents, .pr-page_contents {
+    gap: var(--homepage-contents-mobile-gap);
+    padding: var(--homepage-contents-mobile-padding);
+  }
+}
+
+.homepage_contents--d-poliza {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-48);
+  padding: var(--homepage-contents-padding);
+  min-height: var(--homepage-contents-min-height);
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .homepage_contents--d-poliza {
     gap: var(--homepage-contents-mobile-gap);
     padding: var(--homepage-contents-mobile-padding);
   }
@@ -2485,6 +2501,15 @@ body.menu-open {
   justify-content: space-between;
   border-top: 1px solid var(--modal-pr-filtros-header-border-color);
   padding: 12px 40px;
+}
+
+.principal-section.detalle-polizas__personal-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  width: 100%;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 
 .detalle-polizas__principal-data {

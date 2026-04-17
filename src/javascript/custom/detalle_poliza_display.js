@@ -79,7 +79,7 @@ function displayDetallePolizasUltimasCuotas(){
 
     sortRenovaciones('fecha_emision', false, polizaActual);
     
-    polizaActual.forEach((poliza) =>{
+    polizaActual.slice(0,3).forEach((poliza) =>{
         const newRow = displayRenovacionDetallePoliza(poliza);
         container.appendChild(newRow);
     });

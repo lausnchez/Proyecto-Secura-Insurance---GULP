@@ -1,0 +1,13 @@
+include ../../mixins/detalle-poliza/_detalle-poliza-card.pug
+include ../../mixins/detalle-poliza/_detalle-poliza-card-info-container.pug
+
+- var cardTitle = "Dir. de correspondencia"
+- var cardName = "dir-corresp"
+
++detalle-poliza-card(cardName, cardTitle)
+    +detalle-poliza-info-container(cardName, "datos", "Datos", "datos")
+    +detalle-poliza-info-container(cardName, "poblacion", "Población", "poblacion")
+    +detalle-poliza-info-container(cardName, "cp", "Código postal", "00000")
+    +detalle-poliza-info-container(cardName, "direccion", "Dirección", "direccion")
+    +detalle-poliza-info-container(cardName, "numero", "Número", "0")
+    +detalle-poliza-info-container(cardName, "aclarador", "Aclarador", "BAJO")

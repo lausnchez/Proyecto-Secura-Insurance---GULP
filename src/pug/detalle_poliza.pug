@@ -7,10 +7,13 @@ block vars
 
 block content
     include components/detalle_poliza/_detalle-poliza-page-info.pug
-    .homepage_contents
+    .homepage_contents--d-poliza
         section.principal-section.detalle-polizas__principal-data
             include components/detalle_poliza/_detalle-poliza-personal-info.pug
             include components/detalle_poliza/_detalle-poliza-direccion-facturacion.pug
         section.principal-section.detalle-polizas__ultimas-cuotas
             include components/detalle_poliza/_detalle-poliza-ultimas-cuotas.pug
         section.principal-section.detalle-polizas__personal-data
+            include components/detalle_poliza/_detalle-poliza-metodo-pago.pug
+            include components/detalle_poliza/_detalle-poliza-dir-correspondencia.pug
+            include components/detalle_poliza/_detalle-poliza-contacto.pug

@@ -16,3 +16,18 @@
         padding: var(--homepage-contents-mobile-padding);
     }
 }
+
+.homepage_contents--d-poliza{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-48);
+    padding: var(--homepage-contents-padding);
+    min-height: var(--homepage-contents-min-height);
+    
+    align-items: center;
+
+    @include mobilexl{
+        gap: var(--homepage-contents-mobile-gap);
+        padding: var(--homepage-contents-mobile-padding);
+    }
+}
