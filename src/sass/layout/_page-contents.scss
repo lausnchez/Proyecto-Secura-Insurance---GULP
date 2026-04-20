@@ -27,7 +27,7 @@
     align-items: center;
 
     @include mobilexl{
-        gap: var(--homepage-contents-mobile-gap);
+        gap: var(--spacing-xl);
         padding: var(--homepage-contents-mobile-padding);
     }
 }

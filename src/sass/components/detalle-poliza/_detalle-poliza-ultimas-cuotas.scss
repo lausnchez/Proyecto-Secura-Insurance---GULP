@@ -1,4 +1,5 @@
 @use "../../helpers/font-mixins" as *;
+@use "../../helpers/mixins" as *;
 
 .detalle-polizas__ultimas-cuotas{
    display: flex;
@@ -8,5 +9,13 @@
     .detalle-poliza-u_cuotas__title{
         @include subtitle();
         color: var(--text-title);
+    }
+
+    @include mobilexl{
+        gap: var(--spacing-m);
+
+        .d-poliza-cuotas__contenedor__emision{
+            @include bodyBold();
+        }
     }
 }

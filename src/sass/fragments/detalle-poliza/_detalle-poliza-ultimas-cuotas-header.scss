@@ -1,4 +1,5 @@
 @use "../../helpers/font-mixins" as *;
+@use "../../helpers/mixins" as *;
 
 .detalle-poliza-u_cuotas__header{
     border-bottom: 1px solid var(--general-gray);
@@ -12,5 +13,9 @@
         color: var(--text-subtitle);
         width: var(--d-polizas-tabla-columns-width);
         height: 19px;
+    }
+
+    @include mobilexl{
+        display: none;
     }
 }

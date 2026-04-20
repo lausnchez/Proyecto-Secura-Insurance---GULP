@@ -51,7 +51,7 @@
         flex-direction: column;
         align-items: start;
         gap: var(--d-poliza-tabla-row-mobile-gap);
-        padding: var(--d-poliza-tabla-row-mobile-padding);
+        padding: var(--d-poliza-tabla-row-mobile-padding-y) var(--d-poliza-tabla-row-mobile-padding-x);
         
         .d-poliza-cuotas__contenedor-title{
             display: block;

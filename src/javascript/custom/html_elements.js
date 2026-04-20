@@ -91,6 +91,7 @@ function displayRenovacionDetallePoliza(renovacionContents){
     // Fecha emisión
     const emision = document.createElement('div');
     emision.classList.add('d-poliza-cuotas__contenedor');
+    emision.classList.add('d-poliza-cuotas__contenedor__emision');
     emision.innerHTML = `
     <span class='d-poliza-cuotas__contenedor-title base_body'>Fecha de emisión</span>
     <span class='d-poliza-cuotas__row__content'>${renovacionData.fecha_contrato.toLocaleDateString('es-ES')}</span>

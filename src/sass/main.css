@@ -116,7 +116,8 @@
   --d-poliza-tabla-row-padding: 24px 16px 24px 16px;
   --d-poliza-tabla-row-border-radius: 8px;
   --d-poliza-tabla-row-mobile-gap: 16px;
-  --d-poliza-tabla-row-mobile-padding: 16px;
+  --d-poliza-tabla-row-mobile-padding-x: 16px;
+  --d-poliza-tabla-row-mobile-padding-y: 12px;
 }
 
 :root {
@@ -1233,7 +1234,7 @@ body.menu-open {
 }
 @media (max-width: 767px) {
   .homepage_contents--d-poliza {
-    gap: var(--homepage-contents-mobile-gap);
+    gap: var(--spacing-xl);
     padding: var(--homepage-contents-mobile-padding);
   }
 }
@@ -2113,6 +2114,11 @@ body.menu-open {
   width: var(--d-polizas-tabla-columns-width);
   height: 19px;
 }
+@media (max-width: 767px) {
+  .detalle-poliza-u_cuotas__header {
+    display: none;
+  }
+}
 
 /** CSS LIBS **/
 /** HELPERS **/
@@ -2161,7 +2167,7 @@ body.menu-open {
     flex-direction: column;
     align-items: start;
     gap: var(--d-poliza-tabla-row-mobile-gap);
-    padding: var(--d-poliza-tabla-row-mobile-padding);
+    padding: var(--d-poliza-tabla-row-mobile-padding-y) var(--d-poliza-tabla-row-mobile-padding-x);
   }
   .detalle-poliza-ultimas-cuotas-row .d-poliza-cuotas__contenedor-title {
     display: block;
@@ -2570,4 +2576,16 @@ body.menu-open {
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
   color: var(--text-title);
+}
+@media (max-width: 767px) {
+  .detalle-polizas__ultimas-cuotas {
+    gap: var(--spacing-m);
+  }
+  .detalle-polizas__ultimas-cuotas .d-poliza-cuotas__contenedor__emision {
+    font-family: var(--default-font-family);
+    font-weight: 700;
+    font-size: var(--typo-size-body);
+    letter-spacing: var(--default-letter-spacing);
+    color: var(--text-subtitle);
+  }
 }/*# sourceMappingURL=main.css.map */
