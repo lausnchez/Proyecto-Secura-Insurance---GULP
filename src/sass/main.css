@@ -2097,6 +2097,17 @@ body.menu-open {
   display: none;
 }
 
+.detalle-poliza-info-container--hidden {
+  display: none;
+}
+@media (max-width: 767px) {
+  .detalle-poliza-info-container--hidden {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+  }
+}
+
 .detalle-poliza-u_cuotas__header {
   border-bottom: 1px solid var(--general-gray);
   display: flex;
@@ -2133,7 +2144,7 @@ body.menu-open {
 
 .detalle-poliza-ultimas-cuotas-row {
   display: grid;
-  grid-template-columns: repeat(var(--d-polizas-tabla-columns), var(--d-polizas-tabla-columns-width));
+  grid-template-columns: repeat(var(--d-polizas-tabla-columns), minmax(0, var(--d-polizas-tabla-columns-width)));
   justify-items: left;
   align-items: center;
   padding: var(--d-poliza-tabla-row-padding);

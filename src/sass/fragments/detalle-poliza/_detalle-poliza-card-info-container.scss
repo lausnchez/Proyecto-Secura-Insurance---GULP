@@ -1,4 +1,5 @@
 @use "../../helpers/font-mixins" as *;
+@use "../../helpers/mixins" as *;
 
 .detalle-poliza-info-container{
     display: flex;
@@ -17,5 +18,15 @@
 
     .detalle-poliza-info-container__input{
         display: none;
+    }    
+}
+
+.detalle-poliza-info-container--hidden{
+    display: none;
+
+    @include mobilexl{
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xxs);
     }
 }
