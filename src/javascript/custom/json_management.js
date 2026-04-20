@@ -55,7 +55,6 @@ function loadPolizasData() {
         return response.json();
     })
     .then(data => {
-        console.log('Datos de pólizas cargados:', data.length);
         return data;
     })
     .catch(error => {
@@ -65,8 +64,6 @@ function loadPolizasData() {
 
 function retrieveCompletePolizaData(originalPoliza){
     let poliza = original_renovaciones_data.filter(p => p.no_poliza == originalPoliza.no_poliza);
-    console.log("completeData");
-    console.log(poliza);
     return poliza;
 }
 

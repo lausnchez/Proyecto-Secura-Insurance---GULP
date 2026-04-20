@@ -14,13 +14,6 @@ const filter_estado = document.querySelector('#modal-filtros-pr-filters__estado-
 
 // ─── PAGINACIÓN ─────────────────────────────────────────────────────────────
 
-function comprobarValoresPaginacion(){
-    console.log('Current page: ' + renovacionesCurrentPage);
-    console.log('Max pages: ' + renovacionesMaxPages);
-    console.log('Per page: ' + renovacionesPerPage);
-    console.log('');
-}
-
 function nextPage(){
     if(renovacionesCurrentPage < renovacionesMaxPages){
         renovacionesCurrentPage++;
@@ -258,8 +251,6 @@ function updateFiltersTags(){
     filterTagContainer.innerHTML = '';
     filters.forEach((filter) =>{ 
         const [key, value] = Object.entries(filter)[0];
-        console.log("key: " + key);
-        console.log("value: " + value);
         filterTagContainer.appendChild(filterTagDisplay(key, value));
     });
 }

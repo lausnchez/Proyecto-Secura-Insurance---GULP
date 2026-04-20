@@ -17,7 +17,7 @@
 // ROW
 .detalle-poliza-ultimas-cuotas-row{
     display: grid;
-    grid-template-columns: repeat(var(--d-polizas-tabla-columns), var(--d-polizas-tabla-columns-width));
+    grid-template-columns: repeat(var(--d-polizas-tabla-columns), minmax(0, var(--d-polizas-tabla-columns-width)));
     justify-items: left;
     align-items: center;
     padding: var(--d-poliza-tabla-row-padding);
