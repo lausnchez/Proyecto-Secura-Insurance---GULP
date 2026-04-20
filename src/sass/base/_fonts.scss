@@ -58,6 +58,7 @@
 .icon-user{@include icon(var(--icon-user));}
 .icon-arrow-down{@include icon(var(--icon-arrow-down))}
 .icon-edit{@include icon(var(--icon-edit), var(--base-primary))}
+.icon-edit-red{@include icon(var(--icon-edit), var(--red-icon-active))}
 
 // Font Imports
 //---------------------------------------------------------------------------------

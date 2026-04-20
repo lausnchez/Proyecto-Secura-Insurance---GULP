@@ -22,6 +22,7 @@ function displayDetallePoliza(poliza) {
     updateDetallePolizaTitular();   // Titular
     updateDetallePolizaDireccionFacturacion();  // Dirección de facturación
     displayDetallePolizasUltimasCuotas();   // Últimas cuotas
+    updateMobileIcons();    // Icons en mobile
 
 }
 
@@ -83,4 +84,32 @@ function displayDetallePolizasUltimasCuotas(){
         const newRow = displayRenovacionDetallePoliza(poliza);
         container.appendChild(newRow);
     });
+}
+
+// FUNCIONES DE MOBILE
+// ------------------------------------------------
+function updateMobileIcons(){
+    // Recoger los elementos
+    const icons = document.querySelectorAll(".general-update-button .general-update-button__icon");
+    const mobileClass = 'icon-edit-red';
+    const desktopClass = 'icon-edit';
+
+    const mobileVariable = getComputedStyle(document.documentElement).getPropertyValue("--tablet");
+    const mobileScreenWidth = parseInt(mobileVariable);
+
+    // Cambiar de clase según el tamaño de la ventana
+    function updateLayout() {
+        icons.forEach((icon)=>{
+            if (window.innerWidth <= mobileScreenWidth) {
+                icon.classList.remove(desktopClass);
+                icon.classList.add(mobileClass);
+            } else {
+                icon.classList.remove(mobileClass);
+                icon.classList.add(desktopClass);
+            }
+        });
+    }
+
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
 }

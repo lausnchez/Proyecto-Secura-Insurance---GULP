@@ -188,6 +188,7 @@
   --base-greyscale-600: #596f76;
   --text-body-default: #4A4A68;
   --main-background-color: #F7F9FA;
+  --red-icon-active: #ED0000;
   --select-default-border: #B7CBD3;
   --header-background-color: #FFFFFF;
   --header-dropdown-icon-content-text: #374649;
@@ -764,6 +765,13 @@ template {
   font-family: var(--icon-font-family);
   content: var(--icon-edit);
   color: var(--base-primary);
+  font-size: toRem(var(--icon-size));
+}
+
+.icon-edit-red::before {
+  font-family: var(--icon-font-family);
+  content: var(--icon-edit);
+  color: var(--red-icon-active);
   font-size: toRem(var(--icon-size));
 }
 
@@ -1493,6 +1501,12 @@ body.menu-open {
 
 .general-update-button:hover .general-update-button__textContent {
   text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .detalle-poliza__variant-update-button .general-update-button__textContent {
+    color: var(--red-icon-active);
+  }
 }
 
 /** CSS LIBS **/
