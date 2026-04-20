@@ -1579,6 +1579,7 @@ body.menu-open {
     flex-direction: column;
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     top: var(--dropdown-mobile-top-position);
     height: calc(100vh - var(--dropdown-mobile-top-position));
     border-radius: var(--header-submenu-dropdown-mobilexl-border-radius);

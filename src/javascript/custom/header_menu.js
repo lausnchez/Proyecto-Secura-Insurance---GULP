@@ -134,7 +134,8 @@ function showBurgerMobileSubmenu() {
 //---------------------------------------------------------------------------------
 headerLanguageButton?.addEventListener("click", showLanguageMobileSubmenu);
 
-function showLanguageMobileSubmenu() {
+function showLanguageMobileSubmenu(event) {
+  event?.preventDefault();
   // Mostrar menú
   headerLanguageMenu?.classList.toggle(classToggle);
 }
