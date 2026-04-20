@@ -90,7 +90,7 @@ function displayDetallePolizasUltimasCuotas(){
 // ------------------------------------------------
 function updateMobileIcons(){
     // Recoger los elementos
-    const icons = document.querySelectorAll(".general-update-button .general-update-button__icon");
+    const icons = document.querySelectorAll(".detalle-poliza__variant-update-button .general-update-button__icon");
     const mobileClass = 'icon-edit-red';
     const desktopClass = 'icon-edit';
 
