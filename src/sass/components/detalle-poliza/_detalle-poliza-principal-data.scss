@@ -1,7 +1,15 @@
+@use "../../helpers/mixins" as *;
+
 .detalle-polizas__principal-data{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     width: 100%;
     column-gap: 20px;
+
+    @include mobilexl{
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
 }

@@ -1,10 +1,10 @@
-include ../../mixins/detalle-poliza/_detalle-poliza-card.pug
+include ../../mixins/detalle-poliza/_detalle-poliza-card-variant.pug
 include ../../mixins/detalle-poliza/_detalle-poliza-card-info-container.pug
 
 - var cardTitle = "Contacto"
 - var cardName = "contacto"
 
-+detalle-poliza-card(cardName, cardTitle)
++detalle-poliza-card-variant(cardName, cardTitle)
     +detalle-poliza-info-container(cardName, "correo-principal", "Correo Principal", "email@gmail.com")
     +detalle-poliza-info-container(cardName, "correo-secundario", "Correo 2", "email2@gmail.com")
     +detalle-poliza-info-container(cardName, "tlf-principal", "Teléfono Principal", "+34 000 000 000")

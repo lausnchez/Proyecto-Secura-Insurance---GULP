@@ -4,9 +4,16 @@
     background-color: transparent;
     gap: 10px;
     padding: 0px;
+    height: auto;
 
     .general-update-button__textContent{
         @include bodyBold();
         color: var(--base-primary);
+    }
+}
+
+.general-update-button:hover{
+    .general-update-button__textContent{
+        text-decoration: underline;
     }
 }

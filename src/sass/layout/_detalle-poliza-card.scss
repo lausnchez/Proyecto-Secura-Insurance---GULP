@@ -1,5 +1,6 @@
 @use "../helpers/font-mixins" as *;
 @use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
 
 .detalle-poliza-card{
     background-color: white;
@@ -39,6 +40,28 @@
     }
 
     .detalle-poliza__header-save-button--hidden{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        display: none;
+    }
+
+    @include mobilexl{
+        gap: var(--spacing-m); // Preguntar a Alexandra
+        padding: var(--spacing-m);
+
+        .detalle-poliza__contents{
+            gap: var(--spacing-m);
+        }
+    }
+
+    // DETALLES DE LA CARD VARIANT
+    .detalle-poliza__contents__edit{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .detalle-poliza__contents__edit--hidden{
         opacity: 0;
         visibility: hidden;
         pointer-events: none;

@@ -1,10 +1,10 @@
-include ../../mixins/detalle-poliza/_detalle-poliza-card.pug
+include ../../mixins/detalle-poliza/_detalle-poliza-card-variant.pug
 include ../../mixins/detalle-poliza/_detalle-poliza-card-info-container.pug
 
 - var cardTitle = "Método de pago"
 - var cardName = "metodo-pago"
 
-+detalle-poliza-card(cardName, cardTitle)
++detalle-poliza-card-variant(cardName, cardTitle)
     +detalle-poliza-info-container(cardName, "nombre", "Nombre", "GRUP SISQUELLA")
     +detalle-poliza-info-container(cardName, "CIF", "CIF", "xxxxxxxxx")
     +detalle-poliza-info-container(cardName, "tipo-cobro", "Tipo de cobro", "DOMICILIADO Estándar (7 días)")

@@ -1363,6 +1363,25 @@ body.menu-open {
   pointer-events: none;
   display: none;
 }
+@media (max-width: 767px) {
+  .detalle-poliza-card {
+    gap: var(--spacing-m);
+    padding: var(--spacing-m);
+  }
+  .detalle-poliza-card .detalle-poliza__contents {
+    gap: var(--spacing-m);
+  }
+}
+.detalle-poliza-card .detalle-poliza__contents__edit {
+  display: flex;
+  flex-direction: row;
+}
+.detalle-poliza-card .detalle-poliza__contents__edit--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: none;
+}
 
 /** FRAGMENTS **/
 /** CSS LIBS **/
@@ -1460,6 +1479,7 @@ body.menu-open {
   background-color: transparent;
   gap: 10px;
   padding: 0px;
+  height: auto;
 }
 .general-update-button .general-update-button__textContent {
   font-family: var(--default-font-family);
@@ -1468,6 +1488,10 @@ body.menu-open {
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
   color: var(--base-primary);
+}
+
+.general-update-button:hover .general-update-button__textContent {
+  text-decoration: underline;
 }
 
 /** CSS LIBS **/
@@ -2511,6 +2535,12 @@ body.menu-open {
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
+@media (max-width: 767px) {
+  .principal-section.detalle-polizas__personal-data {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .detalle-polizas__principal-data {
   display: grid;
@@ -2519,6 +2549,13 @@ body.menu-open {
   width: 100%;
   -moz-column-gap: 20px;
        column-gap: 20px;
+}
+@media (max-width: 767px) {
+  .detalle-polizas__principal-data {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
 }
 
 .detalle-polizas__ultimas-cuotas {
