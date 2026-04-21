@@ -15,6 +15,7 @@ let personalInfo = {
 
 let polizaActual;
 
+
 function displayDetallePoliza(poliza) {
     polizaActual = poliza;
     
@@ -23,6 +24,14 @@ function displayDetallePoliza(poliza) {
     updateDetallePolizaDireccionFacturacion();  // Dirección de facturación
     displayDetallePolizasUltimasCuotas();   // Últimas cuotas
     updateMobileIcons();    // Icons en mobile
+    addStateClassControl(); // Event listeners para el modo edición
+    
+    // Abrir edición en cada card individual
+    toggleUpdateInputs('personalInfo');
+    toggleUpdateInputs('facturacion');
+    toggleUpdateInputsVariant('metodo-pago');
+    toggleUpdateInputsVariant('dir-corresp');
+    toggleUpdateInputsVariant('contacto');
 
 }
 
@@ -86,6 +95,183 @@ function displayDetallePolizasUltimasCuotas(){
     });
 }
 
+function addStateClassControl(){
+    const stateClass = "detalle-poliza-card--editMode";
+
+    const updateButtons = document.querySelectorAll('.detalle-poliza__update-button');
+    const saveButtons = document.querySelectorAll('.detalle-poliza__header-save-button, .detalle-poliza__save-button');
+
+    // Botones de Update
+    updateButtons.forEach((updateButton) =>{
+        updateButton.addEventListener('click', (event)=>{
+            const card = event.currentTarget.closest('.detalle-poliza-card');
+            if(!card) return;
+            const cardID = card.id.replace('detalle-poliza-card-', '');
+
+            syncCardEditableFields(card, 'to-inputs');
+            card.classList.add(stateClass);
+
+            if(event.currentTarget.classList.contains('detalle-poliza__variant-update-button')){
+                toggleUpdateInputsVariant(cardID);
+            }
+            else{
+                toggleUpdateInputs(cardID);
+            }
+            
+        });
+    });
+
+    // Botones de Save
+    saveButtons.forEach((saveButton) =>{
+        saveButton.addEventListener('click', (event)=>{
+            const card = event.currentTarget.closest('.detalle-poliza-card');
+            if(!card) return;
+            const cardID = card.id.replace('detalle-poliza-card-', '');
+
+            syncCardEditableFields(card, 'to-content');
+            card.classList.remove(stateClass);
+
+            if(event.currentTarget.classList.contains('detalle-poliza__variant-save-button')){
+                toggleUpdateInputsVariant(cardID);
+            }
+            else{
+                toggleUpdateInputs(cardID);
+            }
+        });
+    });
+}
+
+function syncCardEditableFields(card, mode){
+    const infoContainers = card.querySelectorAll('.detalle-poliza-info-container');
+
+    infoContainers.forEach((container)=>{
+        const title = container.querySelector('.detalle-poliza-info-container__title');
+        const content = container.querySelector('.detalle-poliza-info-container__content');
+        const input = container.querySelector('.detalle-poliza-info-container__input');
+
+        if(!input || !content) return;
+
+        if(mode === 'to-inputs'){
+            // El titulo acompaña al input como referencia del campo
+            if(title) input.setAttribute('placeholder', title.textContent.trim());
+
+            const currentValue = content.textContent.trim();
+            input.value = currentValue;
+            return;
+        }
+
+        if(mode === 'to-content'){
+            content.textContent = input.value.trim();
+        }
+    });
+}
+
+function toggleUpdateInputs(cardID){
+    const stateClass = "detalle-poliza-card--editMode";
+    const hiddenClass = "detalle-poliza-info-container__content--hidden";
+    const hiddenUpdateClass = "detalle-poliza__header-save-button--hidden";
+    const hiddenSaveClass = "detalle-poliza__header-save-button--hidden";
+
+    const card = document.querySelector('#detalle-poliza-card-' + cardID);
+    const updateButton = document.querySelector('#detalle-poliza__header-update-' + cardID);
+    const saveButton = document.querySelector('#detalle-poliza__header-save-' + cardID);
+
+    const inputs = document.querySelectorAll(`#detalle-poliza-card-${cardID} .detalle-poliza-info-container__input`);
+    const labels = document.querySelectorAll(`#detalle-poliza-card-${cardID} .detalle-poliza-info-container__content`);
+    
+    if(!card) return false; // Comprobamos que la card existe
+
+    // Estado de edición
+    if(card.classList.contains(stateClass)){
+        // Labels
+        labels.forEach((label) =>{
+            label.classList.add(hiddenClass);
+        });
+        // Inputs
+        inputs.forEach((input)=>{
+            input.classList.remove(hiddenClass);
+        });
+        // Buttons
+        if(updateButton) updateButton.classList.add(hiddenUpdateClass);
+        if(saveButton) saveButton.classList.remove(hiddenSaveClass);
+    }
+    // Estado de visualización
+    else{
+        // Labels
+        labels.forEach((label) =>{
+            label.classList.remove(hiddenClass);
+        });
+        // Inputs
+        inputs.forEach((input)=>{
+            input.classList.add(hiddenClass);
+        });
+        // Buttons
+        if(updateButton) updateButton.classList.remove(hiddenUpdateClass);
+        if(saveButton) saveButton.classList.add(hiddenSaveClass); 
+    }
+}
+
+function toggleUpdateInputsVariant(cardID){
+    const stateClass = "detalle-poliza-card--editMode";
+    const hiddenClass = "detalle-poliza-info-container__content--hidden";
+    const hiddenUpdateClass = "detalle-poliza__contents__edit--hidden";
+    const hiddenSaveClass = "detalle-poliza__contents__edit--hidden";
+
+    const card = document.querySelector('#detalle-poliza-card-' + cardID);
+    const updateButton = document.querySelector('#detalle-poliza__variant-update-button-' + cardID);
+    const saveButton = document.querySelector('#detalle-poliza__variant-save-button-' + cardID);
+
+    const inputs = document.querySelectorAll(`#detalle-poliza-card-${cardID} .detalle-poliza-info-container__input`);
+    const labels = document.querySelectorAll(`#detalle-poliza-card-${cardID} .detalle-poliza-info-container__content`);
+    
+    if(!card) return false; // Comprobamos que la card existe
+
+    // Estado de edición
+    if(card.classList.contains(stateClass)){
+        // Labels
+        labels.forEach((label) =>{
+            label.classList.add(hiddenClass);
+        });
+        // Inputs
+        inputs.forEach((input)=>{
+            input.classList.remove(hiddenClass);
+        });
+        // Buttons
+        if(updateButton) updateButton.classList.add(hiddenUpdateClass);
+        if(saveButton) saveButton.classList.remove(hiddenSaveClass);
+    }
+    // Estado de visualización
+    else{
+        // Labels
+        labels.forEach((label) =>{
+            label.classList.remove(hiddenClass);
+        });
+        // Inputs
+        inputs.forEach((input)=>{
+            input.classList.add(hiddenClass);
+        });
+        // Buttons
+        if(updateButton) updateButton.classList.remove(hiddenUpdateClass);
+        if(saveButton) saveButton.classList.add(hiddenSaveClass); 
+    }
+}
+
+function openUpdateInputsDirFacturacion(){
+
+}
+
+function openUpdateInputsMetodoPago(){
+    
+}
+
+function openUpdateInputsDirCorrespondencia(){
+
+}
+
+function openUpdateInputsContacto(){
+
+}
+
 // FUNCIONES DE MOBILE
 // ------------------------------------------------
 function updateMobileIcons(){
@@ -109,7 +295,7 @@ function updateMobileIcons(){
             }
         });
     }
-
+    
     updateLayout();
     window.addEventListener("resize", updateLayout);
 }

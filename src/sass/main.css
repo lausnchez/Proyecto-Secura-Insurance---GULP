@@ -2117,7 +2117,7 @@ body.menu-open {
   color: var(--text-subtitle);
   color: var(--text-title);
 }
-.detalle-poliza-info-container .detalle-poliza-info-container__input {
+.detalle-poliza-info-container .detalle-poliza-info-container__content--hidden {
   display: none;
 }
 
