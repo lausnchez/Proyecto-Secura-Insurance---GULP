@@ -2514,7 +2514,6 @@ body.menu-open {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  height: 100%;
   gap: 32px;
 }
 #modal-pr-filtros-contents .modal-filtros-pr-filters > div {
@@ -2533,7 +2532,7 @@ body.menu-open {
 }
 #modal-pr-filtros-contents .modal-filtros-pr-filters__fecha-validez__selectors {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
