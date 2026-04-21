@@ -2031,6 +2031,11 @@ body.menu-open {
   letter-spacing: var(--default-letter-spacing);
   color: var(--text-subtitle);
 }
+@media (max-width: 767px) {
+  .p-renovaciones__paginacion {
+    flex-direction: column;
+  }
+}
 
 .detalle-poliza-info {
   background-color: var(--proximas-renovaciones-page-info-bg-color);
@@ -2479,8 +2484,10 @@ body.menu-open {
   min-height: 100vh;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  min-width: 496px;
+  width: min(496px, 100vw);
+  max-width: 100vw;
   background-color: white;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2515,6 +2522,7 @@ body.menu-open {
   flex-direction: column;
   width: 100%;
   gap: 8px;
+  flex-wrap: wrap;
 }
 #modal-pr-filtros-contents .modal__label {
   font-family: var(--default-font-family);
@@ -2525,13 +2533,13 @@ body.menu-open {
 }
 #modal-pr-filtros-contents .modal-filtros-pr-filters__fecha-validez__selectors {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: -moz-fit-content;
   height: fit-content;
-  gap: 24px;
+  gap: var(--spacing-s);
 }
 #modal-pr-filtros-contents .modal-filters__fecha-validez__input {
   flex: 1;
@@ -2544,6 +2552,7 @@ body.menu-open {
 #modal-pr-filtros-contents .modal-filtros-pr-filters__importe_minimo, #modal-pr-filtros-contents .modal-filtros-pr-filters__importe_maximo {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
@@ -2559,6 +2568,7 @@ body.menu-open {
 #modal-pr-filtros-contents #modal-filtros-pr-filters__importe-min-input,
 #modal-pr-filtros-contents #modal-filtros-pr-filters__importe-max-input {
   flex: 1;
+  min-width: 0;
 }
 #modal-pr-filtros-contents .modal-filtros-pr-buttons {
   display: flex;
@@ -2566,6 +2576,37 @@ body.menu-open {
   justify-content: space-between;
   border-top: 1px solid var(--modal-pr-filtros-header-border-color);
   padding: 12px 40px;
+}
+@media (max-width: 767px) {
+  #modal-pr-filtros-contents {
+    width: 100vw;
+  }
+  #modal-pr-filtros-contents .modal-filtros-pr-filters__fecha-validez__selectors {
+    justify-content: flex-start;
+  }
+  #modal-pr-filtros-contents .modal-filters__fecha-validez__input {
+    width: 100%;
+  }
+  #modal-pr-filtros-contents .modal-filtros-pr-header,
+  #modal-pr-filtros-contents .modal-filtros-pr-filters,
+  #modal-pr-filtros-contents .modal-filtros-pr-buttons {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  #modal-pr-filtros-contents .modal-filtros-pr-filters__importe_minimo,
+  #modal-pr-filtros-contents .modal-filtros-pr-filters__importe_maximo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #modal-pr-filtros-contents .modal-filtros-pr-filters__importe_minimo label,
+  #modal-pr-filtros-contents .modal-filtros-pr-filters__importe_maximo label {
+    min-width: 0;
+    width: 100%;
+  }
+  #modal-pr-filtros-contents .modal-filtros-pr-buttons {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
 }
 
 .principal-section.detalle-polizas__personal-data {

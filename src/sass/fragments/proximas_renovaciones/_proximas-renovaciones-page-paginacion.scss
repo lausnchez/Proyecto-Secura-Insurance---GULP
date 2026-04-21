@@ -1,4 +1,5 @@
 @use "../../helpers/font-mixins" as *;
+@use "../../helpers/mixins" as *;
 
 .p-renovaciones__paginacion{
     display: flex;
@@ -26,5 +27,9 @@
 
     .p-renovaciones__paginacion__totalPages{
         @include bodyBold;
+    }
+
+    @include mobilexl{
+        flex-direction: column;
     }
 }
