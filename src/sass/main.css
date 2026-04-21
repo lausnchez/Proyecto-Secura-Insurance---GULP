@@ -1652,6 +1652,15 @@ body.menu-open {
     width: -moz-fit-content;
     width: fit-content;
   }
+  .header__mobile-burger-submenu__language-dropdown > a.header__submenu__item {
+    height: auto;
+    padding: 8px;
+    text-align: center;
+    display: flex;
+    gap: 0px;
+    min-width: 0;
+    gap: 8px;
+  }
 }
 
 /** CSS LIBS **/
