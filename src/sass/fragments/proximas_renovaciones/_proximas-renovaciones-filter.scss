@@ -81,6 +81,7 @@
 
     @include mobilexl{
         padding-top: 24px;
+        gap: 0px;
 
         .p-renovaciones__filter__num-selector{
             flex-direction: column-reverse;

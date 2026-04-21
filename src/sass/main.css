@@ -1483,6 +1483,11 @@ body.menu-open {
   height: 16px;
   width: 16px;
 }
+@media (max-width: 767px) {
+  .general-filter-tag {
+    margin-bottom: var(--spacing-l);
+  }
+}
 
 .general-update-button {
   background-color: transparent;
@@ -1954,6 +1959,7 @@ body.menu-open {
 @media (max-width: 767px) {
   .proximas-renovaciones__filter {
     padding-top: 24px;
+    gap: 0px;
   }
   .proximas-renovaciones__filter .p-renovaciones__filter__num-selector {
     flex-direction: column-reverse;
