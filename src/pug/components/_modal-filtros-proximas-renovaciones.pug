@@ -32,16 +32,24 @@ include ../mixins/generales/_general-outline-button.pug
                 for='modal-filtros-pr-filters__fecha-contrato-input'
             ) Fecha de validez
             .modal-filtros-pr-filters__fecha-validez__selectors
-                input.modal-filters__fecha-validez__input(
-                    id='modal-filtros-pr-filters__fecha-contrato-input'
-                    name='fecha-validez'
-                    type='date' 
-                    placeholder='Fecha inicio')
+                .modal-filters__fecha-validez__input__container
+                    input.modal-filters__fecha-validez__input(
+                        id='modal-filtros-pr-filters__fecha-contrato-input'
+                        name='fecha-validez'
+                        type='text'
+                        onfocus = "this.type='date'"
+                        onblur="this.type='text'"
+                        placeholder='Fecha inicio')
+                    span.icon-calendar
                 span al
-                input.modal-filters__fecha-validez__input(
-                    id='modal-filtros-pr-filters__fecha-vencimiento-input'
-                    type='date' 
-                    placeholder='Fech fin')
+                .modal-filters__fecha-validez__input__container
+                    input.modal-filters__fecha-validez__input(
+                        id='modal-filtros-pr-filters__fecha-vencimiento-input'
+                        type='text' 
+                        onfocus = "this.type='date'"
+                        onblur="this.type='text'"
+                        placeholder='Fecha fin')
+                    span.icon-calendar
         .modal-filtros-pr-filters__importe
             span.modal-filters__importe__label.modal__label Importe
             .modal-filtros-pr-filters__importe_minimo

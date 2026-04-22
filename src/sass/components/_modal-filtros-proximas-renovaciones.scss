@@ -63,8 +63,37 @@
         gap: var(--spacing-s);
     }
 
+    .modal-filters__fecha-validez__input__container{
+        position: relative;
+        display: inline-flex;
+        flex: 1 1 180px;
+        min-width: 0;
+    }
+    
     .modal-filters__fecha-validez__input{
         flex: 1;
+        width: 0;
+        min-width: 0;
+        box-sizing: border-box;
+        padding-right: 30px;
+    }
+
+    // Icono del calendario persistente
+    .modal-filters__fecha-validez__input__container .icon-calendar{
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        text-align: center;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    // Icono del calendario original
+    .modal-filters__fecha-validez__input[type='date']::-webkit-calendar-picker-indicator{
+        display: none;
+        -webkit-appearance: none;
+        opacity: 0;
+        pointer-events: none;
     }
 
     .modal-filtros-pr-filters__fecha-validez__selectors >span{
@@ -112,8 +141,16 @@
             justify-content: flex-start;
         }
 
+        .modal-filters__fecha-validez__input__container{
+            display: inline-flex;
+        }
+
         .modal-filters__fecha-validez__input{
-            width: 100%;
+            width: 0;
+            min-width: 0;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
         }
 
         .modal-filtros-pr-header,

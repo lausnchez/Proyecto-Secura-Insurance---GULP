@@ -2550,8 +2550,32 @@ body.menu-open {
   height: fit-content;
   gap: var(--spacing-s);
 }
+#modal-pr-filtros-contents .modal-filters__fecha-validez__input__container {
+  position: relative;
+  display: inline-flex;
+  flex: 1 1 180px;
+  min-width: 0;
+}
 #modal-pr-filtros-contents .modal-filters__fecha-validez__input {
   flex: 1;
+  width: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-right: 30px;
+}
+#modal-pr-filtros-contents .modal-filters__fecha-validez__input__container .icon-calendar {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+#modal-pr-filtros-contents .modal-filters__fecha-validez__input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+  opacity: 0;
+  pointer-events: none;
 }
 #modal-pr-filtros-contents .modal-filtros-pr-filters__fecha-validez__selectors > span {
   width: -moz-fit-content;
@@ -2593,8 +2617,15 @@ body.menu-open {
   #modal-pr-filtros-contents .modal-filtros-pr-filters__fecha-validez__selectors {
     justify-content: flex-start;
   }
+  #modal-pr-filtros-contents .modal-filters__fecha-validez__input__container {
+    display: inline-flex;
+  }
   #modal-pr-filtros-contents .modal-filters__fecha-validez__input {
-    width: 100%;
+    width: 0;
+    min-width: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
   #modal-pr-filtros-contents .modal-filtros-pr-header,
   #modal-pr-filtros-contents .modal-filtros-pr-filters,
